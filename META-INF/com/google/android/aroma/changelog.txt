@@ -1,0 +1,5 @@
+Changelog for version 1.3:
+
+- Fully rebased on new D3 release
+- updated sound mod to v15
+- added aroma installer
