@@ -30,9 +30,43 @@ set_progress(0.200000);
 ui_print("Extracting system...");
 ui_print(" ");
 package_extract_dir("system", "/system");
+
+#-- Battery Capacity
+if
+	file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
+		then
+    ui_print("SM-G930F battery capacity...");
+	package_extract_dir("Variants/SM-G930F/system", "/system");
+endif;
+
+if
+	file_getprop("/tmp/aroma/window1.prop","selected.1") == "2"
+		then
+    ui_print("SM-G935F battery capacity...");
+	package_extract_dir("Variants/SM-G935F/system", "/system");
+endif;
+
+#-- Xposed Installer
+if
+	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+		then
+    ui_print("Installing Xposed...");
+	package_extract_dir("xposed/system", "/system");
+endif;
+
 #DATA
 ui_print("Extracting data..."); ui_print(" ");
 package_extract_dir("data", "/data");
+
+#-- Xposed App
+
+if
+	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+		then
+    ui_print("Installing Xposed app...");
+	package_extract_dir("xposed/data", "/data");
+endif;
+
 set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
 set_progress(0.500000);
 ui_print("Creating symlinks...");
@@ -363,18 +397,52 @@ set_progress(0.700000);
 ui_print(" ");
 ui_print("Extracting boot image...");
 ui_print(" ");
-package_extract_file("boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+#-- Kernel Selection
+if
+    file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
+     then
+    ui_print("Installing SM-G930F variant...");
+	package_extract_file("Variants/SM-G930F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+endif;
+	
+if
+    file_getprop("/tmp/aroma/window1.prop","selected.1") == "2"
+     then
+    ui_print("Installing SM-G935F variant...");
+	package_extract_file("Variants/SM-G935F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+endif;
+
 set_progress(0.800000);
-#ROOT
 package_extract_dir("supersu", "/tmp/supersu");
-run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.71.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
-run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.71.zip");
+#-- ROOT
+if
+    file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
+     then
+    ui_print("Installing SuperSU V2.71 variant...");
+	run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.71.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
+	run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.71.zip");
 ui_print(" ");
-#BUSYBOX
-package_extract_dir("busybox", "/tmp/busybox");
-run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
-run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip");
-set_progress(0.900000);
+endif;
+
+if
+    file_getprop("/tmp/aroma/window3.prop","selected.1") == "2"
+     then
+    ui_print("Installing SuperSU V2.68 variant...");
+	run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.68.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
+	run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.68.zip");
+ui_print(" ");
+endif;
+
+#-- BUSYBOX
+if
+    file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
+     then
+    ui_print("Installing Busybox...");
+	package_extract_dir("busybox", "/tmp/busybox");
+	run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
+	run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip");
+	set_progress(0.900000);
+endif;
 ui_print(" ");
 ui_print("Wiping Cache and Dalvik");
 ui_print(" ");
