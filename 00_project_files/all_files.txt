@@ -648,7 +648,6 @@
 /system/etc/firmware/moon-dsp5-dsm.wmfw
 /system/etc/firmware/moon-dsp6-ez2-control.wmfw
 /system/etc/firmware/moon-dsp6-lpsd-control.bin
-/system/etc/floating_feature.xml
 /system/etc/fonts.xml
 /system/etc/fota.cer
 /system/etc/gps.conf
