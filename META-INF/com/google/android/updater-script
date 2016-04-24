@@ -12,7 +12,7 @@ unmount("/data");
 show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
-ui_print("SuperMan Rom Installer V1.3");
+ui_print("SuperMan Rom Installer V1.3.1");
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
@@ -37,13 +37,13 @@ if
 	file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
 		then
     ui_print("SM-G930F battery capacity...");
-	package_extract_dir("Variants/SM-G930F/system", "/system");
+	package_extract_dir("aroma/variants/SM-G930F/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.1") == "2"
 		then
     ui_print("SM-G935F battery capacity...");
-	package_extract_dir("Variants/SM-G935F/system", "/system");
+	package_extract_dir("aroma/variants/SM-G935F/system", "/system");
 endif;
 #-- Xposed Installer
 if
@@ -51,6 +51,19 @@ if
 		then
     ui_print("Installing Xposed...");
 	package_extract_dir("xposed/system", "/system");
+endif;
+#-- Sound Mod
+if
+	file_getprop("/tmp/aroma/window5.prop","selected.1") == "1"
+		then
+    ui_print("Installing sound mod...");
+	package_extract_dir("aroma/sound/mod/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window5.prop","selected.1") == "2"
+		then
+    ui_print("Installing stock sound...");
+	package_extract_dir("aroma/sound/stock/system", "/system");
 endif;
 #DATA
 ui_print("Extracting data..."); ui_print(" ");
@@ -398,14 +411,14 @@ if
     file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
      then
     ui_print("Installing SM-G930F variant...");
-	package_extract_file("Variants/SM-G930F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+	package_extract_file("aroma/variants/SM-G930F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;
 	
 if
     file_getprop("/tmp/aroma/window1.prop","selected.1") == "2"
      then
     ui_print("Installing SM-G935F variant...");
-	package_extract_file("Variants/SM-G935F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+	package_extract_file("aroma/variants/SM-G935F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;
 
 set_progress(0.800000);

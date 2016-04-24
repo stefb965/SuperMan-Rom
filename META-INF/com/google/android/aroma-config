@@ -14,8 +14,8 @@
 # ini_set("dp","1"); #-- LDPI ( 240x320 / QVGA )
 # ini_set("dp","2"); #-- MDPI ( 340x480 / HVGA )
 # ini_set("dp","3"); #-- HDPI ( 480x800 / WVGA )
-# ini_set("dp","4"); #-- XHDPI ( 1280x720 / WVGA )
-ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
+ini_set("dp","4"); #-- XHDPI ( 1280x720 / WVGA )
+# ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
 
 ##
 # Initializing Information
@@ -456,6 +456,36 @@ selectbox(
 
 );
 
+##
+# Sub Window 5
+#
+
+selectbox(
+  #-- Title
+	"Sound Mod V15",
+	  
+  #-- Sub Title
+    "Do you want to install the sound mod by ZuBi182?",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window6.prop
+	"window5.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"Install the sound mod",	"Will install the sound mod by ZuBi182",		1,	#-- selected.1 = 1
+	"No, don't install this mod",	"Will keep the stock file",				0       #-- selected.1 = 2
+	  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
 # Installation UI
 
 ini_set("text_next", "Install Now");
@@ -491,7 +521,7 @@ ini_set("icon_next", "@next");
 install(
   "SuperMan-Rom™ Installation",
   getvar("rom_name") + "\n" +
-  "Please wait while SuperMan-Rom is conquering your tablet" +
+  "Please wait while SuperMan-Rom is conquering your phone" +
   "",
   "icons/install"
 );
@@ -511,7 +541,7 @@ checkviewbox(
     "@welcome",
 
   #-- Checkbox Text
-    "Reboot your device now.",
+    "Reboot your device now. (Don't use this yet, may cause problems with stuck at boot!)",
 
   #-- Initial Checkbox value ( 0=unchecked, 1=checked ) -  (Optional, default:0)
     "1",
@@ -525,7 +555,7 @@ endif;
 # Check if reboot checkbox was checked
 
 if
-  getvar("reboot_it")=="1"
+  getvar("reboot_it")=="0"
 then
   #
   # reboot("onfinish");   - Reboot if anything finished
