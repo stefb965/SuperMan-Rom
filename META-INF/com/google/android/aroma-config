@@ -5,7 +5,7 @@
 # You can use one of following values:
 #   "rgba", "abgr", "argb", "bgra"
 
-# ini_set("force_colorspace","rgba");
+ini_set("force_colorspace","rgba");
 
 ##
 # Screen Resolution
@@ -14,19 +14,19 @@
 # ini_set("dp","1"); #-- LDPI ( 240x320 / QVGA )
 # ini_set("dp","2"); #-- MDPI ( 340x480 / HVGA )
 # ini_set("dp","3"); #-- HDPI ( 480x800 / WVGA )
-ini_set("dp","4"); #-- XHDPI ( 1280x720 / WVGA )
-# ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
+# ini_set("dp","4"); #-- XHDPI ( 1280x720 / WVGA )
+ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
 
 ##
 # Initializing Information
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.3");
+ini_set("rom_version",          "V1.3.1");
+ini_set("rom_codename",         "Stock Based Rom");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "20.04.2016");
-
+ini_set("rom_date",             "24.04.2016");
 
 ##
 # Show Simple Splash
@@ -159,8 +159,8 @@ viewbox(
     "<~welcome.text2>\n\n"+
 	
       "  <~welcome.version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
-      "  <~welcome.codename>\t\t: <b><#selectbg_g> </#></b>\n"+
-	  "  <~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
+      "  <~welcome.codename>\t\t: <b><#selectbg_g>+ini_get("rom_codename")+"</#></b>\n"+
+      "  <~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
 
     "<~welcome.next>",
   
@@ -258,7 +258,7 @@ if prop("menu.prop","selected")=="2" then
       "System Information",
     
     #-- Subtitle
-      "Current system Information on your Xperia MDPI",
+      "Current system Information on your S7",
     
     #-- Icon
       "@info",
@@ -544,7 +544,7 @@ checkviewbox(
     "Reboot your device now. (Don't use this yet, may cause problems with stuck at boot!)",
 
   #-- Initial Checkbox value ( 0=unchecked, 1=checked ) -  (Optional, default:0)
-    "1",
+    "0",
 
   #-- Save checked value in variable "reboot_it" (Optional)
     "reboot_it"
@@ -555,7 +555,7 @@ endif;
 # Check if reboot checkbox was checked
 
 if
-  getvar("reboot_it")=="0"
+  getvar("reboot_it")=="1"
 then
   #
   # reboot("onfinish");   - Reboot if anything finished
