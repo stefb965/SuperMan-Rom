@@ -5,7 +5,7 @@
 # You can use one of following values:
 #   "rgba", "abgr", "argb", "bgra"
 
-ini_set("force_colorspace","rgba");
+# ini_set("force_colorspace","rgba");
 
 ##
 # Screen Resolution
@@ -23,7 +23,6 @@ ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
 ini_set("rom_version",          "V1.3.1");
-ini_set("rom_codename",         "Stock Based Rom");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
 ini_set("rom_date",             "24.04.2016");
@@ -159,7 +158,7 @@ viewbox(
     "<~welcome.text2>\n\n"+
 	
       "  <~welcome.version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
-      "  <~welcome.codename>\t\t: <b><#selectbg_g>+ini_get("rom_codename")+"</#></b>\n"+
+      "  <~welcome.codename>\t\t: <b><#selectbg_g> </#></b>\n"+
       "  <~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
 
     "<~welcome.next>",
