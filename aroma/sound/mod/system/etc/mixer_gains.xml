@@ -12,10 +12,10 @@
 	</path>
 
 	<path name="gain-media-speaker">
-		<ctl name="HPOUT3L Input 1 Volume" value="36" />
-		<ctl name="HPOUT3L Input 2 Volume" value="36" />
-		<ctl name="HPOUT3R Input 1 Volume" value="36" />
-		<ctl name="HPOUT3R Input 2 Volume" value="36" />
+		<ctl name="HPOUT3L Input 1 Volume" value="34" />
+		<ctl name="HPOUT3L Input 2 Volume" value="34" />
+		<ctl name="HPOUT3R Input 1 Volume" value="34" />
+		<ctl name="HPOUT3R Input 2 Volume" value="34" />
 		<ctl name="AIF4TX1 Input 1 Volume" value="36" />
 		<ctl name="AIF4TX2 Input 1 Volume" value="36" />
 	</path>
@@ -24,18 +24,18 @@
 		<ctl name="Noise Gate Switch" value="0" />
 		<ctl name="HPOUT1L Impedance Volume" value="105" />
 		<ctl name="HPOUT1R Impedance Volume" value="105" />
-		<ctl name="HPOUT1L Input 1 Volume" value="45" />
-		<ctl name="HPOUT1R Input 1 Volume" value="45" />
+		<ctl name="HPOUT1L Input 1 Volume" value="43" />
+		<ctl name="HPOUT1R Input 1 Volume" value="43" />
 	</path>
 
 	<path name="gain-media-speaker-headset">
-		<ctl name="AIF4TX1 Input 1 Volume" value="45" />
-		<ctl name="AIF4TX2 Input 1 Volume" value="45" />
+		<ctl name="AIF4TX1 Input 1 Volume" value="43" />
+		<ctl name="AIF4TX2 Input 1 Volume" value="43" />
 		<ctl name="Noise Gate Switch" value="0" />
 		<ctl name="HPOUT1L Impedance Volume" value="60" />
 		<ctl name="HPOUT1R Impedance Volume" value="60" />
-		<ctl name="HPOUT1L Input 1 Volume" value="45" />
-		<ctl name="HPOUT1R Input 1 Volume" value="45" />
+		<ctl name="HPOUT1L Input 1 Volume" value="43" />
+		<ctl name="HPOUT1R Input 1 Volume" value="43" />
 	</path>
 
 	<path name="gain-media-bt-sco-headset">
@@ -139,12 +139,12 @@
 	</path>
 
 	<path name="gain-samsung_voip-speaker">
-		<ctl name="HPOUT3L Input 1 Volume" value="36" />
-		<ctl name="HPOUT3L Input 2 Volume" value="36" />
-		<ctl name="AIF4TX1 Input 1 Volume" value="35" />
-		<ctl name="AIF4TX2 Input 1 Volume" value="35" />
-		<ctl name="AIF4TX1 Input 2 Volume" value="35" />
-		<ctl name="AIF4TX2 Input 2 Volume" value="35" />
+		<ctl name="HPOUT3L Input 1 Volume" value="34" />
+		<ctl name="HPOUT3L Input 2 Volume" value="34" />
+		<ctl name="AIF4TX1 Input 1 Volume" value="33" />
+		<ctl name="AIF4TX2 Input 1 Volume" value="33" />
+		<ctl name="AIF4TX1 Input 2 Volume" value="33" />
+		<ctl name="AIF4TX2 Input 2 Volume" value="33" />
 	</path>
 
 	<path name="gain-samsung_voip-headset">
@@ -180,12 +180,12 @@
 	</path>
 
 	<path name="gain-voip-speaker">
-		<ctl name="HPOUT3L Input 1 Volume" value="36" />
-		<ctl name="HPOUT3L Input 2 Volume" value="36" />
-		<ctl name="AIF4TX1 Input 1 Volume" value="35" />
-		<ctl name="AIF4TX2 Input 1 Volume" value="35" />
-		<ctl name="AIF4TX1 Input 2 Volume" value="35" />
-		<ctl name="AIF4TX2 Input 2 Volume" value="35" />
+		<ctl name="HPOUT3L Input 1 Volume" value="32" />
+		<ctl name="HPOUT3L Input 2 Volume" value="32" />
+		<ctl name="AIF4TX1 Input 1 Volume" value="30" />
+		<ctl name="AIF4TX2 Input 1 Volume" value="30" />
+		<ctl name="AIF4TX1 Input 2 Volume" value="30" />
+		<ctl name="AIF4TX2 Input 2 Volume" value="30" />
 	</path>
 
 	<path name="gain-voip-headset">
@@ -1188,12 +1188,12 @@
 	<!-- media input volume -->
 	<path name="gain-media-mic">
 		<ctl name="IN1R Digital Volume" value="70" />
-		<ctl name="LHPF1 Input 1 Volume" value="20" />
+		<ctl name="LHPF1 Input 1 Volume" value="21" />
 	</path>
 
 	<path name="gain-media-2nd-mic">
 		<ctl name="IN3L Digital Volume" value="90" />
-		<ctl name="LHPF2 Input 1 Volume" value="20" />
+		<ctl name="LHPF2 Input 1 Volume" value="21" />
 	</path>
 
 	<path name="gain-media-headset-mic">
@@ -1215,9 +1215,9 @@
 	<!-- camcorder input volume -->
 	<path name="gain-camcorder-mic">
 		<ctl name="IN1R Digital Volume" value="130" />
-		<ctl name="LHPF1 Input 1 Volume" value="32" />
+		<ctl name="LHPF1 Input 1 Volume" value="33" />
 		<ctl name="IN3L Digital Volume" value="128" />
-		<ctl name="LHPF2 Input 1 Volume" value="32" />
+		<ctl name="LHPF2 Input 1 Volume" value="33" />
 	</path>
 
 	<path name="gain-camcorder-headset-mic">
@@ -1236,7 +1236,7 @@
 	<!-- voice recording input volume -->
 	<path name="gain-recording-mic">
 		<ctl name="IN1R Digital Volume" value="128" />
-		<ctl name="LHPF1 Input 1 Volume" value="32" />
+		<ctl name="LHPF1 Input 1 Volume" value="33" />
 	</path>
 
 	<path name="gain-recording-headset-mic">
@@ -1417,7 +1417,7 @@
 
 	<path name="gain-communication-speaker-mic">
 		<ctl name="IN3L Digital Volume" value="140" />
-		<ctl name="LHPF2 Input 1 Volume" value="32" />
+		<ctl name="LHPF2 Input 1 Volume" value="33" />
 	</path>
 
 	<path name="gain-communication-headset-mic">
