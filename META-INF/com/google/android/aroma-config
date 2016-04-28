@@ -22,10 +22,10 @@ ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.3.1");
+ini_set("rom_version",          "V1.3.5");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "24.04.2016");
+ini_set("rom_date",             "28.04.2016");
 
 ##
 # Show Simple Splash
@@ -388,7 +388,7 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select One",	"",							2,	#-- Group 1. key = "selected.1"
-	"Yes",		"Xposed V81 will be installed.",			1,	#-- selected.1 = 1
+	"Yes",		"Xposed V83 will be installed.",			1,	#-- selected.1 = 1
 	"No",		"Xposed wont be installed.",				0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
@@ -461,7 +461,7 @@ selectbox(
 
 selectbox(
   #-- Title
-	"Sound Mod V15",
+	"Sound Mod V16",
 	  
   #-- Sub Title
     "Do you want to install the sound mod by ZuBi182?",

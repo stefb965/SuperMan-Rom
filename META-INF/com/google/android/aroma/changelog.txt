@@ -1,5 +1,7 @@
-Changelog for version 1.3:
+Changelog for version 1.3.5:
 
-- Fully rebased on new D3 release
-- updated sound mod to v15
-- added aroma installer
+- added applock
+- added some new csc featuers
+- updated xposed to V83
+- updated sound mod to V16
+- removed sd card notification on boot
