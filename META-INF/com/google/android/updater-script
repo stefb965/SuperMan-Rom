@@ -12,7 +12,7 @@ unmount("/data");
 show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
-ui_print("SuperMan Rom Installer V1.3.5");
+ui_print("SuperMan Rom Installer V1.4");
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
@@ -31,7 +31,7 @@ set_progress(0.200000);
 ui_print("Extracting system...");
 ui_print(" ");
 package_extract_dir("system", "/system");
-set_progress(0.500000);
+set_progress(0.300000);
 #-- Battery Capacity
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
@@ -77,7 +77,7 @@ if
 	package_extract_dir("xposed/data", "/data");
 endif;
 set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
-set_progress(0.500000);
+set_progress(0.400000);
 ui_print("Creating symlinks...");
 ui_print(" ");
 #SYM
@@ -260,7 +260,7 @@ symlink("/vendor/lib64/egl/libGLES_mali.so", "/system/vendor/lib64/hw/vulkan.exy
 symlink("/vendor/lib64/egl/libGLES_mali.so", "/system/vendor/lib64/libOpenCL.so.1.1");
 symlink("/vendor/lib/egl/libGLES_mali.so", "/system/vendor/lib/hw/vulkan.exynos5.so");
 symlink("/vendor/lib/egl/libGLES_mali.so", "/system/vendor/lib/libOpenCL.so.1.1");
-set_progress(0.600000);
+set_progress(0.500000);
 ui_print("Setting Permissions...");
 ui_print(" ");
 #PERM
@@ -402,7 +402,7 @@ set_metadata("/system/vendor/lib/mediadrm/libwvdrmengine.so", "uid", 0, "gid", 0
 set_metadata("/system/vendor/media", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata_recursive("/system/xbin", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/xbin/dexdump", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
-set_progress(0.700000);
+set_progress(0.600000);
 ui_print(" ");
 ui_print("Extracting boot image...");
 ui_print(" ");
@@ -421,7 +421,7 @@ if
 	package_extract_file("aroma/variants/SM-G935F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;
 
-set_progress(0.800000);
+set_progress(0.700000);
 package_extract_dir("supersu", "/tmp/supersu");
 #-- ROOT
 if
@@ -430,6 +430,7 @@ if
     ui_print("Installing SuperSU V2.71 variant...");
 	run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.71.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
 	run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.71.zip");
+	set_progress(0.800000);
 ui_print(" ");
 endif;
 
@@ -439,6 +440,7 @@ if
     ui_print("Installing SuperSU V2.68 variant...");
 	run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.68.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
 	run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.68.zip");
+	set_progress(0.800000);
 ui_print(" ");
 endif;
 
