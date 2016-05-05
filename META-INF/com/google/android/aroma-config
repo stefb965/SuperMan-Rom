@@ -485,6 +485,36 @@ selectbox(
 
 );
 
+##
+# Sub Window 6
+#
+
+selectbox(
+  #-- Title
+	"Emojis",
+	  
+  #-- Sub Title
+    "Do you want to install the IOS or stock Emojis in keyboard?",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window6.prop
+	"window6.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"Install stock emoji",		"Will display stock emojis in keyboard",		1,	#-- selected.1 = 1
+	"Install IOS 9.3 emojis",	"Will install different IOS emojis in keyboard",	0       #-- selected.1 = 2
+	  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
 # Installation UI
 
 ini_set("text_next", "Install Now");

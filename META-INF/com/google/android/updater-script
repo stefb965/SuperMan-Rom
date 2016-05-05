@@ -65,6 +65,19 @@ if
     ui_print("Installing stock sound...");
 	package_extract_dir("aroma/sound/stock/system", "/system");
 endif;
+#-- Emoji
+if
+	file_getprop("/tmp/aroma/window6.prop","selected.1") == "1"
+		then
+    ui_print("Installing stock emoji...");
+	package_extract_dir("aroma/emoji/stock", "/system/fonts");
+endif;
+if
+	file_getprop("/tmp/aroma/window6.prop","selected.1") == "2"
+		then
+    ui_print("Installing IOS emoji...");
+	package_extract_dir("aroma/emoji/IOS", "/system/fonts");
+endif;
 #DATA
 ui_print("Extracting data..."); ui_print(" ");
 package_extract_dir("data", "/data");
