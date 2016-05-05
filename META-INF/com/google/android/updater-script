@@ -76,6 +76,13 @@ if
     ui_print("Installing Xposed app...");
 	package_extract_dir("xposed/data", "/data");
 endif;
+#-- BUSYBOX App
+if
+    file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
+     then
+    ui_print("Installing Busybox App...");
+	package_extract_dir("busybox/app", "/data/app");
+endif;
 set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
 set_progress(0.400000);
 ui_print("Creating symlinks...");
