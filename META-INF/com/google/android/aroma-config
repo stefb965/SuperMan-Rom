@@ -404,7 +404,7 @@ selectbox(
 	"SuperSU",
 	  
   #-- Sub Title
-    "Select between SuperSU V2.68 and V2.72",
+    "Select between SuperSU V2.68 and V2.73",
 	  
   #-- Icon:
      "icons/install",
@@ -418,7 +418,7 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select One",		"",								2,	#-- Group 1. key = "selected.1"
-	"SuperSU V2.72",	"Latest version of Chainfire's root access, some people reported not getting root with it if you never had any problems you should choose this.",	1,	#-- selected.1 = 1
+	"SuperSU V2.73",	"Latest version of Chainfire's root access, some people reported not getting root with it if you never had any problems you should choose this.",	1,	#-- selected.1 = 1
 	"SuperSU V2.68",	"Older SuperSU which shouldn't have problems getting root, only use if you had problems before",	0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
