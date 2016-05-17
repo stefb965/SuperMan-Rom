@@ -35,61 +35,61 @@ set_progress(0.300000);
 #-- Battery Capacity
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
-		then
-    ui_print("SM-G930F battery capacity...");
-	package_extract_dir("aroma/variants/SM-G930F/system", "/system");
+	then
+		ui_print("SM-G930F battery capacity...");
+		package_extract_dir("aroma/variants/SM-G930F/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.1") == "2"
-		then
-    ui_print("SM-G935F battery capacity...");
-	package_extract_dir("aroma/variants/SM-G935F/system", "/system");
+	then
+		ui_print("SM-G935F battery capacity...");
+		package_extract_dir("aroma/variants/SM-G935F/system", "/system");
 endif;
 #-- Xposed Installer
 if
 	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
-		then
-    ui_print("Installing Xposed...");
-	package_extract_dir("xposed/system", "/system");
+	then
+		ui_print("Installing Xposed...");
+		package_extract_dir("xposed/system", "/system");
 endif;
 #-- Sound Mod
 if
 	file_getprop("/tmp/aroma/window5.prop","selected.1") == "1"
-		then
-    ui_print("Installing sound mod...");
-	package_extract_dir("aroma/sound/mod/system", "/system");
+	then
+		ui_print("Installing sound mod...");
+		package_extract_dir("aroma/sound/mod/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window5.prop","selected.1") == "2"
-		then
-    ui_print("Installing stock sound...");
-	package_extract_dir("aroma/sound/stock/system", "/system");
+	then
+		ui_print("Installing stock sound...");
+		package_extract_dir("aroma/sound/stock/system", "/system");
 endif;
 #-- Emoji
 if
 	file_getprop("/tmp/aroma/window6.prop","selected.1") == "1"
-		then
-    ui_print("Installing stock emoji...");
-	package_extract_dir("aroma/emoji/stock", "/system/fonts");
+	then
+		ui_print("Installing stock emoji...");
+		package_extract_dir("aroma/emoji/stock", "/system/fonts");
 endif;
 if
 	file_getprop("/tmp/aroma/window6.prop","selected.1") == "2"
-		then
-    ui_print("Installing IOS emoji...");
-	package_extract_dir("aroma/emoji/IOS", "/system/fonts");
+	then
+		ui_print("Installing IOS emoji...");
+		package_extract_dir("aroma/emoji/IOS", "/system/fonts");
 endif;
 #-- SystemUI
 if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "1"
-		then
-    ui_print("Installing stock SystemUI...");
-	package_extract_dir("aroma/systemui/stock", "/system/priv-app");
+	then
+		ui_print("Installing stock SystemUI...");
+		package_extract_dir("aroma/systemui/stock", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "2"
-		then
-    ui_print("Installing rounded SystemUI...");
-	package_extract_dir("aroma/systemui/rounded", "/system/priv-app");
+	then
+		ui_print("Installing rounded SystemUI...");
+		package_extract_dir("aroma/systemui/rounded", "/system/priv-app");
 endif;
 #-- CSC
 if
@@ -159,16 +159,16 @@ package_extract_dir("data", "/data");
 
 if
 	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
-		then
-    ui_print("Installing Xposed app...");
-	package_extract_dir("xposed/data", "/data");
+	then
+		ui_print("Installing Xposed app...");
+		package_extract_dir("xposed/data", "/data");
 endif;
 #-- BUSYBOX App
 if
-    file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
-     then
-    ui_print("Installing Busybox App...");
-	package_extract_dir("busybox/app", "/data/app");
+	file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
+	then
+		ui_print("Installing Busybox App...");
+		package_extract_dir("busybox/app", "/data/app");
 endif;
 set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
 set_progress(0.400000);
@@ -502,17 +502,17 @@ ui_print("Extracting boot image...");
 ui_print(" ");
 #-- Kernel Selection
 if
-    file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
-     then
-    ui_print("Installing SM-G930F variant...");
-	package_extract_file("aroma/variants/SM-G930F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+	file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
+	then
+		ui_print("Installing SM-G930F variant...");
+		package_extract_file("aroma/variants/SM-G930F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;
 	
 if
-    file_getprop("/tmp/aroma/window1.prop","selected.1") == "2"
-     then
-    ui_print("Installing SM-G935F variant...");
-	package_extract_file("aroma/variants/SM-G935F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+	file_getprop("/tmp/aroma/window1.prop","selected.1") == "2"
+	then
+		ui_print("Installing SM-G935F variant...");
+		package_extract_file("aroma/variants/SM-G935F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;
 set_progress(0.700000);
 #SUD
@@ -520,34 +520,34 @@ set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode
 package_extract_dir("supersu", "/tmp/supersu");
 #-- ROOT
 if
-    file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
-     then
-    ui_print("Installing SuperSU V2.71 variant...");
-	run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.71.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
-	run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.71.zip");
-	set_progress(0.800000);
-ui_print(" ");
+	file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
+	then
+		ui_print("Installing SuperSU V2.72 variant...");
+		run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.72.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
+		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.72.zip");
+		set_progress(0.800000);
+		ui_print(" ");
 endif;
 
 if
-    file_getprop("/tmp/aroma/window3.prop","selected.1") == "2"
-     then
-    ui_print("Installing SuperSU V2.68 variant...");
-	run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.68.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
-	run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.68.zip");
-	set_progress(0.800000);
+	file_getprop("/tmp/aroma/window3.prop","selected.1") == "2"
+	then
+		ui_print("Installing SuperSU V2.68 variant...");
+		run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.68.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
+		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.68.zip");
+		set_progress(0.800000);
 ui_print(" ");
 endif;
 
 #-- BUSYBOX
 if
-    file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
-     then
-    ui_print("Installing Busybox...");
-	package_extract_dir("busybox", "/tmp/busybox");
-	run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
-	run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip");
-	set_progress(0.900000);
+	file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
+	then
+		ui_print("Installing Busybox...");
+		package_extract_dir("busybox", "/tmp/busybox");
+		run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
+		run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip");
+		set_progress(0.900000);
 endif;
 ui_print(" ");
 ui_print("Wiping Cache and Dalvik");
