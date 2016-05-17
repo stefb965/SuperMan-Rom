@@ -33,8 +33,7 @@ symlink("app_process64", "/system/bin/app_process");
 symlink("dalvikvm64", "/system/bin/dalvikvm");
 symlink("grep", "/system/bin/egrep");
 symlink("grep", "/system/bin/fgrep");
-symlink("libGLESv2.so", "/system/lib64/libGLESv3.so");
-symlink("libGLESv2.so", "/system/lib/libGLESv3.so");
+symlink("/system/lib64/libGLESv2.so", "/system/lib64/libGLESv3.so");
 symlink("libOpenCL.so.1.1", "/system/vendor/lib64/libOpenCL.so.1");
 symlink("libOpenCL.so.1.1", "/system/vendor/lib/libOpenCL.so.1");
 symlink("libOpenCL.so.1", "/system/vendor/lib64/libOpenCL.so");
@@ -287,6 +286,7 @@ set_metadata("/system/bin/prepare_param.sh", "uid", 0, "gid", 2000, "mode", 0755
 set_metadata("/system/bin/racoon", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:racoon_exec:s0");
 set_metadata("/system/bin/resetreason", "uid", 1000, "gid", 1000, "mode", 0710, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/bin/rild", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:rild_exec:s0");
+set_metadata("/system/bin/rpmbd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:rpmbd_exec:s0");
 set_metadata("/system/bin/run-as", "uid", 0, "gid", 2000, "mode", 0750, "capabilities", 0x0, "selabel", "u:object_r:runas_exec:s0");
 set_metadata("/system/bin/samsungpowersoundplay", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:samsungpowersoundplay_exec:s0");
 set_metadata("/system/bin/scs", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:scs_exec:s0");
@@ -325,6 +325,8 @@ set_metadata("/system/etc/dhcpcd/dhcpcd-run-hooks", "uid", 1014, "gid", 2000, "m
 set_metadata("/system/recovery-from-boot.p", "uid", 0, "gid", 0, "mode", 0644, "capabilities", 0x0);
 set_metadata("/system/etc/event-log-tags", "uid", 0, "gid", 0, "mode", 0644, "capabilities", 0x0, "selabel", "u:object_r:event_log_tags_file:s0");
 set_metadata_recursive("/system/etc/firmware", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+set_metadata_recursive("/system/etc/init.d", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+set_metadata("/system/etc/init.d", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/etc/init.goldfish.sh", "uid", 0, "gid", 2000, "mode", 0550, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/etc/init.sec.boot.sh", "uid", 0, "gid", 2000, "mode", 0550, "capabilities", 0x0, "selabel", "u:object_r:sec-sh_exec:s0");
 set_metadata("/system/etc/permissions", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
@@ -333,6 +335,7 @@ set_metadata("/system/etc/security", "uid", 0, "gid", 2000, "mode", 0755, "capab
 set_metadata("/system/etc/security/cacerts", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/etc/security/.drm", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drm_security_system_file:s0");
 set_metadata_recursive("/system/lib", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_library_file:s0");
+set_metadata("/system/lib/drm", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drm_lib_system_file:s0");
 set_metadata_recursive("/system/vendor", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/vendor/etc", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/vendor/etc/nxp", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
