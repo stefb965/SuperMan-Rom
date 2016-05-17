@@ -22,10 +22,10 @@ ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.4");
+ini_set("rom_version",          "V1.5");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "05.05.2016");
+ini_set("rom_date",             "17.05.2016");
 
 ##
 # Show Simple Splash
@@ -404,7 +404,7 @@ selectbox(
 	"SuperSU",
 	  
   #-- Sub Title
-    "Select between SuperSU V2.68 and V2.71",
+    "Select between SuperSU V2.68 and V2.72",
 	  
   #-- Icon:
      "icons/install",
@@ -418,7 +418,7 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select One",		"",								2,	#-- Group 1. key = "selected.1"
-	"SuperSU V2.71",	"Latest version of Chainfire's root access, some people reported not getting root with it if you never had any problems you should choose this.",	1,	#-- selected.1 = 1
+	"SuperSU V2.72",	"Latest version of Chainfire's root access, some people reported not getting root with it if you never had any problems you should choose this.",	1,	#-- selected.1 = 1
 	"SuperSU V2.68",	"Older SuperSU which shouldn't have problems getting root, only use if you had problems before",	0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
@@ -524,7 +524,7 @@ selectbox(
 	"SystemUI",
 	  
   #-- Sub Title
-    "Do you want the modded SystemUI, stock or good lock?",
+    "Do you want the modded SystemUI or stock SystemUI?",
 	  
   #-- Icon:
      "icons/install",
@@ -539,9 +539,39 @@ selectbox(
 	
 	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
 	"Install stock SystemUI",	"No rounded mods, no other mods, just stock",		0,	#-- selected.1 = 1
-	"Install Modded SystemUI",	"Rounded SystemUI and grey scaling removed while on powersaving mode",	1,      #-- selected.1 = 2
-	"Install Samsungs Good Lock and stock SystemUI",	"Samsung recently published a new SystemUI which looks very flat and google like. This mod can be uninstalled as a normal app",	0,       #-- selected.1 = 3
-	"Install Samsungs Good Lock and rounded SystemUI",	"Samsung recently published a new SystemUI which looks very flat and google like. This mod can be uninstalled as a normal app",	0       #-- selected.1 = 4
+	"Install Modded SystemUI",	"Rounded SystemUI and grey scaling removed while on powersaving mode",	1      #-- selected.1 = 2
+	"Install Samsungs Good Lock and stock SystemUI",	"Samsung recently published a new SystemUI which looks very flat and google 
+  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 8
+#
+
+selectbox(
+  #-- Title
+	"CSC",
+	  
+  #-- Sub Title
+    "Select here which CSC Variant you want to install to your device",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window8.prop
+	"window8.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+	
+	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"Install stock SystemUI",	"No rounded mods, no other mods, just stock",		0,	#-- selected.1 = 1
+	"Install Modded SystemUI",	"Rounded SystemUI and grey scaling removed while on powersaving mode",	1      #-- selected.1 = 2
+	"Install Samsungs Good Lock and stock SystemUI",	"Samsung recently published a new SystemUI which looks very flat and google 
   
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
