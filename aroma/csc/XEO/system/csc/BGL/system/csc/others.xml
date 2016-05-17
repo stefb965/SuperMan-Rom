@@ -1,0 +1,14 @@
+﻿<?xml  version="1.0" encoding="UTF-8" ?>
+<SamsungMobileFeauture>
+  <Version>ED001</Version>
+  <Country>BULGARIA</Country>
+  <CountryISO>BG</CountryISO>
+  <SalesCode>BGL</SalesCode>
+  <FeatureSet>
+    <CscFeature_SIP_EnablePreferredEnglishTypeAsUS>TRUE</CscFeature_SIP_EnablePreferredEnglishTypeAsUS>
+    <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>		<CscFeature_Web_ConfigSyncSource>TRUE</CscFeature_Web_ConfigSyncSource>
+	<CscFeature_Message_ConfigFreeMessage>off</CscFeature_Message_ConfigFreeMessage>
+	<CscFeature_RIL_ConfigPreferredNwMode>GWL</CscFeature_RIL_ConfigPreferredNwMode>
+	<CscFeature_SmartManager_ConfigSubFeatures>roguepopup|autoclean|autorestart</CscFeature_SmartManager_ConfigSubFeatures>
+  </FeatureSet>
+</SamsungMobileFeauture>

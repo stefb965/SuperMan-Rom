@@ -1,0 +1,31 @@
+﻿<?xml  version="1.0" encoding="UTF-8" ?>
+<SamsungMobileFeauture>
+<Version>ED001</Version>
+<Country>ALBANIA</Country>
+<CountryISO>AL</CountryISO>
+<SalesCode>AVF</SalesCode> <FeatureSet>
+  <CscFeature_VoiceCall_EnableCallButtonInFdnList>TRUE</CscFeature_VoiceCall_EnableCallButtonInFdnList>
+  <CscFeature_Message_EnableReplyAll>TRUE</CscFeature_Message_EnableReplyAll>
+  <CscFeature_Message_GalleryView4SingleImageMms>imagetext</CscFeature_Message_GalleryView4SingleImageMms>
+  <CscFeature_Email_UseFixedSmtpPortAs>25</CscFeature_Email_UseFixedSmtpPortAs>
+  <CscFeature_Streaming_SendBandwidthInfo>TRUE</CscFeature_Streaming_SendBandwidthInfo>
+  <CscFeature_Web_DisableMostVisitedHomepage>TRUE</CscFeature_Web_DisableMostVisitedHomepage>
+  <CscFeature_Web_SetUserAgent>VODA</CscFeature_Web_SetUserAgent>
+  <CscFeature_Web_SetUAProfile>http://wap.samsungmobile.com/uaprof/uaprof.rdf</CscFeature_Web_SetUAProfile>
+  <CscFeature_Web_OverrideUserAgent>TRUE</CscFeature_Web_OverrideUserAgent>
+  <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
+  <CscFeature_Wifi_UseRandom4digitCombinationAsSSID>TRUE</CscFeature_Wifi_UseRandom4digitCombinationAsSSID>
+  <CscFeature_Wifi_UseDefaultSecurityAs>WPA2/PSK</CscFeature_Wifi_UseDefaultSecurityAs>
+  <CscFeature_SyncML_EnableShowVersionNameAferSuccessfulUpdate>TRUE</CscFeature_SyncML_EnableShowVersionNameAferSuccessfulUpdate>
+  <CscFeature_SyncML_EnableNotiDeltaBinarySizeBeforeDownload>TRUE</CscFeature_SyncML_EnableNotiDeltaBinarySizeBeforeDownload>
+  <CscFeature_SyncML_DiscardInvalidNetwpinCp>TRUE</CscFeature_SyncML_DiscardInvalidNetwpinCp>
+  <CscFeature_SyncML_DeleteCpAfterTryingToInstall>TRUE</CscFeature_SyncML_DeleteCpAfterTryingToInstall>
+  <CscFeature_RIL_UssdConnectToCall>45,46,132,153</CscFeature_RIL_UssdConnectToCall>
+  <CscFeature_RIL_EnableBIP>TRUE</CscFeature_RIL_EnableBIP>
+  <CscFeature_RIL_ApnControlByModem>TRUE</CscFeature_RIL_ApnControlByModem>
+  <CscFeature_RIL_ConfigAlwaysOnApn>bip</CscFeature_RIL_ConfigAlwaysOnApn>
+  <CscFeature_Setting_EnableDataRoamingButtonInQuickPanel>TRUE</CscFeature_Setting_EnableDataRoamingButtonInQuickPanel>
+  <CscFeature_Message_ConfigFreeMessage>off</CscFeature_Message_ConfigFreeMessage>
+    <CscFeature_SmartManager_ConfigSubFeatures>roguepopup|autoclean|autorestart</CscFeature_SmartManager_ConfigSubFeatures>
+ </FeatureSet>
+</SamsungMobileFeauture>

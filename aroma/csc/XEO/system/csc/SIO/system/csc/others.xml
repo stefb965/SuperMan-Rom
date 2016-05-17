@@ -1,0 +1,9 @@
+﻿<?xml  version="1.0" encoding="UTF-8" ?>
+<SamsungMobileFeauture>
+  <Version>ED001</Version>
+  <Country>SLOVENIA</Country>
+  <CountryISO>SI</CountryISO>
+  <SalesCode>SIO</SalesCode>
+  <FeatureSet>	<CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>	<CscFeature_Message_ConfigFreeMessage>off</CscFeature_Message_ConfigFreeMessage>       <CscFeature_Setting_IncludeApn4SwUpdate>true</CscFeature_Setting_IncludeApn4SwUpdate>
+  	<CscFeature_SmartManager_ConfigSubFeatures>roguepopup|autoclean|autorestart</CscFeature_SmartManager_ConfigSubFeatures>e>  </FeatureSet>
+</SamsungMobileFeauture>

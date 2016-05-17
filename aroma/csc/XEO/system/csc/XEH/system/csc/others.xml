@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SamsungMobileFeauture>
+  <Version>ED0001</Version>
+  <Country>HUNGARY</Country>
+  <CountryISO>HU</CountryISO>
+  <SalesCode>XEH</SalesCode>
+  <FeatureSet>
+    <CscFeature_Web_EnableAutoSimHomeUrlInProfile>TRUE</CscFeature_Web_EnableAutoSimHomeUrlInProfile>
+    <CscFeature_Web_SetHomepageURL>http://mobilecom.samsung.hu/</CscFeature_Web_SetHomepageURL>
+    <CscFeature_Web_DisableMostVisitedHomepage>TRUE</CscFeature_Web_DisableMostVisitedHomepage>
+    <CscFeature_RIL_AllowDuplicatedApnName>TRUE</CscFeature_RIL_AllowDuplicatedApnName>
+
+	<CscFeature_Web_ConfigSyncSource>TRUE</CscFeature_Web_ConfigSyncSource>
+	<CscFeature_Message_ConfigFreeMessage>off</CscFeature_Message_ConfigFreeMessage>
+	<CscFeature_SmartManager_ConfigSubFeatures>roguepopup|autoclean|autorestart</CscFeature_SmartManager_ConfigSubFeatures>
+  </FeatureSet>
+</SamsungMobileFeauture>
