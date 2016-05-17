@@ -91,6 +91,67 @@ if
     ui_print("Installing rounded SystemUI...");
 	package_extract_dir("aroma/systemui/rounded", "/system/priv-app");
 endif;
+#-- CSC
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "1"
+	then
+		ui_print("Installing AUT CSC...");
+		package_extract_dir("aroma/csc/AUT/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "2"
+	then
+		ui_print("Installing BTU CSC...");
+		package_extract_dir("aroma/csc/BTU/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "3"
+	then
+		ui_print("Installing DBT CSC...");
+		package_extract_dir("aroma/csc/DBT/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "4"
+	then
+		ui_print("Installing NEE CSC...");
+		package_extract_dir("aroma/csc/NEE/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "5"
+	then
+		ui_print("Installing PHN CSC...");
+		package_extract_dir("aroma/csc/PHN/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "6"
+	then
+		ui_print("Installing SWC CSC...");
+		package_extract_dir("aroma/csc/SWC/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "7"
+	then
+		ui_print("Installing TEL CSC...");
+		package_extract_dir("aroma/csc/TEL/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "8"
+	then
+		ui_print("Installing XEF CSC...");
+		package_extract_dir("aroma/csc/XEF/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "9"
+	then
+		ui_print("Installing XEO CSC...");
+		package_extract_dir("aroma/csc/XEO/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "10"
+	then
+		ui_print("Installing XSA CSC...");
+		package_extract_dir("aroma/csc/XSA/system", "/system");
+endif;
 #DATA
 ui_print("Extracting data..."); ui_print(" ");
 package_extract_dir("data", "/data");
