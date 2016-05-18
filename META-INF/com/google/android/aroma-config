@@ -25,7 +25,7 @@ ini_set("rom_name",             "SuperMan-Rom™ ");
 ini_set("rom_version",          "V1.5");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "17.05.2016");
+ini_set("rom_date",             "18.05.2016");
 
 ##
 # Show Simple Splash
@@ -356,8 +356,8 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select the right One",		"",								2,	#-- Group 1. key = "selected.1"
-	"SM-G930F",			"It will select the S7 kernel and battery capacity",		0,	#-- selected.1 = 1
-	"SM-G935F",			"It will select the S7 edge kernel and battery capacity",	0	#-- selected.1 = 2
+	"SM-G930F",			"It will select the S7 kernel, battery capacity and build.prop",	0,	#-- selected.1 = 1
+	"SM-G935F",			"It will select the S7 edge kernel, battery capacity and build.prop",	0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -572,17 +572,18 @@ selectbox(
 	"AUT",	"Switzerland unbranded",		0,	#-- selected.1 = 2
 	"BTU",	"Great Britain unbranded",		1,      #-- selected.1 = 3
 	"DBT",	"Germany unbranded",			0,      #-- selected.1 = 4
-	"NEE",	"Nordic Countrys unbranded",		0,      #-- selected.1 = 5
-	"PHN",	"Netherlands unbranded",		0,      #-- selected.1 = 6
-	"SKC",	"Korea unbranded",			0,      #-- selected.1 = 7
-	"SWC",	"Swisscom branded",			0,      #-- selected.1 = 8
-	"TEL",	"Telstra branded",			0,      #-- selected.1 = 9
-	"TMB",	"USA T-Mobile branded",			0,      #-- selected.1 = 10
-	"TUR",	"Turkey unbranded",			0,      #-- selected.1 = 11
-	"XAC",	"Canada unbranded",			0,      #-- selected.1 = 12
-	"XEF",	"France unbranded",			0,      #-- selected.1 = 13
-	"XEO",	"Poland unbranded",			0,      #-- selected.1 = 14
-	"XSA",	"Australia unbranded",			0       #-- selected.1 = 15
+	"DTM",	"Germany T-Mobile branded",		0,      #-- selected.1 = 5
+	"NEE",	"Nordic Countrys unbranded",		0,      #-- selected.1 = 6
+	"PHN",	"Netherlands unbranded",		0,      #-- selected.1 = 7
+	"SKC",	"Korea unbranded",			0,      #-- selected.1 = 8
+	"SWC",	"Swisscom branded",			0,      #-- selected.1 = 9
+	"TEL",	"Telstra branded",			0,      #-- selected.1 = 10
+	"TMB",	"USA T-Mobile branded",			0,      #-- selected.1 = 11
+	"TUR",	"Turkey unbranded",			0,      #-- selected.1 = 12
+	"XAC",	"Canada unbranded",			0,      #-- selected.1 = 13
+	"XEF",	"France unbranded",			0,      #-- selected.1 = 14
+	"XEO",	"Poland unbranded",			0,      #-- selected.1 = 15
+	"XSA",	"Australia unbranded",			0       #-- selected.1 = 16
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
