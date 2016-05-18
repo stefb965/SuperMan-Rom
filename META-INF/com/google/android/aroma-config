@@ -568,17 +568,21 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 	
 	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
-	"AUT",	"Switzerland unbranded",		0,	#-- selected.1 = 1
-	"BTU",	"Great Britain unbranded",		1,      #-- selected.1 = 2
-	"DBT",	"Germany unbranded",			0,      #-- selected.1 = 3
-	"NEE",	"Nordic Countrys unbranded",		0,      #-- selected.1 = 4
-	"PHN",	"Netherlands unbranded",		0,      #-- selected.1 = 5
-	"SKC",	"Korea unbranded",			0,      #-- selected.1 = 6
-	"SWC",	"Swisscom branded",			0,      #-- selected.1 = 7
-	"TEL",	"Telstra branded",			0,      #-- selected.1 = 8
-	"XEF",	"France unbranded",			0,      #-- selected.1 = 9
-	"XEO",	"Poland unbranded",			0,      #-- selected.1 = 10
-	"XSA",	"Australia unbranded",			0       #-- selected.1 = 11
+	"ATT",	"USA AT&T branded",			0,	#-- selected.1 = 1
+	"AUT",	"Switzerland unbranded",		0,	#-- selected.1 = 2
+	"BTU",	"Great Britain unbranded",		1,      #-- selected.1 = 3
+	"DBT",	"Germany unbranded",			0,      #-- selected.1 = 4
+	"NEE",	"Nordic Countrys unbranded",		0,      #-- selected.1 = 5
+	"PHN",	"Netherlands unbranded",		0,      #-- selected.1 = 6
+	"SKC",	"Korea unbranded",			0,      #-- selected.1 = 7
+	"SWC",	"Swisscom branded",			0,      #-- selected.1 = 8
+	"TEL",	"Telstra branded",			0,      #-- selected.1 = 9
+	"TMB",	"USA T-Mobile branded",			0,      #-- selected.1 = 10
+	"TUR",	"Turkey unbranded",			0,      #-- selected.1 = 11
+	"XAC",	"Canada unbranded",			0,      #-- selected.1 = 12
+	"XEF",	"France unbranded",			0,      #-- selected.1 = 13
+	"XEO",	"Poland unbranded",			0,      #-- selected.1 = 14
+	"XSA",	"Australia unbranded",			0       #-- selected.1 = 15
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
