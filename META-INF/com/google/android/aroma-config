@@ -363,7 +363,7 @@ selectbox(
 
 );
 
-alert( "Alert", "If you choose xposed once, you have to select if every time you flash the rom again. Otherwise it will give you a bootloop. If you want to disable xposed again, you have to wipe everything and reflash the rom without xposed!");
+alert( "Alert", "If you choose xposed once, you have to select if every time you flash the rom again. Otherwise it will give you a bootloop. If you want to disable xposed again, you have to wipe everything and reflash the rom without xposed! Note: If you wish to install snapchat after this rom install, you may want to log into snapchat first and than install xposed afterwards");
 
 ##
 # Sub Window 2
@@ -538,12 +538,14 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 	
 	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
-	"Install stock SystemUI",	"No rounded mods, no other mods, just stock",		0,	#-- selected.1 = 1
+	"Install stock SystemUI",	"No rounded mods, no other mods, just stock",				0,	#-- selected.1 = 1
 	"Install Modded SystemUI",	"Rounded SystemUI and grey scaling removed while on powersaving mode",	1      #-- selected.1 = 2
   
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
+
+alert( "Alert", "I not responsible for any bloatware you may get on your phone, depending on which csc you choose!");
 
 ##
 # Sub Window 8
