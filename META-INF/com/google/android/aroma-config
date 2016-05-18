@@ -545,7 +545,7 @@ selectbox(
 
 );
 
-alert( "Alert", "I not responsible for any bloatware you may get on your phone, depending on which csc you choose!");
+alert( "Alert", "I'm not responsible for any bloatware you may get on your phone, depending on which csc you choose!");
 
 ##
 # Sub Window 8

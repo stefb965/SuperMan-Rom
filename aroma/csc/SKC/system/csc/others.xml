@@ -11,14 +11,15 @@
     <CscFeature_Common_EnableHDVoiceDuring3GConnection>FALSE</CscFeature_Common_EnableHDVoiceDuring3GConnection>
     <CscFeature_Common_ConfigNetworkModeDuringEmergency>NOCHANGE</CscFeature_Common_ConfigNetworkModeDuringEmergency>
     <CscFeature_Common_ReplaceSecBrandAsGalaxy>FALSE</CscFeature_Common_ReplaceSecBrandAsGalaxy>
-<CscFeature_Common_ConfigAllowedPackagesDuringPowerSaving>com.elevenst,com.skmc.okcashbag.home_google,com.skt.skaf.OA00026910,com.skplanet.mbuzzer,com.skt.tbagplus,com.skt.skaf.l001mtm091,com.skt.skaf.A000Z00040,com.skt.skaf.OA00018282,com.skt.skaf.Z00000TAPI,com.skt.skaf.Z0000TSEED,Com.sktelecom.minit,com.skt.prod.phone,com.skt.prod.dialer,com.sktelecom.tguard,com.iloen.melon,com.skb.btvmobile,com.nate.android.portalmini,com.tms,com.skt.smartbill,com.skt.tdatafreezone2,com.skt.skaf.OA00199800,com.skmnc.gifticon</CscFeature_Common_ConfigAllowedPackagesDuringPowerSaving>
+    <CscFeature_Common_ConfigAllowedPackagesDuringPowerSaving>com.elevenst,com.skmc.okcashbag.home_google,com.skt.skaf.OA00026910,com.skplanet.mbuzzer,com.skt.tbagplus,com.skt.skaf.l001mtm091,com.skt.skaf.A000Z00040,com.skt.skaf.OA00018282,com.skt.skaf.Z00000TAPI,com.skt.skaf.Z0000TSEED,Com.sktelecom.minit,com.skt.prod.phone,com.skt.prod.dialer,com.sktelecom.tguard,com.iloen.melon,com.skb.btvmobile,com.nate.android.portalmini,com.tms,com.skt.smartbill,com.skt.tdatafreezone2,com.skt.skaf.OA00199800,com.skmnc.gifticon</CscFeature_Common_ConfigAllowedPackagesDuringPowerSaving>
     <CscFeature_Framework_ConfigBlockNotiOperation>Longpress</CscFeature_Framework_ConfigBlockNotiOperation>
     <CscFeature_SystemUI_ConfigOpBrandingForIndicatorIcon>SKT</CscFeature_SystemUI_ConfigOpBrandingForIndicatorIcon>
     <CscFeature_SystemUI_ConfigSettingActvityFromQuickPanel>SKT</CscFeature_SystemUI_ConfigSettingActvityFromQuickPanel>
     <CscFeature_SystemUI_ConfigOpBrandingQuickSettingIcon>SKT</CscFeature_SystemUI_ConfigOpBrandingQuickSettingIcon>
     <CscFeature_SystemUI_ConfigPolicyDisplayOpLogo>BOTH</CscFeature_SystemUI_ConfigPolicyDisplayOpLogo>
     <CscFeature_SystemUI_ConfigRuleRssiLevel>OneLevelPerSec</CscFeature_SystemUI_ConfigRuleRssiLevel>
-    <CscFeature_SystemUI_ConfigOpBrandingForDataIndicator>SKT</CscFeature_SystemUI_ConfigOpBrandingForDataIndicator> <CscFeature_SystemUI_ConfigDefQuickSettingItem>Wifi,Location,SilentMode,RotationLock,Bluetooth,Nfc,MobileData,PowerSaving,AirplaneMode,Flashlight,DormantMode,UltraPowerSaving,WifiHotspot,PersonalMode,AllShareCast,Sync,SFinder</CscFeature_SystemUI_ConfigDefQuickSettingItem>
+    <CscFeature_SystemUI_ConfigOpBrandingForDataIndicator>SKT</CscFeature_SystemUI_ConfigOpBrandingForDataIndicator>
+    <CscFeature_SystemUI_ConfigDefQuickSettingItem>Wifi,Location,SilentMode,RotationLock,Bluetooth,Nfc,MobileData,PowerSaving,AirplaneMode,Flashlight,DormantMode,UltraPowerSaving,WifiHotspot,PersonalMode,AllShareCast,Sync,SFinder</CscFeature_SystemUI_ConfigDefQuickSettingItem>
     <CscFeature_SystemUI_ConfigQuickSettingPopup>SKT</CscFeature_SystemUI_ConfigQuickSettingPopup>
     <CscFeature_SystemUI_ConfigOpBrandingForQuickSettingLabel>SKT</CscFeature_SystemUI_ConfigOpBrandingForQuickSettingLabel>
     <CscFeature_SystemUI_ConfigOverrideDataIcon>LTE</CscFeature_SystemUI_ConfigOverrideDataIcon>
