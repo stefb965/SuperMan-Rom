@@ -570,9 +570,9 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 	
 	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
-	"ATT",	"USA AT&T branded",			3,	#-- selected.1 = 1
-	"AUT",	"Switzerland unbranded",		0,	#-- selected.1 = 2
-	"BTU",	"United Kingdom unbranded",		1,      #-- selected.1 = 3
+#	"ATT",	"USA AT&T branded",			0,	#-- selected.1 = 1
+	"AUT",	"Switzerland unbranded",		1,	#-- selected.1 = 2
+	"BTU",	"United Kingdom unbranded",		0,      #-- selected.1 = 3
 	"CTI",	"Argentina unbranded",			0,      #-- selected.1 = 4
 	"DBT",	"Germany unbranded",			0,      #-- selected.1 = 5
 	"DTM",	"Germany T-Mobile branded",		0,      #-- selected.1 = 6
@@ -582,7 +582,7 @@ selectbox(
 	"SKC",	"Korea unbranded",			0,      #-- selected.1 = 10
 	"SWC",	"Swisscom branded",			0,      #-- selected.1 = 11
 	"TEL",	"Telstra branded",			0,      #-- selected.1 = 12
-	"TMB",	"USA T-Mobile branded",			3,      #-- selected.1 = 13
+#	"TMB",	"USA T-Mobile branded",			0,      #-- selected.1 = 13
 	"TUR",	"Turkey unbranded",			0,      #-- selected.1 = 14
 	"XAC",	"Canada unbranded",			0,      #-- selected.1 = 15
 	"XEF",	"France unbranded",			0,      #-- selected.1 = 16
