@@ -27,11 +27,18 @@ mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/SYSTEM", "/syste
 mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/USERDATA", "/data");
 mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/CACHE", "/cache");
 mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/HIDDEN", "/preload");
+mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/EFS", "/efs");
 set_progress(0.200000);
 ui_print("Extracting system...");
 ui_print(" ");
 package_extract_dir("system", "/system");
 set_progress(0.300000);
+ui_print("Backing Up EFS...");
+ui_print(" ");
+package_extract_dir("scripts", "/tmp");
+set_perm(0, 0, 0777, "/tmp/efs_backup.sh");
+run_program("/tmp/efs_backup.sh", "backup");
+delete_recursive("/tmp");
 #-- Battery Capacity
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
@@ -600,6 +607,7 @@ unmount("/system");
 unmount("/data");
 unmount("/cache");
 unmount("/preload");
+unmount("/efs");
 set_progress(1.000000);
 ui_print("SuperMan Rom Installed");
 
