@@ -570,7 +570,7 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 	
 	"Select One",			"",		2,	#-- Group 1. key = "selected.1"
-	"AUT",	"Switzerland unbranded",		1,	#-- selected.1 = 1
+	"AUT",	"Switzerland unbranded (used in all previous versions!)",		1,	#-- selected.1 = 1
 	"BRI",	"Taiwan unbranded",			0,      #-- selected.1 = 2
 	"BTU",	"United Kingdom unbranded",		0,      #-- selected.1 = 3
 	"CTI",	"Argentina unbranded",			0,      #-- selected.1 = 4
