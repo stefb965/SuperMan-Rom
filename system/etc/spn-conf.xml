@@ -96,7 +96,7 @@ examples:
     <spnOverride numeric="20601" imsi_subset="889" spn_display_rule="SPN_RULE_SHOW_SPN" spn="Telenet" spn_override_only_on="20601" fake_roaming_on="20601"/>
 
 <!-- Denmark -->
-    <spnOverride numeric="23806" fake_home_on="23801" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="238"/> <!-- H3G @ TDC-->
+    <spnOverride numeric="23806" fake_home_on="23820,23866" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="238"/> <!-- H3G @ TDC-->
 
     <spnOverride numeric="23802" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="238"/>
     <spnOverride numeric="23820" spn_display_rule="SPN_RULE_SHOW_SPN" spn_override_only_on="238" fake_home_on="23866"/>

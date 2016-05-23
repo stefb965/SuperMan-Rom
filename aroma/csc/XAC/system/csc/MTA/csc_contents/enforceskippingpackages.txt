@@ -1,5 +1,0 @@
-4
-AxelSpringer.apk
-SamsungPayStub.apk
-SamsungUpdates.apk
-OMCAgent.apk

@@ -224,6 +224,7 @@
 /system/bin/quipc_main u:object_r:location_exec:s0
 /system/bin/racoon u:object_r:racoon_exec:s0
 /system/bin/reactived u:object_r:actlmand_exec:s0
+/system/bin/redsocks u:object_r:redsocks_exec:s0
 /system/bin/refnotify u:object_r:refnotify_exec:s0
 /system/bin/rfs_access u:object_r:rfs_access_exec:s0
 /system/bin/rild_exynos u:object_r:rild_exec:s0
@@ -290,6 +291,7 @@
 /system/bin/tloc_daemon u:object_r:tlocd_exec:s0
 /system/bin/toolbox u:object_r:toolbox_exec:s0
 /system/bin/toybox u:object_r:toolbox_exec:s0
+/system/bin/trustonic_tee_proxy u:object_r:trustonic_tee_proxy_exec:s0
 /system/bin/tsdaemon u:object_r:tsdaemon_exec:s0
 /system/bin/tunman u:object_r:tunman_exec:s0
 /system/bin/tzdaemon u:object_r:tzdaemon_exec:s0

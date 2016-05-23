@@ -43,6 +43,10 @@ auditfilter shell gatekeeper_service:service_manager find;
 
 ### system_app ###
 auditfilter system_app app_data_file:dir search; comm="sung.android.sm"
+
+# P160414-00897 / sysscope app unique case Multi-user case
+auditfilter system_app system_app_data_file:ifile getattr; comm="id.app.sysscope"
+
 # auditfilter system_app wifi_data_file:dir { search write }; name="wifi" fixed CL6788905, 6808930
 auditfilter system_app { platform_app sec_untrusted_app untrusted_app}:process getattr;
 
@@ -61,6 +65,10 @@ auditfilter untrusted_app kernel:lnk_file read;
 auditfilter untrusted_app labeledfs:filesystem remount;
 auditfilter untrusted_app self:unix_stream_socket connectto;
 auditfilter untrusted_app sysfs_lowmemorykiller:file read;
+
+# P160324-01374 / chmod777/data/local/tmp / com.wandoujia.eyepetizer
+auditfilter untrusted_app shell_data_file:dir setattr;
+
 auditfilter untrusted_app system_app_data_file:lnk_file read;
 auditfilter untrusted_app untrusted_app:netlink_kobject_uevent_socket create;
 auditfilter untrusted_app untrusted_app:{ tcp_socket udp_socket } ioctl; dev="sockfs"
@@ -74,6 +82,8 @@ auditfilter untrusted_app unlabeled:file 0x800000;
 auditfilter { aasa_platform_app carrier_app platform_app radio } system_app_data_file:dir search; name="com.android.settings"
 auditfilter { filtered_untrusted_app isolated_app llk_untrusted_app sec_untrusted_app untrusted_app vzwfiltered_untrusted_app } system_app_data_file:dir search; name="com.android.settings"
 
+# P160415-05796 /data/data/com.android.settings/app_fonts/sans.loc / user0 path but it is not necessary for plugin_app
+auditfilter mrst_plugin_app system_app_data_file:dir search; name="com.android.settings"
 
 ########### non-appdomain ###########
 
@@ -192,4 +202,7 @@ auditfilter zygote untrusted_app:process ptrace;
 # avc:  denied  { search } for  pid=7021 comm="ng.android.spay" name="6542" dev="proc" ino=1259018 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:r:system_app:s0:c612 tclass=dir permissive=0 SEPF_SECMOBILE_6.0.1_0003
 # avc:  denied  { read } for  pid=2764 comm="pool-2-thread-4" name="minfree" dev="sysfs" ino=6949 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:sysfs_lowmemorykiller:s0 tclass=file permissive=0 com.cleanmaster.mguard:service
 # avc:  denied  { search } for  pid=23475 comm="ung.aasaservice" name="com.samsung.aasaservice" dev="dm-0" ino=457107 scontext=u:r:sysaccess_platform_app:s0:c523,c768 tcontext=u:object_r:aasa_app_data_file:s0:c512,c768 tclass=dir
+# avc:  denied  { setattr } for  pid=2113 comm="chmod" name="tmp" dev="mmcblk0p32" ino=327682 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0 SEPF_SECMOBILE_6.0.1_0008
+# avc:  denied  { search } for  pid=10793 comm="control.samsung" name="com.android.settings" dev="mmcblk0p21" ino=458860 scontext=u:r:mrst_plugin_app:s0:c512,c768 tcontext=u:object_r:system_app_data_file:s0 tclass=dir
+# avc:  denied  { getattr } for  pid=29611 comm="id.app.sysscope" path="/data/data/com.sec.android.app.sysscope/databases/SysScope.db" dev="dm-0" ino=459146 scontext=u:r:system_app:s0:c524 tcontext=u:object_r:system_app_data_file:s0:c522 tclass=file permissive=0 SEPF_SECMOBILE_6.0.1_0010 proctitle="com.sec.android.app.sysscope"
 
