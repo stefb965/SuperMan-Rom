@@ -5,7 +5,7 @@
 # You can use one of following values:
 #   "rgba", "abgr", "argb", "bgra"
 
-# ini_set("force_colorspace","rgba");
+ini_set("force_colorspace","rgba");
 
 ##
 # Screen Resolution
@@ -22,10 +22,10 @@ ini_set("dp","5"); #-- XXHDPI ( 1920x1080 / WVGA )
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.5.2");
+ini_set("rom_version",          "V1.6");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "21.05.2016");
+ini_set("rom_date",             "25.05.2016");
 
 ##
 # Show Simple Splash
