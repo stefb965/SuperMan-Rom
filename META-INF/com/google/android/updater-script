@@ -348,9 +348,17 @@ ui_print("Extracting boot image...");
 ui_print(" ");
 package_extract_file("boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 set_progress(0.800000);
+#SUD
+set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode", 0700, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 #ROOT
+package_extract_dir("supersu", "/tmp/supersu");
+run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.72.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
+run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.72.zip");
 ui_print(" ");
 #BUSYBOX
+package_extract_dir("busybox", "/tmp/busybox");
+run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
+run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip");
 set_progress(0.900000);
 unmount("/system");
 set_progress(1.000000);
