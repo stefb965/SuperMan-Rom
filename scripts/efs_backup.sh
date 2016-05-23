@@ -1,16 +1,17 @@
 #!/sbin/sh
 # Written by Tkkg1994
 
-mount /dev/block/sda14 /system
-mount /dev/block/sda18 /data
-mount /dev/block/sda3 /efs
+mount /dev/block/platform/155a0000.ufs/by-name/SYSTEM /system
+mount /dev/block/platform/155a0000.ufs/by-name/USERDATA /data
+mount /dev/block/platform/155a0000.ufs/by-name/EFS /efs
 
-if [ ! -d /storage/self/primary/EFSBackup ];then
-  mkdir /storage/self/primary/EFSBackup
+if [ ! -d /data/media/0/EFSBackup ];then
+  mkdir /data/media/0/EFSBackup
+  chmod 777 /data/media/0/EFSBackup
 fi
 
-dd if=/dev/block/sda3 of=/storage/self/primary/EFSBackup/efs.img bs=4096
-cp /system/build.prop /storage/self/primary/EFSBackup/build.prop
+dd if=/dev/block/sda3 of=/data/media/0/EFSBackup/efs.img bs=4096
+cp /system/build.prop /data/media/0/EFSBackup/build.prop
 
 unmount /system
 unmount /data
