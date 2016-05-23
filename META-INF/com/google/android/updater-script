@@ -134,26 +134,26 @@ endif;
 if
 	file_getprop("/tmp/aroma/window8.prop","selected.1") == "6"
 	then
-		ui_print("Installing DTM CSC...");
-		package_extract_dir("aroma/csc/DTM/system", "/system");
+		ui_print("Installing DDE CSC...");
+		package_extract_dir("aroma/csc/DDE/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window8.prop","selected.1") == "7"
+	then
+		ui_print("Installing INS CSC...");
+		package_extract_dir("aroma/csc/INS/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "8"
 	then
 		ui_print("Installing NEE CSC...");
 		package_extract_dir("aroma/csc/NEE/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "8"
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "9"
 	then
 		ui_print("Installing PHN CSC...");
 		package_extract_dir("aroma/csc/PHN/system", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "9"
-	then
-		ui_print("Installing SIN CSC...");
-		package_extract_dir("aroma/csc/SIN/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window8.prop","selected.1") == "10"
@@ -164,20 +164,20 @@ endif;
 if
 	file_getprop("/tmp/aroma/window8.prop","selected.1") == "11"
 	then
-		ui_print("Installing SWC CSC...");
-		package_extract_dir("aroma/csc/SWC/system", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "12"
-	then
 		ui_print("Installing TEL CSC...");
 		package_extract_dir("aroma/csc/TEL/system", "/system");
 endif;
 if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "12"
+	then
+		ui_print("Installing THL CSC...");
+		package_extract_dir("aroma/csc/THL/system", "/system");
+endif;
+if
 	file_getprop("/tmp/aroma/window8.prop","selected.1") == "13"
 	then
-		ui_print("Installing TUR CSC...");
-		package_extract_dir("aroma/csc/TUR/system", "/system");
+		ui_print("Installing VD2 CSC...");
+		package_extract_dir("aroma/csc/VD2/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window8.prop","selected.1") == "14"
@@ -202,6 +202,12 @@ if
 	then
 		ui_print("Installing XSA CSC...");
 		package_extract_dir("aroma/csc/XSA/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "18"
+	then
+		ui_print("Installing XSG CSC...");
+		package_extract_dir("aroma/csc/XSG/system", "/system");
 endif;
 #DATA
 ui_print("Extracting data..."); ui_print(" ");
