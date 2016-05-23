@@ -1,12 +1,21 @@
-#!/system/bin/sh
+#!/sbin/sh
 # Written by Tkkg1994
-m="/sdcard"
 
-if [ ! -d $m/EFS_BACKUP ]; then
-	mkdir $m/EFS_BACKUP
+mount /dev/block/sda14 /system
+mount /dev/block/sda18 /data
+mount /dev/block/sda3 /efs
+
+if [ ! -d /storage/self/primary/EFSBackup ];then
+  mkdir /storage/self/primary/EFSBackup
 fi
 
-cd $m/EFS_BACKUP/
-mount -o rw /dev/block/sda3 /efs
-tar zcvf EFS_$(date +Log_%d.%h.%y_%H.%M).tar /efs
-mount -o ro /dev/block/sda3 /efs
+dd if=/dev/block/sda3 of=/storage/self/primary/EFSBackup/efs.img bs=4096
+cp /system/build.prop /storage/self/primary/EFSBackup/build.prop
+
+unmount /system
+unmount /data
+unmount /efs
+
+exit 10
+
+
