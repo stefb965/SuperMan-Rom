@@ -69,5 +69,6 @@
   <CscFeature_Setting_SupportWifiCall>true</CscFeature_Setting_SupportWifiCall>
   <CscFeature_Wifi_ConfigBestApSelection>SINGLE</CscFeature_Wifi_ConfigBestApSelection>
   <CscFeature_Setting_SupportWiFiCallingMenu>TRUE</CscFeature_Setting_SupportWiFiCallingMenu>
+  <CscFeature_RIL_ConfigEpdgExtraFunction>MobilePrefNoSimCheck</CscFeature_RIL_ConfigEpdgExtraFunction>
   </FeatureSet>
 </SamsungMobileFeauture>

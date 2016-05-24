@@ -43,7 +43,7 @@
         <NbWbAmr>1</NbWbAmr>
         <WbAmr>
           <NetworkName>Vodafone CZ</NetworkName>
-          <WbAmrCodec>off</WbAmrCodec>
+          <WbAmrCodec>on</WbAmrCodec>
         </WbAmr>
       </Network>
       <Sound>

@@ -77,6 +77,10 @@
           <LCDStatus>off</LCDStatus>
           <Version>rel8</Version>
         </FastDormancy>
+        <NbSOSNumber>1</NbSOSNumber>
+        <SOSNumber>112, 117, 100, 101</SOSNumber>
+        <NbSOSNumberNoSIM>1</NbSOSNumberNoSIM>
+        <SOSNumberNoSIM>112, 117, 100, 101</SOSNumberNoSIM>
       </Network>
       <Sound>
         <ExtraSound>

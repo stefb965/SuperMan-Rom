@@ -258,7 +258,7 @@
         <NetworkName>vodafone IE</NetworkName>
         <Editable>yes</Editable>
         <ProfileName>Vodafone live!</ProfileName>
-        <URL>http://myweb.vodafone.ie</URL>
+        <URL>http://start.vodafone.com/ssp/homepage/IE</URL>
         <Auth>normal</Auth>
         <Protocol>http</Protocol>
         <MTUSize>1500</MTUSize>
