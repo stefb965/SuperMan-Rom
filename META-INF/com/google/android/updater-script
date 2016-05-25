@@ -54,6 +54,127 @@ if
 		ui_print("SM-G935F battery capacity...");
 		package_extract_dir("aroma/variants/SM-G935F/system", "/system");
 endif;
+#--CHECK BOX 1
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.1") == "1"
+	then
+		ui_print("Installing Allshare...");
+		package_extract_dir("aroma/debloat/Allshare", "/system/app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.2") == "1"
+	then
+		ui_print("Installing ANT...");
+		package_extract_dir("aroma/debloat/ANT", "/system/app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.3") == "1"
+	then
+		ui_print("Installing Memo...");
+		package_extract_dir("aroma/debloat/Memo", "/system/app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.4") == "1"
+	then
+		ui_print("Installing Mirrorlink...");
+		package_extract_dir("aroma/debloat/MirrorLink", "/system/app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.5") == "1"
+	then
+		ui_print("Installing SBrowser...");
+		package_extract_dir("aroma/debloat/SBrowser", "/system/app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.6") == "1"
+	then
+		ui_print("Installing SPlanner...");
+		package_extract_dir("aroma/debloat/SPlanner", "/system/app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.7") == "1"
+	then
+		ui_print("Installing VideoEditor...");
+		package_extract_dir("aroma/debloat/VideoEditor", "/system/app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.8") == "1"
+	then
+		ui_print("Installing Weather...");
+		package_extract_dir("aroma/debloat/Weather", "/system/app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.9") == "1"
+	then
+		ui_print("Installing Calculator...");
+		package_extract_dir("aroma/debloat/Calculator", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.10") == "1"
+	then
+		ui_print("Installing Email...");
+		package_extract_dir("aroma/debloat/Email", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.11") == "1"
+	then
+		ui_print("Installing GalaxyAppStore...");
+		package_extract_dir("aroma/debloat/GalaxyStore", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.12") == "1"
+	then
+		ui_print("Installing Gallery...");
+		package_extract_dir("aroma/debloat/Gallery", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.13") == "1"
+	then
+		ui_print("Installing GameTools...");
+		package_extract_dir("aroma/debloat/Game", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.14") == "1"
+	then
+		ui_print("Installing MyFiles...");
+		package_extract_dir("aroma/debloat/MyFiles", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.15") == "1"
+	then
+		ui_print("Installing Shealth...");
+		package_extract_dir("aroma/debloat/SHealth", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.16") == "1"
+	then
+		ui_print("Installing SVoice...");
+		package_extract_dir("aroma/debloat/SVoice", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.17") == "1"
+	then
+		ui_print("Installing Themestore...");
+		package_extract_dir("aroma/debloat/Themestore", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.18") == "1"
+	then
+		ui_print("Installing VoiceNote...");
+		package_extract_dir("aroma/debloat/VoiceNote", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.19") == "1"
+	then
+		ui_print("Installing SmartSwitch...");
+		package_extract_dir("aroma/debloat/SmartSwitch", "/system/preload");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.20") == "1"
+	then
+		ui_print("Installing Google Now...");
+		package_extract_dir("aroma/debloat/Google", "/system/priv-app");
+endif;
 #-- Xposed Installer
 if
 	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
