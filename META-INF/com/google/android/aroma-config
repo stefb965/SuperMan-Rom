@@ -336,6 +336,36 @@ endif;
 if prop("menu.prop","selected")=="1" then
 
 ##
+# Sub Window 0
+#
+
+selectbox(
+  #-- Title
+    "Install Variant",
+  
+  #-- Sub Title
+    "Choose between clean install, full wipe and dirty flash",
+  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window0.prop
+    "window0.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
+	"Full Wipe",		"Wipes all except data/media and SD card",		0,	#-- selected.1 = 1
+	"Clean Install",	"Wipes everything except SD card",			1,	#-- selected.1 = 2
+	"Dirty Flash",		"Wipes only system (there will be bugs with this)",	0	#-- selected.1 = 2
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
 # Sub Window 1
 #
 
