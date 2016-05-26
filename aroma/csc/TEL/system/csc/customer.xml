@@ -198,7 +198,7 @@
         </MmsReceiving>
         <NbMMSView>1</NbMMSView>
         <MMSView>
-          <MessageUserAgent>SAMSUNG-ANDROID-MMS/SM-G930F</MessageUserAgent>
+          <MessageUserAgent>SAMSUNG-ANDROID-MMS/SM-G935F</MessageUserAgent>
           <MessageUaProfUrl>http://wap.samsungmobile.com/uaprof/SAMSUNGUAPROFD.xml</MessageUaProfUrl>
         </MMSView>
       </MMS>
@@ -314,10 +314,10 @@
       <GPSActivation>off</GPSActivation>
     </GPS>
     <ActiveSync>
-      <Signature>Sent from my SAMSUNG Galaxy S7 on the Telstra Mobile Network</Signature>
+      <Signature>Sent from my SAMSUNG Galaxy S7 edge on the Telstra Mobile Network</Signature>
     </ActiveSync>
     <Browser>
-      <NbBookmark>2</NbBookmark>
+      <NbBookmark>3</NbBookmark>
       <Bookmark>
         <NetworkName>Telstra</NetworkName>
         <BookmarkName>Telstra Media</BookmarkName>
@@ -328,6 +328,11 @@
         <BookmarkName>My Account</BookmarkName>
         <URL>http://waprd.telstra.com/redirect?target=myaccount-g</URL>
       </Bookmark>
+      <Bookmark>
+        <NetworkName>Telstra</NetworkName>
+        <BookmarkName>Top 10</BookmarkName>
+        <URL>http://waprd.telstra.com/redirect?target=music-w</URL>
+      </Bookmark>      
       <eManual>
         <URL>http://www.samsung.com/m-manual/common</URL>
       </eManual>
