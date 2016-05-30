@@ -1,2 +1,0 @@
-/hidden/Common_app/MyVodafoneRelease312.apk
-/hidden/Common_app/VodafoneShortcut.apk
