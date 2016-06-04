@@ -213,13 +213,6 @@ if
 		ui_print("Installing Gear...");
 		package_extract_dir("aroma/debloat/Gear", "/system");
 endif;
-#-- Xposed Installer
-if
-	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
-	then
-		ui_print("Installing Xposed...");
-		package_extract_dir("xposed/system", "/system");
-endif;
 #-- Sound Mod
 if
 	file_getprop("/tmp/aroma/window5.prop","selected.1") == "1"
@@ -663,6 +656,17 @@ if
 		run_program("/sbin/busybox", "unzip", "/tmp/viper4android/ViPERAtmos_4.8_Sony_Beats_Universal_Edition.zip", "META-INF/com/google/android/*", "-d", "/tmp/viper4android");
 		run_program("/sbin/busybox", "sh", "/tmp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/viper4android/ViPERAtmos_4.8_Sony_Beats_Universal_Edition.zip");
 		set_progress(0.950000);
+endif;
+#-- Xposed
+if
+	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+	then
+		ui_print("Installing Systemless Xposed V85.2...");
+		package_extract_dir("xposed", "/tmp/xposed");
+		run_program("/sbin/busybox", "unzip", "/tmp/xposed/xposed-v85.2-sdk23-arm64-systemless.zip", "META-INF/com/google/android/*", "-d", "/tmp/xposed");
+		run_program("/sbin/busybox", "sh", "/tmp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/xposed/xposed-v85.2-sdk23-arm64-systemless.zip");
+		set_progress(0.980000);
+		ui_print(" ");
 endif;
 ui_print(" ");
 ui_print("Wiping cache, dalvik and tmp");
