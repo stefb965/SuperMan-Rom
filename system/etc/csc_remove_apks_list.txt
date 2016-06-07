@@ -1,4 +1,3 @@
-/system/app/WebManual/WebManual.apk
 /system/priv-app/SVoiceLang_EnglishPack_GB_1.0/SVoiceLang_EnglishPack_GB_1.0.apk
 /system/priv-app/SVoiceLang_FrenchPack_1.0/SVoiceLang_FrenchPack_1.0.apk
 /system/priv-app/SVoiceLang_GermanPack_DE_1.0/SVoiceLang_GermanPack_DE_1.0.apk

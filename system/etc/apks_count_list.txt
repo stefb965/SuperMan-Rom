@@ -15,9 +15,9 @@
 /system/app/FBAppManager/FBAppManager.apk
 /system/app/DictDiotek/DictDiotek.apk
 /system/app/Videos/Videos.apk
+/system/app/UniversalSwitch/UniversalSwitch.apk
 /system/app/KnoxSetupWizardClient/KnoxSetupWizardClient.apk
 /system/app/SPlanner_M/SPlanner_M.apk
-/system/app/UniversalSwitch/UniversalSwitch.apk
 /system/app/HighlightPlayer_Hero/HighlightPlayer_Hero.apk
 /system/app/FlipboardBriefing/FlipboardBriefing.apk
 /system/app/WeatherWidget2016/WeatherWidget2016.apk
@@ -158,8 +158,8 @@
 /system/app/KnoxAttestationAgent/KnoxAttestationAgent.apk
 /system/app/BluetoothMidiService/BluetoothMidiService.apk
 /system/app/SplitSoundService/SplitSoundService.apk
-/system/app/PartnerBookmarksProvider/PartnerBookmarksProvider.apk
 /system/app/EdmSimPinService/EdmSimPinService.apk
+/system/app/PartnerBookmarksProvider/PartnerBookmarksProvider.apk
 /system/app/EdmVpnServices/EdmVpnServices.apk
 /system/app/PacProcessor/PacProcessor.apk
 /system/app/ImsTelephonyService/ImsTelephonyService.apk
@@ -195,8 +195,8 @@
 /system/priv-app/GameTools/GameTools.apk
 /system/priv-app/GameHome/GameHome.apk
 /system/priv-app/SVoiceLang_GermanPack_DE_1.0/SVoiceLang_GermanPack_DE_1.0.apk
-/system/priv-app/SmartManager_v3_NoIcon/SmartManager_v3_NoIcon.apk
 /system/priv-app/SVoiceLang_FrenchPack_1.0/SVoiceLang_FrenchPack_1.0.apk
+/system/priv-app/SmartManager_v3_NoIcon/SmartManager_v3_NoIcon.apk
 /system/priv-app/DeviceKeystring/DeviceKeystring.apk
 /system/priv-app/ThemeStore_3xh/ThemeStore_3xh.apk
 /system/priv-app/SmartcardManager/SmartcardManager.apk
@@ -253,9 +253,9 @@
 /system/priv-app/SoundAlive_40/SoundAlive_40.apk
 /system/priv-app/MtpApplication/MtpApplication.apk
 /system/priv-app/SecDownloadProvider/SecDownloadProvider.apk
+/system/priv-app/OmaCP/OmaCP.apk
 /system/priv-app/WallpaperCropper2/WallpaperCropper2.apk
 /system/priv-app/SettingsReceiver/SettingsReceiver.apk
-/system/priv-app/OmaCP/OmaCP.apk
 /system/priv-app/Fmm/Fmm.apk
 /system/priv-app/TaskEdgePanel/TaskEdgePanel.apk
 /system/priv-app/AutomationTest_FB/AutomationTest_FB.apk

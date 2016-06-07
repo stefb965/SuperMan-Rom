@@ -1,0 +1,19 @@
+
+7-Zip [32] 15.14 : Copyright (c) 1999-2015 Igor Pavlov : 2015-12-31
+p7zip Version 15.14.1 (locale=de_DE.UTF-8,Utf16=on,HugeFiles=on,32 bits,4 CPUs Intel(R) Core(TM) i5 CPU       M 460  @ 2.53GHz (20655),ASM)
+
+Scanning the drive for archives:
+1 file, 27415417 bytes (27 MiB)
+
+Extracting archive: sec_csc.zip
+--
+Path = sec_csc.zip
+Type = zip
+Physical Size = 27415417
+Comment = signed by SignApk
+
+Everything is Ok
+
+Files: 75
+Size:       29103851
+Compressed: 27415417

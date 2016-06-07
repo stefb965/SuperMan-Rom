@@ -1,5 +1,2 @@
 assert(getprop("ro.product.device") == "hero2lte" || getprop("ro.build.product") == "hero2lte" || getprop("ro.product.name") == "hero2lte" ||
-	getprop("ro.product.device") == "herolte" || getprop("ro.build.product") == "herolte" || getprop("ro.product.name") == "herolte" ||
-	abort("This package is for \"hero2lte,herolte\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
-assert(getprop("") == "" ||
-	abort("This package is for \"\"; this is \"" + getprop("") + "\"."););
+	abort("This package is for \"hero2lte\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
