@@ -46,7 +46,7 @@ splash(
 #
 
 fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansFallback.ttf;", "12" ); #-- Use sets of font (Font Family)
-theme("material_red");
+theme("miui4");
 
 ##
 # SHOW LANGUAGE SELECTION
@@ -419,7 +419,7 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Xposed or not",	"",							2,	#-- Group 1. key = "selected.1"
-	"Yes",		"Xposed V85.3 will be installed.",			1,	#-- selected.1 = 1
+	"Yes",		"Xposed V85.1 will be installed.",			1,	#-- selected.1 = 1
 	"No",		"Xposed wont be installed.",				0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
