@@ -22,10 +22,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.6.5");
+ini_set("rom_version",          "V1.7");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "30.05.2016");
+ini_set("rom_date",             "08.06.2016");
 
 ##
 # Show Simple Splash
@@ -212,10 +212,10 @@ menubox(
      # TITLE                   |  SUBTITLE                                                 |   Item Icons  #
      #-------------------------+-----------------------------------------------------------+---------------#	
 	
-    "Installation",        "ROM Installation with Various Features - RECOMMENDED",      "@install",      #-- selected = 1
-    "System Info",                "Get and show device/partition informations",                "@info",         #-- selected = 2
-    "ChangeLog",                  "SuperMan ChangeLog",                                         "@agreement",    #-- selected = 3
-    "Quit Install",               "Leaving perfect LP Setup and trying another ROM :(",     "@install"       #-- selected = 4
+	"Installation",		"ROM Installation with Various Features - RECOMMENDED",      "@install",      #-- selected = 1
+	"System Info",		"Get and show device/partition informations",                "@info",         #-- selected = 2
+	"ChangeLog",		"SuperMan ChangeLog",                                         "@agreement",    #-- selected = 3
+	"Quit Install",		"Leaving the Aroma setup to install another Rom :(",     "@install"       #-- selected = 4
 
 );
 
@@ -357,8 +357,8 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select the one you prefer",		"",						2,	#-- Group 1. key = "selected.1"
-	"Full Wipe",		"Wipes all except data/media and SD card",		0,	#-- selected.1 = 1
-	"Clean Install",	"Wipes everything except SD card",			1,	#-- selected.1 = 2
+	"Full Wipe",		"Wipes all except data/media and external SD card",	1,	#-- selected.1 = 1
+	"Clean Install",	"Wipes everything except external SD card",		0,	#-- selected.1 = 2
 	"Dirty Flash",		"Wipes only system (there will be bugs with this)",	0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
@@ -386,7 +386,7 @@ selectbox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"Select the right One",		"",								2,	#-- Group 1. key = "selected.1"
+	"Select the right Variant",		"",						2,	#-- Group 1. key = "selected.1"
 	"SM-G930F",			"It will select the S7 kernel, battery capacity and build.prop",	0,	#-- selected.1 = 1
 	"SM-G935F",			"It will select the S7 edge kernel, battery capacity and build.prop",	0	#-- selected.1 = 2
 
@@ -418,8 +418,8 @@ selectbox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"Select One",	"",							2,	#-- Group 1. key = "selected.1"
-	"Yes",		"Xposed V85 will be installed.",			1,	#-- selected.1 = 1
+	"Xposed or not",	"",							2,	#-- Group 1. key = "selected.1"
+	"Yes",		"Xposed V85.3 will be installed.",			1,	#-- selected.1 = 1
 	"No",		"Xposed wont be installed.",				0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
@@ -538,7 +538,7 @@ selectbox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"Select which Icons you want",			"",					2,	#-- Group 1. key = "selected.1"
 	"Install stock emoji",		"Will display stock emojis in keyboard",		1,	#-- selected.1 = 1
 	"Install IOS 9.3 emojis",	"Will install different IOS emojis in keyboard",	0       #-- selected.1 = 2
 	  
@@ -571,6 +571,36 @@ selectbox(
 	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
 	"Install stock SystemUI",	"No rounded mods, no other mods, just stock",				0,	#-- selected.1 = 1
 	"Install Modded SystemUI",	"Rounded SystemUI and grey scaling removed while on powersaving mode",	1      #-- selected.1 = 2
+  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 8
+#
+
+selectbox(
+  #-- Title
+	"Notifications",
+	  
+  #-- Sub Title
+    "Do you want to remove all (also System) notification?",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window8.prop
+	"window8.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+	
+	"Select the one you want",		"",							2,	#-- Group 1. key = "selected.1"
+	"Install normal framework",	"Has the notification like stock",				0,	#-- selected.1 = 1
+	"Install Modded framework",	"Makes all notifications removable from statusbar",		1      #-- selected.1 = 2
   
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
