@@ -1,2 +1,0 @@
-assert(getprop("") == "" ||
-	abort("This package is for \"\"; this is \"" + getprop("") + "\"."););

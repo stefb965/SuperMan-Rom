@@ -10,6 +10,7 @@
 /system/bin/at_router u:object_r:at_router_exec:s0
 /system/bin/audiod u:object_r:audiod_exec:s0
 /system/bin/auditd u:object_r:auditd_exec:s0
+/system/bin/autotest u:object_r:autotest_exec:s0
 /system/bin/batterysrv u:object_r:batterysrv_exec:s0
 /system/bin/bauthserver u:object_r:bauthserver_exec:s0
 /system/bin/bintvoutservice u:object_r:bintvoutservice_exec:s0
@@ -26,20 +27,24 @@
 /system/bin/bugreport u:object_r:bugreport_exec:s0
 /system/bin/cellgeofenced u:object_r:cellgeofenced_exec:s0
 /system/bin/charger_monitor u:object_r:charger_monitor_exec:s0
+/system/bin/charge u:object_r:charge_exec:s0
 /system/bin/charon u:object_r:charon_exec:s0
 /system/bin/clatd u:object_r:clatd_exec:s0
 /system/bin/cld-fwlog-netlink u:object_r:wcnss_service_exec:s0
+/system/bin/cmd_services u:object_r:cmd_services_exec:s0
 /system/bin/cnd u:object_r:cnd_exec:s0
 /system/bin/cnss-daemon u:object_r:wcnss_service_exec:s0
 /system/bin/cnss_diag u:object_r:wcnss_service_exec:s0
 /system/bin/codecIPC_server u:object_r:codecIPC_server_exec:s0
-/system/bin/collect_apr u:object_r:collect_apr_exec:s0
+/system/bin/collect_apr u:object_r:aprd_exec:s0
 /system/bin/connfwexe u:object_r:connfwexe_exec:s0
 /system/bin/core-compressor u:object_r:core_compressor_exec:s0
 /system/bin/corehelper.sh u:object_r:corehelper_sh_file:s0
 /system/bin/cp_diskserver u:object_r:cp_diskserver_exec:s0
 /system/bin/createsystemfile u:object_r:createsystemfile_exec:s0
 /system/bin/cs u:object_r:cs_exec:s0
+/system/bin/data_off.sh u:object_r:data_off_exec:s0
+/system/bin/data_on.sh u:object_r:data_on_exec:s0
 /system/bin/ddexe u:object_r:ddexe_exec:s0
 /system/bin/debuggerd64 u:object_r:debuggerd_exec:s0
 /system/bin/debuggerd u:object_r:debuggerd_exec:s0
@@ -82,8 +87,10 @@
 /system/bin/epmd u:object_r:epmd_exec:s0
 /system/bin/epmlogd u:object_r:epmlogd_exec:s0
 /system/bin/eris u:object_r:eris_exec:s0
+/system/bin/ext_symlink.sh u:object_r:ext_symlink_exec:s0
 /system/bin/exyrngd u:object_r:exyrngd_exec:s0
 /system/bin/factory.adsp u:object_r:factory_adsp_exec:s0
+/system/bin/factorytest u:object_r:factorytest_exec:s0
 /system/bin/fingerprintd u:object_r:fingerprintd_exec:s0
 /system/bin/FMRadioServer u:object_r:FMRadiod_exec:s0
 /system/bin/fsck.exfat u:object_r:fsck_exec:s0
@@ -96,7 +103,9 @@
 /system/bin/garden_app u:object_r:location_exec:s0
 /system/bin/gatekeeperd u:object_r:gatekeeperd_exec:s0
 /system/bin/geomagneticd u:object_r:geomagneticd_exec:s0
+/system/bin/gnss_download u:object_r:gnss_download_exec:s0
 /system/bin/gpsd u:object_r:gpsd_exec:s0
+/system/bin/GPSenseEngine u:object_r:GPSenseEngine_exec:s0
 /system/bin/gpslpm_srv u:object_r:gpslpm_srv_exec:s0
 /system/bin/gpsone_daemon u:object_r:location_exec:s0
 /system/bin/gpu_snapshotd u:object_r:gpu_snapshotd_exec:s0
@@ -123,6 +132,7 @@
 /system/bin/ipm u:object_r:ipm_exec:s0
 /system/bin/ipruleset u:object_r:ipruleset_exec:s0
 /system/bin/IPSecService u:object_r:IPSecService_exec:s0
+/system/bin/irisd u:object_r:irisd_exec:s0
 /system/bin/irsc_util u:object_r:irsc_util_exec:s0
 /system/bin/iwland u:object_r:iwland_exec:s0
 /system/bin/jackservice u:object_r:jackservice_exec:s0
@@ -175,7 +185,8 @@
 /system/bin/mm-pp-dpps u:object_r:mm-pp-daemon_exec:s0
 /system/bin/mm-qcamera-daemon u:object_r:mm-qcamerad_exec:s0
 /system/bin/mobicore-startup.sh u:object_r:mobicore_sh_file:s0
-/system/bin/modem_control u:object_r:rild_exec:s0
+/system/bin/modem_control u:object_r:modem_control_exec:s0
+/system/bin/modemDriver_vpad_main u:object_r:modemdriver_vpad_exec:s0
 /system/bin/modemd u:object_r:rild_exec:s0
 /system/bin/mpdecision u:object_r:mpdecision_exec:s0
 /system/bin/mplayer u:object_r:mediaserver_exec:s0
@@ -201,6 +212,7 @@
 /system/bin/otp_server u:object_r:otp_server_exec:s0
 /system/bin/p2p_supplicant u:object_r:p2p_supplicant_exec:s0
 /system/bin/patchoat u:object_r:dex2oat_exec:s0
+/system/bin/phasecheckserver u:object_r:phasecheckserver_exec:s0
 /system/bin/phoneserver u:object_r:rild_exec:s0
 /system/bin/phservice u:object_r:phservice_exec:s0
 /system/bin/PktRspTest u:object_r:diag_exec:s0
@@ -226,6 +238,7 @@
 /system/bin/reactived u:object_r:actlmand_exec:s0
 /system/bin/redsocks u:object_r:redsocks_exec:s0
 /system/bin/refnotify u:object_r:refnotify_exec:s0
+/system/bin/resize2fs u:object_r:fsck_exec:s0
 /system/bin/rfs_access u:object_r:rfs_access_exec:s0
 /system/bin/rild_exynos u:object_r:rild_exec:s0
 /system/bin/rild_SIPC u:object_r:rild_exec:s0
@@ -261,7 +274,8 @@
 /system/bin/setup_fs u:object_r:setup_fs_exec:s0
 /system/bin/sgdisk u:object_r:sgdisk_exec:s0
 /system/bin/sh u:object_r:shell_exec:s0
-/system/bin/slog u:object_r:slog_exec:s0
+/system/bin/slogmodem u:object_r:slogmodem_exec:s0
+/system/bin/slog u:object_r:slogd_exec:s0
 /system/bin/smdexe u:object_r:smdexe_exec:s0
 /system/bin/SMPlayer_fullseg u:object_r:oneseg_mw_exec:s0
 /system/bin/sprd_res_monitor u:object_r:sprd_res_monitor_exec:s0
@@ -273,7 +287,6 @@
 /system/bin/subsystem_ramdump u:object_r:subsystem_ramdump_exec:s0
 /system/bin/surfaceflinger u:object_r:surfaceflinger_exec:s0
 /system/bin/sysmon u:object_r:sysmon_exec:s0
-/system/bin/sysprof u:object_r:sysprof_exec:s0
 /system/bin/taadaemon u:object_r:tzdaemon_exec:s0
 /system/bin/tbased u:object_r:tbased_exec:s0
 /system/bin/tbaseLoader u:object_r:tbaseLoader_exec:s0
@@ -293,6 +306,7 @@
 /system/bin/toybox u:object_r:toolbox_exec:s0
 /system/bin/trustonic_tee_proxy u:object_r:trustonic_tee_proxy_exec:s0
 /system/bin/tsdaemon u:object_r:tsdaemon_exec:s0
+/system/bin/tune2fs u:object_r:fsck_exec:s0
 /system/bin/tunman u:object_r:tunman_exec:s0
 /system/bin/tzdaemon u:object_r:tzdaemon_exec:s0
 /system/bin/tzdatacheck u:object_r:tzdatacheck_exec:s0
@@ -341,6 +355,7 @@
 /system/vendor/bin/fidodaemon u:object_r:fidodaemon_exec:s0
 /system/vendor/bin/gpsd u:object_r:gpsd_exec:s0
 /system/vendor/bin/hbtp_daemon u:object_r:hbtp_exec:s0
+/system/vendor/bin/mdtpd u:object_r:mdtpdaemon_exec:s0
 /system/vendor/bin/mdtp_service u:object_r:mdtpdaemon_exec:s0
 /system/vendor/bin/mm-pp-daemon u:object_r:mm-pp-daemon_exec:s0
 /system/vendor/bin/mm-pp-dpps u:object_r:mm-pp-daemon_exec:s0
