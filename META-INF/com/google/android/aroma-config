@@ -387,11 +387,11 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select the right Variant",		"",							2,	#-- Group 1. key = "selected.1"
-	"SM-G930F",			"It will select the S7 battery capacity and build.prop",	0,	#-- selected.1 = 1
+	"SM-G930F",			"It will select the S7 battery capacity and build.prop",	1,	#-- selected.1 = 1
 	"SM-G935F",			"It will select the S7 edge battery capacity and build.prop",	0,	#-- selected.1 = 2
 	"Select the kernel you want to install",		"",					2,	#-- Group 2. key = "selected.2"
 	"SM-G930F Stock Kernel",	"Just stock kernel with init.d support for S7",			0,	#-- selected.2 = 1
-	"SM-G930F SuperKernel",		"SuperKernel V1.3 with lot improvements for the S7",		0,	#-- selected.2 = 2
+	"SM-G930F SuperKernel",		"SuperKernel V1.3 with lot improvements for the S7",		1,	#-- selected.2 = 2
 	"SM-G935F Stock Kernel",	"Just stock kernel with init.d support for S7 Edge",		0,	#-- selected.2 = 3
 	"SM-G935F SuperKernel",		"SuperKernel V1.3 with lot improvements for the S7",		0	#-- selected.2 = 4
 

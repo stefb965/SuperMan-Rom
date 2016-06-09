@@ -284,25 +284,25 @@ if
 	file_getprop("/tmp/aroma/window1.prop","selected.2") == "1"
 	then
 		ui_print("Installing Stock Files...");
-		package_extract_dir("aroma/kernel/SM-G930F/Stock/mcRegistry", "/system/app");
+		package_extract_dir("aroma/kernel/SM-G930F/Stock/app", "/system/app");
 endif;	
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.2") == "2"
 	then
 		ui_print("Installing Modded Files...");
-		package_extract_dir("aroma/kernel/SM-G930F/SuperKernel/mcRegistry", "/system/app");
+		package_extract_dir("aroma/kernel/SM-G930F/SuperKernel/app", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.2") == "3"
 	then
 		ui_print("Installing Stock Files...");
-		package_extract_dir("aroma/kernel/SM-G935F/Stock/mcRegistry", "/system/app");
+		package_extract_dir("aroma/kernel/SM-G935F/Stock/app", "/system/app");
 endif;	
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.2") == "4"
 	then
 		ui_print("Installing Modded Files...");
-		package_extract_dir("aroma/kernel/SM-G935F/SuperKernel/mcRegistry", "/system/app");
+		package_extract_dir("aroma/kernel/SM-G935F/SuperKernel/app", "/system/app");
 endif;
 #DATA
 ui_print("Extracting data..."); ui_print(" ");
