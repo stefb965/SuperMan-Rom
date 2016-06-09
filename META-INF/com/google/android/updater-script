@@ -14,7 +14,7 @@ unmount("/data");
 show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
-ui_print("SuperMan Rom Installer V1.7");
+ui_print("SuperMan Rom Installer V1.8");
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
@@ -262,8 +262,14 @@ endif;
 if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "2"
 	then
-		ui_print("Installing rounded SystemUI...");
-		package_extract_dir("aroma/systemui/rounded", "/system/priv-app");
+		ui_print("Installing modded SystemUI...");
+		package_extract_dir("aroma/systemui/modded", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "3"
+	then
+		ui_print("Installing modded SystemUI with quicklaunch...");
+		package_extract_dir("aroma/systemui/quicklaunch", "/system/priv-app");
 endif;
 #-- Xposed
 if
