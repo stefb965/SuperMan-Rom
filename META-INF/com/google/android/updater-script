@@ -629,17 +629,28 @@ ui_print("Extracting boot image...");
 ui_print(" ");
 #-- Kernel Selection
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/window1.prop","selected.2") == "1"
 	then
-		ui_print("Installing SM-G930F variant...");
-		package_extract_file("aroma/variants/SM-G930F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
-endif;
-	
+		ui_print("Installing SM-G930F StockKernel...");
+		package_extract_file("aroma/kernel/SM-G930F/Stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+endif;	
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/window1.prop","selected.2") == "2"
 	then
-		ui_print("Installing SM-G935F variant...");
-		package_extract_file("aroma/variants/SM-G935F/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+		ui_print("Installing SM-G930F SuperKernel...");
+		package_extract_file("aroma/kernel/SM-G930F/SuperKernel/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+endif;
+if
+	file_getprop("/tmp/aroma/window1.prop","selected.2") == "3"
+	then
+		ui_print("Installing SM-G935F StockKernel...");
+		package_extract_file("aroma/kernel/SM-G935F/Stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+endif;	
+if
+	file_getprop("/tmp/aroma/window1.prop","selected.2") == "4"
+	then
+		ui_print("Installing SM-G935F SuperKernel...");
+		package_extract_file("aroma/kernel/SM-G935F/SuperKernel/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;
 set_progress(0.700000);
 #SUD
