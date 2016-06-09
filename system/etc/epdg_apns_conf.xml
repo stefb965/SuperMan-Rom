@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- use empty string to specify no proxy or port -->
 <!-- This version must agree with that in apps/common/res/apns.xml -->
-<iwlanapns version="191">
+<iwlanapns version="192">
     <iwlansettings>
         <apn operatornumeric="00101"
             connname="imsApn"
@@ -448,13 +448,13 @@
             ipsecintegrity="IPSEC_INTEGRITY_HMAC_SHA_256_128"
             ipsecgroup="IPSEC_GROUP_MODP_2048"
             ipseclifetime="IPSEC_LIFE_TYPE_SECONDS"
-            ipseclifevalue="3600"
+            ipseclifevalue="31536000"
             ikeversion="IKE_VERSION_2"
             ikeintegrity="IKE_INTEGRITY_HMAC_SHA_256_128"
             ikeencryption="IKE_ENCRYPTION_AES_CBC_128"
             ikegroup="IKE_GROUP_MODP_1536"
             ikeeaptype="EAP_METHOD_AKA"
-            ikelife="14400"
+            ikelife="31536000"
             ikewindowsize="1"
             ikedpdtimeout="60"
             ikeconnectiontimeout="10"

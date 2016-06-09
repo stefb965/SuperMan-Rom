@@ -253,11 +253,11 @@
 /system/priv-app/SoundAlive_40/SoundAlive_40.apk
 /system/priv-app/MtpApplication/MtpApplication.apk
 /system/priv-app/SecDownloadProvider/SecDownloadProvider.apk
+/system/priv-app/TaskEdgePanel/TaskEdgePanel.apk
 /system/priv-app/OmaCP/OmaCP.apk
 /system/priv-app/WallpaperCropper2/WallpaperCropper2.apk
 /system/priv-app/SettingsReceiver/SettingsReceiver.apk
 /system/priv-app/Fmm/Fmm.apk
-/system/priv-app/TaskEdgePanel/TaskEdgePanel.apk
 /system/priv-app/AutomationTest_FB/AutomationTest_FB.apk
 /system/priv-app/SelectiveFocusViewer/SelectiveFocusViewer.apk
 /system/priv-app/SamsungMagnifier3/SamsungMagnifier3.apk
