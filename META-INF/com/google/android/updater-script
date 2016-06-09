@@ -655,12 +655,12 @@ endif;
 set_progress(0.700000);
 #SUD
 set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode", 0700, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
-package_extract_dir("supersu", "/tmp/supersu");
 #-- ROOT
 if
 	file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
 	then
 		ui_print("Installing SuperSU V2.74 variant...");
+		package_extract_dir("supersu", "/tmp/supersu");
 		run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.74-2.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
 		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.74-2.zip");
 		set_progress(0.800000);
@@ -670,6 +670,7 @@ if
 	file_getprop("/tmp/aroma/window3.prop","selected.1") == "2"
 	then
 		ui_print("Installing SuperSU V2.68 variant...");
+		package_extract_dir("supersu", "/tmp/supersu");
 		run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.68.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
 		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.68.zip");
 		set_progress(0.800000);
