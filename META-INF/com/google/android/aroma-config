@@ -575,9 +575,10 @@ selectbox(
 	
 	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
 	"Install stock SystemUI",	"No rounded mods, no other mods, just stock",				0,	#-- selected.1 = 1
-	"Install Modded SystemUI",	"Rounded SystemUI and grey scaling removed while on powersaving mode",	1,      #-- selected.1 = 2
+	"Install Modded SystemUI",	"Rounded SystemUI, remove low battery warning, grey scaling removed while on powersaving mode and Opaque Status Bar Icons",	1,      #-- selected.1 = 2
 	"Install Modded SystemUI with quicklaunch",	"Same as the modded, but with quicklaunch in recent",	0,      #-- selected.1 = 3
-	"Install fully modded SystemUI","This systemUI has all mods, including next alarm on lock screen, service provider on statusbar and more!",	0       #-- selected.1 = 4
+	"Install fully modded SystemUI","This systemUI has all mods, including next alarm on lock screen, service provider on statusbar and more!",	0,       #-- selected.1 = 4
+	"Install fully modded SystemUI without rounded UI","This systemUI has all mods, but without the rounded UI!",	0       #-- selected.1 = 5
   
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 

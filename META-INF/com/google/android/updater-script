@@ -263,7 +263,7 @@ if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "2"
 	then
 		ui_print("Installing modded SystemUI...");
-		package_extract_dir("aroma/systemui/modded", "/system/priv-app");
+		package_extract_dir("aroma/systemui/rounded", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "3"
@@ -276,6 +276,12 @@ if
 	then
 		ui_print("Installing modded SystemUI with all mods...");
 		package_extract_dir("aroma/systemui/fully_modded", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "5"
+	then
+		ui_print("Installing fully modded SystemUI without rounded...");
+		package_extract_dir("aroma/systemui/fully_modded_withoutround", "/system/priv-app");
 endif;
 #-- Settings
 if
