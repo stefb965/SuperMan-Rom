@@ -277,6 +277,19 @@ if
 		ui_print("Installing modded SystemUI with all mods...");
 		package_extract_dir("aroma/systemui/fully_modded", "/system/priv-app");
 endif;
+#-- Settings
+if
+	file_getprop("/tmp/aroma/window10.prop","selected.1") == "1"
+	then
+		ui_print("Installing stock Settings...");
+		package_extract_dir("aroma/settings/normal", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window10.prop","selected.1") == "2"
+	then
+		ui_print("Installing dual Settings...");
+		package_extract_dir("aroma/settings/dual_settings", "/system/priv-app");
+endif;
 #-- Xposed
 if
 	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
