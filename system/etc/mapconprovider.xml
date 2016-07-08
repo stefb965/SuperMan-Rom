@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ratpriority version= "34">
+<ratpriority version= "43">
      <mapcon>
          <operator operatorNumeric="311480">
              <apn apnName="ims" ratPriority="LTE:IWLAN:eHRPD" />
@@ -433,7 +433,7 @@
 		 <operator operatorNumeric="20404">
              <apn apnName="ims" ratPriority="LTE:IWLAN" />
              <apn apnName="mms" ratPriority="LTE" />
-             <apn apnName="xcap" ratPriority="LTE:IWLAN" />
+             <apn apnName="xcap" ratPriority="LTE" />
              <apn apnName="cbs" ratPriority="LTE" />
              <apn apnName="emergency" ratPriority="LTE" />
              <apn apnName="default" ratPriority="LTE" />
