@@ -607,36 +607,6 @@ selectbox(
 );
 
 ##
-# Sub Window 8
-#
-
-selectbox(
-  #-- Title
-	"Notifications",
-	  
-  #-- Sub Title
-    "Do you want to remove all (also System) notification?",
-	  
-  #-- Icon:
-     "icons/install",
-	 
-  #-- Will be saved in /tmp/aroma/window8.prop
-	"window8.prop",
-
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-	
-	"Select the one you want",		"",							2,	#-- Group 1. key = "selected.1"
-	"Install normal framework",	"Has the notification like stock",				0,	#-- selected.1 = 1
-	"Install Modded framework",	"Makes all notifications removable from statusbar",		1      #-- selected.1 = 2
-  
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
-);
-
-##
 # Sub Window 9
 #
 
