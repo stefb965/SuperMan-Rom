@@ -729,7 +729,7 @@ selectbox(
 	
 	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
 	"Stock Launcher",	"Normal touchwiz launcher as always",					1,	#-- selected.1 = 1
-	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects",	0       #-- selected.1 = 2
+	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects (NOTE: THIS DOES ONLY WORK IF YOU SELECTED MODDED SERVICES.JAR FILE!!)",	0       #-- selected.1 = 2
   
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -764,6 +764,8 @@ selectbox(
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
+
+alert( "Alert", "Removing samsung apps can lead to force closes and not working features!");
 
 ##
 # Sub Checkbox 1
