@@ -28,15 +28,38 @@ ini_set("rom_device",           "SM-G930F/SM-G935F");
 ini_set("rom_date",             "16.06.2016");
 
 ##
-# Show Simple Splash
+# Show Animated Splash
 #
-
-splash(
-  #-- Duration 4000ms / 4 seconds
-    4000,
+anisplash(
+#  #-- Number of Loop
+    1,
   
-  #-- <AROMA Resource Dir>/SPLASH.png
-    "SPLASH"
+  #-- Frame  [ Image, duration in millisecond ]
+    "anim/a00", 1,
+    "anim/a01", 1,
+    "anim/a02", 1,
+    "anim/a03", 1,
+    "anim/a04", 1,
+	"anim/a05", 1,
+	"anim/a06", 1,
+	"anim/a07", 1,
+	"anim/a08", 1,
+	"anim/a09", 1,
+	"anim/a10", 1,
+	"anim/a11", 1,
+	"anim/a12", 1,
+	"anim/a13", 1,
+	"anim/a14", 1,
+	"anim/a15", 30,
+	"anim/a16", 30,
+	"anim/a17", 30,
+	"anim/a18", 30,
+	"anim/a19", 30,
+	"anim/a20", 30,
+	"anim/a21", 30,
+	"anim/a22", 30,
+	"anim/a23", 30,
+	"anim/a24", 1500
 );
 
 
