@@ -99,6 +99,63 @@ if
 		ui_print("Installing modded framework...");
 		package_extract_dir("aroma/notifications/removable", "/system/framework");
 endif;
+#-- Emoji
+if
+	file_getprop("/tmp/aroma/window6.prop","selected.1") == "1"
+	then
+		ui_print("Installing stock emoji...");
+		package_extract_dir("aroma/emoji/stock", "/system/fonts");
+endif;
+if
+	file_getprop("/tmp/aroma/window6.prop","selected.1") == "2"
+	then
+		ui_print("Installing IOS emoji...");
+		package_extract_dir("aroma/emoji/IOS", "/system/fonts");
+endif;
+#-- SystemUI
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "1"
+	then
+		ui_print("Installing stock SystemUI...");
+		package_extract_dir("aroma/systemui/stock", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "2"
+	then
+		ui_print("Installing modded SystemUI...");
+		package_extract_dir("aroma/systemui/rounded", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "3"
+	then
+		ui_print("Installing modded SystemUI with quicklaunch...");
+		package_extract_dir("aroma/systemui/quicklaunch", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "4"
+	then
+		ui_print("Installing modded SystemUI with all mods...");
+		package_extract_dir("aroma/systemui/fully_modded", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "5"
+	then
+		ui_print("Installing fully modded SystemUI without rounded...");
+		package_extract_dir("aroma/systemui/fully_modded_withoutround", "/system/priv-app");
+endif;
+#-- Settings
+if
+	file_getprop("/tmp/aroma/window10.prop","selected.1") == "1"
+	then
+		ui_print("Installing stock Settings...");
+		package_extract_dir("aroma/settings/normal", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window10.prop","selected.1") == "2"
+	then
+		ui_print("Installing dual Settings...");
+		package_extract_dir("aroma/settings/dual_settings", "/system/priv-app");
+endif;
 #-- Services.jar
 if
 	file_getprop("/tmp/aroma/window11.prop","selected.1") == "1"
@@ -111,6 +168,57 @@ if
 	then
 		ui_print("Installing modded services...");
 		package_extract_dir("aroma/services/modded", "/system/framework");
+endif;
+#-- Launcher
+if
+	file_getprop("/tmp/aroma/window12.prop","selected.1") == "1"
+	then
+		ui_print("Installing stock launcher...");
+		package_extract_dir("aroma/launcher/stock", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window12.prop","selected.1") == "2"
+	then
+		ui_print("Installing modded launcher...");
+		package_extract_dir("aroma/launcher/modded", "/system/priv-app");
+endif;
+#-- Animation
+if
+	file_getprop("/tmp/aroma/window13.prop","selected.1") == "1"
+	then
+		ui_print("Installing stock launcher...");
+		package_extract_dir("aroma/animation/stock", "/system/media");
+endif;
+if
+	file_getprop("/tmp/aroma/window13.prop","selected.1") == "2"
+	then
+		ui_print("Installing modded launcher...");
+		package_extract_dir("aroma/animation/superman", "/system/media");
+endif;
+#-- Fingerprint files
+if
+	file_getprop("/tmp/aroma/window1.prop","selected.2") == "1"
+	then
+		ui_print("Installing Stock Files...");
+		package_extract_dir("aroma/kernel/SM-G930F/Stock/app", "/system/app");
+endif;	
+if
+	file_getprop("/tmp/aroma/window1.prop","selected.2") == "2"
+	then
+		ui_print("Installing Modded Files...");
+		package_extract_dir("aroma/kernel/SM-G930F/SuperKernel/app", "/system/app");
+endif;
+if
+	file_getprop("/tmp/aroma/window1.prop","selected.2") == "3"
+	then
+		ui_print("Installing Stock Files...");
+		package_extract_dir("aroma/kernel/SM-G935F/Stock/app", "/system/app");
+endif;	
+if
+	file_getprop("/tmp/aroma/window1.prop","selected.2") == "4"
+	then
+		ui_print("Installing Modded Files...");
+		package_extract_dir("aroma/kernel/SM-G935F/SuperKernel/app", "/system/app");
 endif;
 #-- Debloat
 if
@@ -324,63 +432,6 @@ if
 		ui_print("Installing stock sound...");
 		package_extract_dir("aroma/sound/stock/system", "/system");
 endif;
-#-- Emoji
-if
-	file_getprop("/tmp/aroma/window6.prop","selected.1") == "1"
-	then
-		ui_print("Installing stock emoji...");
-		package_extract_dir("aroma/emoji/stock", "/system/fonts");
-endif;
-if
-	file_getprop("/tmp/aroma/window6.prop","selected.1") == "2"
-	then
-		ui_print("Installing IOS emoji...");
-		package_extract_dir("aroma/emoji/IOS", "/system/fonts");
-endif;
-#-- SystemUI
-if
-	file_getprop("/tmp/aroma/window7.prop","selected.1") == "1"
-	then
-		ui_print("Installing stock SystemUI...");
-		package_extract_dir("aroma/systemui/stock", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/window7.prop","selected.1") == "2"
-	then
-		ui_print("Installing modded SystemUI...");
-		package_extract_dir("aroma/systemui/rounded", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/window7.prop","selected.1") == "3"
-	then
-		ui_print("Installing modded SystemUI with quicklaunch...");
-		package_extract_dir("aroma/systemui/quicklaunch", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/window7.prop","selected.1") == "4"
-	then
-		ui_print("Installing modded SystemUI with all mods...");
-		package_extract_dir("aroma/systemui/fully_modded", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/window7.prop","selected.1") == "5"
-	then
-		ui_print("Installing fully modded SystemUI without rounded...");
-		package_extract_dir("aroma/systemui/fully_modded_withoutround", "/system/priv-app");
-endif;
-#-- Settings
-if
-	file_getprop("/tmp/aroma/window10.prop","selected.1") == "1"
-	then
-		ui_print("Installing stock Settings...");
-		package_extract_dir("aroma/settings/normal", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/window10.prop","selected.1") == "2"
-	then
-		ui_print("Installing dual Settings...");
-		package_extract_dir("aroma/settings/dual_settings", "/system/priv-app");
-endif;
 #-- Xposed
 if
 	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
@@ -388,31 +439,6 @@ if
 		ui_print("Installing Xposed V85.1...");
 		package_extract_dir("xposed/system", "/system");
 
-endif;
-#-- Fingerprint files
-if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "1"
-	then
-		ui_print("Installing Stock Files...");
-		package_extract_dir("aroma/kernel/SM-G930F/Stock/app", "/system/app");
-endif;	
-if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "2"
-	then
-		ui_print("Installing Modded Files...");
-		package_extract_dir("aroma/kernel/SM-G930F/SuperKernel/app", "/system/app");
-endif;
-if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "3"
-	then
-		ui_print("Installing Stock Files...");
-		package_extract_dir("aroma/kernel/SM-G935F/Stock/app", "/system/app");
-endif;	
-if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "4"
-	then
-		ui_print("Installing Modded Files...");
-		package_extract_dir("aroma/kernel/SM-G935F/SuperKernel/app", "/system/app");
 endif;
 #DATA
 ui_print("Extracting data..."); ui_print(" ");

@@ -706,6 +706,66 @@ selectbox(
 );
 
 ##
+# Sub Window 12
+#
+
+selectbox(
+  #-- Title
+	"Touchwiz Launcher",
+	  
+  #-- Sub Title
+    "You can choose between stock launcher and modded",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window12.prop
+	"window12.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+	
+	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"Stock Launcher",	"Normal touchwiz launcher as always",					1,	#-- selected.1 = 1
+	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects",	0       #-- selected.1 = 2
+  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Sub Window 13
+#
+
+selectbox(
+  #-- Title
+	"Boot animation",
+	  
+  #-- Sub Title
+    "You can choose between normal animation and superman animation!",
+	  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window13.prop
+	"window13.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+	
+	"Select the desired One",		"",					2,	#-- Group 1. key = "selected.1"
+	"Stock boot animation",	"Just as always",					1,	#-- selected.1 = 1
+	"SuperMan animation!",	"Nice and new superman boot animation!!!",		0       #-- selected.1 = 2
+  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
 # Sub Checkbox 1
 #
 
