@@ -779,10 +779,10 @@ set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode
 if
 	file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
 	then
-		ui_print("Installing SuperSU V2.74 variant...");
+		ui_print("Installing SuperSU V2.76 variant...");
 		package_extract_dir("supersu", "/tmp/supersu");
-		run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.74-2.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
-		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.74-2.zip");
+		run_program("/sbin/busybox", "unzip", "/tmp/supersu/STABLE-SuperSU-v2.76.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
+		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/STABLE-SuperSU-v2.76.zip");
 		set_progress(0.800000);
 		ui_print(" ");
 endif;
