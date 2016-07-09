@@ -22,10 +22,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.8.5");
+ini_set("rom_version",          "V1.9");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "16.06.2016");
+ini_set("rom_date",             "11.07.2016");
 
 ##
 # Show Animated Splash
@@ -447,7 +447,7 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Xposed or not",	"",							2,	#-- Group 1. key = "selected.1"
-	"Yes",		"Xposed V85.1 will be installed.",			1,	#-- selected.1 = 1
+	"Yes",		"Xposed V86 will be installed.",			1,	#-- selected.1 = 1
 	"No",		"Xposed wont be installed.",				0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
@@ -538,8 +538,8 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
-	"Install the sound mod",	"Will install the sound mod by ZuBi182",		1,	#-- selected.1 = 1
-	"No, don't install this mod",	"Will keep the stock file",				0       #-- selected.1 = 2
+	"Install the sound mod",	"Will install the sound mod V17 by ZuBi182",		1,	#-- selected.1 = 1
+	"No, don't install this mod",	"Will keep the stock files",				0       #-- selected.1 = 2
 	  
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -720,7 +720,7 @@ selectbox(
 	
 	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
 	"Stock Launcher",	"Normal touchwiz launcher as always",					1,	#-- selected.1 = 1
-	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects (NOTE: THIS DOES ONLY WORK IF YOU SELECTED MODDED SERVICES.JAR FILE!!)",	0       #-- selected.1 = 2
+	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects. THIS DOES ONLY WORK IF YOU SELECTED MODDED SERVICES FILE!!)",	0       #-- selected.1 = 2
   
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
