@@ -413,10 +413,12 @@ selectbox(
 	"SM-G930F",			"It will select the S7 battery capacity and build.prop",	1,	#-- selected.1 = 1
 	"SM-G935F",			"It will select the S7 edge battery capacity and build.prop",	0,	#-- selected.1 = 2
 	"Select the kernel you want to install",		"",					2,	#-- Group 2. key = "selected.2"
-	"SM-G930F Stock Kernel",	"Just stock kernel with init.d support for S7",			0,	#-- selected.2 = 1
-	"SM-G930F SuperKernel",		"SuperKernel V1.4 with lot improvements for the S7",		1,	#-- selected.2 = 2
-	"SM-G935F Stock Kernel",	"Just stock kernel with init.d support for S7 Edge",		0,	#-- selected.2 = 3
-	"SM-G935F SuperKernel",		"SuperKernel V1.4 with lot improvements for the S7",		0	#-- selected.2 = 4
+	"SM-G930F Stock Kernel",	"Just full stock kernel with init.d support for S7",		0,	#-- selected.2 = 1
+	"SM-G930F SuperKernel",		"SuperKernel V1.5.4 with lot improvements for S7",		0,	#-- selected.2 = 2
+	"SM-G930F modified StockKernel","Selinux permissive and updated Linux for our S7",		1,	#-- selected.2 = 3
+	"SM-G935F Stock Kernel",	"Just full stock kernel with init.d support for S7 Edge",	0,	#-- selected.2 = 4
+	"SM-G935F SuperKernel",		"SuperKernel V1.5.4 with lot improvements for the S7 Edge",	0,	#-- selected.2 = 5
+	"SM-G935F modified StockKernel","Selinux permissive and updated Linux for our S7 Edge",		0	#-- selected.2 = 6
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -750,7 +752,7 @@ selectbox(
 	
 	"Select the desired One",		"",					2,	#-- Group 1. key = "selected.1"
 	"Stock boot animation",	"Just as always",					1,	#-- selected.1 = 1
-	"SuperMan animation!",	"Nice and new superman boot animation!!!",		0       #-- selected.1 = 2
+	"SuperMan animation!",	"Nice and new superman boot animation!!! Thanks to myellow for his great work!",	0       #-- selected.1 = 2
   
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
