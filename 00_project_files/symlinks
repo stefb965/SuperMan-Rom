@@ -23,9 +23,6 @@ symlink("/system/lib64/libprintspooler_jni6.so", "/system/app/SPrintSpooler6/lib
 symlink("/system/lib64/libSamsungBCPP.so", "/system/app/AdvSoundDetector2015/lib/arm64/libSamsungBCPP.so");
 symlink("/system/lib64/libTui.so", "/system/app/TuiService/lib/arm64/libTui.so");
 symlink("/system/lib/libapa_jni.so", "/system/app/SapaMonitor/lib/arm/libapa_jni.so");
-symlink("/system/lib/libasf_fileshareserver.so", "/system/app/AllshareFileShareServer/lib/arm/libasf_fileshareserver.so");
-symlink("/system/lib/libasf_fileshare.so", "/system/app/AllshareFileShare/lib/arm/libasf_fileshare.so");
-symlink("/system/lib/libasf_mediashare.so", "/system/app/AllshareMediaShare/lib/arm/libasf_mediashare.so");
 symlink("/system/lib/libatomcore.so", "/system/priv-app/SelectiveFocusViewer/lib/arm/libatomcore.so");
 symlink("/system/lib/libatomjpeg.so", "/system/priv-app/SelectiveFocusViewer/lib/arm/libatomjpeg.so");
 symlink("/system/lib/libbluetooth_jni.so", "/system/app/Bluetooth/lib/arm/libbluetooth_jni.so");
@@ -35,8 +32,6 @@ symlink("/system/lib/libqjpeg_secvision.so", "/system/priv-app/VirtualTourViewer
 symlink("/system/lib/libQualityWrapper_Wallpaper.so", "/system/priv-app/WallpaperCompression/lib/arm/libQualityWrapper_Wallpaper.so");
 symlink("/system/lib/libsecipx.so", "/system/priv-app/SelectiveFocusViewer/lib/arm/libsecipx.so");
 symlink("/system/lib/libSRIB_FocusShot.so", "/system/priv-app/SelectiveFocusViewer/lib/arm/libSRIB_FocusShot.so");
-symlink("/system/lib/libsvoicedll.so", "/system/priv-app/SVoice_1.0/lib/arm/libsvoicedll.so");
-symlink("/system/lib/libsvoicedll.so", "/system/priv-app/SVoicePLM_1.0/lib/arm/libsvoicedll.so");
 symlink("toolbox", "/system/bin/dd");
 symlink("toolbox", "/system/bin/df");
 symlink("toolbox", "/system/bin/du");
