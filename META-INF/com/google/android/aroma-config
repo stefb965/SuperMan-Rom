@@ -434,7 +434,7 @@ selectbox(
 	"Xposed",
 	  
   #-- Sub Title
-    "Do you want to install xposed?",
+    "Do you want to install systemless xposed?",
 	  
   #-- Icon:
      "icons/install2",
@@ -448,8 +448,8 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Xposed or not",	"",							2,	#-- Group 1. key = "selected.1"
-	"Yes",		"Xposed V86 will be installed.",			1,	#-- selected.1 = 1
-	"No",		"Xposed wont be installed.",				0	#-- selected.1 = 2
+	"Yes",		"Systemless Xposed V85.7 will be installed.",			1,	#-- selected.1 = 1
+	"No",		"Xposed wont be installed.",					0	#-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 

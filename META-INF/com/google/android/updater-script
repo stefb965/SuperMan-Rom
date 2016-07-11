@@ -419,14 +419,6 @@ if
 		ui_print("Installing stock sound...");
 		package_extract_dir("aroma/sound/stock/system", "/system");
 endif;
-#-- Xposed
-if
-	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
-	then
-		ui_print("Installing Xposed V86...");
-		package_extract_dir("xposed/system", "/system");
-
-endif;
 #DATA
 ui_print("Extracting data..."); ui_print(" ");
 package_extract_dir("data", "/data");
@@ -859,10 +851,22 @@ if
 		run_program("/sbin/busybox", "sh", "/tmp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/viper4android/ViPERAtmos_4.8_Sony_Beats_Universal_Edition.zip");
 		set_progress(0.950000);
 endif;
+#-- Xposed
+if
+	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+	then
+		ui_print("Installing Xposed V85.7 systemless...");
+		package_extract_dir("xposed", "/temp/xposed");
+		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v85.7-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
+		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v85.7-sdk23-systemless.zip");
+		set_progress(0.990000);
+		ui_print(" ");
+endif;
 ui_print(" ");
 ui_print("Wiping cache, dalvik and tmp");
 ui_print(" ");
 delete_recursive("/tmp");
+delete_recursive("/temp");
 delete_recursive("/cache");
 delete_recursive("/data/dalvik-cache");
 unmount("/system");
