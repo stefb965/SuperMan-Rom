@@ -69,7 +69,7 @@ anisplash(
 #
 
 fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansFallback.ttf;", "12" ); #-- Use sets of font (Font Family)
-theme("miui4");
+theme("superman");
 
 ##
 # SHOW LANGUAGE SELECTION
@@ -182,7 +182,6 @@ viewbox(
     "<~welcome.text2>\n\n"+
 	
       "  <~welcome.version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
-      "  <~welcome.codename>\t\t: <b><#selectbg_g> </#></b>\n"+
       "  <~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
 
     "<~welcome.next>",
@@ -238,7 +237,7 @@ menubox(
 	"Installation",		"ROM Installation with Various Features - RECOMMENDED",      "@install",      #-- selected = 1
 	"System Info",		"Get and show device/partition informations",                "@info",         #-- selected = 2
 	"ChangeLog",		"SuperMan ChangeLog",                                         "@agreement",    #-- selected = 3
-	"Quit Install",		"Leaving the Aroma setup to install another Rom :(",     "@install"       #-- selected = 4
+	"Quit Install",		"Leaving the Aroma setup to install another Rom :(",     "@install2"       #-- selected = 4
 
 );
 
@@ -370,7 +369,7 @@ selectbox(
     "Choose between clean install, full wipe and dirty flash",
   
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window0.prop
     "window0.prop",
@@ -400,7 +399,7 @@ selectbox(
     "Are you using a Galaxy S7 or an S7 edge?",
   
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window1.prop
     "window1.prop",
@@ -438,7 +437,7 @@ selectbox(
     "Do you want to install xposed?",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window2.prop
 	"window2.prop",
@@ -468,7 +467,7 @@ selectbox(
     "Select between SuperSU V2.68 and V2.76",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window3.prop
 	"window3.prop",
@@ -499,7 +498,7 @@ selectbox(
     "Do you want to install busybox or not?",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window6.prop
 	"window4.prop",
@@ -529,7 +528,7 @@ selectbox(
     "Do you want to install the sound mod by ZuBi182?",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window6.prop
 	"window5.prop",
@@ -559,7 +558,7 @@ selectbox(
     "Do you want to install the IOS or stock Emojis in keyboard?",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window6.prop
 	"window6.prop",
@@ -589,7 +588,7 @@ selectbox(
     "Do you want the modded SystemUI or stock SystemUI?",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window7.prop
 	"window7.prop",
@@ -620,7 +619,7 @@ selectbox(
     "Do you wish to install Viper4Android?",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window9.prop
 	"window9.prop",
@@ -650,7 +649,7 @@ selectbox(
     "Do want to have dual settings or stock?",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window10.prop
 	"window10.prop",
@@ -680,7 +679,7 @@ selectbox(
     "Do want to have stock or modded services.jar?",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window11.prop
 	"window11.prop",
@@ -710,7 +709,7 @@ selectbox(
     "You can choose between stock launcher and modded",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window12.prop
 	"window12.prop",
@@ -740,7 +739,7 @@ selectbox(
     "You can choose between normal animation and superman animation!",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/window13.prop
 	"window13.prop",
@@ -751,8 +750,8 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 	
 	"Select the desired One",		"",					2,	#-- Group 1. key = "selected.1"
-	"Stock boot animation",	"Just as always",					1,	#-- selected.1 = 1
-	"SuperMan animation!",	"Nice and new superman boot animation!!! Thanks to myellow for his great work!",	0       #-- selected.1 = 2
+	"Stock boot/shutdown animation",	"Just as always",					1,	#-- selected.1 = 1
+	"SuperMan animation!",	"Nice and new superman boot/shutdown animation!!! Big thanks to myellow for his great work!",	0       #-- selected.1 = 2
   
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -772,7 +771,7 @@ checkbox(
     "You can debloat the rom here, what you don't want, don't select it",
 	  
   #-- Icon:
-     "icons/install",
+     "icons/install2",
 	 
   #-- Will be saved in /tmp/aroma/checkbox1.prop
 	"checkbox1.prop",
@@ -858,7 +857,7 @@ install(
   getvar("rom_name") + "\n" +
   "Please wait while SuperMan-Rom is conquering your phone" +
   "",
-  "icons/install"
+  "icons/install2"
 );
 
 ini_set("text_next", "Finish");

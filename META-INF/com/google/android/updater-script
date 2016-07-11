@@ -423,7 +423,7 @@ endif;
 if
 	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
 	then
-		ui_print("Installing Xposed V85.1...");
+		ui_print("Installing Xposed V86...");
 		package_extract_dir("xposed/system", "/system");
 
 endif;
@@ -436,7 +436,7 @@ if
 	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
 	then
 		ui_print("Installing Xposed app...");
-		package_extract_dir("xposed/data", "/data");
+		package_extract_dir("xposed/app", "/data/app");
 endif;
 #-- BUSYBOX App
 if
