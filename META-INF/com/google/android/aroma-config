@@ -749,6 +749,7 @@ checkbox(
 	"Microsoft PowerPoint",	"",									0,	#-- item.1.22
 	"Microsoft Word",	"",									0,	#-- item.1.23
 	"Samsung Pay",		"",									0,	#-- item.1.24
+	"Samsung Music Player",	"",									1,	#-- item.1.25
 	"Google Apps",		"",									2,	#-- group 2
 	"Google Now",		"",									0,	#-- item.2.1
 	"Google Chrome",	"",									0,	#-- item.2.2
