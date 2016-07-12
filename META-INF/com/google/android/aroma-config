@@ -426,45 +426,15 @@ selectbox(
 alert( "Alert", "If you choose xposed once, you have to select if every time you flash the rom again. Otherwise it will give you a bootloop. If you want to disable xposed again, you have to wipe everything and reflash the rom without xposed! Note: If you wish to install snapchat after this rom install, you may want to log into snapchat first and than install xposed afterwards");
 
 ##
-# Sub Window 2
-#
-
-selectbox(
-  #-- Title
-	"Xposed",
-	  
-  #-- Sub Title
-    "Do you want to install systemless xposed?",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window2.prop
-	"window2.prop",
-
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
-	"Xposed or not",	"",							2,	#-- Group 1. key = "selected.1"
-	"Yes",		"Systemless Xposed V85.7 will be installed.",			1,	#-- selected.1 = 1
-	"No",		"Xposed wont be installed.",					0	#-- selected.1 = 2
-
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
-);
-
-##
 # Sub Window 3
 #
 
 selectbox(
   #-- Title
-	"SuperSU",
+	"SuperSU/Xposed",
 	  
   #-- Sub Title
-    "Select between SuperSU V2.68 and V2.76",
+    "Select between SuperSU V2.68 and V2.76 and Xposed versions!",
 	  
   #-- Icon:
      "icons/install2",
@@ -477,10 +447,14 @@ selectbox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"Select One",		"",								2,	#-- Group 1. key = "selected.1"
-	"SuperSU V2.76",	"Latest STABLE version of Chainfire's root access, some people reported not getting root with it if you never had any problems you should choose this.",	1,	#-- selected.1 = 1
+	"Select Root Method",		"",							2,	#-- Group 1. key = "selected.1"
+	"SuperSU V2.76",	"Latest STABLE version of Chainfire's root access, you need this for Xposed V86.0!.",	1,	#-- selected.1 = 1
 	"SuperSU V2.68",	"Older SuperSU which shouldn't have problems getting root, only use if you had problems before",	0,	#-- selected.1 = 2
-	"No root",		"I don't want to install any root methode",			0	#-- selected.1 = 3
+	"No root",		"I don't want to install any root method",			0,	#-- selected.1 = 3
+	"Xposed or not",	"",								2,	#-- Group 2. key = "selected.2"
+	"Yes, V85.7",		"Systemless Xposed V85.7 will be installed (Can be used with all root methods).",	0,	#-- selected.2 = 1
+	"Yes, V86.0",		"Systemless Xposed V86.0 will be installed (Can only be used with SuperSU V2.76!!).",	1,	#-- selected.2 = 2
+	"No",			"Xposed wont be installed.",					0	#-- selected.2 = 3
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 

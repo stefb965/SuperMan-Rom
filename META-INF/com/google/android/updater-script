@@ -423,12 +423,17 @@ endif;
 ui_print("Extracting data..."); ui_print(" ");
 package_extract_dir("data", "/data");
 #-- Xposed App
-
 if
-	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "1"
 	then
-		ui_print("Installing Xposed app...");
-		package_extract_dir("xposed/app", "/data/app");
+		ui_print("Installing Xposed V85.7 app...");
+		package_extract_dir("xposed/V85.7/app", "/data/app");
+endif;
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
+	then
+		ui_print("Installing Xposed V86.0 app...");
+		package_extract_dir("xposed/V86.0/app", "/data/app");
 endif;
 #-- BUSYBOX App
 if
@@ -813,7 +818,7 @@ if
 		package_extract_dir("supersu", "/tmp/supersu");
 		run_program("/sbin/busybox", "unzip", "/tmp/supersu/STABLE-SuperSU-v2.76.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
 		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/STABLE-SuperSU-v2.76.zip");
-		set_progress(0.800000);
+		set_progress(0.750000);
 		ui_print(" ");
 endif;
 if
@@ -823,7 +828,7 @@ if
 		package_extract_dir("supersu", "/tmp/supersu");
 		run_program("/sbin/busybox", "unzip", "/tmp/supersu/BETA-SuperSU-v2.68.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
 		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/BETA-SuperSU-v2.68.zip");
-		set_progress(0.800000);
+		set_progress(0.750000);
 		ui_print(" ");
 endif;
 if
@@ -839,7 +844,7 @@ if
 		package_extract_dir("busybox", "/tmp/busybox");
 		run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
 		run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/UPDATE-Busybox.Installer.v1.24.2-ALL-signed.zip");
-		set_progress(0.900000);
+		set_progress(0.800000);
 endif;
 #-- Viper4Android
 if
@@ -849,18 +854,33 @@ if
 		package_extract_dir("viper4android", "/tmp/viper4android");
 		run_program("/sbin/busybox", "unzip", "/tmp/viper4android/ViPERAtmos_4.8_Sony_Beats_Universal_Edition.zip", "META-INF/com/google/android/*", "-d", "/tmp/viper4android");
 		run_program("/sbin/busybox", "sh", "/tmp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/viper4android/ViPERAtmos_4.8_Sony_Beats_Universal_Edition.zip");
-		set_progress(0.950000);
+		set_progress(0.850000);
 endif;
 #-- Xposed
 if
-	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "1"
 	then
 		ui_print("Installing Xposed V85.7 systemless...");
 		package_extract_dir("xposed", "/temp/xposed");
 		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v85.7-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
 		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v85.7-sdk23-systemless.zip");
-		set_progress(0.990000);
+		set_progress(0.900000);
 		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
+	then
+		ui_print("Installing Xposed V86 systemless...");
+		package_extract_dir("xposed", "/temp/xposed");
+		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.0-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
+		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.0-sdk23-systemless.zip");
+		set_progress(0.900000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	then
+		ui_print("No Xposed installed");
 endif;
 ui_print(" ");
 ui_print("Wiping cache, dalvik and tmp");
