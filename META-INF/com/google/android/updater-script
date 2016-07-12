@@ -403,11 +403,29 @@ endif;
 if
 	file_getprop("/tmp/aroma/window5.prop","selected.1") == "1"
 	then
-		ui_print("Installing sound mod...");
-		package_extract_dir("aroma/sound/mod/system", "/system");
+		ui_print("Installing sound mod level 0...");
+		package_extract_dir("aroma/sound/mod0/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window5.prop","selected.1") == "2"
+	then
+		ui_print("Installing sound mod level 1...");
+		package_extract_dir("aroma/sound/mod1/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window5.prop","selected.1") == "3"
+	then
+		ui_print("Installing sound mod level 2...");
+		package_extract_dir("aroma/sound/mod2/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window5.prop","selected.1") == "4"
+	then
+		ui_print("Installing sound mod level 3...");
+		package_extract_dir("aroma/sound/mod3/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window5.prop","selected.1") == "5"
 	then
 		ui_print("Installing stock sound...");
 		package_extract_dir("aroma/sound/stock/system", "/system");
