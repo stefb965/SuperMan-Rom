@@ -443,8 +443,8 @@ endif;
 if
 	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
 	then
-		ui_print("Installing Xposed V86.0 app...");
-		package_extract_dir("xposed/V86.0/app", "/data/app");
+		ui_print("Installing Xposed V86.1 app...");
+		package_extract_dir("xposed/V86.1/app", "/data/app");
 endif;
 #-- BUSYBOX App
 if
@@ -883,8 +883,8 @@ if
 	then
 		ui_print("Installing Xposed V86 systemless...");
 		package_extract_dir("xposed", "/temp/xposed");
-		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.0-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
-		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.0-sdk23-systemless.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.1-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
+		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.1-sdk23-systemless.zip");
 		set_progress(0.900000);
 		ui_print(" ");
 endif;

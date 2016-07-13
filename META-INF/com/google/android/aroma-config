@@ -455,7 +455,7 @@ selectbox(
 	"No root",		"I don't want to install any root method",			0,	#-- selected.1 = 3
 	"Xposed or not",	"",								2,	#-- Group 2. key = "selected.2"
 	"Yes, V85.7",		"Systemless Xposed V85.7 will be installed (Can be used with all root methods).",	0,	#-- selected.2 = 1
-	"Yes, V86.0",		"Systemless Xposed V86.0 will be installed (Can only be used with SuperSU V2.76!!).",	1,	#-- selected.2 = 2
+	"Yes, V86.1",		"Systemless Xposed V86.1 will be installed (Can only be used with SuperSU V2.76!!).",	1,	#-- selected.2 = 2
 	"No",			"Xposed wont be installed.",					0	#-- selected.2 = 3
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
