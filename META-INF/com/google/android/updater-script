@@ -892,6 +892,53 @@ if
 	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
 	then
 		ui_print("No Xposed installed");
+		set_progress(0.900000);
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "1"
+	then
+		ui_print("Installing S7 Stock Splash...");
+		package_extract_dir("aroma/splash", "/tmp/splash");
+		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashstock-930.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
+		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashstock-930.zip");
+		set_progress(0.950000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "2"
+	then
+		ui_print("Installing S7 Edge Stock Splash...");
+		package_extract_dir("aroma/splash", "/tmp/splash");
+		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashstock-935.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
+		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashstock-935.zip");
+		set_progress(0.950000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "3"
+	then
+		ui_print("Installing S7 SuperMan Splash...");
+		package_extract_dir("aroma/splash", "/tmp/splash");
+		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashblue-930.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
+		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashblue-930.zip");
+		set_progress(0.950000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "4"
+	then
+		ui_print("Installing S7 Edge SuperMan Splash...");
+		package_extract_dir("aroma/splash", "/tmp/splash");
+		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashblue-935.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
+		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashblue-935.zip");
+		set_progress(0.950000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/window8.prop","selected.1") == "5"
+	then
+		ui_print("Keep current Splash screen");
+		set_progress(0.950000);
 endif;
 ui_print(" ");
 ui_print("Wiping cache, dalvik and tmp");
