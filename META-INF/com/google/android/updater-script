@@ -14,7 +14,7 @@ unmount("/data");
 show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
-ui_print("SuperMan Rom Installer V1.9.2");
+ui_print("SuperMan Rom Installer V1.10");
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
@@ -118,6 +118,18 @@ if
 		ui_print("Installing modded SystemUI...");
 		package_extract_dir("aroma/systemui/modded", "/system/priv-app");
 endif;
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "4"
+	then
+		ui_print("Installing rounded SystemUI...");
+		package_extract_dir("aroma/systemui/rounded_potato", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "5"
+	then
+		ui_print("Installing modded SystemUI...");
+		package_extract_dir("aroma/systemui/modded_potato", "/system/priv-app");
+endif;
 #-- Services.jar
 if
 	file_getprop("/tmp/aroma/window11.prop","selected.1") == "1"
@@ -193,7 +205,20 @@ if
 	then
 		ui_print("Installing Modded Files...");
 		package_extract_dir("aroma/kernel/SM-G935F/Modify_Stock/app", "/system/app");
-endif;	
+endif;
+#-- SMS App
+if
+	file_getprop("/tmp/aroma/window10.prop","selected.1") == "1"
+	then
+		ui_print("Installing new sms app...");
+		package_extract_dir("aroma/SMS/new", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/window10.prop","selected.1") == "2"
+	then
+		ui_print("Installing old sms app...");
+		package_extract_dir("aroma/SMS/old", "/system/priv-app");
+endif;
 #-- Debloat
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.1") == "1"
@@ -443,8 +468,8 @@ endif;
 if
 	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
 	then
-		ui_print("Installing Xposed V86.1 app...");
-		package_extract_dir("xposed/V86.1/app", "/data/app");
+		ui_print("Installing Xposed V86.2 app...");
+		package_extract_dir("xposed/V86.2/app", "/data/app");
 endif;
 #-- BUSYBOX App
 if
@@ -883,8 +908,8 @@ if
 	then
 		ui_print("Installing Xposed V86 systemless...");
 		package_extract_dir("xposed", "/temp/xposed");
-		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.1-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
-		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.1-sdk23-systemless.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.2-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
+		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.2-sdk23-systemless.zip");
 		set_progress(0.900000);
 		ui_print(" ");
 endif;
