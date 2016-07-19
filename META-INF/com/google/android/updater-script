@@ -478,6 +478,19 @@ if
 		ui_print("Installing Busybox App...");
 		package_extract_dir("busybox/app", "/data/app");
 endif;
+#-- Potato App
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "4"
+	then
+		ui_print("Installing potato clock...");
+		package_extract_dir("aroma/systemui/app", "/data/app");
+endif;
+if
+	file_getprop("/tmp/aroma/window7.prop","selected.1") == "5"
+	then
+		ui_print("Installing potato clock...");
+		package_extract_dir("aroma/systemui/app", "/data/app");
+endif;
 set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
 set_progress(0.400000);
 ui_print("Creating symlinks...");
@@ -740,6 +753,7 @@ set_metadata("/system/bin/prepare_param.sh", "uid", 0, "gid", 2000, "mode", 0755
 set_metadata("/system/bin/racoon", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:racoon_exec:s0");
 set_metadata("/system/bin/resetreason", "uid", 1000, "gid", 1000, "mode", 0710, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/bin/rild", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:rild_exec:s0");
+set_metadata("/system/bin/rpmbd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:rpmbd_exec:s0");
 set_metadata("/system/bin/run-as", "uid", 0, "gid", 2000, "mode", 0750, "capabilities", 0x0, "selabel", "u:object_r:runas_exec:s0");
 set_metadata("/system/bin/samsungpowersoundplay", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:samsungpowersoundplay_exec:s0");
 set_metadata("/system/bin/scs", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:scs_exec:s0");
@@ -788,6 +802,7 @@ set_metadata("/system/etc/security", "uid", 0, "gid", 2000, "mode", 0755, "capab
 set_metadata("/system/etc/security/cacerts", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/etc/security/.drm", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drm_security_system_file:s0");
 set_metadata_recursive("/system/lib", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_library_file:s0");
+set_metadata("/system/lib/drm", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drm_lib_system_file:s0");
 set_metadata_recursive("/system/vendor", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/vendor/etc", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/vendor/etc/nxp", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
