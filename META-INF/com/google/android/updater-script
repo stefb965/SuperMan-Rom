@@ -174,37 +174,37 @@ if
 	file_getprop("/tmp/aroma/window1.prop","selected.2") == "1"
 	then
 		ui_print("Installing Stock Files...");
-		package_extract_dir("aroma/kernel/SM-G930F/Full_Stock/app", "/system/app");
+		package_extract_dir("aroma/kernel/SM-G930F/Full_Stock/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.2") == "2"
 	then
 		ui_print("Installing Modded Files...");
-		package_extract_dir("aroma/kernel/SM-G930F/SuperKernel/app", "/system/app");
+		package_extract_dir("aroma/kernel/SM-G930F/SuperKernel/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.2") == "3"
 	then
 		ui_print("Installing Modded Files...");
-		package_extract_dir("aroma/kernel/SM-G930F/Modify_Stock/app", "/system/app");
+		package_extract_dir("aroma/kernel/SM-G930F/Modify_Stock/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.2") == "4"
 	then
 		ui_print("Installing Stock Files...");
-		package_extract_dir("aroma/kernel/SM-G935F/Stock/app", "/system/app");
+		package_extract_dir("aroma/kernel/SM-G935F/Stock/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.2") == "5"
 	then
 		ui_print("Installing Modded Files...");
-		package_extract_dir("aroma/kernel/SM-G935F/SuperKernel/app", "/system/app");
+		package_extract_dir("aroma/kernel/SM-G935F/SuperKernel/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window1.prop","selected.2") == "6"
 	then
 		ui_print("Installing Modded Files...");
-		package_extract_dir("aroma/kernel/SM-G935F/Modify_Stock/app", "/system/app");
+		package_extract_dir("aroma/kernel/SM-G935F/Modify_Stock/system", "/system");
 endif;
 #-- SMS App
 if
@@ -918,21 +918,31 @@ if
 		set_progress(0.900000);
 		ui_print(" ");
 endif;
+#if
+#	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
+#	then
+#		ui_print("Installing Magisk for V86.3 systemless...");
+#		package_extract_dir("magisk", "/temp/magisk");
+#		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v1.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+#		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v1.zip");
+#		set_progress(0.900000);
+#		ui_print(" ");
+#endif;
 if
 	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
 	then
-		ui_print("Installing Xposed V86 systemless...");
+		ui_print("Installing Xposed V86.2 systemless...");
 		package_extract_dir("xposed", "/temp/xposed");
 		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.2-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
 		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.2-sdk23-systemless.zip");
-		set_progress(0.900000);
+		set_progress(0.950000);
 		ui_print(" ");
 endif;
 if
 	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
 	then
 		ui_print("No Xposed installed");
-		set_progress(0.900000);
+		set_progress(0.950000);
 endif;
 if
 	file_getprop("/tmp/aroma/window8.prop","selected.1") == "1"
@@ -941,7 +951,7 @@ if
 		package_extract_dir("aroma/splash", "/tmp/splash");
 		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashstock-930.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
 		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashstock-930.zip");
-		set_progress(0.950000);
+		set_progress(0.990000);
 		ui_print(" ");
 endif;
 if
@@ -951,7 +961,7 @@ if
 		package_extract_dir("aroma/splash", "/tmp/splash");
 		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashstock-935.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
 		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashstock-935.zip");
-		set_progress(0.950000);
+		set_progress(0.990000);
 		ui_print(" ");
 endif;
 if
@@ -961,7 +971,7 @@ if
 		package_extract_dir("aroma/splash", "/tmp/splash");
 		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashblue-930.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
 		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashblue-930.zip");
-		set_progress(0.950000);
+		set_progress(0.990000);
 		ui_print(" ");
 endif;
 if
@@ -971,14 +981,14 @@ if
 		package_extract_dir("aroma/splash", "/tmp/splash");
 		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashblue-935.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
 		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashblue-935.zip");
-		set_progress(0.950000);
+		set_progress(0.990000);
 		ui_print(" ");
 endif;
 if
 	file_getprop("/tmp/aroma/window8.prop","selected.1") == "5"
 	then
 		ui_print("Keep current Splash screen");
-		set_progress(0.950000);
+		set_progress(0.990000);
 endif;
 ui_print(" ");
 ui_print("Wiping cache, dalvik and tmp");
