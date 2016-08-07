@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- use empty string to specify no proxy or port -->
 <!-- This version must agree with that in apps/common/res/apns.xml -->
-<iwlanapns version="194">
+<iwlanapns version="192">
     <iwlansettings>
         <apn operatornumeric="00101"
             connname="imsApn"
@@ -458,7 +458,7 @@
             ikewindowsize="1"
             ikedpdtimeout="60"
             ikeconnectiontimeout="10"
-            ikenatvalue="20"
+            ikenatvalue="50"
             ikevirtualadaptername="tap0"
             vendorattribute="P-CSCF-V4V6"
             periodicdpdtimer="120"
@@ -2656,7 +2656,7 @@
             remoteidentity="ims"
             tunneltype="IPSEC_RAC"
             ipsecencryption="IPSEC_ENCRYPTION_AES_CBC_256"
-            ipsecintegrity="IPSEC_INTEGRITY_HMAC_SHA1_96"
+            ipsecintegrity="IPSEC_INTEGRITY_AES_XCBC_MAC_96"
             ipsecgroup="IPSEC_GROUP_MODP_2048"
             ipseclifetime="IPSEC_LIFE_TYPE_SECONDS"
             ipseclifevalue="86400"
