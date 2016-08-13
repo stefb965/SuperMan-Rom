@@ -471,6 +471,19 @@ if
 		ui_print("Installing Xposed V86.2 app...");
 		package_extract_dir("xposed/V86.2/app", "/data/app");
 endif;
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	then
+		ui_print("Installing Xposed V86.4 app...");
+		package_extract_dir("xposed/V86.4/app", "/data/app");
+endif;
+#-- PHH's App
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	then
+		ui_print("Installing phh's supersu app...");
+		package_extract_dir("supersu/app", "/data/app");
+endif;
 #-- BUSYBOX App
 if
 	file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
@@ -887,6 +900,26 @@ if
 	then
 		ui_print("No root installed");
 endif;
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "1"
+	then
+		ui_print("Installing SuperSU V2.76 variant...");
+		package_extract_dir("supersu", "/tmp/supersu");
+		run_program("/sbin/busybox", "unzip", "/tmp/supersu/STABLE-SuperSU-v2.76.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
+		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/STABLE-SuperSU-v2.76.zip");
+		set_progress(0.750000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
+	then
+		ui_print("Installing SuperSU V2.76 variant...");
+		package_extract_dir("supersu", "/tmp/supersu");
+		run_program("/sbin/busybox", "unzip", "/tmp/supersu/STABLE-SuperSU-v2.76.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
+		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/STABLE-SuperSU-v2.76.zip");
+		set_progress(0.750000);
+		ui_print(" ");
+endif;
 #-- BUSYBOX
 if
 	file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
@@ -918,16 +951,6 @@ if
 		set_progress(0.900000);
 		ui_print(" ");
 endif;
-#if
-#	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
-#	then
-#		ui_print("Installing Magisk for V86.3 systemless...");
-#		package_extract_dir("magisk", "/temp/magisk");
-#		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v1.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-#		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v1.zip");
-#		set_progress(0.900000);
-#		ui_print(" ");
-#endif;
 if
 	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
 	then
@@ -940,6 +963,37 @@ if
 endif;
 if
 	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	then
+		ui_print("Installing Magisk V3 for V86.4 systemless...");
+		delete("/data/su.img");
+		package_extract_dir("magisk", "/temp/magisk");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v3.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v3.zip");
+		set_progress(0.900000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	then
+		ui_print("Installing Magisk phh's root V2...");
+		package_extract_dir("supersu", "/temp/supersu");
+		run_program("/sbin/busybox", "unzip", "/temp/supersu/phh-superuser-magisk-v2.zip", "META-INF/com/google/android/*", "-d", "/temp/supersu");
+		run_program("/sbin/busybox", "sh", "/temp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/supersu/phh-superuser-magisk-v2.zip");
+		set_progress(0.900000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	then
+		ui_print("Installing Xposed V86.4 systemless...");
+		package_extract_dir("xposed", "/temp/xposed");
+		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.4-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
+		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.4-sdk23-systemless.zip");
+		set_progress(0.950000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "4"
 	then
 		ui_print("No Xposed installed");
 		set_progress(0.950000);
