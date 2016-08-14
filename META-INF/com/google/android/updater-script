@@ -14,20 +14,77 @@ unmount("/data");
 show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
-ui_print("SuperMan Rom Installer V1.10");
+ui_print("SuperMan Rom Installer V1.11");
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
-ui_print("Formatting system...");
 ui_print(" ");
-format("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/SYSTEM", "0", "/system");
-set_progress(0.100000);
+if
+	file_getprop("/tmp/aroma/window0.prop","selected.2") == "1"
+	then
+		ui_print("Formatting system, data and cache ext4...");
+		format("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/SYSTEM", "0", "/system");
+		format("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/USERDATA", "0", "/data");
+		format("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/CACHE", "0", "/cache");
+		set_progress(0.100000);
+endif
+if
+	file_getprop("/tmp/aroma/window0.prop","selected.2") == "2"
+	then
+		ui_print("Formatting system, data and cache f2fs...");
+		format("f2fs", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/SYSTEM", "0", "/system");
+		format("f2fs", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/USERDATA", "0", "/data");
+		format("f2fs", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/CACHE", "0", "/cache");
+		set_progress(0.100000);
+endif
+if
+	file_getprop("/tmp/aroma/window0.prop","selected.2") == "3"
+	then
+		ui_print("Formatting system ext4...");
+		format("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/SYSTEM", "0", "/system");
+		set_progress(0.100000);
+endif
+if
+	file_getprop("/tmp/aroma/window0.prop","selected.2") == "4"
+	then
+		ui_print("Formatting system f2fs...");
+		format("f2fs", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/SYSTEM", "0", "/system");
+		set_progress(0.100000);
+endif
 ui_print(" ");
-ui_print("Mounting Partitions");
+if
+	file_getprop("/tmp/aroma/window0.prop","selected.2") == "1"
+	then
+	ui_print("Mounting Partitions ext4");
+	mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/SYSTEM", "/system");
+	mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/USERDATA", "/data");
+	mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/CACHE", "/cache");
+endif
+if
+	file_getprop("/tmp/aroma/window0.prop","selected.2") == "2"
+	then
+	ui_print("Mounting Partitions f2fs");
+	mount("f2fs", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/SYSTEM", "/system");
+	mount("f2fs", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/USERDATA", "/data");
+	mount("f2fs", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/CACHE", "/cache");
+endif
+if
+	file_getprop("/tmp/aroma/window0.prop","selected.2") == "3"
+	then
+	ui_print("Mounting Partitions ext4");
+	mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/SYSTEM", "/system");
+	mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/USERDATA", "/data");
+	mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/CACHE", "/cache");
+endif
+if
+	file_getprop("/tmp/aroma/window0.prop","selected.2") == "4"
+	then
+	ui_print("Mounting Partitions f2fs");
+	mount("f2fs", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/SYSTEM", "/system");
+	mount("f2fs", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/USERDATA", "/data");
+	mount("f2fs", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/CACHE", "/cache");
+endif
 ui_print(" ");
-mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/SYSTEM", "/system");
-mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/USERDATA", "/data");
-mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/CACHE", "/cache");
 mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/HIDDEN", "/preload");
 mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/EFS", "/efs");
 set_progress(0.200000);
