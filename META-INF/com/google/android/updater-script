@@ -130,6 +130,55 @@ if
 		ui_print("Installing modded SystemUI...");
 		package_extract_dir("aroma/systemui/modded_potato", "/system/priv-app");
 endif;
+#-- Settings
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
+	then
+		ui_print("Installing supersu compatible settings...");
+		package_extract_dir("aroma/settings/supersu", "/system/priv-app");
+endif
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.1") == "2"
+	then
+		ui_print("Installing supersu compatible settings...");
+		package_extract_dir("aroma/settings/supersu", "/system/priv-app");
+endif
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.1") == "3"
+	then
+		ui_print("Installing supersu compatible settings...");
+		package_extract_dir("aroma/settings/supersu", "/system/priv-app");
+endif
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "1"
+	then
+		ui_print("Installing supersu compatible settings...");
+		package_extract_dir("aroma/settings/supersu", "/system/priv-app");
+endif
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
+	then
+		ui_print("Installing supersu compatible settings...");
+		package_extract_dir("aroma/settings/supersu", "/system/priv-app");
+endif
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	then
+		ui_print("Installing phh's compatible settings...");
+		package_extract_dir("aroma/settings/phh", "/system/priv-app");
+endif
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	then
+		ui_print("Installing phh's compatible settings...");
+		package_extract_dir("aroma/settings/phh", "/system/priv-app");
+endif
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "4"
+	then
+		ui_print("Installing supersu compatible settings...");
+		package_extract_dir("aroma/settings/supersu", "/system/priv-app");
+endif
 #-- Services.jar
 if
 	file_getprop("/tmp/aroma/window11.prop","selected.1") == "1"
