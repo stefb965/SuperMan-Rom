@@ -143,6 +143,19 @@ if
 		ui_print("SM-G935F battery capacity...");
 		package_extract_dir("aroma/variants/SM-G935F/system", "/system");
 endif;
+#-- Camera Mod
+if
+	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+	then
+		ui_print("Stock Camera...");
+		package_extract_dir("aroma/camera/stock", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/window2.prop","selected.1") == "2"
+	then
+		ui_print("Modded Camera...");
+		package_extract_dir("aroma/camera/modded", "/system");
+endif;
 #-- Emoji
 if
 	file_getprop("/tmp/aroma/window6.prop","selected.1") == "1"

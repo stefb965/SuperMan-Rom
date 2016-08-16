@@ -418,6 +418,37 @@ selectbox(
 
 );
 
+##
+# Sub Window 2
+#
+
+selectbox(
+  #-- Title
+	"Camera",
+	  
+  #-- Sub Title
+    "Modded or stock Camera application?",
+	  
+  #-- Icon:
+     "icons/install2",
+	 
+  #-- Will be saved in /tmp/aroma/window2.prop
+	"window2.prop",
+
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
+	"Stock Camera",		"Nothing changed",					1,	#-- selected.1 = 1
+	"Modded Camera",	"increase bitrates for all camera resolutions and to set pictures at 100 quality.",				0       #-- selected.1 = 2
+	  
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+
 alert( "Alert", "If you choose xposed once, you have to select if every time you flash the rom again. Otherwise it will give you a bootloop. If you want to disable xposed again, you have to wipe everything and reflash the rom without xposed! Note: If you wish to install snapchat after this rom install, you may want to log into snapchat first and than install xposed afterwards");
 
 ##
