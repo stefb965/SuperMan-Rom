@@ -24,8 +24,28 @@
 # auditfilter bluetooth platform_app:dir search; dev="proc" request dontaudit from insick.jung
 # auditfilter bluetooth untrusted_app:dir search; dev="proc" request dontaudit from insick.jung
 
+### dnsmasq ###
+# P160610-02828 / suddenly notice / Grace EUR OPEN(N930FXXU0APF9)/ SEPF_SECMOBILE_6.0.1_0013 
+auditfilter dnsmasq untrusted_app:fd use;
+
+
 ### init ###
 auditfilter init proc:dir write;
+
+### init ###
+# P160528-00377 / User Trial, proc binder case / SEPF_SECMOBILE_6.0.1_0013
+# P160610-00508 / add onemore case: untrusted_app / SM-N930V_NA_VZW(graceqltevzw) / SEPF_SECMOBILE_6.0.1_0013
+# P160701-00261 / add onemore case: sec_untrusted_app / Grace MR / SEPF_SECMOBILE_6.0.1_0013
+auditfilter nfc { platform_app sec_untrusted_app untrusted_app }:dir search; dev="proc"
+
+
+### isolated_app ###
+# P160706-00613 com.android.chrome:sandboxed_process0
+# avc:  denied  { open } for  pid=22507 comm="CrRendererMain" name=".com.google.Chrome.sax2Zn" dev="dm-1" ino=336708 scontext=u:r:isolated_app:s0:c512,c768
+# tcontext=u:object_r:app_data_file:s0:c512,c768 tclass=file permissive=0
+# neverallow rule : Isolated apps should not directly open app data files themselves.
+auditfilter isolated_app app_data_file:file open;
+
 
 ### platform_app ###
 auditfilter platform_app app_data_file:dir search;
@@ -35,6 +55,8 @@ auditfilter platform_app sec_untrusted_app:dir search;
 auditfilter platform_app container_app_data_backend:file read;
 # P160119-02401 android.spay accesses other user proc
 auditfilter platform_app { platform_app sec_untrusted_app system_app untrusted_app }:dir search; comm="ng.android.spay"
+# P160601-05715 com.rsupport.mobizen.sec(Mobizen for SAMSUNG) SEPF_SECMOBILE_6.0.1_0013
+auditfilter platform_app { filtered_untrusted_app platform_app sec_untrusted_app system_app untrusted_app }:dir { getattr search }; comm="ps"
 # P160225-02687  AFW BYOD
 auditfilter sysaccess_platform_app aasa_app_data_file:dir search;
 
@@ -46,6 +68,8 @@ auditfilter shell gatekeeper_service:service_manager find;
 
 ### system_app ###
 auditfilter system_app app_data_file:dir search; comm="sung.android.sm"
+# P160528-00674 / system/bin/wvkprov/veriwvkey ppcomm=sec.keyverifier / SEPF_SECMOBILE_6.0.1_0011
+auditfilter system_app apk_data_file:dir write; comm="wvkprov"
 
 # P160414-00897 / sysscope app unique case Multi-user case
 auditfilter system_app system_app_data_file:ifile getattr; comm="id.app.sysscope"
@@ -57,7 +81,9 @@ auditfilter system_app { platform_app sec_untrusted_app untrusted_app}:process g
 ### untrusted_app ###
 auditfilter filtered_untrusted_app { app_data_file bluetooth_data_file nfc_data_file policyloader_app_data_file location_app_data_file }:dir search;
 auditfilter sec_untrusted_app { app_data_file bluetooth_data_file nfc_data_file policyloader_app_data_file location_app_data_file }:dir search;
-auditfilter untrusted_app { aasa_app_data_file app_data_file bluetooth_data_file nfc_data_file policyloader_app_data_file location_app_data_file }:dir search;
+# P160528-00372 / com.spotify.music container_app_data_backend dir search / SEPF_SECMOBILE_6.0.1_0013
+# P160707-00334 / com.lookout|U0 sys_fstatat64 access to /data/user/150
+auditfilter untrusted_app { aasa_app_data_file app_data_file bluetooth_data_file container_app_data_backend nfc_data_file policyloader_app_data_file location_app_data_file }:dir { search getattr };
 auditfilter untrusted_app qsee_svc_app_data_file:dir search;
 auditfilter untrusted_app app_data_file:file link;
 auditfilter untrusted_app { app_efs_file efs_file sec_efs_file}:dir search;
@@ -65,6 +91,8 @@ auditfilter untrusted_app full_device:chr_file { read write };
 auditfilter untrusted_app graphics_device:chr_file read;
 auditfilter untrusted_app hidden_file:file read;
 auditfilter untrusted_app kernel:lnk_file read;
+# P160528-00696 / dmesg command of com.nhnent.payapp(market app) / SEPF_SECMOBILE_6.0.1_0013
+auditfilter untrusted_app kernel:system syslog_read;
 auditfilter untrusted_app labeledfs:filesystem remount;
 auditfilter untrusted_app self:unix_stream_socket connectto;
 # System S/W does not want to open panel's info(sysfs_lcd_writable) / P160523-02269 / SEPF_SECMOBILE_6.0.1_0011
@@ -82,9 +110,14 @@ auditfilter untrusted_app surfaceflinger:unix_stream_socket ioctl;
 # com.google.android.apps.docs.editors.docs
 auditfilter untrusted_app unlabeled:file 0x800000;
 
+#P160610-04329 / com.UCMobile.intl / Grace US VERIZON / SEPF_SECMOBILE_6.0.1_0013
+auditfilter untrusted_app system_data_file:dir setattr;
+
 # MLS denial, /data/user/10/com.android.settings/app_fonts/sans.loc
 auditfilter { aasa_platform_app carrier_app platform_app radio } system_app_data_file:dir search; name="com.android.settings"
-auditfilter { filtered_untrusted_app isolated_app llk_untrusted_app sec_untrusted_app untrusted_app vzwfiltered_untrusted_app } system_app_data_file:dir search; name="com.android.settings"
+
+#P160628-04782 KEA app / delete a compare parameter(name="com.android.settings") for BBC case
+auditfilter { filtered_untrusted_app isolated_app llk_untrusted_app sec_untrusted_app untrusted_app vzwfiltered_untrusted_app } system_app_data_file:dir search;
 
 # P160415-05796 /data/data/com.android.settings/app_fonts/sans.loc / user0 path but it is not necessary for plugin_app
 auditfilter mrst_plugin_app system_app_data_file:dir search; name="com.android.settings"
@@ -117,8 +150,12 @@ auditfilter kernel self:capability sys_ptrace;
 ### netd ###
 # P160419-00321 unauthorized untrusted_app commnunicated with netd via fifo.
 # strongly restrict unknown operation.
-allow netd untrusted_app:fifo_file write;
+auditfilter netd untrusted_app:fifo_file write;
 # avc:  denied  { write } for  pid=1877 comm="netd" path="pipe:[930756]" dev="pipefs" ino=930756 scontext=u:r:netd:s0 tcontext=u:r:untrusted_app:s0:c512,c768 tclass=fifo_file permissive=0 SEPF_SECMOBILE_6.0.1_0010avc:  denied  { write } for  pid=1877 comm="netd" path="pipe:[930756]" dev="pipefs" ino=930756 scontext=u:r:netd:s0 tcontext=u:r:untrusted_app:s0:c512,c768 tclass=fifo_file permissive=0 SEPF_SECMOBILE_6.0.1_0010
+# P160603-00215 Security Notice pop up during idle (Module info: /system/bin/netd) 
+# avc:  denied  { write } for  pid=1678 comm="netd" path="/data/data/com.facebook.orca/shared_prefs/rti.mqtt.addresses.xml" dev="dm-1" ino=393846 scontext=u:r:netd:s0 tcontext=u:object_r:app_data_file:s0:c512,c768 tclass=file permissive=0 SEPF_SECMOBILE_6.0.1_0013
+# Due to " neverallow netd { app_data_file system_data_file }:dir_file_class_set write; "
+auditfilter netd app_data_file:file write; path="/data/data/com.facebook.orca/shared_prefs/rti.mqtt.addresses.xml"
 
 
 ### qti_init_shell ###
@@ -152,10 +189,21 @@ auditfilter undefined_service shell_exec:file execute;
 # auditfilter vold system_data_file:file create; managed by KNOX Service Group
 # auditfilter vold app_data_file:lnk_file read; dev="ecryptfs" fixed CL6731407
 
+### vdc ###
+# P160526-05365 / Once Security Notice during ics file sent via WiFi direct / SEPF_SECMOBILE_6.0.1_0012
+auditfilter vdc vold:netlink_socket { read write };
+
 ### zygote ###
 auditfilter zygote zygote:capability sys_ptrace;
 auditfilter zygote untrusted_app:process ptrace;
 
+### sgdisk ###
+#P160524-01065 , P160519-00003 / confirmed by vold team(dragon.kwon, hshik.park) / SEPF_SECMOBILE_6.0.1_0011
+auditfilter sgdisk { firmware_file hidden_file }:file read;
+
+# P160704-01613 syscall=221 MSM8996 sys_execve, fd inherit denial
+# avc:  denied  { read } for  pid=708 comm="sgdisk" path="/dev/block/sda" dev="tmpfs" ino=15696 scontext=u:r:sgdisk:s0 tcontext=u:object_r:emmcblk_device:s0 tclass=blk_file permissive=0
+auditfilter sgdisk emmcblk_device:blk_file read;
 
 
 
@@ -218,5 +266,18 @@ auditfilter zygote untrusted_app:process ptrace;
 # avc:  denied  { getattr } for  pid=29611 comm="id.app.sysscope" path="/data/data/com.sec.android.app.sysscope/databases/SysScope.db" dev="dm-0" ino=459146 scontext=u:r:system_app:s0:c524 tcontext=u:object_r:system_app_data_file:s0:c522 tclass=file permissive=0 SEPF_SECMOBILE_6.0.1_0010 proctitle="com.sec.android.app.sysscope"
 # avc:  denied  { write } for  pid=1 comm="init" name="/" dev="proc" ino=1 scontext=u:r:init:s0 tcontext=u:object_r:proc:s0 tclass=dir SEPF_SECMOBILE_6.0.1_0010 
 # avc:  denied  { read } for  pid=24378 comm="u.go.launcherex" name="window_type" dev="sysfs" ino=34519 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:sysfs_lcd_writable:s0 tclass=file permissive=0 SEPF_SECMOBILE_6.0.1_0011
-
+# avc:  denied  { read } for  pid=703 comm="sgdisk" path="/firmware/image/tz_iccc.mdt" dev="sda16" ino=27 scontext=u:r:sgdisk:s0 tcontext=u:object_r:firmware_file:s0 tclass=file permissive=0 SEPF_SECMOBILE_6.0.1_0011
+# avc:  denied  { read } for  pid=2424 comm="sgdisk" path=2F7072656C6F61642F494E5445524E414C5F5344434152442F53616D73756E672F4D757369632F4F7665722074686520486F72697A6F6E2E6D7033 dev="mmcblk0p22" ino=16 scontext=u:r:sgdisk:s0 tcontext=u:object_r:hidden_file:s0 tclass=file permissive=0 SEPF_SECMOBILE_6.0.1_0011
+# avc:  denied  { search } for  pid=10573 comm="m.spotify.music" name="150" dev="dm-1" ino=1048626 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:container_app_data_backend:s0:c662,c768 tclass=dir permissive=0
+# avc:  denied  { syslog_read } for  pid=13256 comm="dmesg" scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:r:kernel:s0 tclass=system permissive=0 SEPF_SECMOBILE_6.0.1_0013
+# avc:  denied  { write } for  pid=10603 comm="wvkprov" name="app" dev="sda18" ino=196610 scontext=u:r:system_app:s0 tcontext=u:object_r:apk_data_file:s0 tclass=dir permissive=0
+# avc:  denied  { read write } for  pid=2347 comm="vdc" path="socket:[1501]" dev="sockfs" ino=1501 scontext=u:r:vdc:s0 tcontext=u:r:vold:s0 tclass=netlink_socket permissive=0
+# avc:  denied  { search } for  pid=4297 comm="Binder_2" name="13381" dev="proc" ino=557781 scontext=u:r:nfc:s0 tcontext=u:r:platform_app:s0:c512,c768 tclass=dir permissive=0 SEPF_SECMOBILE_6.0.1_0013
+# avc:  denied  { getattr } for  pid=28898 comm="ps" path="/proc/9044" dev="proc" ino=83551 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:r:untrusted_app:s0:c662,c768 tclass=dir permissive=0
+# avc:  denied  { search } for  pid=28898 comm="ps" name="9044" dev="proc" ino=83551 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:r:untrusted_app:s0:c662,c768 tclass=dir permissive=0
+# avc:  denied  { getattr } for  pid=9181 comm="ps" path="/proc/20913" dev="proc" ino=170554 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:r:filtered_untrusted_app:s0:c662,c768 tclass=dir permissive=0 SEPF_SECMOBILE_6.0.1_0013
+# avc:  denied  { search } for  pid=2850 comm="Binder_1" name="8068" dev="proc" ino=1096742 scontext=u:r:nfc:s0 tcontext=u:r:untrusted_app:s0:c512,c768 tclass=dir permissive=0 SEPF_SECMOBILE_6.0.1_0013
+# avc:  denied  { setattr } for  pid=25637 comm="pool-3-thread-7" name="data" dev="dm-1" ino=65537 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:system_data_file:s0 tclass=dir permissive=0 SEPF_SECMOBILE_6.0.1_0013
+# avc:  denied  { use } for  pid=7643 comm="dnsmasq" path="socket:[665649]" dev="sockfs" ino=665649 scontext=u:r:dnsmasq:s0 tcontext=u:r:untrusted_app:s0:c512,c768 tclass=fd permissive=0 
+# avc:  denied  { search } for  pid=3719 comm="Binder_2" name="7407" dev="proc" ino=126722 scontext=u:r:nfc:s0 tcontext=u:r:sec_untrusted_app:s0:c512,c768 tclass=dir permissive=0 SEPF_SECMOBILE_6.0.1_0013
 

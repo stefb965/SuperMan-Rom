@@ -3,7 +3,7 @@
 	<service name="DevicePolicyManagerService">
 
 		<method name="getProfileOwner">
-			<package name="com.google.android.gms" seinfo="gmscore"/>
+			<package name="com.google.android.gms" seinfo="untrusted"/>
 			<package name="com.android.vending" seinfo="gmscore"/>
 			<package name="com.google.android.apps.enterprise.dmagent" seinfo="untrusted"/>
 		</method>
@@ -13,7 +13,6 @@
 	<service name="TimaService">
 
 		<method name="attestation">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="spay" />
 		</method>
@@ -22,8 +21,19 @@
 
 	<service name="PersonaManagerService">
 
+		<method name="getFidoRpContext">
+			<seinfo value="platform" />
+			<seinfo value="shared" />
+		</method>
+
+		<method name="setFidoRpContext">
+			<seinfo value="platform" />
+			<seinfo value="shared" />
+			<package name="com.android.settings" seinfo="platform" />
+			<package name="com.android.settings" seinfo="shared" />
+		</method>
+
 		<method name="getInstance">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -34,7 +44,6 @@
 		</method>
 
 		<method name="registerUser">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -45,7 +54,6 @@
 		</method>
 
 		<method name="getContainerHideUsageStatsApps">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -78,7 +86,6 @@
 		</method>
 
 		<method name="registerSystemPersonaObserver">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -89,7 +96,6 @@
 		</method>
 
 		<method name="registerKnoxModeChangeObserver">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -103,7 +109,6 @@
 		</method>
 
 		<method name="setPersonaType">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -118,7 +123,6 @@
 		</method>
 
 		<method name="setPersonaSamsungAccount">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -133,7 +137,6 @@
 		</method>
 
 		<method name="makeInitialized">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -144,7 +147,6 @@
 		</method>
 
 		<method name="isInitialized">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -162,7 +164,6 @@
 		</method>
 
 		<method name="packageInstalled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -173,7 +174,6 @@
 		</method>
 
 		<method name="getSetupWizardPath">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -184,7 +184,6 @@
 		</method>
 
 		<method name="needVerificationForPackage">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -195,7 +194,6 @@
 		</method>
 
 		<method name="installApplications">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -210,7 +208,6 @@
 		</method>
 
 		<method name="createPersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -225,7 +222,6 @@
 		</method>
 
 		<method name="systemReady">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -236,7 +232,6 @@
 		</method>
 
 		<method name="getPolicyService">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -247,7 +242,6 @@
 		</method>
 
 		<method name="switchPersonaAndLaunch">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -258,7 +252,6 @@
 		</method>
 
 		<method name="launchPersonaHome">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -269,7 +262,6 @@
 		</method>
 
 		<method name="removePersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -280,13 +272,11 @@
 		</method>
 
 		<method name="resetPersonaDataPartition">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 		
 		<method name="stopPersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -297,7 +287,6 @@
 		</method>
 
 		<method name="startRemovingPersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -308,7 +297,6 @@
 		</method>
 
 		<method name="stopAndRemovePersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -319,7 +307,6 @@
 		</method>
 
 		<method name="userStopped">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -330,7 +317,6 @@
 		</method>
 
 		<method name="userStopAborted">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -341,7 +327,6 @@
 		</method>
 
 		<method name="packageDeleted">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -352,7 +337,6 @@
 		</method>
 
 		<method name="userForeground">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -363,7 +347,6 @@
 		</method>
 
 		<method name="userBackground">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -382,7 +365,6 @@
 		</method>
 
 		<method name="setPersonaIcon">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -401,7 +383,6 @@
 		</method>
 
 		<method name="setCurrentPersonaForUser">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -416,7 +397,6 @@
 		</method>
 
 		<method name="setPersonaName">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -435,7 +415,6 @@
 		</method>
 
 		<method name="resetPersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -450,7 +429,6 @@
 		</method>
 
 		<method name="markForRemoval">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -461,7 +439,6 @@
 		</method>
 
 		<method name="unmarkForRemoval">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -472,7 +449,6 @@
 		</method>
 
 		<method name="rollUpToParent">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -488,7 +464,6 @@
 		</method>
 
 		<method name="rollBackToPersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -506,7 +481,6 @@
 		</method>
 
 		<method name="unInstallSystemApplications">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -517,7 +491,6 @@
 		</method>
 
 		<method name="PersonaHandler">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -528,7 +501,6 @@
 		</method>
 
 		<method name="handleHomeShow">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -536,7 +508,6 @@
 		</method>
 
 		<method name="setShortcutMode">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -544,7 +515,6 @@
 		</method>
 
 		<method name="lockPersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -555,7 +525,6 @@
 		</method>
 
 		<method name="isSessionExpired">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -566,19 +535,16 @@
 		</method>
 
 		<method name="setFsMountState">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="setResetPasswordState">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="adminLockPersona">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -586,43 +552,36 @@
 		</method>
 
 		<method name="adminUnLockPersona">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="handleSuperUnlockPersona">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="addAppListForPersona">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="addAppForPersona">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="removeAppForPersona">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="savePasswordInTima">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="resetPassword">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -630,75 +589,63 @@
 		</method>
 
 		<method name="addPackageToInstallWhiteList">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="removePackageFromInstallWhiteList">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="setMaximumScreenOffTimeoutFromDeviceAdmin">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="refreshTimer">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.securehandler" seinfo="platform" />
 		</method>
 
 		<method name="userActivity">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="disablePersonaKeyGuard">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="enablePersonaKeyGuard">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="resetPersonaOnReboot">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="onWakeLockChange">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="clearAppListForPersona">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.android.providers.settings" seinfo="platform" />
 		</method>
 
 		<method name="settingSyncAllowed">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="getPasswordHint">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -706,25 +653,21 @@
 		</method>
 
 		<method name="setBackPressed">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="onSentinelActivityResumed">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="updatePersonaInfo">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="notifyKeyguardShow">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -732,61 +675,51 @@
 		</method>
 
 		<method name="getScreenOffTime">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 	    <method name="setMoveToKnoxStatus">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
         <method name="getMoveToKnoxStatus">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="activateSdp">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="calmSdp">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="getAppListForPersona">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="getEncodedPassword">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="onPatternChange">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="onPasswordChange">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="isPackageInInstallWhiteList">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<seinfo value="_container" />
@@ -794,7 +727,6 @@
 		</method>
 
 		<method name="getPackagesFromInstallWhiteList">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<seinfo value="_container" />
@@ -802,13 +734,11 @@
 		</method>
 
 		<method name="isResetPersonaOnRebootEnabled">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="getDisabledHomeLaunchers">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -816,37 +746,31 @@
 		</method>
 
 		<method name="setAccessPermission">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="canAccess">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 				
 		<method name="postRestartMsg">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="setCachedPassword">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="resetPersonaPassword">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="convertContainerType">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -854,14 +778,12 @@
 		</method>
 
 		<method name="setShortcutGuideDisplay">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.knoxsetupwizardclient" seinfo="platform" />
 		</method>
 
 		<method name="getIsFingerAsSupplement">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.android.settings" seinfo="platform" />
@@ -871,7 +793,6 @@
 		</method>
 
 		<method name="setIsFingerAsSupplement">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.android.settings" seinfo="platform" />
@@ -881,13 +802,11 @@
 		</method>
 
 		<method name="getIsUnlockedAfterTurnOn">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="setIsUnlockedAfterTurnOn">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -895,13 +814,23 @@
 		</method>
 
 		<method name="getIsFingerTimeout">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="setIsFingerTimeout">
-			<seinfo value="system" />
+			<seinfo value="platform" />
+			<seinfo value="shared" />
+			<package name="com.sec.knox.containeragent2" seinfo="platform" />
+			<package name="com.sec.knox.containeragent2" seinfo="shared" />
+		</method>
+
+		<method name="getIsIrisTimeout">
+			<seinfo value="platform" />
+			<seinfo value="shared" />
+		</method>
+
+		<method name="setIsIrisTimeout">
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -909,13 +838,11 @@
 		</method>
 
 		<method name="getIsFingerIdentifyFailed">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="setIsFingerIdentifyFailed">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -924,27 +851,36 @@
 		</method>
 
 		<method name="getIsFingerReset">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="setIsFingerReset">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
 			<package name="com.sec.knox.containeragent2" seinfo="shared" />
 		</method>
 
+		<method name="getIsIrisReset">
+			<seinfo value="platform" />
+			<seinfo value="shared" />
+		</method>
+
+		<method name="setIsIrisReset">
+		
+			<seinfo value="platform" />
+			<seinfo value="shared" />
+			<package name="com.sec.knox.containeragent2" seinfo="platform" />
+			<package name="com.sec.knox.containeragent2" seinfo="shared" />
+		</method>
+		
 		<method name="getIsAdminLockedJustBefore">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 		
 		<method name="setIsAdminLockedJustBefore">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -952,13 +888,11 @@
 		</method>
 
 		<method name="getLastKeyguardUnlockTime">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 		
 		<method name="setLastKeyguardUnlockTime">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -966,7 +900,6 @@
 		</method>
 
 		<method name="getFingerCount">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -974,7 +907,6 @@
 		</method>
 
 		<method name="setFingerCount">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -982,7 +914,6 @@
 		</method>
 
 		<method name="isFingerSupplementActivated">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -990,7 +921,6 @@
 		</method>
 
 		<method name="isFingerLockscreenActivated">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -998,19 +928,16 @@
 		</method>
 
 		<method name="savePasswordResetTokenInTima">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="handleDisableKeyguardForSdp">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="fireEvent">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.android.settings" seinfo="platform" />
@@ -1022,7 +949,6 @@
 		</method>
 
 		<method name="setAttribute">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.android.settings" seinfo="platform" />
@@ -1031,31 +957,26 @@
 		</method>
 		
 		<method name="getPersonaPolicyHandler">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 			<method name="postActiveUserChange">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="showKeyguard">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 			<method name="hideKeyguard">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="getKnoxWallpaper">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1063,7 +984,6 @@
 		</method>
 
 		<method name="getAppList">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1071,7 +991,6 @@
 		</method>
 
 		<method name="getState">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1082,7 +1001,6 @@
 		</method>
 
 		<method name="getPreviousState">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1090,7 +1008,6 @@
 		</method>
 
 		<method name="setKnoxSecurityTimeout">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1098,7 +1015,6 @@
 		</method>
 
 		<method name="getKnoxSecurityTimeout">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1106,7 +1022,6 @@
 		</method>
 
 		<method name="setShownHelp">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1114,7 +1029,6 @@
 		</method>
 
 		<method name="addPrimaryPackage">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1122,7 +1036,6 @@
 		</method>
 
 		<method name="removePrimaryPackage">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1130,7 +1043,6 @@
 		</method>
 		
 		<method name="verifyKnoxBackupPin">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1138,7 +1050,6 @@
 		</method>
 		
 		<method name="setKnoxBackupPin">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1146,7 +1057,6 @@
 		</method>
 		
 		<method name="getKnoxNameChanged">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1154,7 +1064,6 @@
 		</method>
 		
 		<method name="getKnoxIconChanged">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1162,64 +1071,54 @@
 		</method>
 
 		<method name="mountOldContainer">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent" seinfo="platform" />
 		</method>
 
 		<method name="unmountOldContainer">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent" seinfo="platform" />
 		</method>
 		
 		<method name="setFingerprintIndex">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="isEnabledFingerprintIndex">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="getFingerprintIndex">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="getFingerprintHash">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="setFingerprintHash">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="setFocusedUser">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="setIsQuickAccessUIEnabled">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.samsung.knox.knoxtrustagent" seinfo="platform" />
 		</method>
 
 		<method name="setupComplete">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.knoxsetupwizardclient" seinfo="platform" />
@@ -1228,13 +1127,11 @@
 		</method>
 
         <method name="getAdminComponentName">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="getContainerCriticalApps">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
@@ -1244,7 +1141,6 @@
 	<service name="RCPManagerService">
 
 		<method name="queryProvider">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1253,7 +1149,6 @@
 		</method>
 
 		<method name="queryAllProviders">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1262,7 +1157,6 @@
 		</method>
 
 		<method name="registerProvider">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1271,7 +1165,6 @@
 		</method>
 
 		<method name="registerSync">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1280,7 +1173,6 @@
 		</method>
 
 		<method name="registerRCPGlobalContactsDir">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1289,7 +1181,6 @@
 		</method>
 
 		<method name="registerCommandExe">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1298,7 +1189,6 @@
 		</method>
 
 		<method name="registerRCPInterface">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1307,7 +1197,6 @@
 		</method>
 
 		<method name="executeCommandForPersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1316,7 +1205,6 @@
 		</method>
 
 		<method name="switchPersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1325,7 +1213,6 @@
 		</method>
 
 		<method name="getPolicy">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1334,7 +1221,6 @@
 		</method>
 
 		<method name="refreshClipboard">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1343,7 +1229,6 @@
 		</method>
 
 		<method name="getUsersToSyncFrom">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1352,7 +1237,6 @@
 		</method>
 
 		<method name="setupClipbardSandbox">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1361,7 +1245,6 @@
 		</method>
 
 		<method name="saveSharedSandbox">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1370,7 +1253,6 @@
 		</method>
 
 		<method name="copyClipboardFile">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1379,7 +1261,6 @@
 		</method>
 
 		<method name="deleteClipboardFile">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1388,7 +1269,6 @@
 		</method>
 
 		<method name="getRCPProxy">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1396,7 +1276,6 @@
 		</method>
 
 		<method name="getRCPInterface">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1405,7 +1284,6 @@
 		</method>
 
 		<method name="getCallerInfo">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1424,6 +1302,7 @@
 			<package name="com.sec.knoxcts.pal.service" seinfo="platform" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
   			<package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
+  			<package name="com.sec.knox.knoxsetupwizardclient" seinfo="platform"/>
 		</method>
 
 		<method name="moveFile">
@@ -1434,7 +1313,6 @@
 		</method>
 
 		<method name="isFileExist">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1443,7 +1321,6 @@
 		</method>
 
 		<method name="registerExchangeData">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1452,7 +1329,6 @@
 		</method>
 
 		<method name="exchangeData">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1461,7 +1337,6 @@
 		</method>
 
 		<method name="onUserSwitching">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1469,7 +1344,6 @@
 		</method>
 
 		<method name="onUserSwitchComplete">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1477,7 +1351,6 @@
 		</method>
 
 		<method name="onPersonaActive">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1485,7 +1358,6 @@
 		</method>
 
 		<method name="onRemovePersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1493,7 +1365,6 @@
 		</method>
 
 		<method name="onResetPersona">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1501,7 +1372,6 @@
 		</method>
 
 		<method name="handleShortcut">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1510,7 +1380,6 @@
 		</method>
 
 		<method name="checkSAccount">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1519,7 +1388,6 @@
 		</method>
 
 		<method name="checkSAccountPassword">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1528,7 +1396,6 @@
 		</method>
 
 		<method name="getFiles">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1537,7 +1404,6 @@
 		</method>
 
 		<method name="deleteFile">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1546,7 +1412,6 @@
 		</method>
 
 		<method name="getFileInfo">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1555,7 +1420,6 @@
 		</method>
 
 		<method name="copyChunks">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1564,7 +1428,6 @@
 		</method>
 
 		<method name="cancelCopyChunks">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1573,7 +1436,6 @@
 		</method>
 		
 		<method name="changePermissionMigration">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1582,7 +1444,6 @@
 		</method>
 
 		<method name="startRCPProxy">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1591,7 +1452,6 @@
 		</method>
 
 		<method name="onKnoxContainerLaunch">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1599,7 +1459,6 @@
 		</method>
 
 		<method name="onStateChange">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1616,6 +1475,7 @@
 	        <package name="com.samsung.android.onlinevideo" seinfo="platform" />
 	        <package name="com.samsung.android.videolist" seinfo="platform" />
 	        <package name="com.samsung.android.app.music.chn" seinfo="platform" />
+	        <package name="com.samsung.android.app.notes" seinfo="platform" />
 		</method>
 
 	</service>
@@ -1623,7 +1483,6 @@
 
 	<service name="Proxy">
 		<method name="setSessionId">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1631,7 +1490,6 @@
 		</method>
 
 		<method name="doSync">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1639,7 +1497,6 @@
 		</method>
 
 		<method name="deletePersonaData">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1647,7 +1504,6 @@
 		</method>
 
 		<method name="singleClipDeleted">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1655,7 +1511,6 @@
 		</method>
 
 		<method name="allClipsCleared">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1663,7 +1518,6 @@
 		</method>
 
 		<method name="execute">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1671,7 +1525,6 @@
 		</method>
 
 		<method name="queryProvider">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1680,7 +1533,6 @@
 		</method>
 
 		<method name="getCallerInfoDetails">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1688,7 +1540,6 @@
 		</method>
 
 		<method name="queryAllProviders">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1697,7 +1548,6 @@
 		</method>
 
 		<method name="setupClipboardSandbox">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1706,7 +1556,6 @@
 		</method>
 
 		<method name="saveSharedSandbox">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1715,7 +1564,6 @@
 		</method>
 
 		<method name="getUsersToSyncFrom">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1724,7 +1572,6 @@
 		</method>
 
 		<method name="copyClipboardFile">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1733,7 +1580,6 @@
 		</method>
 
 		<method name="deleteClipboardFile">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1742,7 +1588,6 @@
 		</method>
 
 		<method name="refreshClipboard">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1751,7 +1596,6 @@
 		</method>
 
 		<method name="getCallerInfo">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1768,6 +1612,7 @@
 			<package name="com.sec.knoxcts" seinfo="platform" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
 			<package name="com.sec.knoxcts.pal.service" seinfo="platform" />
+			<package name="com.sec.knox.knoxsetupwizardclient" seinfo="platform"/>
 		</method>
 
 		<method name="moveFile">
@@ -1778,7 +1623,6 @@
 		</method>
 
 		<method name="getErrorMessage">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1786,7 +1630,6 @@
 		</method>
 
 		<method name="isFileExist">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1794,7 +1637,6 @@
 		</method>
 		
 		<method name="handleMessage">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1803,7 +1645,6 @@
 		</method>
 		
 		<method name="handleShortcut">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1811,7 +1652,6 @@
 		</method>
 		
 		<method name="checkSAccount">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1820,7 +1660,6 @@
 		</method>
 		
 		<method name="checkSAccountPassword">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1832,6 +1671,7 @@
 			<package name="com.samsung.knox.rcp.components" seinfo="platform" />
 			<package name="com.sec.knox.containeragent" seinfo="platform" />
 			<package name="com.sec.knox.bluetooth" seinfo="platform" />
+			<package name="com.sec.knox.switcher" seinfo="platform" />
 		</method>
 
 		<method name="moveFiles">
@@ -1849,10 +1689,10 @@
 			<package name="com.samsung.android.onlinevideo" seinfo="platform" />
 			<package name="com.samsung.android.videolist" seinfo="platform" />
 			<package name="com.samsung.android.app.music.chn" seinfo="platform" />
+			<package name="com.samsung.android.app.notes" seinfo="platform" />
 		</method>
 
 		<method name="getFiles">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1860,7 +1700,6 @@
 		</method>
 		
 		<method name="getFileInfo">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1868,7 +1707,6 @@
 		</method>
 		
 		<method name="copyChunks">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1876,7 +1714,6 @@
 		</method>
 		
 		<method name="cancelCopyChunks">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1884,7 +1721,6 @@
 		</method>
 		
 		<method name="cancel">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1892,7 +1728,6 @@
 		</method>
 		
 		<method name="registerProvider">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1908,7 +1743,6 @@
 
 	<service name="PersonaFileManagerService">
 		<method name="createPartition">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1916,7 +1750,6 @@
 		</method>
 
 		<method name="removePartition">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1924,7 +1757,6 @@
 		</method>
 
 		<method name="mount">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1932,7 +1764,6 @@
 		</method>
 
 		<method name="unmount">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1940,7 +1771,6 @@
 		</method>
 
 		<method name="changeEncryptionKey">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1948,7 +1778,6 @@
 		</method>
 
 		<method name="isEncrypted">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1961,7 +1790,6 @@
 	<service name="PersonaPolicyManagerService">
 
 		<method name="PersonaPolicyManagerService">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1972,7 +1800,6 @@
 		</method>
 
 		<method name="registerReceivers">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1983,7 +1810,6 @@
 		</method>
 
 		<method name="setPasswordLockPolicy">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -1994,7 +1820,6 @@
 		</method>
 
 		<method name="getPasswordLockPolicy">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2010,7 +1835,6 @@
 		</method>
 
 		<method name="setEncryptionStatus">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2024,7 +1848,6 @@
 		</method>
 
 		<method name="getEncryptionStatus">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2035,7 +1858,6 @@
 		</method>
 
 		<method name="setSecureKeystoreEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2049,7 +1871,6 @@
 		</method>
 
 		<method name="getSecureKeystoreEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2060,7 +1881,6 @@
 		</method>
 
 		<method name="setCameraModeChangeEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2071,7 +1891,6 @@
 		</method>
 
 		<method name="getCameraModeChangeEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2082,7 +1901,6 @@
 		</method>
 
 		<method name="setAllowCustomBadgeIcon">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2093,7 +1911,6 @@
 		</method>
 
 		<method name="getAllowCustomBadgeIcon">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2104,7 +1921,6 @@
 		</method>
 
 		<method name="setDisableSwitchWidgetOnLockScreen">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2115,7 +1931,6 @@
 		</method>
 
 		<method name="getDisableSwitchWidgetOnLockScreen">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2126,7 +1941,6 @@
 		</method>
 
 		<method name="setAllowCustomPersonaIcon">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2137,7 +1951,6 @@
 		</method>
 
 		<method name="getAllowCustomPersonaIcon">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2148,7 +1961,6 @@
 		</method>
 
 		<method name="setAllowCustomColorIdentification">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2159,7 +1971,6 @@
 		</method>
 
 		<method name="getAllowCustomColorIdentification">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2170,7 +1981,6 @@
 		</method>
 
 		<method name="setAllowContainerReset">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2181,7 +1991,6 @@
 		</method>
 
 		<method name="getAllowContainerReset">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2192,7 +2001,6 @@
 		</method>
 
 		<method name="setAllowShortCutCreation">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2203,7 +2011,6 @@
 		</method>
 
 		<method name="getAllowShortCutCreation">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2214,7 +2021,6 @@
 		</method>
 
 		<method name="setAllowDLNADataTransfer">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2225,7 +2031,6 @@
 		</method>
 
 		<method name="getAllowDLNADataTransfer">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2236,7 +2041,6 @@
 		</method>
 
 		<method name="setAllowPrint">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2247,7 +2051,6 @@
 		</method>
 
 		<method name="getAllowPrint">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2258,7 +2061,6 @@
 		</method>
 
 		<method name="setModifyLockScreenTimeout">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2269,7 +2071,6 @@
 		</method>
 
 		<method name="getModifyLockScreenTimeout">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2280,7 +2081,6 @@
 		</method>
 
 		<method name="setAllowAllShare">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2291,7 +2091,6 @@
 		</method>
 
 		<method name="getAllowAllShare">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2302,7 +2101,6 @@
 		</method>
 
 		<method name="setGearSupportEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2313,7 +2111,6 @@
 		</method>
 
 		<method name="getGearSupportEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2324,7 +2121,6 @@
 		</method>
 
 		<method name="setPenWindowEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2335,7 +2131,6 @@
 		</method>
 
 		<method name="getPenWindowEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2346,7 +2141,6 @@
 		</method>
 
 		<method name="setAirCommandEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2357,7 +2151,6 @@
 		</method>
 
 		<method name="getAirCommandEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2368,7 +2161,6 @@
 		</method>
 
 		<method name="setAllowUniversalCallerId">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2379,7 +2171,6 @@
 		</method>
 
 		<method name="getAllowUniversalCallerId">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2390,7 +2181,6 @@
 		</method>
 
 		<method name="setAllowImportFiles">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2401,7 +2191,6 @@
 		</method>
 
 		<method name="getAllowImportFiles">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2412,7 +2201,6 @@
 		</method>
 
 		<method name="setAllowExportFiles">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2423,7 +2211,6 @@
 		</method>
 
 		<method name="getAllowExportFiles">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2434,7 +2221,6 @@
 		</method>
 
 		<method name="setAllowExportAndDeleteFiles">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2445,7 +2231,6 @@
 		</method>
 
 		<method name="getAllowExportAndDeleteFiles">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2456,7 +2241,6 @@
 		</method>
 
 		<method name="setSwitchNotifEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2467,7 +2251,6 @@
 		</method>
 
 		<method name="getSwitchNotifEnabled">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2491,7 +2274,6 @@
 		</method>
 
 		<method name="getRCPDataPolicyForUser">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2502,7 +2284,6 @@
 		</method>
 
 		<method name="getRCPNotificationPolicyForUser">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2513,7 +2294,6 @@
 		</method>
 
 		<method name="getRCPDataPolicy">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2524,7 +2304,6 @@
 		</method>
 
 		<method name="getRCPNotificationPolicy">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2535,7 +2314,6 @@
 		</method>
 
 		<method name="setRCPDataPolicy">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2546,7 +2324,6 @@
 		</method>
 
 		<method name="setRCPNotificationPolicy">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2560,7 +2337,6 @@
 
 	<service name="EnterprisePartitionManager">
 		<method name="getInstance">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2570,7 +2346,6 @@
 		</method>
 
 		<method name="isReady">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2579,7 +2354,6 @@
 		</method>
 
 		<method name="onDaemonConnected">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2588,12 +2362,10 @@
 		</method>
 
 		<method name="onEvent">
-			<seinfo value="system" />
 			<agentType value="8" />
 		</method>
 
 		<method name="mount">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2602,7 +2374,6 @@
 		</method>
 
 		<method name="unmount">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2611,7 +2382,6 @@
 		</method>
 
 		<method name="changePassword">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2620,7 +2390,6 @@
 		</method>
 
 		<method name="verifyPassword">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2629,7 +2398,6 @@
 		</method>
 
 		<method name="createPartition">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2638,7 +2406,6 @@
 		</method>
 
 		<method name="removePartition">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2647,7 +2414,6 @@
 		</method>
 
 		<method name="resetPartition">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2656,7 +2422,6 @@
 		</method>
 
 		<method name="createExtSdPartition">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2665,7 +2430,6 @@
 		</method>
 
 		<method name="removeExtSdPartition">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2674,7 +2438,6 @@
 		</method>
 
 		<method name="mountExtSd">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2683,7 +2446,6 @@
 		</method>
 
 		<method name="unmountExtSd">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2692,7 +2454,6 @@
 		</method>
 
 		<method name="isFileExist">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2701,13 +2462,11 @@
 		</method>
 
 		<method name="sendDLPCommand">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<agentType value="8" />
 		</method>
 		
 		<method name="copy">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2717,7 +2476,6 @@
 		</method>
 
 		<method name="move">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2726,7 +2484,6 @@
 		</method>
 
 		<method name="copy_overload">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2735,7 +2492,6 @@
 		</method>
 
 		<method name="move_overload">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2744,7 +2500,6 @@
 		</method>
 		
 		<method name="getFileInfo">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2753,7 +2508,6 @@
 		</method>
 		
 		<method name="cancelCopyChunks">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2762,7 +2516,6 @@
 		</method>
 		
 		<method name="copyChunks">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2771,7 +2524,6 @@
 		</method>
 		
 		<method name="getFiles">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2780,7 +2532,6 @@
 		</method>
 		
 		<method name="deleteFile">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2789,7 +2540,6 @@
 		</method>
 
 		<method name="isMounted">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2799,7 +2549,6 @@
 		</method>
 
 		<method name="changePermissionMigration">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2808,7 +2557,6 @@
 		</method>
 
 		<method name="changePermissionMigration">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2817,7 +2565,6 @@
 		</method>
 
 		<method name="migration">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2826,7 +2573,6 @@
 		</method>
 
 		<method name="syncFS">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2835,7 +2581,6 @@
 		</method>
 
 		<method name="createEncPkgDir">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2844,7 +2589,6 @@
 		</method>
 
 		<method name="removeEncPkgDir">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2853,7 +2597,6 @@
 		</method>
 
 		<method name="createChamber">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2862,7 +2605,6 @@
 		</method>
 
 		<method name="removeChamber">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2877,23 +2619,19 @@
 
 		<method name="activateDomain">
 			<seinfo value="good_trustonicpartner" />
-			<seinfo value="fixmo" />
 		</method>
 
 		<method name="addAppToContainer">
 			<seinfo value="gsd" />
-			<seinfo value="fixmo" />
 		</method>
 
 		<method name="deActivateDomain">
 			<seinfo value="gsd" />
-			<seinfo value="fixmo" />
 		</method>
 
 		<method name="getActivationStatus">
 			<seinfo value="gsd" />
 			<seinfo value="good_trustonicpartner" />
-			<seinfo value="fixmo" />
 		</method>
 
 		<method name="getSEContainerIDsFromPackageName">
@@ -2915,69 +2653,63 @@
 
 		<method name="removeAppFromContainer">
 			<seinfo value="gsd" />
-			<seinfo value="fixmo" />
 		</method>
 
-		<method name="relabelData">
-			<seinfo value="system" />
-		</method>
-		
 		<method name="setBBCFlag">
 			<package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
 		</method>
 
+		<method name="getSeinfo">
+			<package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
+		</method>
+
+		<method name="changeAppDomain">
+			<package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
+		</method>
 	</service>
 
 
 	<service name="KnoxMUMContainerPolicy">
 		<method name="removeContainer">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
 			<package name="com.sec.knox.containeragent2" seinfo="shared" />
 		</method>
 
 		<method name="systemReady">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="createContainerInternal">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.knoxsetupwizardclient" seinfo="platform" />
 		</method>
 
 		<method name="createContainerMarkSuccess">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.knoxsetupwizardclient" seinfo="platform" />
 		</method>
 
 		<method name="cancelCreateContainer">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.knoxsetupwizardclient" seinfo="platform" />
 		</method>
 
 		<method name="onAdminAdded">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="onAdminRemoved">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
 
 		<method name="onPreAdminRemoval">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
@@ -2987,7 +2719,6 @@
 		</method>
 
 		<method name="getDefaultConfigurationTypes">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -2997,7 +2728,6 @@
 		</method>	
 
 		<method name="getContainerCreationParams">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -3008,7 +2738,6 @@
 		</method>	
 
 		<method name="getEnforceAuthForContainer">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -3025,7 +2754,6 @@
 	<service name="CardManagerService">
 
 		<method name="getVersion">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -3034,7 +2762,6 @@
 		</method>
 		
 		<method name="getPin">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -3043,7 +2770,6 @@
 		</method>
 		
 		<method name="connectCryptoService">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -3052,7 +2778,6 @@
 		</method>
 		
 		<method name="disconnectCryptoService">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -3061,7 +2786,6 @@
 		</method>
 		
 		<method name="getCryptoServiceSocket">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -3074,7 +2798,6 @@
 	<service name="tima">
 
 		<method name="ccmRegisterForDefaultCertificate">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -3123,7 +2846,6 @@
 	<service name="knox_ccm_policy">
 
 		<method name="getSlotIdForPackage">
-			<seinfo value="system" />
 			<seinfo value="release" />
 			<seinfo value="media" />
 			<seinfo value="platform" />
@@ -3137,6 +2859,12 @@
 		
 	</service>
 
+	<service name="knox_esecomm_policy">
+		<method name="native">
+			<package name="com.samsung.ucs.agent.ese" seinfo="platform" />
+			<package name="com.samsung.ucs.agent.boot" seinfo="platform" />
+		</method>
+	</service>
 
 	<service name="knox_timakeystore_policy">
 
@@ -3148,6 +2876,7 @@
 			<package name="com.samsung.android.spayfw" seinfo="system" />
 			<package name="com.samsung.android.spayfw" seinfo="spay" />
 			<package name="com.samsung.android.spay" seinfo="spay" />
+			<package name="com.samsung.ucm.baiplugin" seinfo="platform" />
 		</method>
 
 	</service>
@@ -3165,12 +2894,7 @@
 
 	<service name="SdpManagerService">
 
-		<method name="systemReady">
-			<seinfo value="system" />
-		</method>
-
 		<method name="SdpHandler">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="_container" />
 			<seinfo value="shared" />
@@ -3178,97 +2902,81 @@
 		</method>
 
 		<method name="isSensitiveColumn">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="addColumn">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="onBoot">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="onDeviceLocked">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="onDeviceUnlocked">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="onChangePassword">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="onUserAdded">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="onUserRemoved">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="getState">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="isSDPEnabled">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="setSensitiveFileInfo">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="setSensitiveDBInfo">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="getSensitiveFileInfo">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="getSensitiveDBInfo">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="setSDPMigrating">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
 
 		<method name="isSdpMigrating">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
@@ -3290,12 +2998,7 @@
 
 	<service name="SdpLogService">
 
-		<method name="systemReady">
-			<seinfo value="system" />
-		</method>
-
 		<method name="enqPayload">
-			<seinfo value="system" />
 			<seinfo value="_container" />
 			<seinfo value="platform" />
 		</method>
@@ -3306,17 +3009,22 @@
 	<service name="ContactsProvider2">
 
 		<method name="queryPhoneLookupEnterpriseForKnox">
+			<package name="com.samsung.android.incallui" seinfo="platform" />
 			<package name="com.android.incallui" seinfo="platform" />
 			<package name="com.android.server.telecom" seinfo="platform" />
-		<package name="com.android.providers.contacts" seinfo="shared" />
+		    <package name="com.android.providers.contacts" seinfo="shared" />
+		</method>
+
+		<method name="isBluetoothEnterpriseContactSharingDisabled">
+			<package name="com.android.bluetooth" seinfo="platform" />
 		</method>
 
 		<method name="openCorpContactPicture">
+			<package name="com.samsung.android.incallui" seinfo="platform" />
 			<package name="com.android.incallui" seinfo="platform" />
 			<package name="com.android.server.telecom" seinfo="platform" />
 			<package name="com.android.providers.contacts" seinfo="shared" />
 		</method>
-
 	</service>
 
 
@@ -3336,46 +3044,19 @@
 
 	<service name="UniversalCredentialManagerService">
 
-		<method name="isPackageFromExemptList">
-			<seinfo value="system" />
-		</method>
-
-		<method name="getCertificateAliasesAsUser">
-			<seinfo value="system" />
-		</method>
-
-		<method name="getCertificateAliases">
-			<seinfo value="system" />
-		</method>
-		
-		<method name="getAllCertificateAliases">
-			<seinfo value="system" />
-		</method>
-
 		<method name="getDefaultInstallStorageAsUser">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 		</method>
 
-		<method name="isAccessAllowed">
-			<seinfo value="system" />
-		</method>
-
-		<method name="isCredentialStorageLockedAsUser">
-			<seinfo value="system" />
-		</method>
-	
-		<method name="getStorageAuthenticationType">
-			<seinfo value="system" />
-		</method>
-
 		<method name="isCredentialStorageManagedAsUser">
-			<seinfo value="system" />
 			<package name="com.android.settings" seinfo="platform" />
 		</method>
-		<method name="notifyLicenseStatus">
-			<seinfo value="system" />
+
+		<method name="getEnforcedCredentialStorageForLockTypeAsUser">
+			<package name="com.android.settings" seinfo="platform" />
+			<package name="com.sec.knox.containeragent2" seinfo="platform" />
 		</method>
+
 		<method name="installCertificateInternal">
 			<package name="com.samsung.android.certenrollservice.scep" seinfo="platform" />
 			<package name="com.samsung.android.certenrollservice.cmp" seinfo="platform" />
@@ -3396,62 +3077,10 @@
 
     <service name="CredentialManagerService">
 
-		<method name="installCertificate">
-			<seinfo value="system" />
-		</method>
-
-		<method name="deleteCertificate">
-			<seinfo value="system" />
-		</method>
-
-		<method name="listAllProviders">
-			<seinfo value="system" />
-		</method>
-
-		<method name="setPackageSetting">
-			<seinfo value="system" />
-		</method>
-
-		<method name="getPackageSetting">
-			<seinfo value="system" />
-		</method>
-
-		<method name="setAdminConfigureBundleForCs">
-			<seinfo value="system" />
-		</method>
-
-		<method name="getAdminConfigureBundleFromCs">
-			<seinfo value="system" />
-		</method>
-
-		<method name="notifyLicenseStatus">
-			<seinfo value="system" />
-		</method>
 		<method name="notifyChangeToPlugin">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 		</method>
 
-		<method name="setState">
-			<seinfo value="system" />
-		</method>
-		
-		<method name="getDek">
-			<seinfo value="system" />
-		</method>
-		
-		<method name="unwrapDek">
-			<seinfo value="system" />
-		</method>
-		
-		<method name="generateDek">
-			<seinfo value="system" />
-		</method>
-		
-		<method name="generateWrappedDek">
-			<seinfo value="system" />
-		</method>
-		
 		<method name="generateKeyPairInternal">
 			<package name="com.samsung.android.certenrollservice.scep" seinfo="platform" />
 			<package name="com.samsung.android.certenrollservice.cmp" seinfo="platform" />
@@ -3459,18 +3088,13 @@
 		</method>
 		
 		<method name="resetNonMdmCertificates">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 		</method>
 	</service>
 
 	<service name="DLPManagerService">
-		<method name="systemReady">
-			<seinfo value="system" />
-		</method>
 
 		<method name="DLPHandler">
-			<seinfo value="system" />
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
