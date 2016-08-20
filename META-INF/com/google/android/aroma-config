@@ -469,13 +469,15 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select Root Method",		"",							2,	#-- Group 1. key = "selected.1"
-	"SuperSU V2.76",	"Latest STABLE version of Chainfire's root access.",		0,	#-- selected.1 = 1
+	"SuperSU V2.76",	"Latest STABLE version of Chainfire's root access. (used for Xposed V86.2)",		0,	#-- selected.1 = 1
 	"SuperSU V2.68",	"Older SuperSU with more compatibility.",			0,	#-- selected.1 = 2
-	"Do not install SuperSU",	"This is used if you want Xposed V86.4 with magisk and PHH root or no root at all",			0,	#-- selected.1 = 3
+	"Phh's Root (Magisk)",	"Latest opensource root access with (used with magisk)",	0,	#-- selected.1 = 3
+	"SuperSU V2.6 (Magisk)"	"Same as above but with magisk compatibility",			1,	#-- selected.1 = 4
+	"Do not install Root",	"This will not install any root method",			0,	#-- selected.1 = 5
 	"Xposed or not",	"",								2,	#-- Group 2. key = "selected.2"
-	"Yes, V85.7",		"Systemless Xposed V85.7 and SuperSU V2.76 will be installed.",	0,	#-- selected.2 = 1
-	"Yes, V86.2",		"Systemless Xposed V86.2 and SuperSU V2.76 will be installed.",	1,	#-- selected.2 = 2
-	"Yes, V86.4 (Magisk)",	"Magisk V3, Systemless Xposed V86.4 and phh's root V2.",	0,	#-- selected.2 = 3
+	"Yes, V85.7",		"Systemless Xposed V85.7,					0,	#-- selected.2 = 1
+	"Yes, V86.2",		"Systemless Xposed V86.2",					0,	#-- selected.2 = 2
+	"Yes, V86.5 (Magisk)",	"Magisk V5, Systemless Xposed V86.5",				1,	#-- selected.2 = 3
 	"No",			"Xposed won't be installed.",					0	#-- selected.2 = 4
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
