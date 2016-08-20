@@ -536,6 +536,13 @@ if
 		ui_print("Installing Busybox App...");
 		package_extract_dir("busybox/app", "/data/app");
 endif;
+#-- Magisk App
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	then
+		ui_print("Installing Magisk App...");
+		package_extract_dir("magisk/app", "/system/app");
+endif;
 #-- Potato App
 if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "4"
