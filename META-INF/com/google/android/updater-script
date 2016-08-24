@@ -14,7 +14,7 @@ show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
-ui_print("SuperMan Rom Installer V1.11");
+ui_print("SuperMan Rom Installer V1.12");
 ui_print(" ");
 ui_print(" ");
 ui_print("Formatting system...");
@@ -1020,11 +1020,11 @@ endif;
 if
 	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
 	then
-		ui_print("Installing Magisk V5 for V86.5 systemless...");
+		ui_print("Installing Magisk V6 for V86.5 systemless...");
 		delete("/data/su.img");
 		package_extract_dir("magisk", "/temp/magisk");
-		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v5.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v5.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v6.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v6.zip");
 		set_progress(0.900000);
 		ui_print(" ");
 endif;

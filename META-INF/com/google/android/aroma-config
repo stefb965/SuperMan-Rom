@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.11");
+ini_set("rom_version",          "V1.12");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "16.08.2016");
+ini_set("rom_date",             "24.08.2016");
 
 ##
 # Show Animated Splash
@@ -444,7 +444,7 @@ selectbox(
 );
 
 
-alert( "Alert", "Note: If you wish to install snapchat after this rom install, you may want to log into snapchat first and than install xposed afterwards. PAY ATTENTION: If you want to use Magisk with latest V86.4 Xposed, SuperSU won't work. Make sure to not install supersu but instead check the Magisk tab, phh's root will automatically be installed with it.");
+alert( "Alert", "Note: If you wish to install snapchat after this rom install, you may want to log into snapchat first and than install xposed afterwards. PAY ATTENTION: If you want to use Magisk with latest V86.5 Xposed, be carefull, since it has issues with normal root method, if you want to change from phh to supersu make sure you have cleaned all root things out! Otherwise root will not work (may needs full wipe)");
 
 ##
 # Sub Window 3
@@ -471,13 +471,13 @@ selectbox(
 	"Select Root Method",		"",							2,	#-- Group 1. key = "selected.1"
 	"SuperSU V2.76",	"Latest STABLE version of Chainfire's root access. (used for Xposed V86.2)",		0,	#-- selected.1 = 1
 	"SuperSU V2.68",	"Older SuperSU with more compatibility.",			0,	#-- selected.1 = 2
-	"Phh's Root (Magisk)",	"Latest opensource root access with (used with magisk)",	0,	#-- selected.1 = 3
-	"SuperSU V2.6 (Magisk)","Same as above but with magisk compatibility",			1,	#-- selected.1 = 4
+	"Phh's Root (Magisk)",	"Latest opensource root access with (used with magisk)",	1,	#-- selected.1 = 3
+	"SuperSU V2.6 (Magisk)","Same as above but with magisk compatibility",			0,	#-- selected.1 = 4
 	"Do not install Root",	"This will not install any root method",			0,	#-- selected.1 = 5
 	"Xposed or not",	"",								2,	#-- Group 2. key = "selected.2"
 	"Yes, V85.7",		"Systemless Xposed V85.7",					0,	#-- selected.2 = 1
 	"Yes, V86.2",		"Systemless Xposed V86.2",					0,	#-- selected.2 = 2
-	"Yes, V86.5 (Magisk)",	"Magisk V5, Systemless Xposed V86.5",				1,	#-- selected.2 = 3
+	"Yes, V86.5 (Magisk)",	"Magisk V6, Systemless Xposed V86.5",				1,	#-- selected.2 = 3
 	"No",			"Xposed won't be installed.",					0	#-- selected.2 = 4
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
