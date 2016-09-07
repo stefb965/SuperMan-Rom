@@ -32,6 +32,7 @@
 
     IgnoreJniTime="true"
     AssertEnabled="false"
+    DisablePglorNmeaCallback="true"
    />
 
   <gll

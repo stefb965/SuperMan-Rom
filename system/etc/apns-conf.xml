@@ -23805,6 +23805,13 @@
       type="mms"
   />
 
+  <apn carrier="AZI"
+      mcc="425"
+      mnc="19"
+      apn="netazi"
+      type="default"
+  />
+
   <apn carrier="Batelco Internet"
       mcc="426"
       mnc="01"

@@ -189,6 +189,7 @@
 /system/bin/modem_control u:object_r:modem_control_exec:s0
 /system/bin/modemDriver_vpad_main u:object_r:modemdriver_vpad_exec:s0
 /system/bin/modemd u:object_r:rild_exec:s0
+/system/bin/moredump u:object_r:moredump_exec:s0
 /system/bin/mpdecision u:object_r:mpdecision_exec:s0
 /system/bin/mplayer u:object_r:mediaserver_exec:s0
 /system/bin/mrvl_gpsd u:object_r:mrvl_gpsd_exec:s0
@@ -196,6 +197,7 @@
 /system/bin/mtpd u:object_r:mtp_exec:s0
 /system/bin/mvpd u:object_r:vmwared_exec:s0
 /system/bin/mwlan_helper u:object_r:mwlan_helper_exec:s0
+/system/bin/mx_logger_dump.sh u:object_r:moredump_exec:s0
 /system/bin/netd u:object_r:netd_exec:s0
 /system/bin/netmgrd u:object_r:netmgrd_exec:s0
 /system/bin/nexprocess u:object_r:oneseg_mw_exec:s0

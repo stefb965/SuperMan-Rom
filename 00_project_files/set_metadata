@@ -132,3 +132,7 @@ set_metadata("/system/vendor/lib/mediadrm/libwvdrmengine.so", "uid", 0, "gid", 0
 set_metadata("/system/vendor/media", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata_recursive("/system/xbin", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/xbin/dexdump", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+set_metadata("/system/bin/redsocks", "selabel", "u:object_r:redsocks_exec:s0");
+set_metadata("/system/bin/resize2fs", "selabel", "u:object_r:fsck_exec:s0");
+set_metadata("/system/bin/rpmbd", "selabel", "u:object_r:rpmbd_exec:s0");
+set_metadata("/system/lib/drm", "selabel", "u:object_r:drm_lib_system_file:s0");

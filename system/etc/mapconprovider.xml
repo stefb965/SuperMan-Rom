@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ratpriority version= "47">
+<ratpriority version= "61">
      <mapcon>
          <operator operatorNumeric="311480">
              <apn apnName="ims" ratPriority="LTE:IWLAN:eHRPD" />
@@ -127,7 +127,7 @@
              <apn apnName="mms" ratPriority="IWLAN:LTE" />
              <apn apnName="xcap" ratPriority="LTE" />
              <apn apnName="cbs" ratPriority="LTE" />
-             <apn apnName="emergency" ratPriority="LTE" />
+             <apn apnName="emergency" ratPriority="IWLAN" />
              <apn apnName="default" ratPriority="LTE" />
              <apn apnName="hipri" ratPriority="LTE" />
              <apn apnName="supl" ratPriority="LTE" />
@@ -138,7 +138,7 @@
              <apn apnName="mms" ratPriority="IWLAN:LTE" />
              <apn apnName="xcap" ratPriority="LTE" />
              <apn apnName="cbs" ratPriority="LTE" />
-             <apn apnName="emergency" ratPriority="LTE" />
+             <apn apnName="emergency" ratPriority="IWLAN" />
              <apn apnName="default" ratPriority="LTE" />
              <apn apnName="hipri" ratPriority="LTE" />
              <apn apnName="supl" ratPriority="LTE" />
@@ -248,7 +248,7 @@
              <apn apnName="mms" ratPriority="LTE" />
              <apn apnName="xcap" ratPriority="LTE" />
              <apn apnName="cbs" ratPriority="LTE" />
-             <apn apnName="emergency" ratPriority="LTE" />
+             <apn apnName="emergency" ratPriority="LTE:IWLAN" />
              <apn apnName="default" ratPriority="LTE" />
              <apn apnName="hipri" ratPriority="LTE" />
              <apn apnName="supl" ratPriority="LTE" />
@@ -413,7 +413,7 @@
              <apn apnName="mms" ratPriority="LTE" />
              <apn apnName="xcap" ratPriority="LTE:IWLAN" />
              <apn apnName="cbs" ratPriority="LTE" />
-             <apn apnName="emergency" ratPriority="LTE" />
+             <apn apnName="emergency" ratPriority="IWLAN" />
              <apn apnName="default" ratPriority="LTE" />
              <apn apnName="hipri" ratPriority="LTE" />
              <apn apnName="supl" ratPriority="LTE" />
@@ -466,7 +466,7 @@
 		 <operator operatorNumeric="26202">
              <apn apnName="ims" ratPriority="IWLAN:LTE" />
              <apn apnName="mms" ratPriority="LTE" />
-             <apn apnName="xcap" ratPriority="IWLAN:LTE" />
+             <apn apnName="xcap" ratPriority="LTE" />
              <apn apnName="cbs" ratPriority="LTE" />
              <apn apnName="emergency" ratPriority="LTE" />
              <apn apnName="default" ratPriority="LTE" />
@@ -488,7 +488,7 @@
          <operator operatorNumeric="26209">
              <apn apnName="ims" ratPriority="IWLAN:LTE" />
              <apn apnName="mms" ratPriority="LTE" />
-             <apn apnName="xcap" ratPriority="IWLAN:LTE" />
+             <apn apnName="xcap" ratPriority="LTE" />
              <apn apnName="cbs" ratPriority="LTE" />
              <apn apnName="emergency" ratPriority="LTE" />
              <apn apnName="default" ratPriority="LTE" />
@@ -531,7 +531,7 @@
 		 </operator>
 		 <operator operatorNumeric="45406">
              <apn apnName="ims" ratPriority="IWLAN:LTE" />
-             <apn apnName="mms" ratPriority="IWLAN:LTE" />
+             <apn apnName="mms" ratPriority="LTE" />
              <apn apnName="xcap" ratPriority="LTE" />
              <apn apnName="cbs" ratPriority="LTE" />
              <apn apnName="emergency" ratPriority="LTE" />
@@ -542,7 +542,7 @@
 		 </operator>
 		 <operator operatorNumeric="45412">
              <apn apnName="ims" ratPriority="IWLAN:LTE" />
-             <apn apnName="mms" ratPriority="IWLAN:LTE" />
+             <apn apnName="mms" ratPriority="LTE" />
              <apn apnName="xcap" ratPriority="LTE" />
              <apn apnName="cbs" ratPriority="LTE" />
              <apn apnName="emergency" ratPriority="LTE" />
@@ -606,6 +606,17 @@
              <apn apnName="supl" ratPriority="LTE" />
              <apn apnName="dun" ratPriority="LTE" />
          </operator>
+         <operator operatorNumeric="52003">
+             <apn apnName="ims" ratPriority="LTE:IWLAN" />
+             <apn apnName="mms" ratPriority="LTE" />
+             <apn apnName="xcap" ratPriority="LTE" />
+             <apn apnName="cbs" ratPriority="LTE" />
+             <apn apnName="emergency" ratPriority="LTE" />
+             <apn apnName="default" ratPriority="LTE" />
+             <apn apnName="hipri" ratPriority="LTE" />
+             <apn apnName="supl" ratPriority="LTE" />
+             <apn apnName="dun" ratPriority="LTE" />
+         </operator>
          <operator operatorNumeric="52005">
              <apn apnName="ims" ratPriority="IWLAN:LTE" />
              <apn apnName="mms" ratPriority="LTE" />
@@ -623,6 +634,28 @@
              <apn apnName="xcap" ratPriority="IWLAN:LTE" />
              <apn apnName="cbs" ratPriority="LTE" />
              <apn apnName="emergency" ratPriority="LTE" />
+             <apn apnName="default" ratPriority="LTE" />
+             <apn apnName="hipri" ratPriority="LTE" />
+             <apn apnName="supl" ratPriority="LTE" />
+             <apn apnName="dun" ratPriority="LTE" />
+         </operator>
+         <operator operatorNumeric="302720">
+             <apn apnName="ims" ratPriority="LTE:IWLAN" />
+             <apn apnName="mms" ratPriority="LTE:IWLAN" />
+             <apn apnName="xcap" ratPriority="LTE:IWLAN" />
+             <apn apnName="cbs" ratPriority="LTE:IWLAN" />
+             <apn apnName="emergency" ratPriority="LTE:IWLAN" />
+             <apn apnName="default" ratPriority="LTE" />
+             <apn apnName="hipri" ratPriority="LTE" />
+             <apn apnName="supl" ratPriority="LTE" />
+             <apn apnName="dun" ratPriority="LTE" />
+         </operator>
+         <operator operatorNumeric="302370">
+             <apn apnName="ims" ratPriority="LTE:IWLAN" />
+             <apn apnName="mms" ratPriority="LTE:IWLAN" />
+             <apn apnName="xcap" ratPriority="LTE:IWLAN" />
+             <apn apnName="cbs" ratPriority="LTE:IWLAN" />
+             <apn apnName="emergency" ratPriority="LTE:IWLAN" />
              <apn apnName="default" ratPriority="LTE" />
              <apn apnName="hipri" ratPriority="LTE" />
              <apn apnName="supl" ratPriority="LTE" />
@@ -663,7 +696,7 @@
              <ipflow ipflowType="apps" ipflowRule="imsvideovoicecall" routingRule="IWLAN:LTE" apnName="ims"/>
              <ipflow ipflowType="apps" ipflowRule="idle" routingRule="LTE:CS:IWLAN" apnName="ims"/>
              <ipflow ipflowType="apps" ipflowRule="blockhandoff" routingRule="UNKNOWN" apnName="ims"/>
-             <ipflow ipflowType="apps" ipflowRule="e911call" routingRule="UNKNOWN" apnName="emergency:ims"/>
+             <ipflow ipflowType="apps" ipflowRule="e911call" routingRule="UNKNOWN" apnName="emergency"/>
          </operator>
          <operator operatorNumeric="310380">
              <ipflow ipflowType="apps" ipflowRule="imsvideocall" routingRule="IWLAN:LTE" apnName="ims"/>
@@ -671,7 +704,7 @@
              <ipflow ipflowType="apps" ipflowRule="imsvideovoicecall" routingRule="IWLAN:LTE" apnName="ims"/>
              <ipflow ipflowType="apps" ipflowRule="idle" routingRule="LTE:CS:IWLAN" apnName="ims"/>
              <ipflow ipflowType="apps" ipflowRule="blockhandoff" routingRule="UNKNOWN" apnName="ims"/>
-             <ipflow ipflowType="apps" ipflowRule="e911call" routingRule="UNKNOWN" apnName="emergency:ims"/>
+             <ipflow ipflowType="apps" ipflowRule="e911call" routingRule="UNKNOWN" apnName="emergency"/>
          </operator>
          <operator operatorNumeric="310410">
              <ipflow ipflowType="apps" ipflowRule="imsvideocall" routingRule="IWLAN:LTE" apnName="ims"/>
@@ -679,7 +712,7 @@
              <ipflow ipflowType="apps" ipflowRule="imsvideovoicecall" routingRule="IWLAN:LTE" apnName="ims"/>
              <ipflow ipflowType="apps" ipflowRule="idle" routingRule="LTE:CS:IWLAN" apnName="ims"/>
              <ipflow ipflowType="apps" ipflowRule="blockhandoff" routingRule="UNKNOWN" apnName="ims"/>
-             <ipflow ipflowType="apps" ipflowRule="e911call" routingRule="UNKNOWN" apnName="emergency:ims"/>
+             <ipflow ipflowType="apps" ipflowRule="e911call" routingRule="UNKNOWN" apnName="emergency"/>
          </operator>
          <operator operatorNumeric="310560">
              <ipflow ipflowType="apps" ipflowRule="imsvideocall" routingRule="IWLAN:LTE" apnName="ims"/>
@@ -687,7 +720,7 @@
              <ipflow ipflowType="apps" ipflowRule="imsvideovoicecall" routingRule="IWLAN:LTE" apnName="ims"/>
              <ipflow ipflowType="apps" ipflowRule="idle" routingRule="LTE:CS:IWLAN" apnName="ims"/>
              <ipflow ipflowType="apps" ipflowRule="blockhandoff" routingRule="UNKNOWN" apnName="ims"/>
-             <ipflow ipflowType="apps" ipflowRule="e911call" routingRule="UNKNOWN" apnName="emergency:ims"/>
+             <ipflow ipflowType="apps" ipflowRule="e911call" routingRule="UNKNOWN" apnName="emergency"/>
          </operator>
          <operator operatorNumeric="311180">
              <ipflow ipflowType="apps" ipflowRule="imsvideocall" routingRule="IWLAN:LTE" apnName="ims"/>
@@ -695,7 +728,7 @@
              <ipflow ipflowType="apps" ipflowRule="imsvideovoicecall" routingRule="IWLAN:LTE" apnName="ims"/>
              <ipflow ipflowType="apps" ipflowRule="idle" routingRule="LTE:CS:IWLAN" apnName="ims"/>
              <ipflow ipflowType="apps" ipflowRule="blockhandoff" routingRule="UNKNOWN" apnName="ims"/>
-             <ipflow ipflowType="apps" ipflowRule="e911call" routingRule="UNKNOWN" apnName="emergency:ims"/>
+             <ipflow ipflowType="apps" ipflowRule="e911call" routingRule="UNKNOWN" apnName="emergency"/>
          </operator>
 		 <!-- Currently ifom is defined only for ATT and Verizon-->
      </ifomtable>

@@ -6,9 +6,9 @@
 /system/app/Hangouts/Hangouts.apk
 /system/app/SamsungIMEv3/SamsungIMEv3.apk
 /system/app/Photos/Photos.apk
+/system/app/YouTube/YouTube.apk
 /system/app/GoogleTTS/GoogleTTS.apk
 /system/app/Drive/Drive.apk
-/system/app/YouTube/YouTube.apk
 /system/app/OneDrive_Samsung_v2/OneDrive_Samsung_v2.apk
 /system/app/Music2/Music2.apk
 /system/app/Gmail2/Gmail2.apk
@@ -152,9 +152,9 @@
 /system/app/TetheringAutomation/TetheringAutomation.apk
 /system/app/SecFactoryPhoneTest/SecFactoryPhoneTest.apk
 /system/app/BCService/BCService.apk
+/system/app/AASAservice/AASAservice.apk
 /system/app/SnsImageCache/SnsImageCache.apk
 /system/app/Kies/Kies.apk
-/system/app/AASAservice/AASAservice.apk
 /system/app/KnoxAttestationAgent/KnoxAttestationAgent.apk
 /system/app/BluetoothMidiService/BluetoothMidiService.apk
 /system/app/SplitSoundService/SplitSoundService.apk
@@ -171,8 +171,8 @@
 /system/priv-app/SecSettings2/SecSettings2.apk
 /system/priv-app/SecEmail_M/SecEmail_M.apk
 /system/priv-app/SystemUI/SystemUI.apk
-/system/priv-app/AxelSpringer/AxelSpringer.apk
 /system/priv-app/WallpaperPicker_Zero2/WallpaperPicker_Zero2.apk
+/system/priv-app/AxelSpringer/AxelSpringer.apk
 /system/priv-app/SVoice_1.0/SVoice_1.0.apk
 /system/priv-app/Phonesky/Phonesky.apk
 /system/priv-app/PhotoStudio_WQHD_Hero/PhotoStudio_WQHD_Hero.apk
@@ -283,6 +283,7 @@
 /system/priv-app/Word_SamsungStub/Word_SamsungStub.apk
 /system/priv-app/AuthService/AuthService.apk
 /system/priv-app/StoryService/StoryService.apk
+/system/priv-app/ASKSManager/ASKSManager.apk
 /system/priv-app/serviceModeApp_FB/serviceModeApp_FB.apk
 /system/priv-app/SecSettingsProvider2/SecSettingsProvider2.apk
 /system/priv-app/CarrierConfig/CarrierConfig.apk
