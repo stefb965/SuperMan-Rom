@@ -17,3 +17,21 @@ Everything is Ok
 Files: 180
 Size:       78988653
 Compressed: 58351192
+
+7-Zip [32] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,32 bits,8 CPUs Intel(R) Core(TM) i7-3632QM CPU @ 2.20GHz (306A9),ASM,AES-NI)
+
+Scanning the drive:
+781 folders, 3825 files, 3097556987 bytes (2955 MiB)
+
+Creating archive: SuperMan-Rom.zip
+
+Items to compress: 4606
+
+
+Scan WARNINGS for files and folders:
+
+vendor : No more files
+rootzip : No more files
+----------------
+Scan WARNINGS: 2
