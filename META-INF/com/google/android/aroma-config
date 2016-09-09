@@ -437,7 +437,7 @@ selectbox(
 
 	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
 	"Stock Camera",		"Nothing changed",					1,	#-- selected.1 = 1
-	"Modded Camera",	"increase bitrates for all camera resolutions and to set pictures at 100 quality.",				0       #-- selected.1 = 2
+	"Modded Camera V5",	"increase bitrates for all camera resolutions and to set pictures at 100 quality.",				0       #-- selected.1 = 2
 	  
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
