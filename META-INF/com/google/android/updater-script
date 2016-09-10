@@ -932,6 +932,18 @@ if
 		package_extract_file("aroma/kernel/SM-G935F/Modify_Stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;	
 set_progress(0.700000);
+#Magisk
+if
+	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	then
+		ui_print("Installing Magisk V6 for systemless mods...");
+		delete("/data/su.img");
+		package_extract_dir("magisk", "/temp/magisk");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v6.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v6.zip");
+		set_progress(0.900000);
+		ui_print(" ");
+endif;
 #-- ROOT
 if
 	file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
@@ -1054,17 +1066,6 @@ if
 		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.2-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
 		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.2-sdk23-systemless.zip");
 		set_progress(0.950000);
-		ui_print(" ");
-endif;
-if
-	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
-	then
-		ui_print("Installing Magisk V6 for V86.5 systemless...");
-		delete("/data/su.img");
-		package_extract_dir("magisk", "/temp/magisk");
-		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v6.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v6.zip");
-		set_progress(0.900000);
 		ui_print(" ");
 endif;
 if
