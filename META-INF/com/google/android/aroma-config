@@ -469,7 +469,7 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 
 	"Select Root Method",		"",							2,	#-- Group 1. key = "selected.1"
-	"SuperSU V2.78",	"Latest STABLE version of Chainfire's root access. (used for Xposed V86.2)",		1,	#-- selected.1 = 1
+	"SuperSU V2.78 SR 1",	"Latest STABLE version of Chainfire's root access. (used for Xposed V86.2)",		1,	#-- selected.1 = 1
 	"SuperSU V2.68",	"Older SuperSU with more compatibility.",			0,	#-- selected.1 = 2
 	"Phh's Root (Magisk)",	"Latest opensource root access with (used with magisk)",	0,	#-- selected.1 = 3
 	"SuperSU V2.6 (Magisk)","Same as above but with magisk compatibility",			0,	#-- selected.1 = 4
