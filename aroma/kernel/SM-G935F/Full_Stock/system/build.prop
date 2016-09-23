@@ -176,10 +176,8 @@ ro.build.version.sdl=2301
 ro.expect.recovery_id=0xd9f0a3d40b2ab85fdecfe58e8a52cb1ae547c83a000000000000000000000000
 
 # Tweaks
-fw.power_user_switcher=1
-fw.show_hidden_users=1
+fw.max_users=3
 fw.show_multiuserui=1
-fw.max_users=10
 wlan.wfd.hdcp=disable
 debug.performance.tuning=1
 ro.config.hw_fast_dormancy=1
@@ -195,3 +193,4 @@ ro.config.hw_quickpoweron=true
 ro.config.hw_power_saving=true
 ro.ril.disable.power.collapse=1
 pm.sleep_mode=1
+fingerprint.unlock=1
