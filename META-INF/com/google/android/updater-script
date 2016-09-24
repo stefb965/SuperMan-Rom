@@ -105,13 +105,13 @@ if
 	file_getprop("/tmp/aroma/window6.prop","selected.1") == "1"
 	then
 		ui_print("Installing stock emoji...");
-		package_extract_dir("aroma/emoji/stock", "/system/fonts");
+		package_extract_dir("aroma/emoji/stock/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window6.prop","selected.1") == "2"
 	then
 		ui_print("Installing IOS emoji...");
-		package_extract_dir("aroma/emoji/IOS", "/system/fonts");
+		package_extract_dir("aroma/emoji/IOS/system", "/system");
 endif;
 #-- SystemUI
 if
