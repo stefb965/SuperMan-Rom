@@ -446,71 +446,42 @@ selectbox(
 
 alert( "Alert", "Note: If you wish to install snapchat after this rom install, you may want to log into snapchat first and than install xposed afterwards. PAY ATTENTION: If you want to use Magisk with latest V86.5 Xposed, be carefull, since it has issues with normal root method, if you want to change from phh to supersu make sure you have cleaned all root things out! Otherwise root will not work (may needs full wipe)");
 
-##
-# Sub Window 3
-#
-
-selectbox(
-  #-- Title
-	"SuperSU/Xposed",
-	  
-  #-- Sub Title
-    "Select between SuperSU V2.78, PHH's and Xposed versions!",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window3.prop
-	"window3.prop",
-
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
-	"Select Root Method",		"",							2,	#-- Group 1. key = "selected.1"
-	"SuperSU V2.78 SR 1",	"Latest STABLE version of Chainfire's root access. (used for Xposed V86.2)",		1,	#-- selected.1 = 1
-	"Phh's Root (Magisk)",	"Latest opensource root access with (used with magisk)",	0,	#-- selected.1 = 2
-	"Do not install Root",	"This will not install any root method",			0,	#-- selected.1 = 3
-	"Xposed or not",	"",								2,	#-- Group 2. key = "selected.2"
-	"Yes, V85.7",		"Last Systemless Xposed which works on stock kernel",		0,	#-- selected.2 = 1
-	"Yes, V86.2",		"Last Systemless Xposed without magisk",			1,	#-- selected.2 = 2
-	"Yes, V86.5 (Magisk)",	"Magisk V6, Systemless Xposed V86.5",				0,	#-- selected.2 = 3
-	"No",			"Xposed won't be installed.",					0	#-- selected.2 = 4
-
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
-);
-
-##
-# Sub Window 4
-#
-
-selectbox(
-  #-- Title
-	"Busybox",
-	  
-  #-- Sub Title
-    "Do you want to install busybox or not?",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window4.prop
-	"window4.prop",
-
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
-	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
-	"Yes, I want busybox",		"Busybox will be installed",				1,	#-- selected.1 = 1
-	"Busybox (Magisk)",		"Installs magisk compatible busybox",			0,	#-- selected.1 = 2
-	"No, I don't need it",		"Busybox won't be installed",				0       #-- selected.1 = 3
-	  
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
+form(
+    "Root/Magisk",
+    "You can choose many things here, read carefully:",
+    "@default",
+    "magisk.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"magisk",	"Magisk V7",	"Magisk and its modules do only work on hydra kernel!!",		"group",
+	"yes",		"Yes",		"Will install magisk V7",						"select.selected",
+	"no",		"No",		"Will not install magisk",						"select",
+	"root",		"Root method", 	"Magisk does only work with phh's superuser at the moment!",		"group",
+	"su",		"SuperSU",	"Will install SuperSU 2.78 SR1, NOT compatible with magisk",		"select",
+	"phhma",	"PHH's (magisk)","Installs phh's supersuser patched for magisk!",			"select.selected",
+	"phh",		"PHH's",	"Will install phh's superuser (stock one, not compatible with magisk)",	"select",
+	"no",		"No root",	"Nothing will be installed",						"select",
+	"busybox",	"Busybox", 	"Choose between magisk or non magisk busybox",				"group",
+	"yes",		"Busybox",	"Will install latest busybox available compatibility",			"select",
+	"no",		"No busybox",	"Nothing will be installed",						"select.selected",
+	"xposed",	"Xposed",	"Want xposed or not?",							"group",
+	"xpsma",	"Xposed V86.6",	"Will install xposed V86.6 systemless",					"select.selected",
+	"xps",		"Xposed V86.2",	"Last xposed version without magisk",					"select",
+	"no",		"No xposed",	"Xposed won't be installed",						"select",
+	"v4a",		"Viper4Android","Magiks or stock v4a",							"group",
+	"yes",		"Normal V4A",	"Normal system patch will be applied",					"select",
+	"yesma",	"Magisk V4A",	"Magisk compatible viper4android will be installed",			"select",
+	"no",		"No V4A",	"Viper4Android won't be installed",					"select"
 );
 
 ##
@@ -638,37 +609,6 @@ selectbox(
 	"SuperMan SM-G935F",		"Superman Splash screen for S7 Edge",				0,      #-- selected.1 = 4
 	"Change nothing",		"Keeps your current splash screen (no matter which it is)",	1       #-- selected.1 = 5
 	  
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
-);
-
-##
-# Sub Window 9
-#
-
-selectbox(
-  #-- Title
-	"Viper4Android",
-	  
-  #-- Sub Title
-    "Do you wish to install Viper4Android?",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window9.prop
-	"window9.prop",
-
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-	
-	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
-	"Yes",		"Will install viper4android",						0,	#-- selected.1 = 1
-	"Yes, magisk",	"Installs magisk V4A, BUT you need to install the APK manually",	0,      #-- selected.1 = 2
-	"No",		"Won't install viper4android",						1       #-- selected.1 = 3
-  
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );

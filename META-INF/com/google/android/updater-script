@@ -146,19 +146,25 @@ if
 endif;
 #-- Settings
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/magisk.prop","root") == "su"
 	then
 		ui_print("Installing supersu compatible settings...");
 		package_extract_dir("aroma/settings/supersu", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
 	then
-		ui_print("Installing supersu compatible settings...");
+		ui_print("Installing phh compatible settings...");
 		package_extract_dir("aroma/settings/phh", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.1") == "3"
+	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
+	then
+		ui_print("Installing phh compatible settings...");
+		package_extract_dir("aroma/settings/phh", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","root") == "no"
 	then
 		ui_print("Installing supersu compatible settings...");
 		package_extract_dir("aroma/settings/supersu", "/system/priv-app");
@@ -493,49 +499,43 @@ ui_print("Extracting data..."); ui_print(" ");
 package_extract_dir("data", "/data");
 #-- Xposed App
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.2") == "1"
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xps"
 	then
-		ui_print("Installing Xposed V85.7 app...");
-		package_extract_dir("xposed/V85.7/app", "/data/app");
+		ui_print("Installing Xposed app...");
+		package_extract_dir("xposed/app", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpsma"
 	then
-		ui_print("Installing Xposed V86.2 app...");
-		package_extract_dir("xposed/V86.2/app", "/data/app");
-endif;
-if
-	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
-	then
-		ui_print("Installing Xposed V86.5 app...");
-		package_extract_dir("xposed/V86.5/app", "/data/app");
+		ui_print("Installing Xposed app...");
+		package_extract_dir("xposed/app", "/data/app");
 endif;
 #-- PHH's App
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
+	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
+	then
+		ui_print("Installing phh's supersu app...");
+		package_extract_dir("supersu/app", "/data/app");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
 	then
 		ui_print("Installing phh's supersu app...");
 		package_extract_dir("supersu/app", "/data/app");
 endif;
 #-- BUSYBOX App
 if
-	file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
-	then
-		ui_print("Installing Busybox App...");
-		package_extract_dir("busybox/app", "/data/app");
-endif;
-if
-	file_getprop("/tmp/aroma/window4.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/magisk.prop","busybox") == "yes"
 	then
 		ui_print("Installing Busybox App...");
 		package_extract_dir("busybox/app", "/data/app");
 endif;
 #-- Magisk App
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
 		ui_print("Installing Magisk App...");
-		package_extract_dir("magisk/app", "/system/app");
+		package_extract_dir("magisk/app", "/data/app");
 endif;
 #-- Potato App
 if
@@ -922,21 +922,26 @@ endif;
 set_progress(0.700000);
 #Magisk
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
-		ui_print("Installing Magisk V6 for systemless mods...");
+		ui_print("Installing Magisk V7 for systemless mods...");
 		delete("/data/su.img");
 		package_extract_dir("magisk", "/temp/magisk");
-		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v6.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v6.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v7.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v7.zip");
 		set_progress(0.900000);
 		ui_print(" ");
 endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","magisk") == "no"
+	then
+		ui_print("No magisk installed...");
+endif;
 #-- ROOT
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/magisk.prop","root") == "su"
 	then
-		ui_print("Installing SuperSU V2.78 variant...");
+		ui_print("Installing SuperSU V2.78 SR1 variant...");
 		package_extract_dir("supersu", "/tmp/supersu");
 		run_program("/sbin/busybox", "unzip", "/tmp/supersu/SR1-SuperSU-v2.78-SR1.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
 		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/SR1-SuperSU-v2.78-SR1.zip");
@@ -946,23 +951,33 @@ if
 		ui_print(" ");
 endif;
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
 	then
-		ui_print("Installing Magisk phh's root V5...");
+		ui_print("Installing Magisk phh's root r29...");
 		package_extract_dir("supersu", "/temp/supersu");
-		run_program("/sbin/busybox", "unzip", "/temp/supersu/phh-superuser-17-magisk.zip", "META-INF/com/google/android/*", "-d", "/temp/supersu");
-		run_program("/sbin/busybox", "sh", "/temp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/supersu/phh-superuser-17-magisk.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/supersu/phh-superuser-magisk-r259.zip", "META-INF/com/google/android/*", "-d", "/temp/supersu");
+		run_program("/sbin/busybox", "sh", "/temp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/supersu/phh-superuser-magisk-r259.zip");
 		set_progress(0.900000);
 		ui_print(" ");
 endif;
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.1") == "3"
+	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
+	then
+		ui_print("Installing phh's root r29...");
+		package_extract_dir("supersu", "/temp/supersu");
+		run_program("/sbin/busybox", "unzip", "/temp/supersu/superuser-r259.zip", "META-INF/com/google/android/*", "-d", "/temp/supersu");
+		run_program("/sbin/busybox", "sh", "/temp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/supersu/superuser-r259.zip");
+		set_progress(0.900000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/magisk.prop","root") == "no"
 	then
 		ui_print("No root installed");
 endif;
 #-- BUSYBOX
 if
-	file_getprop("/tmp/aroma/window4.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/magisk.prop","busybox") == "yes"
 	then
 		ui_print("Installing Busybox...");
 		package_extract_dir("busybox", "/tmp/busybox");
@@ -971,23 +986,14 @@ if
 		set_progress(0.800000);
 endif;
 if
-	file_getprop("/tmp/aroma/window4.prop","selected.1") == "2"
-	then
-		ui_print("Installing Magisk Busybox...");
-		package_extract_dir("busybox", "/tmp/busybox");
-		run_program("/sbin/busybox", "unzip", "/tmp/busybox/BusyBox-Magisk-1.25.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
-		run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/BusyBox-Magisk-1.25.zip");
-		set_progress(0.800000);
-endif;
-if
-	file_getprop("/tmp/aroma/window4.prop","selected.1") == "3"
+	file_getprop("/tmp/aroma/magisk.prop","busybox") == "no"
 	then
 		ui_print("No Busybox installed...");
 		set_progress(0.800000);
 endif;
 #-- Viper4Android
 if
-	file_getprop("/tmp/aroma/window9.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/magisk.prop","v4a") == "yes"
 	then
 		ui_print("Installing ViPERAtmos_4.8_Sony_Beats_Universal_Edition...");
 		package_extract_dir("viper4android", "/tmp/viper4android");
@@ -996,16 +1002,16 @@ if
 		set_progress(0.850000);
 endif;
 if
-	file_getprop("/tmp/aroma/window9.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/magisk.prop","v4a") == "yesma"
 	then
 		ui_print("Installing Magisk Viper4Android...");
 		package_extract_dir("viper4android", "/tmp/viper4android");
-		run_program("/sbin/busybox", "unzip", "/tmp/viper4android/V4A-Magisk-Dark.zip", "META-INF/com/google/android/*", "-d", "/tmp/viper4android");
-		run_program("/sbin/busybox", "sh", "/tmp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/viper4android/V4A-Magisk-Dark.zip");
+		run_program("/sbin/busybox", "unzip", "/tmp/viper4android/ViPER4Android_FX-v2.4.0.1.zip", "META-INF/com/google/android/*", "-d", "/tmp/viper4android");
+		run_program("/sbin/busybox", "sh", "/tmp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/viper4android/ViPER4Android_FX-v2.4.0.1.zip");
 		set_progress(0.850000);
 endif;
 if
-	file_getprop("/tmp/aroma/window9.prop","selected.1") == "3"
+	file_getprop("/tmp/aroma/magisk.prop","v4a") == "no"
 	then
 		ui_print("No Viper4Android installed...");
 		package_extract_dir("viper4android", "/tmp/viper4android");
@@ -1013,17 +1019,7 @@ if
 endif;
 #-- Xposed
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.2") == "1"
-	then
-		ui_print("Installing Xposed V85.7 systemless...");
-		package_extract_dir("xposed", "/temp/xposed");
-		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v85.7-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
-		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v85.7-sdk23-systemless.zip");
-		set_progress(0.900000);
-		ui_print(" ");
-endif;
-if
-	file_getprop("/tmp/aroma/window3.prop","selected.2") == "2"
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xps"
 	then
 		ui_print("Installing Xposed V86.2 systemless...");
 		package_extract_dir("xposed", "/temp/xposed");
@@ -1033,17 +1029,17 @@ if
 		ui_print(" ");
 endif;
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.2") == "3"
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpsma"
 	then
-		ui_print("Installing Xposed V86.5 systemless...");
+		ui_print("Installing Xposed V86.6 systemless...");
 		package_extract_dir("xposed", "/temp/xposed");
-		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.5-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
-		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.5-sdk23-systemless.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.6-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
+		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.6-sdk23-systemless.zip");
 		set_progress(0.950000);
 		ui_print(" ");
 endif;
 if
-	file_getprop("/tmp/aroma/window3.prop","selected.2") == "4"
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "no"
 	then
 		ui_print("No Xposed installed");
 		set_progress(0.950000);
