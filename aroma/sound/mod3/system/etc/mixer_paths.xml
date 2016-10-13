@@ -220,8 +220,6 @@
 		<ctl name="DSP5 Aux 3" value="AIF4RX2" />
 		<ctl name="HPOUT3L Input 1" value="AIF1RX1" />
 		<ctl name="HPOUT3L Input 2" value="AIF1RX2" />
-		<ctl name="HPOUT3R Input 1" value="AIF1RX1" />
-		<ctl name="HPOUT3R Input 2" value="AIF1RX2" />
 		<ctl name="RCV Switch" value="1" />
 		<ctl name="VI SENSING Switch" value="1" />
 		<ctl name="SPK Switch" value="1" />
@@ -265,23 +263,7 @@
 	</path>
 
 	<path name="ringtone-speaker">
-		<ctl name="ASYNC Sample Rate 2" value="48kHz" />
-		<ctl name="DSP5 Rate" value="ASYNCCLK rate 2" />
-		<ctl name="ASRC2IN1L Input" value="AIF1RX1" />
-		<ctl name="ASRC2IN1R Input" value="AIF1RX2" />
-		<ctl name="DSP5L Input 1" value="ASRC2IN1L" />
-		<ctl name="DSP5L Input 2" value="ASRC2IN1R" />
-		<ctl name="AIF4TX1 Input 1" value="DSP5.1" />
-		<ctl name="AIF4TX2 Input 1" value="DSP5.1" />
-		<ctl name="DSP5 Aux 2" value="AIF4RX1" />
-		<ctl name="DSP5 Aux 3" value="AIF4RX2" />
-		<ctl name="HPOUT3L Input 1" value="AIF1RX1" />
-		<ctl name="HPOUT3L Input 2" value="AIF1RX2" />
-		<ctl name="HPOUT3R Input 1" value="AIF1RX1" />
-		<ctl name="HPOUT3R Input 2" value="AIF1RX2" />
-		<ctl name="RCV Switch" value="1" />
-		<ctl name="VI SENSING Switch" value="1" />
-		<ctl name="SPK Switch" value="1" />
+		<path name="media-speaker" />
 	</path>
 
 	<path name="ringtone-headset">
@@ -310,9 +292,6 @@
 		<ctl name="ASRC2IN1R Input" value="AIF1RX2" />
 		<ctl name="AIF4TX1 Input 1" value="ASRC2IN1L" />
 		<ctl name="AIF4TX2 Input 1" value="ASRC2IN1R" />
-		<ctl name="HPOUT3L Input 1" value="AIF1RX1" />
-		<ctl name="HPOUT3L Input 2" value="AIF1RX2" />
-		<ctl name="RCV Switch" value="1" />
 		<ctl name="SPK Switch" value="1" />
 	</path>
 
@@ -424,9 +403,6 @@
 		<ctl name="AIF4TX2 Input 1" value="DSP5.1" />
 		<ctl name="DSP5 Aux 2" value="AIF4RX1" />
 		<ctl name="DSP5 Aux 3" value="AIF4RX2" />
-		<ctl name="HPOUT3L Input 1" value="ISRC2INT1" />
-		<ctl name="HPOUT3R Input 1" value="ISRC2INT1" />
-		<ctl name="RCV Switch" value="1" />
 		<ctl name="VI SENSING Switch" value="1" />
 		<ctl name="SPK Switch" value="1" />
 	</path>
@@ -497,9 +473,6 @@
 		<ctl name="AIF4TX2 Input 1" value="DSP5.1" />
 		<ctl name="DSP5 Aux 2" value="AIF4RX1" />
 		<ctl name="DSP5 Aux 3" value="AIF4RX2" />
-		<ctl name="HPOUT3L Input 1" value="ISRC2INT1" />
-		<ctl name="HPOUT3R Input 1" value="ISRC2INT1" />
-		<ctl name="RCV Switch" value="1" />
 		<ctl name="VI SENSING Switch" value="1" />
 		<ctl name="SPK Switch" value="1" />
 	</path>
@@ -570,9 +543,6 @@
 		<ctl name="AIF4TX2 Input 1" value="DSP5.1" />
 		<ctl name="DSP5 Aux 2" value="AIF4RX1" />
 		<ctl name="DSP5 Aux 3" value="AIF4RX2" />
-		<ctl name="HPOUT3L Input 1" value="ISRC2INT1" />
-		<ctl name="HPOUT3R Input 1" value="ISRC2INT1" />
-		<ctl name="RCV Switch" value="1" />
 		<ctl name="VI SENSING Switch" value="1" />
 		<ctl name="SPK Switch" value="1" />
 	</path>
@@ -661,12 +631,12 @@
 	<path name="incall_default-handset">
 		<ctl name="ASRC1IN2L Input" value="AIF2RX1" />
 		<ctl name="ISRC2INT3 Input" value="ASRC1IN2L" />
-		<ctl name="HPOUT3L Input 3 Volume" value="35" />
-		<ctl name="HPOUT3R Input 3 Volume" value="35" />
+		<ctl name="HPOUT3L Input 3 Volume" value="0" />
+		<ctl name="HPOUT3R Input 3 Volume" value="0" />
 		<ctl name="HPOUT3L Input 3" value="ISRC2INT3" />
 		<ctl name="HPOUT3R Input 3" value="ISRC2INT3" />
-		<ctl name="HPOUT3L Input 3 Volume" value="35" />
-		<ctl name="HPOUT3R Input 3 Volume" value="35" />
+		<ctl name="HPOUT3L Input 3 Volume" value="32" />
+		<ctl name="HPOUT3R Input 3 Volume" value="32" />
 		<ctl name="HPOUT3L Input 2" value="None" />
 		<ctl name="HPOUT3R Input 2" value="None" />
 		<!-- Call recording route -->
@@ -817,11 +787,6 @@
 		<ctl name="AIF4TX2 Input 1" value="DSP5.1" />
 		<ctl name="DSP5 Aux 2" value="AIF4RX1" />
 		<ctl name="DSP5 Aux 3" value="AIF4RX2" />
-		<ctl name="HPOUT3L Input 1" value="AIF1RX1" />
-		<ctl name="HPOUT3R Input 1" value="AIF1RX2" />
-		<ctl name="HPOUT3L Input 2" value="ISRC2INT1" />
-		<ctl name="HPOUT3R Input 2" value="ISRC2INT1" />
-		<ctl name="RCV Switch" value="1" />
 		<ctl name="VI SENSING Switch" value="1" />
 		<ctl name="SPK Switch" value="1" />
 		<!-- Call recording route -->
@@ -940,11 +905,6 @@
 		<ctl name="AIF4TX2 Input 1" value="DSP5.1" />
 		<ctl name="DSP5 Aux 2" value="AIF4RX1" />
 		<ctl name="DSP5 Aux 3" value="AIF4RX2" />
-		<ctl name="HPOUT3L Input 1" value="AIF1RX1" />
-		<ctl name="HPOUT3R Input 1" value="AIF1RX2" />
-		<ctl name="HPOUT3L Input 2" value="ISRC2INT1" />
-		<ctl name="HPOUT3R Input 2" value="ISRC2INT1" />
-		<ctl name="RCV Switch" value="1" />
 		<ctl name="VI SENSING Switch" value="1" />
 		<ctl name="SPK Switch" value="1" />
 		<!-- Call recording route -->
