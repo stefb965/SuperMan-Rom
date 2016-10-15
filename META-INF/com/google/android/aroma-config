@@ -403,10 +403,10 @@ selectbox(
 	"SM-G935F",			"It will select the S7 edge battery capacity and build.prop",	0,	#-- selected.1 = 2
 	"Select the kernel you want to install",		"",					2,	#-- Group 2. key = "selected.2"
 	"SM-G930F Stock Kernel",	"If you select this, sytemless xposed won't work (bootloop)",	0,	#-- selected.2 = 1
-	"SM-G930F SuperKernel",		"SuperKernel V1.8 and Synapse installed S7",			0,	#-- selected.2 = 2
+	"SM-G930F SuperKernel",		"SuperKernel V1.8.5 and Synapse installed S7",			0,	#-- selected.2 = 2
 	"SM-G930F SuperStock",		"Selinux permissive and updated Linux for our S7",		1,	#-- selected.2 = 3
 	"SM-G935F Stock Kernel",	"If you select this, sytemless xposed won't work (bootloop)",	0,	#-- selected.2 = 4
-	"SM-G935F SuperKernel",		"SuperKernel V1.8 and Synapse installed S7 Edge",		0,	#-- selected.2 = 5
+	"SM-G935F SuperKernel",		"SuperKernel V1.8.5 and Synapse installed S7 Edge",		0,	#-- selected.2 = 5
 	"SM-G935F SuperStock",		"Selinux permissive and updated Linux for our S7 Edge",		0	#-- selected.2 = 6
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
@@ -481,7 +481,7 @@ form(
 	"v4a",		"Viper4Android","Magiks or stock v4a",							"group",
 	"yes",		"Normal V4A",	"Normal system patch will be applied",					"select",
 	"yesma",	"Magisk V4A",	"Magisk compatible viper4android will be installed",			"select",
-	"no",		"No V4A",	"Viper4Android won't be installed",					"select"
+	"no",		"No V4A",	"Viper4Android won't be installed",					"select.selected"
 );
 
 ##

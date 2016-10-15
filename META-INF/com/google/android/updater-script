@@ -42,6 +42,9 @@ if
 		run_program("/sbin/busybox", "sh", "/tmp/DeleteDataWithoutMedia.sh");
 		delete_recursive("/tmp/scripts");
 		delete_recursive("/data/dalvik-cache");
+		delete_recursive("/magisk");
+		delete_recursive("/supersu");
+		delete_recursive("/temp");
 		set_progress(0.250000);
 endif;	
 if
@@ -53,6 +56,9 @@ if
 		delete_recursive("/sdcard");
 		delete_recursive("/cache");
 		delete_recursive("/data/dalvik-cache");
+		delete_recursive("/magisk");
+		delete_recursive("/supersu");
+		delete_recursive("/temp");
 		set_progress(0.250000);
 endif;
 if
