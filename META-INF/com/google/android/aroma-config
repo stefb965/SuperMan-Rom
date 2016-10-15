@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.14");
+ini_set("rom_version",          "V1.14.5");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "24.09.2016");
+ini_set("rom_date",             "16.10.2016");
 
 ##
 # Show Animated Splash
@@ -463,7 +463,7 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"magisk",	"Magisk V7",	"Magisk and its modules do only work on hydra kernel!!",		"group",
+	"magisk",	"Magisk V7",	"Magisk and its modules do only work on Superstock and superkernel!!",	"group",
 	"yes",		"Yes",		"Will install magisk V7",						"select.selected",
 	"no",		"No",		"Will not install magisk",						"select",
 	"root",		"Root method", 	"Magisk does only work with phh's superuser at the moment!",		"group",
