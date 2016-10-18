@@ -926,6 +926,19 @@ if
 		package_extract_file("aroma/kernel/SM-G935F/Modify_Stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;	
 set_progress(0.700000);
+#SuperSU
+if
+	file_getprop("/tmp/aroma/magisk.prop","root") == "su"
+	then
+		ui_print("Installing SuperSU V2.78 SR1 variant...");
+		package_extract_dir("supersu", "/tmp/supersu");
+		run_program("/sbin/busybox", "unzip", "/tmp/supersu/SR1-SuperSU-v2.78-SR1.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
+		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/SR1-SuperSU-v2.78-SR1.zip");
+#SUD
+		set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode", 0700, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
+		set_progress(0.750000);
+		ui_print(" ");
+endif;
 #Magisk
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
@@ -944,18 +957,6 @@ if
 		ui_print("No magisk installed...");
 endif;
 #-- ROOT
-if
-	file_getprop("/tmp/aroma/magisk.prop","root") == "su"
-	then
-		ui_print("Installing SuperSU V2.78 SR1 variant...");
-		package_extract_dir("supersu", "/tmp/supersu");
-		run_program("/sbin/busybox", "unzip", "/tmp/supersu/SR1-SuperSU-v2.78-SR1.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
-		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/SR1-SuperSU-v2.78-SR1.zip");
-#SUD
-		set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode", 0700, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
-		set_progress(0.750000);
-		ui_print(" ");
-endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
 	then
