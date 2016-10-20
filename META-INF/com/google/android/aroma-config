@@ -359,7 +359,7 @@ form(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"variant",	"Variant",		"",							"group",
+	"variant",	"Variant/Model selection",		"",					"group",
 	"s7",		"S7 Model",		"I got a SM-G930F/FD/W8",				"select.selected",
 	"s7e",		"S7E Model",		"I got a SM-G935F/FD/W8",				"select"
 );
@@ -402,10 +402,10 @@ form(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"kernelg930",	"Kernel",		"",									"group",
-	"stock",	"Stock Kernel",		"If you select this, sytemless xposed won't work (bootloop)",		"select",
-	"super",	"SuperKernel",		"SuperKernel V1.8.6 and Synapse installed S7",				"select",
-	"superstock",	"SuperStock",		"Selinux permissive and updated Linux for our S7",			"select.selected"
+	"kernelg930",	"Kernel SM-G930F/FD/W8",		"",									"group",
+	"stock",	"Stock Kernel",			"If you select this, sytemless xposed won't work (bootloop)",		"select",
+	"super",	"SuperKernel",			"SuperKernel V1.8.6 and Synapse installed S7",				"select",
+	"superstock",	"SuperStock",			"Selinux permissive and updated Linux for our S7",			"select.selected"
 );
 
 ##
@@ -448,10 +448,10 @@ form(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"kernelg935",	"Kernel",		"",									"group",
-	"stock",	"Stock Kernel",		"If you select this, sytemless xposed won't work (bootloop)",		"select",
-	"super",	"SuperKernel",		"SuperKernel V1.8.6 and Synapse installed S7e",				"select",
-	"superstock",	"SuperStock",		"Selinux permissive and updated Linux for our S7e",			"select.selected"
+	"kernelg935",	"Kernel SM-G935F/FD/W8",	"",									"group",
+	"stock",	"Stock Kernel",			"If you select this, sytemless xposed won't work (bootloop)",		"select",
+	"super",	"SuperKernel",			"SuperKernel V1.8.6 and Synapse installed S7e",				"select",
+	"superstock",	"SuperStock",			"Selinux permissive and updated Linux for our S7e",			"select.selected"
 );
 
 ##
@@ -528,12 +528,12 @@ form(
 	"no",		"No root",	"No root will be installed",						"select",
 	"busybox",	"Busybox", 	"",									"group",
 	"yes",		"Busybox",	"Will install latest busybox available",				"select",
-	"no",		"No busybox",	"Nothing will be installed",						"select.selected",
+	"no",		"No busybox",	"Busybox is already included in MAGISK V8",				"select.selected",
 	"xposed",	"Xposed",	"",									"group",
 	"xpsma",	"Xposed V86.6",	"Will install xposed V86.6 systemless (magisk required)",		"select.selected",
 	"xps",		"Xposed V86.2",	"Last xposed version without magisk",					"select",
 	"no",		"No xposed",	"Xposed won't be installed",						"select",
-	"v4a",		"Viper4Android","",	§								"group",
+	"v4a",		"Viper4Android","",									"group",
 	"yes",		"Normal V4A",	"Normal system patch will be applied",					"select",
 	"yesma",	"Magisk V4A",	"Magisk compatible viper4android will be installed",			"select",
 	"no",		"No V4A",	"Viper4Android won't be installed",					"select.selected"
