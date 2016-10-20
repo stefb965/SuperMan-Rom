@@ -676,8 +676,8 @@ form(
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
 	"services",	"Services",		"",							"group",
-	"modded",	"Stock services.jar",	"You will have no mods like 5 way reboot",		"select",
-	"stock",	"Modded services.jar",	"USB Plug/Unplug disable wake up, Remove high volume warning for headphones, 5 way reboot, long press back to kill and more. Install this for modded launcher!",									"select.selected",
+	"stock",	"Stock services.jar",	"You will have no mods like 5 way reboot",		"select",
+	"modded",	"Modded services.jar",	"USB Plug/Unplug disable wake up, Remove high volume warning for headphones, 5 way reboot, long press back to kill and more. Install this for modded launcher!",									"select.selected",
 	"launcher",	"Launcher", 		"",							"group",
 	"stock",	"Stock Launcher",	"Normal touchwiz launcher as always",			"select",
 	"modded",	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects, launcher rotation, twswipe (this only works with modded services!)",												"select.selected"
