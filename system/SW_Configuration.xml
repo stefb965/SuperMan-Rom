@@ -4,9 +4,14 @@
 	<PublicName>SM-G935F</PublicName>
 	</MobileData>
 	<CustomerDataSet>
-	<CSCName>G935FZTO</CSCName>
-	<CSCVersion>1BPIF</CSCVersion>
-	<NbCustomer>1</NbCustomer>
-	<CustomerData src="/Customer/ZTO/customer.xml" />
+	<CSCName>G935FODD</CSCName>
+	<CSCVersion>1BPJ7</CSCVersion>
+	<NbCustomer>6</NbCustomer>
+	<CustomerData src="/Customer/INU/customer.xml" />
+	<CustomerData src="/Customer/INS/customer.xml" />
+	<CustomerData src="/Customer/BNG/customer.xml" />
+	<CustomerData src="/Customer/SLK/customer.xml" />
+	<CustomerData src="/Customer/SLI/customer.xml" />
+	<CustomerData src="/Customer/NPL/customer.xml" />
 	</CustomerDataSet>
 </SW-Configuration>

@@ -45,7 +45,7 @@ ro.build.hidden_ver=G930FXXU1BPJ7
 ro.config.rm_preload_enabled=0
 ro.build.changelist=9113173
 ro.product_ship=true
-ro.build.official.release=true
+ro.build.official.release=false
 ro.chipname=exynos8890
 # end build properties
 
@@ -173,8 +173,10 @@ ro.build.version.sdl=2301
 ro.expect.recovery_id=0x84d597cd41cec6f647dd598b04a71515d8e2472d000000000000000000000000
 
 # Tweaks
-fw.max_users=3
+fw.max_users=30
 fw.show_multiuserui=1
+fw.show_hidden_users=1
+fw.power_user_switcher=1
 wlan.wfd.hdcp=disable
 debug.performance.tuning=1
 ro.config.hw_fast_dormancy=1

@@ -14,7 +14,7 @@ show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
-ui_print("SuperMan Rom Installer V1.14.5");
+ui_print("SuperMan Rom Installer V1.15");
 ui_print(" ");
 ui_print(" ");
 ui_print("Formatting system...");
@@ -32,7 +32,7 @@ mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/EFS", "/efs");
 set_progress(0.200000);
 #-- Format Options
 if
-	file_getprop("/tmp/aroma/window0.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/wipe.prop","wipe") == "full"
 	then
 		ui_print("Full wipe...");
 		delete_recursive("/system");
@@ -48,7 +48,7 @@ if
 		set_progress(0.250000);
 endif;	
 if
-	file_getprop("/tmp/aroma/window0.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/wipe.prop","wipe") == "clean"
 	then
 		ui_print("Clean install...");
 		delete_recursive("/system");
@@ -62,7 +62,7 @@ if
 		set_progress(0.250000);
 endif;
 if
-	file_getprop("/tmp/aroma/window0.prop","selected.1") == "3"
+	file_getprop("/tmp/aroma/wipe.prop","wipe") == "dirty"
 	then
 		ui_print("Dirty flash...");
 		delete_recursive("/system");
@@ -80,28 +80,28 @@ package_extract_file("scripts/efs_backup.sh", "/tmp/efs_backup.sh");
 set_perm(0, 0, 0777, "/tmp/efs_backup.sh");
 run_program("/tmp/efs_backup.sh");
 set_progress(0.350000);
-#-- Battery Capacity
+#-- Variants
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/variant.prop","variant") == "s7"
 	then
-		ui_print("SM-G930F battery capacity...");
+		ui_print("SM-G930F variant...");
 		package_extract_dir("aroma/variants/SM-G930F/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/variant.prop","variant") == "s7e"
 	then
-		ui_print("SM-G935F battery capacity...");
+		ui_print("SM-G935F variant...");
 		package_extract_dir("aroma/variants/SM-G935F/system", "/system");
 endif;
 #-- Camera Mod
 if
-	file_getprop("/tmp/aroma/window2.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/camera.prop","camera") == "stock"
 	then
 		ui_print("Stock Camera...");
 		package_extract_dir("aroma/camera/stock", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window2.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/camera.prop","camera") == "modded"
 	then
 		ui_print("Modded Camera...");
 		package_extract_dir("aroma/camera/modded", "/system");
@@ -142,13 +142,13 @@ if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "4"
 	then
 		ui_print("Installing rounded SystemUI...");
-		package_extract_dir("aroma/systemui/rounded_potato", "/system/priv-app");
+		package_extract_dir("aroma/systemui/rounded_clock", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "5"
 	then
 		ui_print("Installing modded SystemUI...");
-		package_extract_dir("aroma/systemui/modded_potato", "/system/priv-app");
+		package_extract_dir("aroma/systemui/modded_clock", "/system/priv-app");
 endif;
 #-- Settings
 if
@@ -177,78 +177,78 @@ if
 endif;
 #-- Services.jar
 if
-	file_getprop("/tmp/aroma/window11.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/mods.prop","services") == "stock"
 	then
 		ui_print("Installing stock services...");
 		package_extract_dir("aroma/services/stock", "/system/framework");
 endif;
 if
-	file_getprop("/tmp/aroma/window11.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/mods.prop","services") == "modded"
 	then
 		ui_print("Installing modded services...");
 		package_extract_dir("aroma/services/modded", "/system/framework");
 endif;
 #-- Launcher
 if
-	file_getprop("/tmp/aroma/window12.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/mods.prop","launcher") == "stock"
 	then
 		ui_print("Installing stock launcher...");
 		package_extract_dir("aroma/launcher/stock", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/window12.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/mods.prop","launcher") == "modded"
 	then
 		ui_print("Installing modded launcher...");
 		package_extract_dir("aroma/launcher/modded", "/system/priv-app");
 endif;
 #-- Animation
 if
-	file_getprop("/tmp/aroma/window13.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/bootanim.prop","anim") == "stock"
 	then
 		ui_print("Installing stock animation...");
 		package_extract_dir("aroma/animation/stock", "/system/media");
 endif;
 if
-	file_getprop("/tmp/aroma/window13.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/bootanim.prop","anim") == "super"
 	then
 		ui_print("Installing superman animation...");
 		package_extract_dir("aroma/animation/superman", "/system/media");
 endif;
 #-- Fingerprint files
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "1"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "stock"
 	then
-		ui_print("Installing Stock Files...");
+		ui_print("Installing Stock kernel Files...");
 		package_extract_dir("aroma/kernel/SM-G930F/Full_Stock/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "2"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "super"
 	then
-		ui_print("Installing Modded Files...");
+		ui_print("Installing Modded kernel Files...");
 		package_extract_dir("aroma/kernel/SM-G930F/SuperKernel/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "3"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "superstock"
 	then
-		ui_print("Installing Modded Files...");
+		ui_print("Installing Modded kernel Files...");
 		package_extract_dir("aroma/kernel/SM-G930F/Modify_Stock/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "4"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "stock"
 	then
-		ui_print("Installing Stock Files...");
+		ui_print("Installing Stock kernel Files...");
 		package_extract_dir("aroma/kernel/SM-G935F/Stock/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "5"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "super"
 	then
-		ui_print("Installing Modded Files...");
+		ui_print("Installing Modded kernel Files...");
 		package_extract_dir("aroma/kernel/SM-G935F/SuperKernel/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "6"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "superstock"
 	then
-		ui_print("Installing Modded Files...");
+		ui_print("Installing Modded kernel Files...");
 		package_extract_dir("aroma/kernel/SM-G935F/Modify_Stock/system", "/system");
 endif;
 #-- SMS App
@@ -416,6 +416,18 @@ if
 		package_extract_dir("aroma/debloat/Samsung_Music", "/system/priv-app");
 endif;
 if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.26") == "1"
+	then
+		ui_print("Installing OneDrive...");
+		package_extract_dir("aroma/debloat/Samsung_OneDrive", "/system/priv-app");
+endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.1.27") == "1"
+	then
+		ui_print("Installing OneNote App...");
+		package_extract_dir("aroma/debloat/OneNote", "/system/priv-app");
+endif;
+if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.2.1") == "1"
 	then
 		ui_print("Installing Google Now...");
@@ -469,33 +481,39 @@ if
 		ui_print("Installing Youtube...");
 		package_extract_dir("aroma/debloat/Youtube", "/system/app");
 endif;
+if
+	file_getprop("/tmp/aroma/checkbox1.prop","item.2.10") == "1"
+	then
+		ui_print("Installing AndroidPay...");
+		package_extract_dir("aroma/debloat/AndroidPay", "/system/preload");
+endif;
 #-- Sound Mod
 if
-	file_getprop("/tmp/aroma/window5.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/sound.prop","sound") == "level0"
 	then
 		ui_print("Installing sound mod level 0...");
 		package_extract_dir("aroma/sound/mod0/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window5.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/sound.prop","sound") == "level1"
 	then
 		ui_print("Installing sound mod level 1...");
 		package_extract_dir("aroma/sound/mod1/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window5.prop","selected.1") == "3"
+	file_getprop("/tmp/aroma/sound.prop","sound") == "level2"
 	then
 		ui_print("Installing sound mod level 2...");
 		package_extract_dir("aroma/sound/mod2/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window5.prop","selected.1") == "4"
+	file_getprop("/tmp/aroma/sound.prop","sound") == "level3"
 	then
 		ui_print("Installing sound mod level 3...");
 		package_extract_dir("aroma/sound/mod3/system", "/system");
 endif;
 if
-	file_getprop("/tmp/aroma/window5.prop","selected.1") == "5"
+	file_getprop("/tmp/aroma/sound.prop","sound") == "nothing"
 	then
 		ui_print("Installing stock sound...");
 		package_extract_dir("aroma/sound/stock/system", "/system");
@@ -542,19 +560,6 @@ if
 	then
 		ui_print("Installing Magisk App...");
 		package_extract_dir("magisk/app", "/data/app");
-endif;
-#-- Potato App
-if
-	file_getprop("/tmp/aroma/window7.prop","selected.1") == "4"
-	then
-		ui_print("Installing potato clock...");
-		package_extract_dir("aroma/systemui/app", "/data/app");
-endif;
-if
-	file_getprop("/tmp/aroma/window7.prop","selected.1") == "5"
-	then
-		ui_print("Installing potato clock...");
-		package_extract_dir("aroma/systemui/app", "/data/app");
 endif;
 set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
 set_progress(0.400000);
@@ -890,39 +895,39 @@ ui_print("Extracting boot image...");
 ui_print(" ");
 #-- Kernel Selection
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "1"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "stock"
 	then
 		ui_print("Installing SM-G930F full StockKernel...");
 		package_extract_file("aroma/kernel/SM-G930F/Full_Stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;	
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "2"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "super"
 	then
 		ui_print("Installing SM-G930F SuperKernel...");
 		package_extract_file("aroma/kernel/SM-G930F/SuperKernel/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "3"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "superstock"
 	then
-		ui_print("Installing SM-G930F modified StockKernel...");
+		ui_print("Installing SM-G930F SuperStock...");
 		package_extract_file("aroma/kernel/SM-G930F/Modify_Stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;	
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "4"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "stock"
 	then
 		ui_print("Installing SM-G935F full StockKernel...");
 		package_extract_file("aroma/kernel/SM-G935F/Full_Stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;	
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "5"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "super"
 	then
 		ui_print("Installing SM-G935F SuperKernel...");
 		package_extract_file("aroma/kernel/SM-G935F/SuperKernel/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;
 if
-	file_getprop("/tmp/aroma/window1.prop","selected.2") == "6"
+	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "superstock"
 	then
-		ui_print("Installing SM-G935F modified StockKernel...");
+		ui_print("Installing SM-G935F SuperStock...");
 		package_extract_file("aroma/kernel/SM-G935F/Modify_Stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;	
 set_progress(0.700000);
@@ -943,11 +948,11 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
-		ui_print("Installing Magisk V7 for systemless mods...");
+		ui_print("Installing Magisk V8 for systemless mods...");
 		delete("/data/su.img");
 		package_extract_dir("magisk", "/temp/magisk");
-		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v7.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v7.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v8.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v8.zip");
 		set_progress(0.900000);
 		ui_print(" ");
 endif;
@@ -1052,7 +1057,7 @@ if
 		set_progress(0.950000);
 endif;
 if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/splash.prop","splashg930") == "stock"
 	then
 		ui_print("Installing S7 Stock Splash...");
 		package_extract_dir("aroma/splash", "/tmp/splash");
@@ -1062,7 +1067,7 @@ if
 		ui_print(" ");
 endif;
 if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/splash.prop","splashg935") == "stock"
 	then
 		ui_print("Installing S7 Edge Stock Splash...");
 		package_extract_dir("aroma/splash", "/tmp/splash");
@@ -1072,7 +1077,7 @@ if
 		ui_print(" ");
 endif;
 if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "3"
+	file_getprop("/tmp/aroma/splash.prop","splashg930") == "super"
 	then
 		ui_print("Installing S7 SuperMan Splash...");
 		package_extract_dir("aroma/splash", "/tmp/splash");
@@ -1082,7 +1087,7 @@ if
 		ui_print(" ");
 endif;
 if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "4"
+	file_getprop("/tmp/aroma/splash.prop","splashg935") == "super"
 	then
 		ui_print("Installing S7 Edge SuperMan Splash...");
 		package_extract_dir("aroma/splash", "/tmp/splash");
@@ -1092,7 +1097,13 @@ if
 		ui_print(" ");
 endif;
 if
-	file_getprop("/tmp/aroma/window8.prop","selected.1") == "5"
+	file_getprop("/tmp/aroma/splash.prop","splashg930") == "nothing"
+	then
+		ui_print("Keep current Splash screen");
+		set_progress(0.990000);
+endif;
+if
+	file_getprop("/tmp/aroma/splash.prop","splashg935") == "nothing"
 	then
 		ui_print("Keep current Splash screen");
 		set_progress(0.990000);

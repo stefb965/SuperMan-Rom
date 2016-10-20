@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.14.5");
+ini_set("rom_version",          "V1.15");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "16.10.2016");
+ini_set("rom_date",             "22.10.2016");
 
 ##
 # Show Animated Splash
@@ -346,110 +346,165 @@ endif;
 if prop("menu.prop","selected")=="1" then
 
 ##
-# Sub Window 0
+# Variant Form
 #
 
-selectbox(
-  #-- Title
-    "Wipe method",
-  
-  #-- Sub Title
-    "Choose between clean install, full wipe and dirty flash",
-  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window0.prop
-    "window0.prop",
+form(
+    "Variant",
+    "Choose your variant here",
+    "icons/install2",
+    "variant.prop",
   
 	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"Select the one you prefer",		"",					2,	#-- Group 1. key = "selected.1"
-	"Full Wipe",		"Wipes all except data/media and external SD card",	1,	#-- selected.1 = 1
-	"Clean Install",	"Wipes everything except external SD card",		0,	#-- selected.1 = 2
-	"Dirty Flash",		"Wipes only system (there will be bugs with this)",	0	#-- selected.1 = 3
-
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
+	"variant",	"Variant",		"",							"group",
+	"s7",		"S7 Model",		"I got a SM-G930F/FD/W8",				"select.selected",
+	"s7e",		"S7E Model",		"I got a SM-G935F/FD/W8",				"select"
 );
 
-alert( "Alert", "For Kernels, if you are not a professional or an android geek it is recommend to stick to stock/stock modified kernel!");
-
 ##
-# Sub Window 1
+# Wipe Form
 #
 
-selectbox(
-  #-- Title
-    "Variant's",
-  
-  #-- Sub Title
-    "Are you using a Galaxy S7 or an S7 edge?",
-  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window1.prop
-    "window1.prop",
+form(
+    "Wipe",
+    "Choose your wipe option here",
+    "icons/install2",
+    "wipe.prop",
   
 	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"Select your right Variant",		"",							2,	#-- Group 1. key = "selected.1"
-	"SM-G930F",			"It will select the S7 battery capacity and build.prop",	1,	#-- selected.1 = 1
-	"SM-G935F",			"It will select the S7 edge battery capacity and build.prop",	0,	#-- selected.1 = 2
-	"Select the kernel you want to install",		"",					2,	#-- Group 2. key = "selected.2"
-	"SM-G930F Stock Kernel",	"If you select this, sytemless xposed won't work (bootloop)",	0,	#-- selected.2 = 1
-	"SM-G930F SuperKernel",		"SuperKernel V1.8.5 and Synapse installed S7",			0,	#-- selected.2 = 2
-	"SM-G930F SuperStock",		"Selinux permissive and updated Linux for our S7",		1,	#-- selected.2 = 3
-	"SM-G935F Stock Kernel",	"If you select this, sytemless xposed won't work (bootloop)",	0,	#-- selected.2 = 4
-	"SM-G935F SuperKernel",		"SuperKernel V1.8.5 and Synapse installed S7 Edge",		0,	#-- selected.2 = 5
-	"SM-G935F SuperStock",		"Selinux permissive and updated Linux for our S7 Edge",		0	#-- selected.2 = 6
+	"wipe",		"Wipe method",		"",									"group",
+	"full",		"Full Wipe",		"Wipes everything except internal and external SD card",		"select.selected",
+	"clean",	"Clean Install",	"Wipes everything except external SD card",				"select",
+	"dirty",	"Dirty Flash",		"Wipes only system (there will be bugs with this). Can also be used to change settings after clean install!",			"select"
+);
 
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+if prop("variant.prop","variant")=="s7" then
 
+alert("Warning", "For Kernels, if you are not a professional or an android geek it is recommend to stick to stock/stock modified kernel!");
+
+##
+# Kernel Form
+#
+
+form(
+    "Kernel",
+    "Choose your kernel here",
+    "icons/install2",
+    "kernel.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"kernelg930",	"Kernel",		"",									"group",
+	"stock",	"Stock Kernel",		"If you select this, sytemless xposed won't work (bootloop)",		"select",
+	"super",	"SuperKernel",		"SuperKernel V1.8.6 and Synapse installed S7",				"select",
+	"superstock",	"SuperStock",		"Selinux permissive and updated Linux for our S7",			"select.selected"
 );
 
 ##
-# Sub Window 2
+# Splash Form
 #
 
-selectbox(
-  #-- Title
-	"Camera",
-	  
-  #-- Sub Title
+form(
+    "Splash Screen",
+    "Choose between stock and superman splash",
+    "icons/install2",
+    "splash.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"splashg930",	"Splash",		"",									"group",
+	"stock",	"Stock Splash",		"Stock S7 splash screen will be installed",				"select",
+	"super",	"SuperMan Splash",	"Superman Splash screen for S7",					"select",
+	"nothing",	"Keep current",		"Keeps your current splash screen (no matter which it is)",		"select.selected"
+);
+
+endif;
+
+if prop("variant.prop","variant")=="s7e" then
+
+alert("Warning", "For Kernels, if you are not a professional or an android geek it is recommend to stick to stock/stock modified kernel!");
+
+##
+# Kernel Form
+#
+
+form(
+    "Kernel",
+    "Choose your kernel here",
+    "icons/install2",
+    "kernel.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"kernelg935",	"Kernel",		"",									"group",
+	"stock",	"Stock Kernel",		"If you select this, sytemless xposed won't work (bootloop)",		"select",
+	"super",	"SuperKernel",		"SuperKernel V1.8.6 and Synapse installed S7e",				"select",
+	"superstock",	"SuperStock",		"Selinux permissive and updated Linux for our S7e",			"select.selected"
+);
+
+##
+# Splash Form
+#
+
+form(
+    "Splash Screen",
+    "Choose between stock and superman splash",
+    "icons/install2",
+    "splash.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"splashg935",	"Splash",		"",									"group",
+	"stock",	"Stock Splash",		"Stock S7e splash screen will be installed",				"select",
+	"super",	"SuperMan Splash",	"Superman Splash screen for S7e",					"select",
+	"nothing",	"Keep current",		"Keeps your current splash screen (no matter which it is)",		"select.selected"
+);
+
+endif;
+
+##
+# Camera Form
+#
+
+form(
+    "Camera",
     "Modded or stock Camera application?",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window2.prop
-	"window2.prop",
-
+    "icons/install2",
+    "camera.prop",
   
 	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
-	"Stock Camera",		"Nothing changed",					1,	#-- selected.1 = 1
-	"Modded Camera V5",	"increase bitrates for all camera resolutions and to set pictures at 100 quality.",				0       #-- selected.1 = 2
-	  
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
+	"camera",	"Camera Selection",		"",											"group",
+	"stock",	"Stock Camera",			"Nothing changed, stock values",							"select.selected",
+	"modded",	"Modded Camera V5",		"Increase bitrates for all camera resolutions and to set pictures at 100 quality.",	"select"
 );
 
+alert("Important:", "If you want to install snapchat after this rom, make sure to NOT use root OR xposed! Snapchat will be UNABLE to login! Install xposed and root after you logged in to snapchat.");
 
-alert( "Alert", "Note: If you wish to install snapchat after this rom install, you may want to log into snapchat first and than install xposed afterwards. PAY ATTENTION: If you want to use Magisk with latest V86.5 Xposed, be carefull, since it has issues with normal root method, if you want to change from phh to supersu make sure you have cleaned all root things out! Otherwise root will not work (may needs full wipe)");
+##
+# Magisk Form
+#
 
 form(
     "Root/Magisk",
     "You can choose many things here, read carefully:",
-    "@default",
+    "icons/install2",
     "magisk.prop",
   #
   # Type:
@@ -463,58 +518,47 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"magisk",	"Magisk V7",	"Magisk and its modules do only work on Superstock and superkernel!!",	"group",
-	"yes",		"Yes",		"Will install magisk V7",						"select.selected",
+	"magisk",	"Magisk V8",	"",									"group",
+	"yes",		"Yes",		"Magisk and its modules do only work on Superstock and superkernel!!",	"select.selected",
 	"no",		"No",		"Will not install magisk",						"select",
-	"root",		"Root method", 	"Magisk does only work with phh's superuser at the moment!",		"group",
-	"su",		"SuperSU",	"Will install SuperSU 2.78 SR1, NOT compatible with magisk",		"select",
+	"root",		"Root method", 	"",									"group",
+	"su",		"SuperSU",	"Will install SuperSU 2.78 SR1",					"select",
 	"phhma",	"PHH's (magisk)","Installs phh's supersuser patched for magisk!",			"select.selected",
 	"phh",		"PHH's",	"Will install phh's superuser (stock one, not compatible with magisk)",	"select",
-	"no",		"No root",	"Nothing will be installed",						"select",
-	"busybox",	"Busybox", 	"Choose between magisk or non magisk busybox",				"group",
-	"yes",		"Busybox",	"Will install latest busybox available compatibility",			"select",
+	"no",		"No root",	"No root will be installed",						"select",
+	"busybox",	"Busybox", 	"",									"group",
+	"yes",		"Busybox",	"Will install latest busybox available",				"select",
 	"no",		"No busybox",	"Nothing will be installed",						"select.selected",
-	"xposed",	"Xposed",	"Want xposed or not?",							"group",
-	"xpsma",	"Xposed V86.6",	"Will install xposed V86.6 systemless",					"select.selected",
+	"xposed",	"Xposed",	"",									"group",
+	"xpsma",	"Xposed V86.6",	"Will install xposed V86.6 systemless (magisk required)",		"select.selected",
 	"xps",		"Xposed V86.2",	"Last xposed version without magisk",					"select",
 	"no",		"No xposed",	"Xposed won't be installed",						"select",
-	"v4a",		"Viper4Android","Magiks or stock v4a",							"group",
+	"v4a",		"Viper4Android","",	§								"group",
 	"yes",		"Normal V4A",	"Normal system patch will be applied",					"select",
 	"yesma",	"Magisk V4A",	"Magisk compatible viper4android will be installed",			"select",
 	"no",		"No V4A",	"Viper4Android won't be installed",					"select.selected"
 );
 
 ##
-# Sub Window 5
+# Sound Form
 #
 
-selectbox(
-  #-- Title
-	"Sound Mod V18",
-	  
-  #-- Sub Title
+form(
+    "SoundMod V18",
     "Do you want to install the sound mod by ZuBi182?",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window6.prop
-	"window5.prop",
-
+    "icons/install2",
+    "sound.prop",
   
 	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"Choose which version you want",			"",					2,	#-- Group 1. key = "selected.1"
-	"Install sound mod Level 0",	"Stock Volume",							0,	#-- selected.1 = 1
-	"Install sound mod Level 1",	"Slightly increased values",					0,	#-- selected.1 = 2
-	"Install sound mod Level 2",	"Intermediate version",						0,	#-- selected.1 = 3
-	"Install sound mod Level 3",	"Best volume values",						1,	#-- selected.1 = 4
-	"No, don't install this mod",	"Will keep the stock files",					0       #-- selected.1 = 5
-	  
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
+	"sound",	"Sound Level",			"",					"group",
+	"level0",	"Install sound mod Level 0",	"Stock Volume",				"select",
+	"level1",	"Install sound mod Level 1",	"Slightly increased values",		"select",
+	"level2",	"Install sound mod Level 2",	"Intermediate version",			"select",
+	"level3",	"Install sound mod Level 3",	"Best volume values",			"select",
+	"nothing",	"Use stock sound",		"Will keep the stock files",		"select.selected"
 );
 
 ##
@@ -539,9 +583,9 @@ selectbox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"Select which Icons you want",			"",					2,	#-- Group 1. key = "selected.1"
-	"Install stock emoji",		"Will display stock emojis in keyboard",		1,	#-- selected.1 = 1
-	"Install IOS 10 emojis",	"Will install different IOS emojis in keyboard",	0       #-- selected.1 = 2
+	"Select which Icons you want",			"",						2,	#-- Group 1. key = "selected.1"
+	"Install stock emoji",		"Will display stock emojis in samsung keyboard",		1,	#-- selected.1 = 1
+	"Install IOS 10 emojis",	"Will install different IOS emojis in samsung keyboard",	0       #-- selected.1 = 2
 	  
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -573,42 +617,9 @@ selectbox(
 	"Install stock SystemUI",	"No rounded mods, no other mods, just stock",				0,	#-- selected.1 = 1
 	"Install Rounded SystemUI",	"Rounded SystemUI, remove low battery warning, grey scaling removed while on powersaving mode and Opaque Status Bar Icons and many options in rom control",	1,      #-- selected.1 = 2
 	"Install Modded SystemUI",	"Same as above but WITHOUT rounded UI",	0,     #-- selected.1 = 3
-	"Install Rounded SystemUI Potato",	"Rounded UI WITH POTATO",		0,     #-- selected.1 = 4
-	"Install Modded SystemUI Potato",	"WITHOUT Rounded UI WITH POTATO",	0      #-- selected.1 = 5
+	"Install Rounded SystemUI MinitClock",	"Rounded UI WITH MinitClock",		0,     #-- selected.1 = 4
+	"Install Modded SystemUI MinitClock",	"WITHOUT Rounded UI WITH MinitClock",	0      #-- selected.1 = 5
   
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
-);
-
-##
-# Sub Window 8
-#
-
-selectbox(
-  #-- Title
-	"Splash Screen",
-	  
-  #-- Sub Title
-    "You can choose between 2 different splash screens here (the very first screen that appears)",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window8.prop
-	"window8.prop",
-
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
-	"Select One",			"",								2,	#-- Group 1. key = "selected.1"
-	"Stock SM-G930F",		"Stock S7 splash screen will be installed",			0,	#-- selected.1 = 1
-	"Stock SM-G935F",		"Stock S7 Edge splash screen will be installed",		0,      #-- selected.1 = 2
-	"SuperMan SM-G930F",		"Superman Splash screen for S7",				0,      #-- selected.1 = 3
-	"SuperMan SM-G935F",		"Superman Splash screen for S7 Edge",				0,      #-- selected.1 = 4
-	"Change nothing",		"Keeps your current splash screen (no matter which it is)",	1       #-- selected.1 = 5
-	  
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
@@ -636,104 +647,69 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
 	
 	"Select the one you want",		"",					2,	#-- Group 1. key = "selected.1"
-	"New SMS App",		"With floating message support, but can give you small settings problem",	0,	#-- selected.1 = 1
-	"Old SMS App",		"This installs the stock sms app, fully functional but without floating message",	1       #-- selected.1 = 2
+	"Patched SMS App",		"With floating message support, but can give you small settings problem",	0,	#-- selected.1 = 1
+	"Stock SMS App",		"This installs the stock sms app, fully functional but without floating message",	1       #-- selected.1 = 2
   
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
 
 ##
-# Sub Window 11
+# Services/Launcher Form
 #
 
-selectbox(
-  #-- Title
-	"Services.jar",
-	  
-  #-- Sub Title
-    "Do want to have stock or modded services.jar?",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window11.prop
-	"window11.prop",
-
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-	
-	"Select One",			"",					2,	#-- Group 1. key = "selected.1"
-	"Stock",	"You will have no mods like 5 way reboot",		0,	#-- selected.1 = 1
-	"Modded",	"USB Plug/Unplug disable wake up, Remove high volume warning for headphones, 5 way reboot. AND YOU NEED THIS FOR MODDED LAUNCHER!",	1       #-- selected.1 = 2
-  
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
+form(
+    "Services and Launcher",
+    "Choose between stock and modded services/launcher",
+    "icons/install2",
+    "mods.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"services",	"Services",		"",							"group",
+	"modded",	"Stock services.jar",	"You will have no mods like 5 way reboot",		"select",
+	"stock",	"Modded services.jar",	"USB Plug/Unplug disable wake up, Remove high volume warning for headphones, 5 way reboot, long press back to kill and more. Install this for modded launcher!",									"select.selected",
+	"launcher",	"Launcher", 		"",							"group",
+	"stock",	"Stock Launcher",	"Normal touchwiz launcher as always",			"select",
+	"modded",	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects, launcher rotation, twswipe (this only works with modded services!)",												"select.selected"
 );
 
 ##
-# Sub Window 12
+# Bootanimation Form
 #
 
-selectbox(
-  #-- Title
-	"Touchwiz Launcher",
-	  
-  #-- Sub Title
-    "You can choose between stock launcher and modded",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window12.prop
-	"window12.prop",
-
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-	
-	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
-	"Stock Launcher",	"Normal touchwiz launcher as always",					1,	#-- selected.1 = 1
-	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects. THIS DOES ONLY WORK IF YOU SELECTED MODDED SERVICES FILE!!)",	0       #-- selected.1 = 2
-  
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
+form(
+    "Bootanimation",
+    "Make your selection concerning bootanimation",
+    "icons/install2",
+    "bootanim.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"anim",		"Bootanimations",			"",									"group",
+	"stock",	"Stock animation",	"Just as always, stock boot/shutdown animation",					"select",
+	"super",	"SuperMan animation!",	"Superman boot/shutdown animation!!! Big thanks to myellow for his great work!",	"select.selected"
 );
 
-##
-# Sub Window 13
-#
-
-selectbox(
-  #-- Title
-	"Boot animation",
-	  
-  #-- Sub Title
-    "You can choose between normal animation and superman animation!",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window13.prop
-	"window13.prop",
-
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-	
-	"Select the desired One",		"",					2,	#-- Group 1. key = "selected.1"
-	"Stock boot/shutdown animation",	"Just as always",					1,	#-- selected.1 = 1
-	"SuperMan animation!",	"Nice and new superman boot/shutdown animation!!! Big thanks to myellow for his great work!",	0       #-- selected.1 = 2
-  
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
-);
-
-alert( "Alert", "Removing samsung apps can lead to force closes and not working features!");
+alert("Attention", "Removing samsung apps can lead to force closes and not working features!");
 
 ##
 # Sub Checkbox 1
@@ -782,6 +758,8 @@ checkbox(
 	"Microsoft Word",	"",									0,	#-- item.1.23
 	"Samsung Pay",		"",									0,	#-- item.1.24
 	"Samsung Music Player",	"",									1,	#-- item.1.25
+	"Samsung OneDrive",	"",									0,	#-- item.1.26
+	"OneNote",		"",									0,	#-- item.1.27
 	"Google Apps",		"",									2,	#-- group 2
 	"Google Now",		"",									0,	#-- item.2.1
 	"Google Chrome",	"",									0,	#-- item.2.2
@@ -791,7 +769,8 @@ checkbox(
 	"Google Maps",		"",									0,	#-- item.2.6
 	"Play Music",		"",									0,	#-- item.2.7
 	"Google Movies",	"",									0,	#-- item.2.8
-	"Youtube",		"",									0	#-- item.2.9
+	"Youtube",		"",									0,	#-- item.2.9
+	"AndroidPay",		"",									0	#-- item.2.10
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
