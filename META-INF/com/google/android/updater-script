@@ -949,7 +949,6 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
 		ui_print("Installing Magisk V8 for systemless mods...");
-		delete("/data/su.img");
 		package_extract_dir("magisk", "/temp/magisk");
 		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v8.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
 		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v8.zip");
