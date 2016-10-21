@@ -561,6 +561,19 @@ if
 		ui_print("Installing Magisk App...");
 		package_extract_dir("magisk/app", "/data/app");
 endif;
+#-- Synapse App
+if
+	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "super"
+	then
+		ui_print("Installing Synapse...");
+		package_extract_dir("aroma/kernel/SM-G930F/SuperKernel/data", "/data");
+endif;
+if
+	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "super"
+	then
+		ui_print("Installing Synapse...");
+		package_extract_dir("aroma/kernel/SM-G935F/SuperKernel/data", "/data");
+endif;
 set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
 set_progress(0.400000);
 ui_print("Creating symlinks...");
