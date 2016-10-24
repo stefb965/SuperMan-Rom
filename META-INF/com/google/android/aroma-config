@@ -720,7 +720,7 @@ checkbox(
 	"Debloating Options",
 	  
   #-- Sub Title
-    "You can debloat the rom here, what you don't want, don't select it",
+    "You can debloat the rom here. Everything what is ticked will be installed!",
 	  
   #-- Icon:
      "icons/install2",
