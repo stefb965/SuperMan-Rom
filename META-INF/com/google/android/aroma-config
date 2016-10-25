@@ -815,6 +815,8 @@ install(
   "icons/install2"
 );
 
+alert("Reminder:", "Don't forget to flash your providers csc after rom install.");
+
 ini_set("text_next", "Finish");
 ini_set("icon_next", "@finish");
 endif;
