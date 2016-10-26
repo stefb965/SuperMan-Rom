@@ -255,14 +255,14 @@ endif;
 if
 	file_getprop("/tmp/aroma/window10.prop","selected.1") == "1"
 	then
-		ui_print("Installing new sms app...");
-		package_extract_dir("aroma/SMS/new", "/system/priv-app");
+		ui_print("Installing patched sms app...");
+		package_extract_dir("aroma/SMS/patched", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/window10.prop","selected.1") == "2"
 	then
-		ui_print("Installing old sms app...");
-		package_extract_dir("aroma/SMS/old", "/system/priv-app");
+		ui_print("Installing stock sms app...");
+		package_extract_dir("aroma/SMS/stock", "/system/priv-app");
 endif;
 #-- Debloat
 if
