@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.15");
+ini_set("rom_version",          "V1.15.5");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "22.10.2016");
+ini_set("rom_date",             "27.10.2016");
 
 ##
 # Show Animated Splash
