@@ -535,7 +535,7 @@ form(
 	"no",		"No xposed",	"Xposed won't be installed",						"select",
 	"v4a",		"Viper4Android","",									"group",
 	"yes",		"Normal V4A",	"Normal system patch will be applied",					"select",
-	"yesma",	"Magisk V4A",	"Magisk compatible viper4android will be installed",			"select",
+	"yesma",	"Magisk V4A",	"Magisk compatible viper4android will be installed (APK needs to be installed seperately!)",			"select",
 	"no",		"No V4A",	"Viper4Android won't be installed",					"select.selected"
 );
 
