@@ -237,7 +237,7 @@ if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "stock"
 	then
 		ui_print("Installing Stock kernel Files...");
-		package_extract_dir("aroma/kernel/SM-G935F/Stock/system", "/system");
+		package_extract_dir("aroma/kernel/SM-G935F/Full_Stock/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "super"
