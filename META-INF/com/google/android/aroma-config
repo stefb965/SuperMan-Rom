@@ -522,7 +522,7 @@ form(
 	"yes",		"Yes",		"Magisk and its modules do only work on Superstock and superkernel!!",	"select.selected",
 	"no",		"No",		"Will not install magisk",						"select",
 	"root",		"Root method", 	"",									"group",
-	"su",		"SuperSU",	"Will install SuperSU 2.78 SR1",					"select",
+	"su",		"SuperSU",	"Will install SuperSU 2.78 SR3",					"select",
 	"phhma",	"PHH's (magisk)","Installs phh's supersuser patched for magisk!",			"select.selected",
 	"phh",		"PHH's",	"Will install phh's superuser (stock one, not compatible with magisk)",	"select",
 	"no",		"No root",	"No root will be installed",						"select",
