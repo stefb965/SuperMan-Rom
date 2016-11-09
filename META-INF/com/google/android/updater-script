@@ -40,10 +40,12 @@ if
 		package_extract_file("scripts/DeleteDataWithoutMedia.sh", "/tmp/DeleteDataWithoutMedia.sh"); 
 		set_perm(0, 0, 0777, "/tmp/DeleteDataWithoutMedia.sh");
 		run_program("/sbin/busybox", "sh", "/tmp/DeleteDataWithoutMedia.sh");
-		delete_recursive("/tmp/scripts");
 		delete_recursive("/data/dalvik-cache");
 		delete_recursive("/magisk");
+		delete_recursive("/data/magisk");
+		delete_recursive("/data/magisk.img");
 		delete_recursive("/supersu");
+		delete_recursive("/data/su.img");
 		delete_recursive("/temp");
 		set_progress(0.250000);
 endif;	
@@ -57,6 +59,7 @@ if
 		delete_recursive("/cache");
 		delete_recursive("/data/dalvik-cache");
 		delete_recursive("/magisk");
+		delete_recursive("/data/magisk");
 		delete_recursive("/supersu");
 		delete_recursive("/temp");
 		set_progress(0.250000);
@@ -977,17 +980,17 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
 	then
-		ui_print("Installing Magisk phh's root r29...");
+		ui_print("Installing Magisk phh's root r266...");
 		package_extract_dir("supersu", "/temp/supersu");
-		run_program("/sbin/busybox", "unzip", "/temp/supersu/phh-superuser-magisk-r259.zip", "META-INF/com/google/android/*", "-d", "/temp/supersu");
-		run_program("/sbin/busybox", "sh", "/temp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/supersu/phh-superuser-magisk-r259.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/supersu/phh-superuser-magisk-r266.zip", "META-INF/com/google/android/*", "-d", "/temp/supersu");
+		run_program("/sbin/busybox", "sh", "/temp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/supersu/phh-superuser-magisk-r266.zip");
 		set_progress(0.900000);
 		ui_print(" ");
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
 	then
-		ui_print("Installing phh's root r29...");
+		ui_print("Installing phh's root r259...");
 		package_extract_dir("supersu", "/temp/supersu");
 		run_program("/sbin/busybox", "unzip", "/temp/supersu/superuser-r259.zip", "META-INF/com/google/android/*", "-d", "/temp/supersu");
 		run_program("/sbin/busybox", "sh", "/temp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/supersu/superuser-r259.zip");
