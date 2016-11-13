@@ -88,7 +88,7 @@ if
 	file_getprop("/tmp/aroma/csc.prop","csc") == "stock"
 	then
 		ui_print("Installing stock CSC...");
-		package_extract_dir("superstock/csc/system", "/system");
+		package_extract_dir("aroma/csc/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/csc.prop","csc") == "none"
