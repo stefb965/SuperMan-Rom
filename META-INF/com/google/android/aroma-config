@@ -1,4 +1,4 @@
-﻿##
+##
 # Fix Colorspace Issue
 # You can use one of following values:
 #   "rgba", "abgr", "argb", "bgra"
@@ -384,6 +384,25 @@ form(
 	"dirty",	"Dirty Flash",		"Wipes only system (there will be bugs with this). Can also be used to change settings after clean install!",			"select"
 );
 
+##
+# CSC Form
+#
+
+form(
+    "CSC",
+    "You can choose if you want to include default csc or flash your csc after rom",
+    "icons/install2",
+    "csc.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+
+	"csc",		"Choose if you want to include csc or not",			"",					"group",
+	"stock",	"Install stock csc",		"For this base ITV csc is stock csc and will be flashed with this",	"select.selected",
+	"none",		"Don't install any csc",	"This is used if you flash csc right after rom install. So no files got messed up with any other csc and your csc can work perfect",						"select"
+);
+
 if prop("variant.prop","variant")=="s7" then
 
 alert("Warning", "For Kernels, if you are not a professional or an android geek it is recommend to stick to stock/stock modified kernel!");
@@ -404,7 +423,7 @@ form(
 
 	"kernelg930",	"Kernel SM-G930F/FD/W8",		"",									"group",
 	"stock",	"Stock Kernel",			"If you select this, sytemless xposed won't work (bootloop)",		"select",
-	"super",	"SuperKernel",			"SuperKernel V1.8.6 and Synapse installed S7",				"select",
+	"super",	"SuperKernel",			"SuperKernel V1.9.1 and Synapse installed S7",				"select",
 	"superstock",	"SuperStock",			"Selinux permissive and updated Linux for our S7",			"select.selected"
 );
 
@@ -450,7 +469,7 @@ form(
 
 	"kernelg935",	"Kernel SM-G935F/FD/W8",	"",									"group",
 	"stock",	"Stock Kernel",			"If you select this, sytemless xposed won't work (bootloop)",		"select",
-	"super",	"SuperKernel",			"SuperKernel V1.8.6 and Synapse installed S7e",				"select",
+	"super",	"SuperKernel",			"SuperKernel V1.9.1 and Synapse installed S7e",				"select",
 	"superstock",	"SuperStock",			"Selinux permissive and updated Linux for our S7e",			"select.selected"
 );
 
@@ -519,20 +538,20 @@ form(
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
 	"magisk",	"Magisk V8",	"",									"group",
-	"yes",		"Yes",		"Magisk and its modules do only work on Superstock and superkernel!!",	"select.selected",
-	"no",		"No",		"Will not install magisk",						"select",
+	"yes",		"Yes",		"Magisk and its modules do only work on Superstock and superkernel!!",	"select",
+	"no",		"No",		"Will not install magisk",						"select.selected",
 	"root",		"Root method", 	"",									"group",
 	"su",		"SuperSU",	"Will install SuperSU 2.78 SR3",					"select",
-	"phhma",	"PHH's (magisk)","Installs phh's supersuser patched for magisk!",			"select.selected",
-	"phh",		"PHH's",	"Will install phh's superuser (stock one, not compatible with magisk)",	"select",
+	"phhma",	"PHH's (magisk)","Installs phh's supersuser patched for magisk!",			"select",
+	"phh",		"PHH's",	"Installs phh hidesu without magisk compatibility",			"select.selected",
 	"no",		"No root",	"No root will be installed",						"select",
 	"busybox",	"Busybox", 	"",									"group",
-	"yes",		"Busybox",	"Will install latest busybox available",				"select",
-	"no",		"No busybox",	"Busybox is already included in MAGISK V8",				"select.selected",
+	"yes",		"Busybox",	"Will install latest busybox available",				"select.selected",
+	"no",		"No busybox",	"Busybox is already included in MAGISK V8",				"select",
 	"xposed",	"Xposed",	"",									"group",
-	"xpsma",	"Xposed V86.6",	"Will install xposed V86.6 systemless (magisk required)",		"select.selected",
+	"xpsma",	"Xposed V86.6",	"Will install xposed V86.6 systemless (magisk required)",		"select",
 	"xps",		"Xposed V86.2",	"Last xposed version without magisk",					"select",
-	"no",		"No xposed",	"Xposed won't be installed",						"select",
+	"no",		"No xposed",	"Xposed won't be installed",						"select.selected",
 	"v4a",		"Viper4Android","",									"group",
 	"yes",		"Normal V4A",	"Normal system patch will be applied",					"select",
 	"yesma",	"Magisk V4A",	"Magisk compatible viper4android will be installed (APK needs to be installed seperately!)",			"select",
@@ -585,7 +604,8 @@ selectbox(
 
 	"Select which Icons you want",			"",						2,	#-- Group 1. key = "selected.1"
 	"Install stock emoji",		"Will display stock emojis in samsung keyboard",		1,	#-- selected.1 = 1
-	"Install IOS 10 emojis",	"Will install different IOS emojis in samsung keyboard",	0       #-- selected.1 = 2
+	"Install IOS 10 emojis",	"Will install different IOS emojis in samsung keyboard",	0,      #-- selected.1 = 2
+	"Install Android N emojis",	"Installs android N emojis from developer preview",		0       #-- selected.1 = 3
 	  
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -680,7 +700,7 @@ form(
 	"modded",	"Modded services.jar",	"USB Plug/Unplug disable wake up, Remove high volume warning for headphones, 5 way reboot, long press back to kill and more. Install this for modded launcher!",									"select.selected",
 	"launcher",	"Launcher", 		"",							"group",
 	"stock",	"Stock Launcher",	"Normal touchwiz launcher as always",			"select",
-	"modded",	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects, launcher rotation, twswipe (this only works with modded services!)",												"select.selected"
+	"modded",	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects, twswipe (this only works with modded services!)",												"select.selected"
 );
 
 ##
@@ -707,6 +727,32 @@ form(
 	"anim",		"Bootanimations",			"",									"group",
 	"stock",	"Stock animation",	"Just as always, stock boot/shutdown animation",					"select",
 	"super",	"SuperMan animation!",	"Superman boot/shutdown animation!!! Big thanks to myellow for his great work!",	"select.selected"
+);
+
+##
+# AdAway Form
+#
+
+form(
+    "AdAway",
+    "Select if you want adblocker by default or not",
+    "icons/install2",
+    "adaway.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"adblocker",	"Adblocker",			"",									"group",
+	"enable",	"Enable by default",	"Enables Adblocker by default (3minit battery needs disabled adblocker to work)",	"select.selected",
+	"disable",	"Disable by default",	"Disables Adblocker by default. However you can still enable it in the app later",	"select"
 );
 
 alert("Attention", "Removing samsung apps can lead to force closes and not working features!");
@@ -752,14 +798,17 @@ checkbox(
 	"Themestore",		"",									1,	#-- item.1.17
 	"VoiceNote",		"",									1,	#-- item.1.18
 	"SmartSwitch",		"",									0,	#-- item.1.19
-	"Gear S/ Gear VR manager", 	" Install Gear S and Gear VR manager",				1,	#-- item.1.20
-	"Microsoft Excel",	"",									0,	#-- item.1.21
-	"Microsoft PowerPoint",	"",									0,	#-- item.1.22
-	"Microsoft Word",	"",									0,	#-- item.1.23
-	"Samsung Pay",		"",									0,	#-- item.1.24
-	"Samsung Music Player",	"",									1,	#-- item.1.25
-	"Samsung OneDrive",	"",									0,	#-- item.1.26
-	"OneNote",		"",									0,	#-- item.1.27
+	"Gear S manager", 	"Used for Gear S, Gear S2 etc",						1,	#-- item.1.20
+	"Gear VR manager", 	"You have to install this in order to use your oculus gear VR",		1,	#-- item.1.21
+	"Microsoft Excel",	"",									0,	#-- item.1.22
+	"Microsoft PowerPoint",	"",									0,	#-- item.1.23
+	"Microsoft Word",	"",									0,	#-- item.1.24
+	"Samsung Pay",		"",									0,	#-- item.1.25
+	"Samsung Music Player",	"",									1,	#-- item.1.26
+	"Samsung OneDrive",	"",									0,	#-- item.1.27
+	"OneNote",		"",									0,	#-- item.1.28
+	"OperaMax",		"Is used if you want to have UDS working (Ultra-Data Saving)",		0,	#-- item.1.29
+	"UPSM",			"This app can configure your apps you can use on UltarPowerSaving Mode",0,	#-- item.1.30
 	"Google Apps",		"",									2,	#-- group 2
 	"Google Now",		"",									0,	#-- item.2.1
 	"Google Chrome",	"",									0,	#-- item.2.2
@@ -815,7 +864,7 @@ install(
   "icons/install2"
 );
 
-alert("Reminder:", "Don't forget to flash your providers csc after rom install.");
+alert("Reminder:", "Don't forget to flash your providers csc after rom install. Especially if you did NOT INSTALL any csc with the rom!!");
 
 ini_set("text_next", "Finish");
 ini_set("icon_next", "@finish");
