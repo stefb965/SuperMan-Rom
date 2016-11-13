@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.15.5");
+ini_set("rom_version",          "V1.16");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "27.10.2016");
+ini_set("rom_date",             "13.11.2016");
 
 ##
 # Show Animated Splash
@@ -543,7 +543,7 @@ form(
 	"root",		"Root method", 	"",									"group",
 	"su",		"SuperSU",	"Will install SuperSU 2.78 SR3",					"select",
 	"phhma",	"PHH's (magisk)","Installs phh's supersuser patched for magisk!",			"select",
-	"phh",		"PHH's",	"Installs phh hidesu without magisk compatibility",			"select.selected",
+	"phh",		"PHH's hidesu",	"Installs phh hidesu without magisk compatibility",			"select.selected",
 	"no",		"No root",	"No root will be installed",						"select",
 	"busybox",	"Busybox", 	"",									"group",
 	"yes",		"Busybox",	"Will install latest busybox available",				"select.selected",
@@ -602,10 +602,10 @@ selectbox(
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
 	  #------------------+-----------------------------------------------------------+---------------#  
 
-	"Select which Icons you want",			"",						2,	#-- Group 1. key = "selected.1"
-	"Install stock emoji",		"Will display stock emojis in samsung keyboard",		1,	#-- selected.1 = 1
-	"Install IOS 10 emojis",	"Will install different IOS emojis in samsung keyboard",	0,      #-- selected.1 = 2
-	"Install Android N emojis",	"Installs android N emojis from developer preview",		0       #-- selected.1 = 3
+	"Select which Icons you want",			"",								2,	#-- Group 1. key = "selected.1"
+	"Install stock emoji",		"Will display stock emojis in samsung keyboard",				1,	#-- selected.1 = 1
+	"Install IOS 10 emojis",	"Will install different IOS emojis in samsung keyboard",			0,      #-- selected.1 = 2
+	"Install Android N emojis",	"Installs android N emojis from s7 nougat (looked similar to MM to be honest)",	0       #-- selected.1 = 3
 	  
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
