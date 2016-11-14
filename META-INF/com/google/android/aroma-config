@@ -423,7 +423,7 @@ form(
 
 	"kernelg930",	"Kernel SM-G930F/FD/W8",		"",									"group",
 	"stock",	"Stock Kernel",			"If you select this, sytemless xposed won't work (bootloop)",		"select",
-	"super",	"SuperKernel",			"SuperKernel V1.9.1 and Synapse installed S7",				"select",
+	"super",	"SuperKernel",			"SuperKernel V1.9.2 and Synapse installed S7",				"select",
 	"superstock",	"SuperStock",			"Selinux permissive and updated Linux for our S7",			"select.selected"
 );
 
@@ -469,7 +469,7 @@ form(
 
 	"kernelg935",	"Kernel SM-G935F/FD/W8",	"",									"group",
 	"stock",	"Stock Kernel",			"If you select this, sytemless xposed won't work (bootloop)",		"select",
-	"super",	"SuperKernel",			"SuperKernel V1.9.1 and Synapse installed S7e",				"select",
+	"super",	"SuperKernel",			"SuperKernel V1.9.2 and Synapse installed S7e",				"select",
 	"superstock",	"SuperStock",			"Selinux permissive and updated Linux for our S7e",			"select.selected"
 );
 
