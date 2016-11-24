@@ -547,7 +547,7 @@ form(
 	"no",		"No root",	"No root will be installed",						"select",
 	"busybox",	"Busybox", 	"",									"group",
 	"yes",		"Busybox",	"Will install latest busybox available",				"select.selected",
-	"no",		"No busybox",	"Busybox is already included in MAGISK V8",				"select",
+	"no",		"No busybox",	"Busybox is already included in MAGISK V9",				"select",
 	"xposed",	"Xposed",	"",									"group",
 	"xpsma",	"Xposed V86.6",	"Will install xposed V86.6 systemless (magisk required)",		"select",
 	"xps",		"Xposed V86.2",	"Last xposed version without magisk",					"select",
@@ -808,7 +808,7 @@ checkbox(
 	"Samsung OneDrive",	"",									0,	#-- item.1.27
 	"OneNote",		"",									0,	#-- item.1.28
 	"OperaMax",		"Is used if you want to have UDS working (Ultra-Data Saving)",		0,	#-- item.1.29
-	"UPSM",			"This app can configure your apps you can use on UltarPowerSaving Mode",0,	#-- item.1.30
+	"UPSM",			"This app can configure your apps you can use on UltraPowerSaving Mode",0,	#-- item.1.30
 	"Google Apps",		"",									2,	#-- group 2
 	"Google Now",		"",									0,	#-- item.2.1
 	"Google Chrome",	"",									0,	#-- item.2.2
