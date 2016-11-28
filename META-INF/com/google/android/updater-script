@@ -88,7 +88,7 @@ if
 	file_getprop("/tmp/aroma/csc.prop","csc") == "stock"
 	then
 		ui_print("Installing stock CSC...");
-		package_extract_dir("aroma/csc/system", "/system");
+		package_extract_dir("superman/csc/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/csc.prop","csc") == "none"
@@ -100,475 +100,475 @@ if
 	file_getprop("/tmp/aroma/variant.prop","variant") == "s7"
 	then
 		ui_print("SM-G930F variant...");
-		package_extract_dir("aroma/variants/SM-G930F/system", "/system");
+		package_extract_dir("superman/variants/SM-G930F/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/variant.prop","variant") == "s7e"
 	then
 		ui_print("SM-G935F variant...");
-		package_extract_dir("aroma/variants/SM-G935F/system", "/system");
+		package_extract_dir("superman/variants/SM-G935F/system", "/system");
 endif;
 #-- Camera Mod
 if
 	file_getprop("/tmp/aroma/camera.prop","camera") == "stock"
 	then
 		ui_print("Stock Camera...");
-		package_extract_dir("aroma/camera/stock", "/system");
+		package_extract_dir("superman/camera/stock", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/camera.prop","camera") == "modded"
 	then
 		ui_print("Modded Camera...");
-		package_extract_dir("aroma/camera/modded", "/system");
+		package_extract_dir("superman/camera/modded", "/system");
 endif;
 #-- Emoji
 if
 	file_getprop("/tmp/aroma/window6.prop","selected.1") == "1"
 	then
 		ui_print("Installing stock emoji...");
-		package_extract_dir("aroma/emoji/stock/system", "/system");
+		package_extract_dir("superman/emoji/stock/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window6.prop","selected.1") == "2"
 	then
 		ui_print("Installing IOS emoji...");
-		package_extract_dir("aroma/emoji/IOS/system", "/system");
+		package_extract_dir("superman/emoji/IOS/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/window6.prop","selected.1") == "3"
 	then
 		ui_print("Installing Android N emoji...");
-		package_extract_dir("aroma/emoji/nougat/system", "/system");
+		package_extract_dir("superman/emoji/nougat/system", "/system");
 endif;
 #-- SystemUI
 if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "1"
 	then
 		ui_print("Installing stock SystemUI...");
-		package_extract_dir("aroma/systemui/stock", "/system/priv-app");
+		package_extract_dir("superman/systemui/stock", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "2"
 	then
 		ui_print("Installing rounded SystemUI...");
-		package_extract_dir("aroma/systemui/rounded", "/system/priv-app");
+		package_extract_dir("superman/systemui/rounded", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "3"
 	then
 		ui_print("Installing modded SystemUI...");
-		package_extract_dir("aroma/systemui/modded", "/system/priv-app");
+		package_extract_dir("superman/systemui/modded", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "4"
 	then
 		ui_print("Installing rounded SystemUI...");
-		package_extract_dir("aroma/systemui/rounded_clock", "/system/priv-app");
+		package_extract_dir("superman/systemui/rounded_clock", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/window7.prop","selected.1") == "5"
 	then
 		ui_print("Installing modded SystemUI...");
-		package_extract_dir("aroma/systemui/modded_clock", "/system/priv-app");
+		package_extract_dir("superman/systemui/modded_clock", "/system/priv-app");
 endif;
 #-- Settings
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "su"
 	then
 		ui_print("Installing supersu compatible settings...");
-		package_extract_dir("aroma/settings/supersu", "/system/priv-app");
+		package_extract_dir("superman/settings/supersu", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
 	then
 		ui_print("Installing phh compatible settings...");
-		package_extract_dir("aroma/settings/phh", "/system/priv-app");
+		package_extract_dir("superman/settings/phh", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
 	then
 		ui_print("Installing phh compatible settings...");
-		package_extract_dir("aroma/settings/phh", "/system/priv-app");
+		package_extract_dir("superman/settings/phh", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "no"
 	then
 		ui_print("Installing supersu compatible settings...");
-		package_extract_dir("aroma/settings/supersu", "/system/priv-app");
+		package_extract_dir("superman/settings/supersu", "/system/priv-app");
 endif;
 #-- Services.jar
 if
 	file_getprop("/tmp/aroma/mods.prop","services") == "stock"
 	then
 		ui_print("Installing stock services...");
-		package_extract_dir("aroma/services/stock", "/system/framework");
+		package_extract_dir("superman/services/stock", "/system/framework");
 endif;
 if
 	file_getprop("/tmp/aroma/mods.prop","services") == "modded"
 	then
 		ui_print("Installing modded services...");
-		package_extract_dir("aroma/services/modded", "/system/framework");
+		package_extract_dir("superman/services/modded", "/system/framework");
 endif;
 #-- Launcher
 if
 	file_getprop("/tmp/aroma/mods.prop","launcher") == "stock"
 	then
 		ui_print("Installing stock launcher...");
-		package_extract_dir("aroma/launcher/stock", "/system/priv-app");
+		package_extract_dir("superman/launcher/stock", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/mods.prop","launcher") == "modded"
 	then
 		ui_print("Installing modded launcher...");
-		package_extract_dir("aroma/launcher/modded", "/system/priv-app");
+		package_extract_dir("superman/launcher/modded", "/system/priv-app");
 endif;
 #-- Animation
 if
 	file_getprop("/tmp/aroma/bootanim.prop","anim") == "stock"
 	then
 		ui_print("Installing stock animation...");
-		package_extract_dir("aroma/animation/stock", "/system/media");
+		package_extract_dir("superman/animation/stock", "/system/media");
 endif;
 if
 	file_getprop("/tmp/aroma/bootanim.prop","anim") == "super"
 	then
 		ui_print("Installing superman animation...");
-		package_extract_dir("aroma/animation/superman", "/system/media");
+		package_extract_dir("superman/animation/superman", "/system/media");
 endif;
 #-- Fingerprint files
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "stock"
 	then
 		ui_print("Installing Stock kernel Files...");
-		package_extract_dir("aroma/kernel/SM-G930F/stock/system", "/system");
+		package_extract_dir("superman/kernel/SM-G930F/stock/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "super"
 	then
 		ui_print("Installing Modded kernel Files...");
-		package_extract_dir("aroma/kernel/SM-G930F/superkernel/system", "/system");
+		package_extract_dir("superman/kernel/SM-G930F/superkernel/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "superstock"
 	then
 		ui_print("Installing Modded kernel Files...");
-		package_extract_dir("aroma/kernel/SM-G930F/superstock/system", "/system");
+		package_extract_dir("superman/kernel/SM-G930F/superstock/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "stock"
 	then
 		ui_print("Installing Stock kernel Files...");
-		package_extract_dir("aroma/kernel/SM-G935F/stock/system", "/system");
+		package_extract_dir("superman/kernel/SM-G935F/stock/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "super"
 	then
 		ui_print("Installing Modded kernel Files...");
-		package_extract_dir("aroma/kernel/SM-G935F/superkernel/system", "/system");
+		package_extract_dir("superman/kernel/SM-G935F/superkernel/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "superstock"
 	then
 		ui_print("Installing Modded kernel Files...");
-		package_extract_dir("aroma/kernel/SM-G935F/superstock/system", "/system");
+		package_extract_dir("superman/kernel/SM-G935F/superstock/system", "/system");
 endif;
 #-- SMS App
 if
-	file_getprop("/tmp/aroma/window10.prop","selected.1") == "1"
+	file_getprop("/tmp/aroma/sms.prop","sms") == "modded"
 	then
 		ui_print("Installing patched sms app...");
-		package_extract_dir("aroma/SMS/patched", "/system/priv-app");
+		package_extract_dir("superman/SMS/patched", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/window10.prop","selected.1") == "2"
+	file_getprop("/tmp/aroma/sms.prop","sms") == "stock"
 	then
 		ui_print("Installing stock sms app...");
-		package_extract_dir("aroma/SMS/stock", "/system/priv-app");
+		package_extract_dir("superman/SMS/stock", "/system/priv-app");
 endif;
 #-- Adblocker
 if
 	file_getprop("/tmp/aroma/adaway.prop","adblocker") == "enable"
 	then
 		ui_print("Enable adblocking...");
-		package_extract_dir("aroma/adaway/enable", "/system/etc");
+		package_extract_dir("superman/adaway/enable", "/system/etc");
 endif;
 if
 	file_getprop("/tmp/aroma/adaway.prop","adblocker") == "disable"
 	then
 		ui_print("Disable adblocking...");
-		package_extract_dir("aroma/adaway/disable", "/system/etc");
+		package_extract_dir("superman/adaway/disable", "/system/etc");
 endif;
 #-- Debloat
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.1") == "1"
 	then
 		ui_print("Installing Allshare...");
-		package_extract_dir("aroma/debloat/Allshare", "/system/app");
+		package_extract_dir("superman/debloat/Allshare", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.2") == "1"
 	then
 		ui_print("Installing ANT...");
-		package_extract_dir("aroma/debloat/ANT", "/system/app");
+		package_extract_dir("superman/debloat/ANT", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.3") == "1"
 	then
 		ui_print("Installing Memo...");
-		package_extract_dir("aroma/debloat/Memo", "/system/app");
+		package_extract_dir("superman/debloat/Memo", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.4") == "1"
 	then
 		ui_print("Installing Mirrorlink...");
-		package_extract_dir("aroma/debloat/MirrorLink", "/system/app");
+		package_extract_dir("superman/debloat/MirrorLink", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.5") == "1"
 	then
 		ui_print("Installing SBrowser...");
-		package_extract_dir("aroma/debloat/SBrowser", "/system/app");
+		package_extract_dir("superman/debloat/SBrowser", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.6") == "1"
 	then
 		ui_print("Installing SPlanner...");
-		package_extract_dir("aroma/debloat/SPlanner", "/system/app");
+		package_extract_dir("superman/debloat/SPlanner", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.7") == "1"
 	then
 		ui_print("Installing VideoEditor...");
-		package_extract_dir("aroma/debloat/VideoEditor", "/system/app");
+		package_extract_dir("superman/debloat/VideoEditor", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.8") == "1"
 	then
 		ui_print("Installing Weather...");
-		package_extract_dir("aroma/debloat/Weather", "/system/app");
+		package_extract_dir("superman/debloat/Weather", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.9") == "1"
 	then
 		ui_print("Installing Calculator...");
-		package_extract_dir("aroma/debloat/Calculator", "/system/priv-app");
+		package_extract_dir("superman/debloat/Calculator", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.10") == "1"
 	then
 		ui_print("Installing Email...");
-		package_extract_dir("aroma/debloat/Email", "/system/priv-app");
+		package_extract_dir("superman/debloat/Email", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.11") == "1"
 	then
 		ui_print("Installing GalaxyAppStore...");
-		package_extract_dir("aroma/debloat/GalaxyStore", "/system/priv-app");
+		package_extract_dir("superman/debloat/GalaxyStore", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.12") == "1"
 	then
 		ui_print("Installing Gallery...");
-		package_extract_dir("aroma/debloat/Gallery", "/system/priv-app");
+		package_extract_dir("superman/debloat/Gallery", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.13") == "1"
 	then
 		ui_print("Installing GameTools...");
-		package_extract_dir("aroma/debloat/Game", "/system/priv-app");
+		package_extract_dir("superman/debloat/Game", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.14") == "1"
 	then
 		ui_print("Installing MyFiles...");
-		package_extract_dir("aroma/debloat/MyFiles", "/system/priv-app");
+		package_extract_dir("superman/debloat/MyFiles", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.15") == "1"
 	then
 		ui_print("Installing Shealth...");
-		package_extract_dir("aroma/debloat/SHealth", "/system/priv-app");
+		package_extract_dir("superman/debloat/SHealth", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.16") == "1"
 	then
 		ui_print("Installing SVoice...");
-		package_extract_dir("aroma/debloat/SVoice", "/system/priv-app");
+		package_extract_dir("superman/debloat/SVoice", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.17") == "1"
 	then
 		ui_print("Installing Themestore...");
-		package_extract_dir("aroma/debloat/Themestore", "/system/priv-app");
+		package_extract_dir("superman/debloat/Themestore", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.18") == "1"
 	then
 		ui_print("Installing VoiceNote...");
-		package_extract_dir("aroma/debloat/VoiceNote", "/system/priv-app");
+		package_extract_dir("superman/debloat/VoiceNote", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.19") == "1"
 	then
 		ui_print("Installing SmartSwitch...");
-		package_extract_dir("aroma/debloat/SmartSwitch", "/system/preload");
+		package_extract_dir("superman/debloat/SmartSwitch", "/system/preload");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.20") == "1"
 	then
 		ui_print("Installing Gear S...");
-		package_extract_dir("aroma/debloat/Gear_S", "/system");
+		package_extract_dir("superman/debloat/Gear_S", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.21") == "1"
 	then
 		ui_print("Installing Gear VR...");
-		package_extract_dir("aroma/debloat/Gear_VR", "/system");
+		package_extract_dir("superman/debloat/Gear_VR", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.22") == "1"
 	then
 		ui_print("Installing Excel...");
-		package_extract_dir("aroma/debloat/Excel", "/system/priv-app");
+		package_extract_dir("superman/debloat/Excel", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.23") == "1"
 	then
 		ui_print("Installing PowerPoint...");
-		package_extract_dir("aroma/debloat/PowerPoint", "/system/priv-app");
+		package_extract_dir("superman/debloat/PowerPoint", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.24") == "1"
 	then
 		ui_print("Installing Word...");
-		package_extract_dir("aroma/debloat/Word", "/system/priv-app");
+		package_extract_dir("superman/debloat/Word", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.25") == "1"
 	then
 		ui_print("Installing Samsung Pay...");
-		package_extract_dir("aroma/debloat/SamsungPay", "/system/priv-app");
+		package_extract_dir("superman/debloat/SamsungPay", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.26") == "1"
 	then
 		ui_print("Installing Samsung Music App...");
-		package_extract_dir("aroma/debloat/Samsung_Music", "/system/priv-app");
+		package_extract_dir("superman/debloat/Samsung_Music", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.27") == "1"
 	then
 		ui_print("Installing OneDrive...");
-		package_extract_dir("aroma/debloat/Samsung_OneDrive", "/system/priv-app");
+		package_extract_dir("superman/debloat/Samsung_OneDrive", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.28") == "1"
 	then
 		ui_print("Installing OneNote App...");
-		package_extract_dir("aroma/debloat/OneNote", "/system/priv-app");
+		package_extract_dir("superman/debloat/OneNote", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.29") == "1"
 	then
 		ui_print("Installing OperaMax...");
-		package_extract_dir("aroma/debloat/Opera", "/system/app");
+		package_extract_dir("superman/debloat/Opera", "/data/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.1.30") == "1"
 	then
 		ui_print("Installing UPSM App...");
-		package_extract_dir("aroma/debloat/UPSM", "/system/app");
+		package_extract_dir("superman/debloat/UPSM", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.2.1") == "1"
 	then
 		ui_print("Installing Google Now...");
-		package_extract_dir("aroma/debloat/Google", "/system/priv-app");
+		package_extract_dir("superman/debloat/Google", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.2.2") == "1"
 	then
 		ui_print("Installing Google Chrome...");
-		package_extract_dir("aroma/debloat/Chrome", "/system/app");
+		package_extract_dir("superman/debloat/Chrome", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.2.3") == "1"
 	then
 		ui_print("Installing Google Drive...");
-		package_extract_dir("aroma/debloat/Drive", "/system/app");
+		package_extract_dir("superman/debloat/Drive", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.2.4") == "1"
 	then
 		ui_print("Installing Google Gmail...");
-		package_extract_dir("aroma/debloat/Gmail", "/system/app");
+		package_extract_dir("superman/debloat/Gmail", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.2.5") == "1"
 	then
 		ui_print("Installing Google Hangouts...");
-		package_extract_dir("aroma/debloat/Hangouts", "/system/app");
+		package_extract_dir("superman/debloat/Hangouts", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.2.6") == "1"
 	then
 		ui_print("Installing Google Maps...");
-		package_extract_dir("aroma/debloat/Maps", "/system/app");
+		package_extract_dir("superman/debloat/Maps", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.2.7") == "1"
 	then
 		ui_print("Installing Google Music...");
-		package_extract_dir("aroma/debloat/Music", "/system/app");
+		package_extract_dir("superman/debloat/Music", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.2.8") == "1"
 	then
 		ui_print("Installing Google Movies...");
-		package_extract_dir("aroma/debloat/Videos", "/system/app");
+		package_extract_dir("superman/debloat/Videos", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.2.9") == "1"
 	then
 		ui_print("Installing Youtube...");
-		package_extract_dir("aroma/debloat/Youtube", "/system/app");
+		package_extract_dir("superman/debloat/Youtube", "/system/app");
 endif;
 if
 	file_getprop("/tmp/aroma/checkbox1.prop","item.2.10") == "1"
 	then
 		ui_print("Installing AndroidPay...");
-		package_extract_dir("aroma/debloat/AndroidPay", "/system/preload");
+		package_extract_dir("superman/debloat/AndroidPay", "/system/preload");
 endif;
 #-- Sound Mod
 if
 	file_getprop("/tmp/aroma/sound.prop","sound") == "level0"
 	then
 		ui_print("Installing sound mod level 0...");
-		package_extract_dir("aroma/sound/mod0/system", "/system");
+		package_extract_dir("superman/sound/mod0/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/sound.prop","sound") == "level1"
 	then
 		ui_print("Installing sound mod level 1...");
-		package_extract_dir("aroma/sound/mod1/system", "/system");
+		package_extract_dir("superman/sound/mod1/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/sound.prop","sound") == "level2"
 	then
 		ui_print("Installing sound mod level 2...");
-		package_extract_dir("aroma/sound/mod2/system", "/system");
+		package_extract_dir("superman/sound/mod2/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/sound.prop","sound") == "level3"
 	then
 		ui_print("Installing sound mod level 3...");
-		package_extract_dir("aroma/sound/mod3/system", "/system");
+		package_extract_dir("superman/sound/mod3/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/sound.prop","sound") == "nothing"
 	then
 		ui_print("Installing stock sound...");
-		package_extract_dir("aroma/sound/stock/system", "/system");
+		package_extract_dir("superman/sound/stock/system", "/system");
 endif;
 #DATA
 ui_print("Extracting data..."); ui_print(" ");
@@ -578,53 +578,53 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xps"
 	then
 		ui_print("Installing Xposed app...");
-		package_extract_dir("xposed/app", "/data/app");
+		package_extract_dir("superman/xposed/app", "/data/app");
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpsma"
 	then
 		ui_print("Installing Xposed app...");
-		package_extract_dir("xposed/app", "/data/app");
+		package_extract_dir("superman/xposed/app", "/data/app");
 endif;
 #-- PHH's App
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
 	then
-		ui_print("Installing phh's supersu app...");
-		package_extract_dir("supersu/app", "/data/app");
+		ui_print("Installing phh's superuser app...");
+		package_extract_dir("superman/root/app", "/data/app");
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
 	then
-		ui_print("Installing phh's supersu app...");
-		package_extract_dir("supersu/app", "/data/app");
+		ui_print("Installing phh's superuser app...");
+		package_extract_dir("superman/root/app", "/data/app");
 endif;
 #-- BUSYBOX App
 if
 	file_getprop("/tmp/aroma/magisk.prop","busybox") == "yes"
 	then
 		ui_print("Installing Busybox App...");
-		package_extract_dir("busybox/app", "/data/app");
+		package_extract_dir("superman/busybox/app", "/data/app");
 endif;
 #-- Magisk App
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
 		ui_print("Installing Magisk App...");
-		package_extract_dir("magisk/app", "/data/app");
+		package_extract_dir("superman/magisk/app", "/data/app");
 endif;
 #-- Synapse App
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "super"
 	then
 		ui_print("Installing Synapse...");
-		package_extract_dir("aroma/kernel/SM-G930F/superkernel/data", "/data");
+		package_extract_dir("superman/kernel/SM-G930F/superkernel/data", "/data");
 endif;
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "super"
 	then
 		ui_print("Installing Synapse...");
-		package_extract_dir("aroma/kernel/SM-G935F/superkernel/data", "/data");
+		package_extract_dir("superman/kernel/SM-G935F/superkernel/data", "/data");
 endif;
 set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
 set_progress(0.400000);
@@ -929,7 +929,7 @@ set_metadata_recursive("/system/etc/firmware", "uid", 0, "gid", 2000, "dmode", 0
 set_metadata_recursive("/system/etc/init.d", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/etc/init.d", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/etc/init.goldfish.sh", "uid", 0, "gid", 2000, "mode", 0550, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
-set_metadata("/system/etc/init.sec.boot.sh", "uid", 0, "gid", 2000, "mode", 0550, "capabilities", 0x0, "selabel", "u:object_r:sec-sh_exec:s0");
+set_metadata("/system/etc/init.sec.boot.sh", "uid", 0, "gid", 2000, "mode", 0644, "capabilities", 0x0, "selabel", "u:object_r:sec-sh_exec:s0");
 set_metadata("/system/etc/permissions", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata_recursive("/system/etc/ppp", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0555, "capabilities", 0x0, "selabel", "u:object_r:ppp_system_file:s0");
 set_metadata("/system/etc/security", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
@@ -963,37 +963,37 @@ if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "stock"
 	then
 		ui_print("Installing SM-G930F full StockKernel...");
-		package_extract_file("aroma/kernel/SM-G930F/stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+		package_extract_file("superman/kernel/SM-G930F/stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;	
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "super"
 	then
 		ui_print("Installing SM-G930F SuperKernel...");
-		package_extract_file("aroma/kernel/SM-G930F/superkernel/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+		package_extract_file("superman/kernel/SM-G930F/superkernel/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg930") == "superstock"
 	then
 		ui_print("Installing SM-G930F SuperStock...");
-		package_extract_file("aroma/kernel/SM-G930F/superstock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+		package_extract_file("superman/kernel/SM-G930F/superstock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;	
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "stock"
 	then
 		ui_print("Installing SM-G935F full StockKernel...");
-		package_extract_file("aroma/kernel/SM-G935F/stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+		package_extract_file("superman/kernel/SM-G935F/stock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;	
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "super"
 	then
 		ui_print("Installing SM-G935F SuperKernel...");
-		package_extract_file("aroma/kernel/SM-G935F/superkernel/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+		package_extract_file("superman/kernel/SM-G935F/superkernel/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernelg935") == "superstock"
 	then
 		ui_print("Installing SM-G935F SuperStock...");
-		package_extract_file("aroma/kernel/SM-G935F/superstock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+		package_extract_file("superman/kernel/SM-G935F/superstock/boot.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
 endif;	
 set_progress(0.700000);
 #SuperSU
@@ -1001,9 +1001,9 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "su"
 	then
 		ui_print("Installing SuperSU V2.78 SR4 variant...");
-		package_extract_dir("supersu", "/tmp/supersu");
-		run_program("/sbin/busybox", "unzip", "/tmp/supersu/SuperSU-v2.78-SR4.zip", "META-INF/com/google/android/*", "-d", "/tmp/supersu");
-		run_program("/sbin/busybox", "sh", "/tmp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/supersu/SuperSU-v2.78-SR4.zip");
+		package_extract_dir("superman/root", "/tmp/root");
+		run_program("/sbin/busybox", "unzip", "/tmp/root/SuperSU-v2.78-SR4.zip", "META-INF/com/google/android/*", "-d", "/tmp/root");
+		run_program("/sbin/busybox", "sh", "/tmp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/root/SuperSU-v2.78-SR4.zip");
 #SUD
 		set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode", 0700, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 		set_progress(0.750000);
@@ -1014,7 +1014,7 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
 		ui_print("Installing Magisk V9 for systemless mods...");
-		package_extract_dir("magisk", "/temp/magisk");
+		package_extract_dir("superman/magisk", "/temp/magisk");
 		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v9.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
 		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v9.zip");
 		set_progress(0.900000);
@@ -1030,9 +1030,9 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
 	then
 		ui_print("Installing Magisk phh's root r266...");
-		package_extract_dir("supersu", "/temp/supersu");
-		run_program("/sbin/busybox", "unzip", "/temp/supersu/phh-superuser-magisk-r266-2.zip", "META-INF/com/google/android/*", "-d", "/temp/supersu");
-		run_program("/sbin/busybox", "sh", "/temp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/supersu/phh-superuser-magisk-r266-2.zip");
+		package_extract_dir("superman/root", "/temp/root");
+		run_program("/sbin/busybox", "unzip", "/temp/root/phh-superuser-magisk-r266-2.zip", "META-INF/com/google/android/*", "-d", "/temp/root");
+		run_program("/sbin/busybox", "sh", "/temp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/root/phh-superuser-magisk-r266-2.zip");
 		set_progress(0.900000);
 		ui_print(" ");
 endif;
@@ -1040,9 +1040,9 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
 	then
 		ui_print("Installing phh's root r266...");
-		package_extract_dir("supersu", "/temp/supersu");
-		run_program("/sbin/busybox", "unzip", "/temp/supersu/superuser-r266-hidesu.zip", "META-INF/com/google/android/*", "-d", "/temp/supersu");
-		run_program("/sbin/busybox", "sh", "/temp/supersu/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/supersu/superuser-r266-hidesu.zip");
+		package_extract_dir("superman/root", "/temp/root");
+		run_program("/sbin/busybox", "unzip", "/temp/root/superuser-r266-hidesu.zip", "META-INF/com/google/android/*", "-d", "/temp/root");
+		run_program("/sbin/busybox", "sh", "/temp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/root/superuser-r266-hidesu.zip");
 		set_progress(0.900000);
 		ui_print(" ");
 endif;
@@ -1056,7 +1056,7 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","busybox") == "yes"
 	then
 		ui_print("Installing Busybox...");
-		package_extract_dir("busybox", "/tmp/busybox");
+		package_extract_dir("superman/busybox", "/tmp/busybox");
 		run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.25.1-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
 		run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/UPDATE-Busybox.Installer.v1.25.1-ALL-signed.zip");
 		set_progress(0.800000);
@@ -1072,7 +1072,7 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","v4a") == "yes"
 	then
 		ui_print("Installing ViPERAtmos_4.8_Sony_Beats_Universal_Edition...");
-		package_extract_dir("viper4android", "/tmp/viper4android");
+		package_extract_dir("superman/viper4android", "/tmp/viper4android");
 		run_program("/sbin/busybox", "unzip", "/tmp/viper4android/ViPERAtmos_4.8_Sony_Beats_Universal_Edition.zip", "META-INF/com/google/android/*", "-d", "/tmp/viper4android");
 		run_program("/sbin/busybox", "sh", "/tmp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/viper4android/ViPERAtmos_4.8_Sony_Beats_Universal_Edition.zip");
 		set_progress(0.850000);
@@ -1081,7 +1081,7 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","v4a") == "yesma"
 	then
 		ui_print("Installing Magisk Viper4Android...");
-		package_extract_dir("viper4android", "/tmp/viper4android");
+		package_extract_dir("superman/viper4android", "/tmp/viper4android");
 		run_program("/sbin/busybox", "unzip", "/tmp/viper4android/ViPER4Android_FX-v2.4.0.1.zip", "META-INF/com/google/android/*", "-d", "/tmp/viper4android");
 		run_program("/sbin/busybox", "sh", "/tmp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/viper4android/ViPER4Android_FX-v2.4.0.1.zip");
 		set_progress(0.850000);
@@ -1090,7 +1090,6 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","v4a") == "no"
 	then
 		ui_print("No Viper4Android installed...");
-		package_extract_dir("viper4android", "/tmp/viper4android");
 		set_progress(0.850000);
 endif;
 #-- Xposed
@@ -1098,7 +1097,7 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xps"
 	then
 		ui_print("Installing Xposed V86.2 systemless...");
-		package_extract_dir("xposed", "/temp/xposed");
+		package_extract_dir("superman/xposed", "/temp/xposed");
 		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.2-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
 		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.2-sdk23-systemless.zip");
 		set_progress(0.950000);
@@ -1108,7 +1107,7 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpsma"
 	then
 		ui_print("Installing Xposed V87 systemless...");
-		package_extract_dir("xposed", "/temp/xposed");
+		package_extract_dir("superman/xposed", "/temp/xposed");
 		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v87-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
 		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v87-sdk23-systemless.zip");
 		set_progress(0.950000);
@@ -1124,7 +1123,7 @@ if
 	file_getprop("/tmp/aroma/splash.prop","splashg930") == "stock"
 	then
 		ui_print("Installing S7 Stock Splash...");
-		package_extract_dir("aroma/splash", "/tmp/splash");
+		package_extract_dir("superman/splash", "/tmp/splash");
 		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashstock-930.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
 		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashstock-930.zip");
 		set_progress(0.990000);
@@ -1134,7 +1133,7 @@ if
 	file_getprop("/tmp/aroma/splash.prop","splashg935") == "stock"
 	then
 		ui_print("Installing S7 Edge Stock Splash...");
-		package_extract_dir("aroma/splash", "/tmp/splash");
+		package_extract_dir("superman/splash", "/tmp/splash");
 		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashstock-935.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
 		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashstock-935.zip");
 		set_progress(0.990000);
@@ -1144,7 +1143,7 @@ if
 	file_getprop("/tmp/aroma/splash.prop","splashg930") == "super"
 	then
 		ui_print("Installing S7 SuperMan Splash...");
-		package_extract_dir("aroma/splash", "/tmp/splash");
+		package_extract_dir("superman/splash", "/tmp/splash");
 		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashblue-930.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
 		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashblue-930.zip");
 		set_progress(0.990000);
@@ -1154,7 +1153,7 @@ if
 	file_getprop("/tmp/aroma/splash.prop","splashg935") == "super"
 	then
 		ui_print("Installing S7 Edge SuperMan Splash...");
-		package_extract_dir("aroma/splash", "/tmp/splash");
+		package_extract_dir("superman/splash", "/tmp/splash");
 		run_program("/sbin/busybox", "unzip", "/tmp/splash/splashblue-935.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
 		run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashblue-935.zip");
 		set_progress(0.990000);
@@ -1172,10 +1171,45 @@ if
 		ui_print("Keep current Splash screen");
 		set_progress(0.990000);
 endif;
+if
+	file_getprop("/tmp/aroma/csc.prop","csc") == "stock"
+	then
+		ui_print("Setting right CSC version");
+		package_extract_file("scripts/model.sh", "/tmp/model.sh");
+		set_perm(0, 0, 0777, "/tmp/model.sh");
+		run_program("/tmp/model.sh");
+endif;
+if
+	file_getprop("/tmp/aroma/modem.prop","modem") == "update"
+	then
+		ifelse(
+			is_substring("G930F", getprop("ro.boot.bootloader")),
+				(
+					ui_print("Flashing latest BPJG G930F/FD Modem");
+					assert(package_extract_file("superman/modem/s7/modem.bin", "/dev/block/sda8"));
+				),
+				(
+				ifelse(
+					is_substring("G935F", getprop("ro.boot.bootloader")),
+						(
+							ui_print("Flashing latest BPJG G935F/FD Modem");
+							assert(package_extract_file("superman/modem/s7e/modem.bin", "/dev/block/sda8"));
+						),
+						(
+							ui_print("You don't have a F/FD device, flash your modem manually with odin!");
+						)
+				);
+				)
+		);
+endif;
+if
+	file_getprop("/tmp/aroma/modem.prop","modem") == "keep"
+	then
+		ui_print("Don't update Modem");
+endif;
 ui_print(" ");
-ui_print("Wiping cache, dalvik and tmp");
+ui_print("Wiping dalvik and tmp");
 ui_print(" ");
-delete_recursive("/tmp");
 delete_recursive("/temp");
 delete_recursive("/data/dalvik-cache");
 unmount("/system");
