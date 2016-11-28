@@ -1107,10 +1107,10 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpsma"
 	then
-		ui_print("Installing Xposed V86.6 systemless...");
+		ui_print("Installing Xposed V87 systemless...");
 		package_extract_dir("xposed", "/temp/xposed");
-		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v86.6-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
-		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v86.6-sdk23-systemless.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/xposed/xposed-v87-sdk23-systemless.zip", "META-INF/com/google/android/*", "-d", "/temp/xposed");
+		run_program("/sbin/busybox", "sh", "/temp/xposed/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/xposed/xposed-v87-sdk23-systemless.zip");
 		set_progress(0.950000);
 		ui_print(" ");
 endif;
