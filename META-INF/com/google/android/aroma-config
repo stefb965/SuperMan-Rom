@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.16");
+ini_set("rom_version",          "V1.17");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "13.11.2016");
+ini_set("rom_date",             "30.11.2016");
 
 ##
 # Show Animated Splash
@@ -590,9 +590,9 @@ form(
 
 form(
     "Modem",
-    "You want to auto update your modem?",
+    "You want to auto update your modem and bootloader?",
     "icons/install2",
-    "modem.prop",
+    "cpandbl.prop",
   #
   # Type:
   #  - group              = Group
@@ -605,9 +605,12 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"modem",	"Modem BPJG",		"",									"group",
-	"update",	"Update Modem",		"Will auto update your modem to latest BPJG release",			"select",
-	"keep",		"Keep Modem",		"Will keep your current modem and change nothing",			"select.selected"
+	"modem",	"Modem BPJG",			"",									"group",
+	"update",	"Update Modem",			"Will auto update your modem to latest BPJG release",			"select",
+	"keep",		"Keep current Modem",	"Will keep your current modem and change nothing",				"select.selected",
+	"bootloader",	"Bootloader BPKA",	"",							"group",
+	"update",	"Update Bootloader",	"Will auto update your BL to latest BPKA release. ATTENTION: If you check this, your phone will auto reboot after installation!!",			"select",
+	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",		"select.selected"
 );
 
 ##

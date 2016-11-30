@@ -14,7 +14,7 @@ show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
-ui_print("SuperMan Rom Installer V1.16");
+ui_print("SuperMan-Rom Installer V1.17");
 ui_print(" ");
 ui_print(" ");
 ui_print("Formatting system...");
@@ -929,7 +929,7 @@ set_metadata_recursive("/system/etc/firmware", "uid", 0, "gid", 2000, "dmode", 0
 set_metadata_recursive("/system/etc/init.d", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/etc/init.d", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/etc/init.goldfish.sh", "uid", 0, "gid", 2000, "mode", 0550, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
-set_metadata("/system/etc/init.sec.boot.sh", "uid", 0, "gid", 2000, "mode", 0644, "capabilities", 0x0, "selabel", "u:object_r:sec-sh_exec:s0");
+set_metadata("/system/etc/init.sec.boot.sh", "uid", 0, "gid", 2000, "mode", 0550, "capabilities", 0x0, "selabel", "u:object_r:sec-sh_exec:s0");
 set_metadata("/system/etc/permissions", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata_recursive("/system/etc/ppp", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0555, "capabilities", 0x0, "selabel", "u:object_r:ppp_system_file:s0");
 set_metadata("/system/etc/security", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
@@ -1119,6 +1119,31 @@ if
 		ui_print("No Xposed installed");
 		set_progress(0.950000);
 endif;
+#-- Param update
+if
+	file_getprop("/tmp/aroma/cpandbl.prop","bootloader") == "update"
+	then
+		ifelse(
+			is_substring("G930F", getprop("ro.boot.bootloader")),
+				(
+					ui_print("Flashing latest BPKA G930F/FD param file");
+					assert(package_extract_file("superman/bootloader/s7/param.bin", "/dev/block/sda4"));
+				),
+				(
+				ifelse(
+					is_substring("G935F", getprop("ro.boot.bootloader")),
+						(
+							ui_print("Flashing latest BPKA G935F/FD param file");
+							assert(package_extract_file("superman/bootloader/s7e/param.bin", "/dev/block/sda4"));
+						),
+						(
+							ui_print("You don't have a F/FD device, flash your bootloader manually with odin!");
+						)
+				);
+				)
+		);
+endif;
+#-- Splash Screen
 if
 	file_getprop("/tmp/aroma/splash.prop","splashg930") == "stock"
 	then
@@ -1171,6 +1196,7 @@ if
 		ui_print("Keep current Splash screen");
 		set_progress(0.990000);
 endif;
+#-- CSC Model
 if
 	file_getprop("/tmp/aroma/csc.prop","csc") == "stock"
 	then
@@ -1179,8 +1205,9 @@ if
 		set_perm(0, 0, 0777, "/tmp/model.sh");
 		run_program("/tmp/model.sh");
 endif;
+#-- Update Modem
 if
-	file_getprop("/tmp/aroma/modem.prop","modem") == "update"
+	file_getprop("/tmp/aroma/cpandbl.prop","modem") == "update"
 	then
 		ifelse(
 			is_substring("G930F", getprop("ro.boot.bootloader")),
@@ -1203,7 +1230,7 @@ if
 		);
 endif;
 if
-	file_getprop("/tmp/aroma/modem.prop","modem") == "keep"
+	file_getprop("/tmp/aroma/cpandbl.prop","modem") == "keep"
 	then
 		ui_print("Don't update Modem");
 endif;
@@ -1218,8 +1245,45 @@ unmount("/cache");
 unmount("/preload");
 unmount("/efs");
 set_progress(1.000000);
-ui_print("SuperMan Rom Installed");
+ui_print("SuperMan-Rom Installed");
 
+endif;
+#-- Bootloader update
+if
+	file_getprop("/tmp/aroma/cpandbl.prop","bootloader") == "update"
+	then
+		ifelse(
+			is_substring("G930F", getprop("ro.boot.bootloader")),
+				(
+					ui_print("Flashing latest BPKA G930F/FD BL");
+					assert(package_extract_file("superman/bootloader/s7/sboot.bin", "/dev/block/sda1"));
+					sleep(1);
+					assert(package_extract_file("superman/bootloader/s7/cm.bin", "/dev/block/sda2"));
+					sleep(1);
+					run_program("/sbin/reboot", "fota_bl");
+				),
+				(
+				ifelse(
+					is_substring("G935F", getprop("ro.boot.bootloader")),
+						(
+							ui_print("Flashing latest BPKA G935F/FD BL");
+							assert(package_extract_file("superman/bootloader/s7e/sboot.bin", "/dev/block/sda1"));
+							sleep(1);
+							assert(package_extract_file("superman/bootloader/s7e/cm.bin", "/dev/block/sda2"));
+							sleep(1);
+							run_program("/sbin/reboot", "fota_bl");
+						),
+						(
+							ui_print("You don't have a F/FD device, flash your bootloader manually with odin!");
+						)
+				);
+				)
+		);
+endif;
+if
+	file_getprop("/tmp/aroma/cpandbl.prop","bootloader") == "keep"
+	then
+		ui_print("Don't update the Bootloader");
 endif;
 
 ui_print("Please Reboot now");
