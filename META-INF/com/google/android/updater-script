@@ -30,6 +30,12 @@ mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/CACHE", "/cache"
 mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/HIDDEN", "/preload");
 mount("ext4", "EMMC", "/dev/block/platform/155a0000.ufs/by-name/EFS", "/efs");
 set_progress(0.200000);
+ui_print("Backing Up EFS...");
+ui_print(" ");
+package_extract_file("scripts/efs_backup.sh", "/tmp/efs_backup.sh");
+set_perm(0, 0, 0777, "/tmp/efs_backup.sh");
+run_program("/tmp/efs_backup.sh");
+set_progress(0.225000);
 #-- Format Options
 if
 	file_getprop("/tmp/aroma/wipe.prop","wipe") == "full"
@@ -75,14 +81,9 @@ if
 endif;
 ui_print("Extracting system...");
 ui_print(" ");
+set_progress(0.275000);
 package_extract_dir("system", "/system");
 set_progress(0.300000);
-ui_print("Backing Up EFS...");
-ui_print(" ");
-package_extract_file("scripts/efs_backup.sh", "/tmp/efs_backup.sh");
-set_perm(0, 0, 0777, "/tmp/efs_backup.sh");
-run_program("/tmp/efs_backup.sh");
-set_progress(0.350000);
 #-- CSC
 if
 	file_getprop("/tmp/aroma/csc.prop","csc") == "stock"
