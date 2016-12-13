@@ -258,6 +258,7 @@ if prop("menu.prop","selected")=="1" then
 
 # Write tmp file for restore check
 writetmpfile("restore.prop","restore=no");
+writetmpfile("jumpinstall.prop","install=no");
 
 # Check if wipe.sh is backed up from last time
 resexec("checkconfig/checkconfig.sh");
@@ -270,19 +271,42 @@ if prop("restore.prop","restore")=="yes" then
 			#-- Text
 			"Do you want to restore your settings from last aroma installation?",
 			#-- Icon (Optional)
-			"@info",
+			"@install",
 			#-- Yes Text
-			"Yes, restore backup",
+			"Yes, restore backup.",
 			#-- No Text
-			"No, start fresh"
+			"No, start fresh."
 	)=="yes"
 		then
 			resexec("checkconfig/restoreconfig.sh");
+			writetmpfile("jumpinstall.prop","install=yes");
 			alert("Result","Backup restored");
 		else
+			writetmpfile("jumpinstall.prop","install=no");
 			alert("Result","Backup not restored, going on with fresh installation");
 	endif;
+	if prop("jumpinstall.prop","install")=="yes" then
+		if confirm(
+				#-- Title
+				"Jump to installation screen?",
+				#-- Text
+				"Do you want to jump directly to install screen? Since you already got an aroma backup.",
+				#-- Icon (Optional)
+				"@install",
+				#-- Yes Text
+				"Yes, keep all settings.",
+				#-- No Text
+				"No, change settings."
+		)=="yes"
+			then
+				writetmpfile("jumpinstall.prop","install=yes");
+			else
+				writetmpfile("jumpinstall.prop","install=no");
+		endif;
+	endif;
 endif;
+
+if prop("jumpinstall.prop","install")=="no" then
 
 ##
 # Wipe Form
@@ -455,10 +479,10 @@ form(
 	"no",		"No root",		"No root will be installed",						"select",
 	"busybox",	"Busybox", 		"",									"group",
 	"yes",		"Busybox",		"Will install latest busybox available",				"select.selected",
-	"no",		"No busybox",		"Busybox is already included in MAGISK V9",				"select",
+	"no",		"No busybox",		"Busybox is already included in Magisk V9",				"select",
 	"xposed",	"Xposed",		"",									"group",
-	"xpsma",	"Xposed V87.0",		"Will install xposed V87 systemless (magisk required)",			"select",
-	"xps",		"Xposed V86.2",		"Last xposed version without magisk",					"select",
+	"xpsma",	"Xposed V87.0",		"Will install xposed V87.0 systemless (magisk required)",		"select",
+	"xpssu",	"Xposed V86.2",		"Last xposed version without magisk (SuperSU required",			"select",
 	"no",		"No xposed",		"Xposed won't be installed",						"select.selected",
 	"v4a",		"Viper4Android",	"",									"group",
 	"yes",		"Normal V4A",		"Normal system patch will be applied",					"select",
@@ -760,6 +784,9 @@ checkbox(
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
+
+# This endif comes from the jump command
+endif;
 
 # Installation UI
 

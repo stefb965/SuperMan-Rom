@@ -8,4 +8,3 @@ rm -rf /data/media/0/SuperMan/aroma/*
 
 exit 10
 
-

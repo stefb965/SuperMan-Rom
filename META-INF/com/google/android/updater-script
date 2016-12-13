@@ -39,6 +39,7 @@ if
 	then
 		ui_print("Full wipe...");
 		delete_recursive("/system");
+		delete_recursive("/cache");
 		package_extract_file("scripts/DeleteDataWithoutMedia.sh", "/tmp/DeleteDataWithoutMedia.sh"); 
 		set_perm(0, 0, 0777, "/tmp/DeleteDataWithoutMedia.sh");
 		run_program("/sbin/busybox", "sh", "/tmp/DeleteDataWithoutMedia.sh");
@@ -51,8 +52,8 @@ if
 	then
 		ui_print("Clean install...");
 		delete_recursive("/system");
+		delete_recursive("/cache");
 		delete_recursive("/data");
-		delete_recursive("/sdcard");
 		delete_recursive("/magisk");
 		delete_recursive("/supersu");
 		set_progress(0.250000);
@@ -62,6 +63,7 @@ if
 	then
 		ui_print("Dirty flash...");
 		delete_recursive("/system");
+		delete_recursive("/cache");
 		set_progress(0.250000);
 endif;
 ui_print("Extracting system...");
@@ -569,7 +571,7 @@ ui_print("Extracting data..."); ui_print(" ");
 package_extract_dir("data", "/data");
 #-- Xposed App
 if
-	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xps"
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpssu"
 	then
 		ui_print("Installing Xposed app...");
 		package_extract_dir("superman/xposed/app", "/data/app");
@@ -1106,7 +1108,7 @@ if
 endif;
 #-- Xposed
 if
-	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xps"
+	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpssu"
 	then
 		ui_print("Installing Xposed V86.2 systemless...");
 		package_extract_dir("superman/xposed", "/temp/xposed");
