@@ -85,6 +85,14 @@ if
 	then
 		ui_print("Don't install any csc...");
 endif;
+#-- Model
+ui_print(" ");
+ui_print("Setting right model number to csc and build.prop");
+ui_print(" ");
+package_extract_file("scripts/model.sh", "/tmp/model.sh");
+set_perm(0, 0, 0777, "/tmp/model.sh");
+run_program("/tmp/model.sh");
+set_progress(0.350000);
 #-- Variants
 ifelse(
 	is_substring("G930F", getprop("ro.boot.bootloader")),
@@ -1217,17 +1225,6 @@ ifelse(
 			endif;
 		)
 );
-#-- Model
-if
-	file_getprop("/tmp/aroma/csc.prop","csc") == "stock"
-	then
-		ui_print(" ");
-		ui_print("Setting right CSC version");
-		ui_print(" ");
-		package_extract_file("scripts/model.sh", "/tmp/model.sh");
-		set_perm(0, 0, 0777, "/tmp/model.sh");
-		run_program("/tmp/model.sh");
-endif;
 #-- Aroma Backup
 ui_print(" ");
 ui_print("Backing Up aroma config");
