@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.17");
+ini_set("rom_version",          "V1.18");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "30.11.2016");
+ini_set("rom_date",             "14.12.2016");
 
 ##
 # Show Animated Splash
@@ -70,26 +70,25 @@ fontresload( "1", "ttf/Roboto-Regular.ttf", "18" ); #-- "1" = Big Font
 ##
 #   SHOW ROM/Mod INFORMATION
 #
-
 viewbox(
-  #-- Title
-    "<~welcome.title>",
-  
-  #-- Text
-    "<~welcome.text1> <b>"+
-	  #-- Get Config Value
-	  ini_get("rom_name")+
-	"</b> <~common.for> <b>"+ini_get("rom_device")+"</b>.\n\n"+
-    
-    "<~welcome.text2>\n\n"+
-	
-      "  <~welcome.version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
-      "  <~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
+	#-- Title
+	"<~welcome.title>",
 
-    "<~welcome.next>",
-  
-  #-- Icon
-    "@welcome"
+ 	#-- Text
+	"<~welcome.text1> <b>"+
+	#-- Get Config Value
+	ini_get("rom_name")+
+	"</b> <~common.for> <b>"+ini_get("rom_device")+"</b>.\n\n"+
+
+	"<~welcome.text2>\n\n"+
+
+	"<~welcome.version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
+	"<~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
+
+	"<~welcome.next>",
+
+	#-- Icon
+	"@welcome"
 );
 
 ##
@@ -97,49 +96,49 @@ viewbox(
 #
 
 agreebox(
-  #-- Title
-    "SuperMan-Rom™",
-  
-  #-- Subtitle / Description
-    "Read Carefully",
-  
-  #-- Icon:
-    "@license",
-  
-  #-- Text Content 
-    resread("license.txt"),
-  
-  #-- Checkbox Text
-    "Have you really read it and are agree?",
-  
-  #-- Unchecked Alert Message
-    "You've to agree!"
+	#-- Title
+	"SuperMan-Rom™",
+
+	#-- Subtitle / Description
+	"Read Carefully",
+
+	#-- Icon:
+	"@license",
+
+	#-- Text Content 
+	resread("license.txt"),
+
+	#-- Checkbox Text
+	"Have you really read it and are agree?",
+
+	#-- Unchecked Alert Message
+	"You've to agree!"
 );
 
 ##
 # MAIN MENU- INSTALLER n MISC
 #
 menubox(
-  #-- Title
-    "SuperMan-Rom™ Menu",
-  
-  #-- Sub Title
-    "Please select from the Menu Below to Modify the required features",
-  
-  #-- Icon
-    "@apps",
-    
-  #-- Will be saved in /tmp/aroma/menu.prop
-    "menu.prop",
+	#-- Title
+	"SuperMan-Rom™ Menu",
+
+	#-- Sub Title
+	"Please select from the Menu Below to Modify the required features",
+
+	#-- Icon
+	"@apps",
+ 
+	#-- Will be saved in /tmp/aroma/menu.prop
+	"menu.prop",
     
      #-------------------------+-----------------[ Menubox Items ]-------------------------+---------------#
      # TITLE                   |  SUBTITLE                                                 |   Item Icons  #
      #-------------------------+-----------------------------------------------------------+---------------#	
 	
-	"Installation",		"ROM Installation with Various Features - RECOMMENDED",      "@install",      #-- selected = 1
-	"System Info",		"Get and show device/partition informations",                "@info",         #-- selected = 2
-	"ChangeLog",		"SuperMan ChangeLog",                                         "@agreement",    #-- selected = 3
-	"Quit Install",		"Leaving the Aroma setup to install another Rom :(",     "@install2"       #-- selected = 4
+	"Installation",		"ROM Installation with Various Features - RECOMMENDED",		"@install",      #-- selected = 1
+	"System Info",		"Get and show device/partition informations",			"@info",         #-- selected = 2
+	"ChangeLog",		"SuperMan ChangeLog",						"@agreement",    #-- selected = 3
+	"Quit Install",		"Leaving the Aroma setup to install another Rom :(",		"@install2"       #-- selected = 4
 
 );
 
@@ -149,62 +148,62 @@ menubox(
 
 if prop("menu.prop","selected")=="2" then
 
-  #-- Show Please Wait
-  pleasewait("Getting System Information...");
+	#-- Show Please Wait
+	pleasewait("Getting System Information...");
 
-  #-- Fetch System Information
-  setvar(
-    #-- Variable Name
-      "sysinfo",
-    
-    #-- Variable Value
-      "<@center><b>Your Device System Information</b></@>\n\n"+
-      
-      "Device Name\t\t: <#469>Galaxy S7/S7 edge</#>\n"+
-      "Board Name\t\t: <#469>SM-G930F/G935F</#>\n"+
-      "Manufacturer\t\t: <#469>Samsung</#>\n"+
-	  
-	  "\n"+
-	  
-      "System Size\t\t: <b><#selectbg_g>"+getdisksize("/system","m")+" MB</#></b>\n"+
-        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/system","m")+" MB</#></b>\n\n"+
-      "Data Size\t\t: <b><#selectbg_g>"+getdisksize("/data","m")+" MB</#></b>\n"+
-        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/data","m")+" MB</#></b>\n\n"+
-      "SDCard Size\t\t: <b><#selectbg_g>"+getdisksize("/sdcard","m")+" MB</#></b>\n"+
-        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/sdcard","m")+" MB</#></b>\n\n"+
+	#-- Fetch System Information
+	setvar(
+		#-- Variable Name
+		"sysinfo",
 
-      ""
-  );
+		#-- Variable Value
+		"<@center><b>Your Device System Information</b></@>\n\n"+
+
+		"Device Name\t\t: <#469>Galaxy S7/S7 edge</#>\n"+
+		"Board Name\t\t: <#469>SM-G930F/G935F</#>\n"+
+		"Manufacturer\t\t: <#469>Samsung</#>\n"+
+	  
+		"\n"+
+
+		"System Size\t\t: <b><#selectbg_g>"+getdisksize("/system","m")+" MB</#></b>\n"+
+		"\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/system","m")+" MB</#></b>\n\n"+
+		"Data Size\t\t: <b><#selectbg_g>"+getdisksize("/data","m")+" MB</#></b>\n"+
+		"\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/data","m")+" MB</#></b>\n\n"+
+		"SDCard Size\t\t: <b><#selectbg_g>"+getdisksize("/sdcard","m")+" MB</#></b>\n"+
+		"\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/sdcard","m")+" MB</#></b>\n\n"+
+
+		""
+	);
   
-  #-- Show Textbox
-  textbox(
-    #-- Title
-      "System Information",
+	#-- Show Textbox
+	textbox(
+		#-- Title
+		"System Information",
     
-    #-- Subtitle
-      "Current system Information on your S7",
+		#-- Subtitle
+		"Current system Information on your S7",
     
-    #-- Icon
-      "@info",
+		#-- Icon
+		"@info",
     
-    #-- Text
-      getvar("sysinfo")
-  );
+		#-- Text
+		getvar("sysinfo")
+	);
   
-  #-- Show Alert
-  alert(
-    #-- Alert Title
-      "Finished",
+	#-- Show Alert
+	alert(
+		#-- Alert Title
+		"Finished",
     
-    #-- Alert Text
-      "You will be back to Menu",
+		#-- Alert Text
+		"You will be back to Menu",
     
-    #-- Alert Icon
-      "@alert"
-  );
+		#-- Alert Icon
+		"@alert"
+	);
   
-  #-- Back to Menu ( 2 Wizard UI to Back )
-  back("2");
+	#-- Back to Menu ( 2 Wizard UI to Back )
+	back("2");
   
 endif;
 
@@ -214,18 +213,18 @@ endif;
 
 if prop("menu.prop","selected")=="3" then
 
-    #-- TextDialog 
- textdialog(
-    #-- Title
-    "SuperMan-Rom Changelog",
-	#-- Text
-    resread("changelog.txt"),
-    #-- Custom OK Button Text (Optional)
-    "Close"
- );
+	#-- TextDialog 
+	textdialog(
+		#-- Title
+		"SuperMan-Rom Changelog",
+		#-- Text
+		resread("changelog.txt"),
+		#-- Custom OK Button Text (Optional)
+		"Close"
+	);
  
-  #-- Back to Menu ( 2 Wizard UI to Back )
-  back("1");
+	#-- Back to Menu ( 2 Wizard UI to Back )
+	back("1");
   
 endif;
 
@@ -236,20 +235,18 @@ endif;
 if prop("menu.prop","selected")=="4" then
 
 #-- Exit
-	if
-	  confirm(
+	if confirm(
 		#-- Title
-		  "Exit",
+		"Exit",
 		#-- Text
-		  "Are you sure want to exit the Installer?",
+		"Are you sure want to exit the Installer?",
 		#-- Icon (Optional)
-		  "@alert"
-	  )=="yes"
+		"@alert"
+	)=="yes"
 	then
-	  #-- Exit 
-	  exit("");
+		#-- Exit 
+		exit("");
 	endif;
-
 endif;
 
 
@@ -259,24 +256,33 @@ endif;
 
 if prop("menu.prop","selected")=="1" then
 
-##
-# Variant Form
-#
+# Write tmp file for restore check
+writetmpfile("restore.prop","restore=no");
 
-form(
-    "Variant",
-    "Choose your variant here",
-    "icons/install2",
-    "variant.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
+# Check if wipe.sh is backed up from last time
+resexec("checkconfig/checkconfig.sh");
 
-	"variant",	"Variant/Model selection",		"",					"group",
-	"s7",		"S7 Model",		"I got a SM-G930F/FD/W8",				"select.selected",
-	"s7e",		"S7E Model",		"I got a SM-G935F/FD/W8",				"select"
-);
+if prop("restore.prop","restore")=="yes" then
+
+	if confirm(
+			#-- Title
+			"Backup found!",
+			#-- Text
+			"Do you want to restore your settings from last aroma installation?",
+			#-- Icon (Optional)
+			"@info",
+			#-- Yes Text
+			"Yes, restore backup",
+			#-- No Text
+			"No, start fresh"
+	)=="yes"
+		then
+			resexec("checkconfig/restoreconfig.sh");
+			alert("Result","Backup restored");
+		else
+			alert("Result","Backup not restored, going on with fresh installation");
+	endif;
+endif;
 
 ##
 # Wipe Form
@@ -287,11 +293,18 @@ form(
     "Choose your wipe option here",
     "icons/install2",
     "wipe.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
 	"wipe",		"Wipe method",		"",									"group",
 	"full",		"Full Wipe",		"Wipes everything except internal and external SD card",		"select.selected",
 	"clean",	"Clean Install",	"Wipes everything except external SD card",				"select",
@@ -307,18 +320,23 @@ form(
     "You can choose if you want to include default csc or flash your csc after rom",
     "icons/install2",
     "csc.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
 	"csc",		"Choose if you want to include csc or not",			"",					"group",
 	"stock",	"Install stock csc",		"For this base AUT (Switzerland) csc is stock csc and will be flashed with this",	"select.selected",
 	"none",		"Don't install any csc",	"This is used if you flash csc right after rom install. So no files got messed up with any other csc and your csc can work perfect",						"select"
 );
 
-if prop("variant.prop","variant")=="s7" then
-
 alert("Warning", "For Kernels, if you are not a professional or an android geek it is recommend to stick to stock/stock modified kernel!");
 
 ##
@@ -330,15 +348,25 @@ form(
     "Choose your kernel here",
     "icons/install2",
     "kernel.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
-	"kernelg930",	"Kernel SM-G930F/FD/W8",		"",									"group",
-	"stock",	"Stock Kernel",			"If you select this, sytemless xposed won't work (bootloop)",		"select",
-	"super",	"SuperKernel",			"SuperKernel V1.9.2 and Synapse installed S7",				"select",
-	"superstock",	"SuperStock",			"Selinux permissive and updated Linux for our S7",			"select.selected"
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"kernel",	"Kernel Selection",		"",									"group",
+	"stock",	"Stock Kernel",			"This is just a full stock kernel as you can find on stock rom",	"select",
+	"super",	"SuperKernel",			"SuperKernel V1.9.5 with many tweaks",					"select",
+	"superstock",	"SuperStock",			"Latest SuperStock V1.5.6 for our galaxy s7",				"select.selected",
+	"control",	"Kernel Control app",		"",									"group",
+	"synapse",	"Synapse",			"Installs Synapse app to control the Kernel. Only working on SuperKernel",	"check",
+	"adiutor",	"Kernel Adiutor",		"Installs latest Kernel Adiutor app. You can control all kernels with it",	"check"
 );
 
 ##
@@ -350,64 +378,23 @@ form(
     "Choose between stock and superman splash",
     "icons/install2",
     "splash.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
-	"splashg930",	"Splash",		"",									"group",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"splash",	"Splash",		"",									"group",
 	"stock",	"Stock Splash",		"Stock S7 splash screen will be installed",				"select",
 	"super",	"SuperMan Splash",	"Superman Splash screen for S7",					"select",
 	"nothing",	"Keep current",		"Keeps your current splash screen (no matter which it is)",		"select.selected"
 );
-
-endif;
-
-if prop("variant.prop","variant")=="s7e" then
-
-alert("Warning", "For Kernels, if you are not a professional or an android geek it is recommend to stick to stock/stock modified kernel!");
-
-##
-# Kernel Form
-#
-
-form(
-    "Kernel",
-    "Choose your kernel here",
-    "icons/install2",
-    "kernel.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
-	"kernelg935",	"Kernel SM-G935F/FD/W8",	"",									"group",
-	"stock",	"Stock Kernel",			"If you select this, sytemless xposed won't work (bootloop)",		"select",
-	"super",	"SuperKernel",			"SuperKernel V1.9.2 and Synapse installed S7e",				"select",
-	"superstock",	"SuperStock",			"Selinux permissive and updated Linux for our S7e",			"select.selected"
-);
-
-##
-# Splash Form
-#
-
-form(
-    "Splash Screen",
-    "Choose between stock and superman splash",
-    "icons/install2",
-    "splash.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
-	"splashg935",	"Splash",		"",									"group",
-	"stock",	"Stock Splash",		"Stock S7e splash screen will be installed",				"select",
-	"super",	"SuperMan Splash",	"Superman Splash screen for S7e",					"select",
-	"nothing",	"Keep current",		"Keeps your current splash screen (no matter which it is)",		"select.selected"
-);
-
-endif;
 
 ##
 # Camera Form
@@ -418,11 +405,18 @@ form(
     "Modded or stock Camera application?",
     "icons/install2",
     "camera.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
 	"camera",	"Camera Selection",		"",											"group",
 	"stock",	"Stock Camera",			"Nothing changed, stock values",							"select.selected",
 	"modded",	"Modded Camera V5",		"Increase bitrates for all camera resolutions and to set pictures at 100 quality.",	"select"
@@ -451,25 +445,25 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"magisk",	"Magisk V9",	"",									"group",
-	"yes",		"Yes",		"Magisk V9 and its modules for systemless mods",			"select",
-	"no",		"No",		"Will not install magisk",						"select.selected",
-	"root",		"Root method", 	"",									"group",
-	"su",		"SuperSU",	"Will install SuperSU 2.78 SR5",					"select",
-	"phhma",	"PHH's (magisk)","Installs phh's supersuser patched for magisk!",			"select",
-	"phh",		"PHH's hidesu",	"Installs phh hidesu without magisk compatibility",			"select.selected",
-	"no",		"No root",	"No root will be installed",						"select",
-	"busybox",	"Busybox", 	"",									"group",
-	"yes",		"Busybox",	"Will install latest busybox available",				"select.selected",
-	"no",		"No busybox",	"Busybox is already included in MAGISK V9",				"select",
-	"xposed",	"Xposed",	"",									"group",
-	"xpsma",	"Xposed V87",	"Will install xposed V87 systemless (magisk required)",			"select",
-	"xps",		"Xposed V86.2",	"Last xposed version without magisk",					"select",
-	"no",		"No xposed",	"Xposed won't be installed",						"select.selected",
-	"v4a",		"Viper4Android","",									"group",
-	"yes",		"Normal V4A",	"Normal system patch will be applied",					"select",
-	"yesma",	"Magisk V4A",	"Magisk compatible viper4android will be installed (APK needs to be installed seperately!)",			"select",
-	"no",		"No V4A",	"Viper4Android won't be installed",					"select.selected"
+	"magisk",	"Magisk V9",		"",									"group",
+	"yes",		"Yes",			"Magisk V9 and its modules for systemless mods",			"select",
+	"no",		"No",			"Will not install magisk",						"select.selected",
+	"root",		"Root method", 		"",									"group",
+	"su",		"SuperSU",		"Will install SuperSU 2.78 SR5",					"select",
+	"phhma",	"Phh's r266-2 magisk",	"Installs phh's supersuser patched for magisk!",			"select",
+	"phh",		"Phh's r275",		"Installs standard r275 phh superuser",					"select.selected",
+	"no",		"No root",		"No root will be installed",						"select",
+	"busybox",	"Busybox", 		"",									"group",
+	"yes",		"Busybox",		"Will install latest busybox available",				"select.selected",
+	"no",		"No busybox",		"Busybox is already included in MAGISK V9",				"select",
+	"xposed",	"Xposed",		"",									"group",
+	"xpsma",	"Xposed V87.0",		"Will install xposed V87 systemless (magisk required)",			"select",
+	"xps",		"Xposed V86.2",		"Last xposed version without magisk",					"select",
+	"no",		"No xposed",		"Xposed won't be installed",						"select.selected",
+	"v4a",		"Viper4Android",	"",									"group",
+	"yes",		"Normal V4A",		"Normal system patch will be applied",					"select",
+	"yesma",	"Magisk V4A",		"Magisk compatible viper4android will be installed (APK needs to be installed seperately!)",			"select",
+	"no",		"No V4A",		"Viper4Android won't be installed",					"select.selected"
 );
 
 ##
@@ -481,11 +475,18 @@ form(
     "Do you want to install the sound mod by ZuBi182?",
     "icons/install2",
     "sound.prop",
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
 	"sound",	"Sound Level",			"",					"group",
 	"level0",	"Install sound mod Level 0",	"Stock Volume",				"select",
 	"level1",	"Install sound mod Level 1",	"Slightly increased values",		"select",
@@ -495,67 +496,62 @@ form(
 );
 
 ##
-# Sub Window 6
+# Emoji Form
 #
 
-selectbox(
-  #-- Title
-	"Emojis",
-	  
-  #-- Sub Title
-    "Do you want to install the IOS or stock Emojis in keyboard?",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window6.prop
-	"window6.prop",
-
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-
-	"Select which Icons you want",			"",								2,	#-- Group 1. key = "selected.1"
-	"Install stock emoji",		"Will display stock emojis in samsung keyboard",				1,	#-- selected.1 = 1
-	"Install IOS 10 emojis",	"Will install different IOS emojis in samsung keyboard",			0,      #-- selected.1 = 2
-	"Install Android N emojis",	"Installs android N emojis from s7 nougat (looked similar to MM to be honest)",	0       #-- selected.1 = 3
-	  
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
+form(
+    "Emojis",
+    "Do you want to install the iOS, nougat or stock Emojis in keyboard?",
+    "icons/install2",
+    "emoji.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"emoji",	"Select which Icons you want",	"",							"group",
+	"stock",	"Install stock emoji",		"Will display stock emojis in samsung keyboard",	"select.selected",
+	"ios",		"Install iOS 10 emojis",	"Will install new iOS emojis in samsung keyboard",	"select",
+	"nougat",	"Install Android N emojis",	"Installs android N emojis from s7 nougat (looked similar to MM to be honest)",	"select"
 );
 
 ##
-# Sub Window 7
+# SystemUI/Settings Form
 #
 
-selectbox(
-  #-- Title
-	"SystemUI",
-	  
-  #-- Sub Title
-    "Do you want the modded SystemUI or stock SystemUI?",
-	  
-  #-- Icon:
-     "icons/install2",
-	 
-  #-- Will be saved in /tmp/aroma/window7.prop
-	"window7.prop",
-
-  
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-	
-	"Select One",			"",							2,	#-- Group 1. key = "selected.1"
-	"Install stock SystemUI",	"No rounded mods, no other mods, just stock",				0,	#-- selected.1 = 1
-	"Install Rounded SystemUI",	"Rounded SystemUI, remove low battery warning, grey scaling removed while on powersaving mode and Opaque Status Bar Icons and many options in rom control",	1,      #-- selected.1 = 2
-	"Install Modded SystemUI",	"Same as above but WITHOUT rounded UI",	0,     #-- selected.1 = 3
-	"Install Rounded SystemUI MinitClock",	"Rounded UI WITH MinitClock",		0,     #-- selected.1 = 4
-	"Install Modded SystemUI MinitClock",	"WITHOUT Rounded UI WITH MinitClock",	0      #-- selected.1 = 5
-  
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-
+form(
+    "SystemUI and Settings",
+    "You can choose here if you want to install modded systemUI and settings",
+    "icons/install2",
+    "mods.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"systemUI",	"Choose your prefered SystemUI",		"",									"group",
+	"modded",	"Modded SystemUI",		"Includes all romcontrol features, disabled sd card notificaitons, no grey background on powersaving mode and many more features.",		"select",
+	"rounded",	"Rounded SytemUI",		"Same features as modded SystemUI but with rounded recentpanel view",			"select.selected",
+	"moddedclock",	"Modded 3minit clock SystemUI",	"Same features as modded SystemUI but with 3minit clock instead of normal clock",	"select",
+	"roundedclock",	"Rounded 3minit clock SytemUI",	"Same features as rounded SystemUI but with 3minit clock instead of normal clock",	"select",
+	"stock",	"Stock SystemUI",		"No features included in here. Just stock SystemUI as you can find on any rom",		"select",
+	"settings",	"Choose your prefered Settings",		"",									"group",
+	"modded",	"Modded Settings",		"Features mods like: Links to Superuser, adaway. SuperMan header in Settings, changable fonts and more",	"select.selected",
+	"stock",	"Stock Settings",		"No special features, all stock in this settings",					"select"
 );
 
 ##
@@ -605,11 +601,11 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"modem",	"Modem BPJG",			"",									"group",
-	"update",	"Update Modem",			"Will auto update your modem to latest BPJG release",			"select",
-	"keep",		"Keep current Modem",	"Will keep your current modem and change nothing",				"select.selected",
-	"bootloader",	"Bootloader BPKA",	"",							"group",
-	"update",	"Update Bootloader",	"Will auto update your BL to latest BPKA release. ATTENTION: If you check this, your phone will auto reboot after installation!!",			"select",
+	"modem",	"Modem BPKG",			"",							"group",
+	"update",	"Update Modem",		"Will auto update your modem to latest BPKG release",		"select",
+	"keep",		"Keep current Modem",	"Will keep your current modem and change nothing",		"select.selected",
+	"bootloader",	"Bootloader BPL3",	"",								"group",
+	"update",	"Update Bootloader",	"Will auto update your BL to latest BPL3 release. ATTENTION: If you check this, your phone will auto reboot after installation!!",			"select",
 	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",		"select.selected"
 );
 
@@ -621,7 +617,7 @@ form(
     "Services and Launcher",
     "Choose between stock and modded services/launcher",
     "icons/install2",
-    "mods.prop",
+    "launcher.prop",
   #
   # Type:
   #  - group              = Group
@@ -690,7 +686,7 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"adblocker",	"Adblocker",			"",									"group",
+	"adblocker",	"Adblocker",			"",										"group",
 	"enable",	"Enable by default",	"Enables Adblocker by default (3minit battery needs disabled adblocker to work)",	"select.selected",
 	"disable",	"Disable by default",	"Disables Adblocker by default. However you can still enable it in the app later",	"select"
 );
@@ -771,17 +767,17 @@ ini_set("text_next", "Install Now");
 ini_set("icon_next", "@installbutton");
   
 viewbox(
-  #-- Title
-    "Ready to Install",
+	#-- Title
+	"Ready to Install",
 
-  #-- Text
-    "SuperMan-Rom is ready to be installed.\n\n"+
+	#-- Text
+	"SuperMan-Rom is ready to be installed.\n\n"+
 	"Press <b>Install ROM</b> to begin the installation.\n\n"+
 	"To review or change any of your installation settings, press <b>Back</b>.\n\n"+
 	"Press Menu -> Quit Installation to quit.",
 
-  #-- Icon
-    "@install"
+	#-- Icon
+	"@install"
 );
 
 endif;
@@ -790,18 +786,17 @@ endif;
 # INSTALLATION PROCESS
 #
 
-if prop("menu.prop","selected")== "1" 
-then
+if prop("menu.prop","selected")== "1" then
 
 ini_set("text_next", "Next");
 ini_set("icon_next", "@next");
 
 install(
-  "SuperMan-Rom™ Installation",
-  getvar("rom_name") + "\n" +
-  "Please wait while SuperMan-Rom is conquering your phone" +
-  "",
-  "icons/install2"
+	"SuperMan-Rom™ Installation",
+	getvar("rom_name") + "\n" +
+	"Please wait while SuperMan-Rom is conquering your phone" +
+	"",
+	"icons/install2"
 );
 
 alert("Reminder:", "Don't forget to flash your providers csc after rom install. Especially if you did NOT INSTALL any csc with the rom!!");
