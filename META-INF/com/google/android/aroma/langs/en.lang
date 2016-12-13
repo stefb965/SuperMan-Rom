@@ -55,9 +55,9 @@ themes.desc=Please select installer theme that you want to use in this installat
 welcome.title=Welcome
 welcome.text1=You are about to Installing
 welcome.text2=AROMA Installer was the first and the only Touch and Customizable ANDROID ROM Installer in the World.
-welcome.version=VERSION
-welcome.codename=CODENAME
-welcome.updated=UPDATED
+welcome.version=Version
+welcome.codename=Codename
+welcome.updated=Updated
 welcome.next=Press Next to Continue the Installation...
 
 terms.title=Terms and Conditions
