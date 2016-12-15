@@ -481,7 +481,7 @@ form(
 	"yes",		"Busybox",		"Will install latest busybox available",				"select.selected",
 	"no",		"No busybox",		"Busybox is already included in Magisk V9",				"select",
 	"xposed",	"Xposed",		"",									"group",
-	"xpsma",	"Xposed V87.0",		"Will install xposed V87.0 systemless (magisk required)",		"select",
+	"xpsma",	"Xposed V87.1",		"Will install xposed V87.1 systemless (magisk required)",		"select",
 	"xpssu",	"Xposed V86.2",		"Last xposed version without magisk (SuperSU required",			"select",
 	"no",		"No xposed",		"Xposed won't be installed",						"select.selected",
 	"v4a",		"Viper4Android",	"",									"group",
