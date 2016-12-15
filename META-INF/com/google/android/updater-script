@@ -1094,8 +1094,8 @@ if
 	then
 		ui_print("Installing Magisk Viper4Android...");
 		package_extract_dir("superman/viper4android", "/tmp/viper4android");
-		run_program("/sbin/busybox", "unzip", "/tmp/viper4android/ViPER4Android_FX-v2.4.0.1.zip", "META-INF/com/google/android/*", "-d", "/tmp/viper4android");
-		run_program("/sbin/busybox", "sh", "/tmp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/viper4android/ViPER4Android_FX-v2.4.0.1.zip");
+		run_program("/sbin/busybox", "unzip", "/tmp/viper4android/ViPER4Android_FX-v2.5.0.5.zip", "META-INF/com/google/android/*", "-d", "/tmp/viper4android");
+		run_program("/sbin/busybox", "sh", "/tmp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/viper4android/ViPER4Android_FX-v2.5.0.5.zip");
 		set_progress(0.950000);
 		ui_print(" ");
 endif;
