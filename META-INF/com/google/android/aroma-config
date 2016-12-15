@@ -486,7 +486,8 @@ form(
 	"no",		"No xposed",		"Xposed won't be installed",						"select.selected",
 	"v4a",		"Viper4Android",	"",									"group",
 	"yes",		"Normal V4A",		"Normal system patch will be applied",					"select",
-	"yesma",	"Magisk V4A",		"Magisk compatible viper4android will be installed (APK needs to be installed seperately!)",			"select",
+	"yesma",	"Magisk V4A",		"Magisk compatible viper4android will be installed",			"select",
+	"arise",	"Viper4 ARISE",		"A.R.I.S.E sound system which is similar to V4A",			"select",
 	"no",		"No V4A",		"Viper4Android won't be installed",					"select.selected"
 );
 
@@ -609,7 +610,7 @@ form(
 #
 
 form(
-    "Modem",
+    "Modem and Bootloader",
     "You want to auto update your modem and bootloader?",
     "icons/install2",
     "cpandbl.prop",
@@ -625,12 +626,12 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"modem",	"Modem BPKG",			"",							"group",
-	"update",	"Update Modem",		"Will auto update your modem to latest BPKG release",		"select",
-	"keep",		"Keep current Modem",	"Will keep your current modem and change nothing",		"select.selected",
-	"bootloader",	"Bootloader BPL3",	"",								"group",
-	"update",	"Update Bootloader",	"Will auto update your BL to latest BPL3 release. ATTENTION: If you check this, your phone will auto reboot after installation!!",			"select",
-	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",		"select.selected"
+	"modem",	"Modem update F/FD/W8",		"",										"group",
+	"update",	"Update Modem",		"Will auto update your modem to latest BPKG on F/FD and to APK3 on W8 models",		"select",
+	"keep",		"Keep current Modem",	"Will keep your current modem and change nothing",					"select.selected",
+	"bootloader",	"Bootloader update F/FD/W8",	"",										"group",
+	"update",	"Update Bootloader",	"Will auto update your BL to latest release on F/FD/W8 models. Other models please flash on Odin! ATTENTION: If you check this, your phone will auto reboot after installation!!",			"select",
+	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",				"select.selected"
 );
 
 ##
