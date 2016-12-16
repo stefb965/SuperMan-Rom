@@ -14,7 +14,7 @@ show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
-ui_print("SuperMan-Rom Installer V1.18");
+ui_print("SuperMan-Rom Installer V1.18.1");
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
