@@ -386,8 +386,8 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"kernel",	"Kernel Selection",		"",									"group",
 	"stock",	"Stock Kernel",			"This is just a full stock kernel as you can find on stock rom",	"select",
-	"super",	"SuperKernel",			"SuperKernel V1.9.5 with many tweaks",					"select",
-	"superstock",	"SuperStock",			"Latest SuperStock V1.5.6 for our galaxy s7",				"select.selected",
+	"super",	"SuperKernel",			"SuperKernel V1.9.6 with many tweaks",					"select",
+	"superstock",	"SuperStock",			"Latest SuperStock V1.6 for our galaxy s7",				"select.selected",
 	"control",	"Kernel Control app",		"",									"group",
 	"synapse",	"Synapse",			"Installs Synapse app to control the Kernel. Only working on SuperKernel",	"check",
 	"adiutor",	"Kernel Adiutor",		"Installs latest Kernel Adiutor app. You can control all kernels with it",	"check"
@@ -574,6 +574,7 @@ form(
 	"moddedclock",	"Modded 3minit clock SystemUI",	"Same features as modded SystemUI but with 3minit clock instead of normal clock",	"select",
 	"roundedclock",	"Rounded 3minit clock SytemUI",	"Same features as rounded SystemUI but with 3minit clock instead of normal clock",	"select",
 	"stock",	"Stock SystemUI",		"No features included in here. Just stock SystemUI as you can find on any rom",		"select",
+	"goodlock",	"Good Lock SystemUI",		"Installs samsungs updated good lock SystemUI app. It can't be used with romcontrol!",	"select",
 	"settings",	"Choose your prefered Settings",		"",									"group",
 	"modded",	"Modded Settings",		"Features mods like: Links to Superuser, adaway. SuperMan header in Settings, changable fonts and more",	"select.selected",
 	"stock",	"Stock Settings",		"No special features, all stock in this settings",					"select"

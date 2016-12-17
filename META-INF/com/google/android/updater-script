@@ -137,6 +137,12 @@ if
 		package_extract_dir("superman/systemui/stock", "/system/priv-app");
 endif;
 if
+	file_getprop("/tmp/aroma/mods.prop","systemUI") == "goodlock"
+	then
+		ui_print("Installing goodlock SystemUI...");
+		package_extract_dir("superman/systemui/goodlock", "/system/priv-app");
+endif;
+if
 	file_getprop("/tmp/aroma/mods.prop","systemUI") == "rounded"
 	then
 		ui_print("Installing rounded SystemUI...");
@@ -622,7 +628,7 @@ if
 		ui_print("Installing Kernel Adiutor...");
 		package_extract_dir("superman/kernel/apps/adiutor/app", "/data/app");
 endif;
-#-- Magisk APK
+#-- ViperMagisk APK
 if
 	file_getprop("/tmp/aroma/magisk.prop","v4a") == "yesma"
 	then
