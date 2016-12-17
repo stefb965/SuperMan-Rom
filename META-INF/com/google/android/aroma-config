@@ -631,7 +631,7 @@ form(
 	"update",	"Update Modem",		"Will auto update your modem to latest BPKG on F/FD and to APK3 on W8 models",		"select",
 	"keep",		"Keep current Modem",	"Will keep your current modem and change nothing",					"select.selected",
 	"bootloader",	"Bootloader update F/FD/W8",	"",										"group",
-	"update",	"Update Bootloader",	"Will auto update your BL to latest release on F/FD/W8 models. Other models please flash on Odin! ATTENTION: If you check this, your phone will auto reboot after installation!!",			"select",
+	"update",	"Update Bootloader",	"Will auto update your BL to latest release on F/FD/W8 models. Phone will auto reboot!",			"select",
 	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",				"select.selected"
 );
 
