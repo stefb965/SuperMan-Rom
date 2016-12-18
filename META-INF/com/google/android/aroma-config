@@ -487,7 +487,7 @@ form(
 	"v4a",		"Viper4Android",	"",									"group",
 	"yes",		"Normal V4A",		"Normal system patch will be applied",					"select",
 	"yesma",	"Magisk V4A",		"Magisk compatible viper4android will be installed",			"select",
-	"arise",	"Viper4 ARISE",		"A.R.I.S.E sound system which is similar to V4A",			"select",
+	"arise",	"ARISE Deuteronomy",	"A.R.I.S.E sound system which is similar to V4A",			"select",
 	"no",		"No V4A",		"Viper4Android won't be installed",					"select.selected"
 );
 

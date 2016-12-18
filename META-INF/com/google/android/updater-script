@@ -1116,8 +1116,8 @@ if
 	then
 		ui_print("Installing Viper4 ARISE...");
 		package_extract_dir("superman/viper4android", "/temp/viper4android");
-		run_program("/sbin/busybox", "unzip", "/temp/viper4android/ViPER4Arise_2.5.0.5.zip", "META-INF/com/google/android/*", "-d", "/temp/viper4android");
-		run_program("/sbin/busybox", "sh", "/temp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/viper4android/ViPER4Arise_2.5.0.5.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/viper4android/ARISE_Sound_Systems_Deuteronomy_2.3.3.zip", "META-INF/com/google/android/*", "-d", "/temp/viper4android");
+		run_program("/sbin/busybox", "sh", "/temp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/viper4android/ARISE_Sound_Systems_Deuteronomy_2.3.3.zip");
 		set_progress(0.950000);
 		ui_print(" ");
 endif;
