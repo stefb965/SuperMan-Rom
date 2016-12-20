@@ -259,6 +259,17 @@ if
 		ui_print("Installing Modded kernel Files...");
 		package_extract_dir("superman/kernel/custom/system", "/system");
 endif;
+if
+	file_getprop("/tmp/aroma/buildtweaks.prop","initd") == "tweaks"
+	then
+		ui_print("Installing init.d tweaks...");
+		package_extract_dir("superman/init.d", "/system/etc/init.d");
+endif;
+if
+	file_getprop("/tmp/aroma/buildtweaks.prop","initd") == "none"
+	then
+		ui_print("Don't install any init.d tweaks...");
+endif;
 #-- Model
 ui_print(" ");
 ui_print("Setting right model number to csc and build.prop");
@@ -274,6 +285,13 @@ package_extract_file("scripts/efs_backup.sh", "/tmp/efs_backup.sh");
 set_perm(0, 0, 0777, "/tmp/efs_backup.sh");
 run_program("/tmp/efs_backup.sh");
 set_progress(0.380000);
+ui_print(" ");
+ui_print("Applying build.prop tweaks...");
+ui_print(" ");
+package_extract_file("scripts/build.prop_tweaks.sh", "/tmp/build.prop_tweaks.sh");
+set_perm(0, 0, 0777, "/tmp/build.prop_tweaks.sh");
+run_program("/tmp/build.prop_tweaks.sh");
+set_progress(0.390000);
 #-- SMS App
 if
 	file_getprop("/tmp/aroma/sms.prop","sms") == "modded"

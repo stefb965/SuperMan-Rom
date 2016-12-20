@@ -159,9 +159,9 @@ if prop("menu.prop","selected")=="2" then
 		#-- Variable Value
 		"<@center><b>Your Device System Information</b></@>\n\n"+
 
-		"Device Name\t\t: <#469>Galaxy S7/S7 edge</#>\n"+
-		"Board Name\t\t: <#469>SM-G930F/G935F</#>\n"+
-		"Manufacturer\t\t: <#469>Samsung</#>\n"+
+		"Device Name\t\t: <#ff0000>Galaxy S7/S7 edge</#>\n"+
+		"Board Name\t\t: <#ff0000>SM-G930F/G935F</#>\n"+
+		"Manufacturer\t\t: <#ff0000>Samsung</#>\n"+
 	  
 		"\n"+
 
@@ -391,6 +391,36 @@ form(
 	"control",	"Kernel Control app",		"",									"group",
 	"synapse",	"Synapse",			"Installs Synapse app to control the Kernel. Only working on SuperKernel",	"check",
 	"adiutor",	"Kernel Adiutor",		"Installs latest Kernel Adiutor app. You can control all kernels with it",	"check"
+);
+
+##
+# build.prop Form
+#
+
+form(
+    "Build.prop and init.d Tweaks",
+    "You can choose if you want to install any build.prop or init.d mods here",
+    "icons/install2",
+    "buildtweaks.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"build",	"Select your build.prop tweaks",	"",							"group",
+	"none",		"No build.prop tweaks",		"Will keep your build.prop clean from tweaks",			"select",
+	"stock",	"Stock build.prop tweaks",	"Include the stock tweaks like we had them until now",		"select.selected",
+	"max",		"Max build.prop tweaks",	"Includes all possible tweaks I found on the internet",		"select",
+	"initd",	"Select your init.d tweaks",	"",								"group",
+	"none",		"No init.d tweaks",		"Will not install any init.d tweaks",				"select.selected",
+	"tweaks",	"Include init.d tweaks",	"GPU rendering tweak, sqlite tweak, dalvik cache tweak, readahead tweak and many others. Only use this if you really understand init.d!",		"select"
 );
 
 ##
@@ -828,7 +858,9 @@ install(
 	"icons/install2"
 );
 
-alert("Reminder:", "Don't forget to flash your providers csc after rom install. Especially if you did NOT INSTALL any csc with the rom!!");
+if prop("csc.prop","csc")=="none" then
+alert("Reminder:", "You did not choose to install the stock CSC. Please flash your CSC right after this zip to avoid errors!");
+endif;
 
 ini_set("text_next", "Finish");
 ini_set("icon_next", "@finish");
