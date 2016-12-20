@@ -26,6 +26,7 @@ fi
 fi
 
 if grep -q build=none $aromabuildprop; then
+	echo "Installing minmal build.prop tweaks"
 	echo "# No Tweaks" >> $buildprop
 	echo "fingerprint.unlock=1" >> $buildprop
 	echo "fw.max_users=30" >> $buildprop
@@ -34,6 +35,7 @@ if grep -q build=none $aromabuildprop; then
 	echo "fw.power_user_switcher=1" >> $buildprop
 	echo "wlan.wfd.hdcp=disable" >> $buildprop
 else if grep -q build=stock $aromabuildprop; then
+	echo "Installing stock build.prop tweaks"
 	echo "# Stock Tweaks" >> $buildprop
 	echo "fingerprint.unlock=1" >> $buildprop
 	echo "fw.max_users=30" >> $buildprop
@@ -56,6 +58,7 @@ else if grep -q build=stock $aromabuildprop; then
 	echo "ro.ril.disable.power.collapse=1" >> $buildprop
 	echo "pm.sleep_mode=1" >> $buildprop
 else if grep -q build=max $aromabuildprop; then
+	echo "Installing max build.prop tweaks"
 	echo "# Max Tweaks" >> $buildprop
 	echo "fingerprint.unlock=1" >> $buildprop
 	echo "fw.max_users=30" >> $buildprop
