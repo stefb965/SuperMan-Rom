@@ -1182,7 +1182,7 @@ if
 			is_substring("G930F", getprop("ro.boot.bootloader")),
 				(
 					ui_print(" ");
-					ui_print("Flashing latest BPL3 G930F/FD param file");
+					ui_print("Flashing latest BPLB G930F/FD param file");
 					assert(package_extract_file("superman/bootloader/s7/param.bin", "/dev/block/sda4"));
 					ui_print(" ");
 				),
@@ -1191,7 +1191,7 @@ if
 					is_substring("G935F", getprop("ro.boot.bootloader")),
 						(
 							ui_print(" ");
-							ui_print("Flashing latest BPL3 G935F/FD param file");
+							ui_print("Flashing latest BPLB G935F/FD param file");
 							assert(package_extract_file("superman/bootloader/s7e/param.bin", "/dev/block/sda4"));
 							ui_print(" ");
 						),
@@ -1381,7 +1381,7 @@ if
 			is_substring("G930F", getprop("ro.boot.bootloader")),
 				(
 					ui_print(" ");
-					ui_print("Flashing latest BPL3 G930F/FD BL");
+					ui_print("Flashing latest BPLB G930F/FD BL");
 					assert(package_extract_file("superman/bootloader/s7/sboot.bin", "/dev/block/sda1"));
 					sleep(1);
 					assert(package_extract_file("superman/bootloader/s7/cm.bin", "/dev/block/sda2"));
@@ -1394,7 +1394,7 @@ if
 					is_substring("G935F", getprop("ro.boot.bootloader")),
 						(
 							ui_print(" ");
-							ui_print("Flashing latest BPL3 G935F/FD BL");
+							ui_print("Flashing latest BPLB G935F/FD BL");
 							assert(package_extract_file("superman/bootloader/s7e/sboot.bin", "/dev/block/sda1"));
 							sleep(1);
 							assert(package_extract_file("superman/bootloader/s7e/cm.bin", "/dev/block/sda2"));
