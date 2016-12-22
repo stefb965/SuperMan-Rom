@@ -259,17 +259,6 @@ if
 		ui_print("Installing Modded kernel Files...");
 		package_extract_dir("superman/kernel/custom/system", "/system");
 endif;
-if
-	file_getprop("/tmp/aroma/buildtweaks.prop","initd") == "tweaks"
-	then
-		ui_print("Installing init.d tweaks...");
-		package_extract_dir("superman/init.d", "/system/etc/init.d");
-endif;
-if
-	file_getprop("/tmp/aroma/buildtweaks.prop","initd") == "none"
-	then
-		ui_print("Don't install any init.d tweaks...");
-endif;
 #-- Model
 ui_print(" ");
 ui_print("Setting right model number to csc and build.prop");

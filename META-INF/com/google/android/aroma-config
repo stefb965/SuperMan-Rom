@@ -398,8 +398,8 @@ form(
 #
 
 form(
-    "Build.prop and init.d Tweaks",
-    "You can choose if you want to install any build.prop or init.d mods here",
+    "Build.prop Tweaks",
+    "You can choose if you want to install any build.prop",
     "icons/install2",
     "buildtweaks.prop",
   #
@@ -417,10 +417,7 @@ form(
 	"build",	"Select your build.prop tweaks",	"",							"group",
 	"none",		"No build.prop tweaks",		"Will keep your build.prop clean from tweaks",			"select",
 	"stock",	"Stock build.prop tweaks",	"Include the stock tweaks like we had them until now",		"select.selected",
-	"max",		"Max build.prop tweaks",	"Includes all possible tweaks I found on the internet",		"select",
-	"initd",	"Select your init.d tweaks",	"",								"group",
-	"none",		"No init.d tweaks",		"Will not install any init.d tweaks",				"select.selected",
-	"tweaks",	"Include init.d tweaks",	"GPU rendering tweak, sqlite tweak, dalvik cache tweak, readahead tweak and many others. Only use this if you really understand init.d!",		"select"
+	"max",		"Max build.prop tweaks",	"Includes all possible tweaks I found on the internet",		"select"
 );
 
 ##
