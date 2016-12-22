@@ -503,7 +503,7 @@ form(
 	"yes",		"Yes",			"Magisk V9 and its modules for systemless mods",			"select",
 	"no",		"No",			"Won't install magisk",							"select.selected",
 	"root",		"Root method", 		"",									"group",
-	"su",		"SuperSU 2.79",		"Will install SuperSU 2.79",						"select",
+	"su",		"SuperSU 2.79 SR1",	"Will install SuperSU 2.79 SR1",					"select",
 	"phhma",	"Phh's r266-2 magisk",	"Installs phh's supersuser patched for magisk!",			"select",
 	"phh",		"Phh's r275",		"Installs standard r275 phh superuser",					"select.selected",
 	"no",		"No root",		"No root will be installed",						"select",
