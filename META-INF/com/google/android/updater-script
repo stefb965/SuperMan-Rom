@@ -640,6 +640,7 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","v4a") == "yesma"
 	then
 		package_extract_dir("superman/viper4android/app", "/data/app");
+		package_extract_dir("superman/viper4android/etc", "/system/etc");
 endif;
 set_metadata_recursive("/data/app", "uid", 1000, "gid", 1000, "dmode", 0755, "fmode", 0644, "capabilities", 0x0);
 set_progress(0.400000);
