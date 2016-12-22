@@ -501,7 +501,7 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"magisk",	"Magisk V9",		"",									"group",
 	"yes",		"Yes",			"Magisk V9 and its modules for systemless mods",			"select",
-	"no",		"No",			"Will not install magisk",						"select.selected",
+	"no",		"No",			"Won't install magisk",							"select.selected",
 	"root",		"Root method", 		"",									"group",
 	"su",		"SuperSU 2.79",		"Will install SuperSU 2.79",						"select",
 	"phhma",	"Phh's r266-2 magisk",	"Installs phh's supersuser patched for magisk!",			"select",
@@ -512,7 +512,7 @@ form(
 	"no",		"No busybox",		"Busybox is already included in Magisk V9",				"select",
 	"xposed",	"Xposed",		"",									"group",
 	"xpsma",	"Xposed V87.1",		"Will install xposed V87.1 systemless (magisk required)",		"select",
-	"xpssu",	"Xposed V86.2",		"Last xposed version without magisk (SuperSU required",			"select",
+	"xpssu",	"Xposed V86.2",		"Last xposed version without magisk (SuperSU required)",		"select",
 	"no",		"No xposed",		"Xposed won't be installed",						"select.selected",
 	"v4a",		"Viper4Android",	"",									"group",
 	"yes",		"Normal V4A",		"Normal system patch will be applied",					"select",
