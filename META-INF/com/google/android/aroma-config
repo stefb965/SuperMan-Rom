@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.18.2");
+ini_set("rom_version",          "V1.19");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "21.12.2016");
+ini_set("rom_date",             "24.12.2016");
 
 ##
 # Show Animated Splash
@@ -49,8 +49,6 @@ anisplash(
 	"anim/a23", 30,
 	"anim/a24", 1500
 );
-
-
 
 ##
 # Font and Theme Selection
@@ -368,8 +366,8 @@ alert("Warning", "For Kernels, if you are not a professional or an android geek 
 #
 
 form(
-    "Kernel",
-    "Choose your kernel here",
+    "Kernel/Recovery",
+    "Choose your desired kernel here. You can also update recovery if you want",
     "icons/install2",
     "kernel.prop",
   #
@@ -386,11 +384,14 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"kernel",	"Kernel Selection",		"",									"group",
 	"stock",	"Stock Kernel",			"This is just a full stock kernel as you can find on stock rom",	"select",
-	"super",	"SuperKernel",			"SuperKernel V1.9.6 with many tweaks",					"select",
-	"superstock",	"SuperStock",			"Latest SuperStock V1.6 for our galaxy s7",				"select.selected",
+	"super",	"SuperKernel",			"SuperKernel V1.9.7 with many tweaks",					"select",
+	"superstock",	"SuperStock",			"Latest SuperStock V1.6.5 for our galaxy s7",				"select.selected",
 	"control",	"Kernel Control app",		"",									"group",
 	"synapse",	"Synapse",			"Installs Synapse app to control the Kernel. Only working on SuperKernel",	"check",
-	"adiutor",	"Kernel Adiutor",		"Installs latest Kernel Adiutor app. You can control all kernels with it",	"check"
+	"adiutor",	"Kernel Adiutor",		"Installs latest Kernel Adiutor app. You can control all kernels with it",	"check",
+	"recovery",	"Recovery Update",		"",									"group",
+	"update",	"Update Recovery",		"This will update your TWRP to latest 3.0.2-5 release made by me",	"select",
+	"keep",		"Keep current Recovery",	"Will keep your current installed TWRP version",			"select.selected"
 );
 
 ##
@@ -416,8 +417,7 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"build",	"Select your build.prop tweaks",	"",							"group",
 	"none",		"No build.prop tweaks",		"Will keep your build.prop clean from tweaks",			"select",
-	"stock",	"Stock build.prop tweaks",	"Include the stock tweaks like we had them until now",		"select.selected",
-	"max",		"Max build.prop tweaks",	"Includes all possible tweaks I found on the internet",		"select"
+	"stock",	"Stock build.prop tweaks",	"Include the stock tweaks like we had them until now",		"select.selected"
 );
 
 ##
@@ -496,17 +496,17 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"magisk",	"Magisk V9",		"",									"group",
-	"yes",		"Yes",			"Magisk V9 and its modules for systemless mods",			"select",
+	"magisk",	"Magisk V10.2",		"",									"group",
+	"yes",		"Yes",			"Magisk V10.2 and its modules for systemless mods",			"select",
 	"no",		"No",			"Won't install magisk",							"select.selected",
 	"root",		"Root method", 		"",									"group",
-	"su",		"SuperSU 2.79 SR1",	"Will install SuperSU 2.79 SR1",					"select",
-	"phhma",	"Phh's r266-2 magisk",	"Installs phh's supersuser patched for magisk!",			"select",
+	"su",		"SuperSU 2.79 SR2",	"Will install SuperSU 2.79 SR2",					"select",
+	"phhma",	"Phh's r2 topjohwu",	"Installs phh's supersuser patched for magisk",				"select",
 	"phh",		"Phh's r275",		"Installs standard r275 phh superuser",					"select.selected",
 	"no",		"No root",		"No root will be installed",						"select",
 	"busybox",	"Busybox", 		"",									"group",
 	"yes",		"Busybox",		"Will install latest busybox available",				"select.selected",
-	"no",		"No busybox",		"Busybox is already included in Magisk V9",				"select",
+	"no",		"No busybox",		"Busybox is already included in Magisk V10.2",				"select",
 	"xposed",	"Xposed",		"",									"group",
 	"xpsma",	"Xposed V87.1",		"Will install xposed V87.1 systemless (magisk required)",		"select",
 	"xpssu",	"Xposed V86.2",		"Last xposed version without magisk (SuperSU required)",		"select",

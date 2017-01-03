@@ -129,8 +129,11 @@
         <font weight="400" style="normal">Clock2016.ttf</font>
     </family>
     <!-- Added Number fonts for Dream UX models -->
-    <family name="clock2017">
-        <font weight="400" style="normal">Clock2017.ttf</font>
+    <family name="clock2017L">
+        <font weight="400" style="normal">Clock2017L.ttf</font>
+    </family>
+    <family name="clock2017R">
+        <font weight="400" style="normal">Clock2017R.ttf</font>
     </family>
 
     <!-- Added Number fonts for OS up models -->
@@ -183,11 +186,11 @@
         <font weight="700" style="normal">NotoSansHebrew-Bold.ttf</font>
     </family>
     <family lang="und-Thai" variant="elegant">
-        <font weight="400" style="normal">SamsungThai-Regular.ttf</font>
+        <font weight="400" style="normal">NotoSansThai-Regular.ttf</font>
+        <font weight="700" style="normal">NotoSansThai-Bold.ttf</font>
     </family>
     <family lang="und-Thai" variant="compact">
-        <font weight="400" style="normal">NotoSansThaiUI-Regular.ttf</font>
-        <font weight="700" style="normal">NotoSansThaiUI-Bold.ttf</font>
+        <font weight="400" style="normal">SamsungThaiUI-Regular.ttf</font>
     </family>
     <family lang="und-Armn">
         <font weight="400" style="normal">NotoSansArmenian-Regular.ttf</font>
@@ -282,9 +285,13 @@
         <font weight="400" style="normal">NotoSansSinhala-Regular.ttf</font>
         <font weight="700" style="normal">NotoSansSinhala-Bold.ttf</font>
     </family>
-    <family lang="und-Khmr">
-        <font weight="400" style="normal">SamsungKhmerForN-Regular.ttf</font>
-        <font weight="700" style="normal">SamsungKhmerForN-Bold.ttf</font>
+    <family lang="und-Khmr" variant="elegant">
+        <font weight="400" style="normal">NotoSansKhmer-Regular.ttf</font>
+        <font weight="700" style="normal">NotoSansKhmer-Bold.ttf</font>
+    </family>
+    <family lang="und-Khmr" variant="compact">
+        <font weight="400" style="normal">SamsungKhmerUI-Regular.ttf</font>
+        <font weight="700" style="normal">SamsungKhmerUI-Bold.ttf</font>
     </family>
     <family lang="und-Laoo" variant="elegant">
         <font weight="400" style="normal">NotoSansLao-Regular.ttf</font>
@@ -294,12 +301,16 @@
         <font weight="400" style="normal">NotoSansLaoUI-Regular.ttf</font>
         <font weight="700" style="normal">NotoSansLaoUI-Bold.ttf</font>
     </family>
-    <family lang="und-Mymr">
-        <font weight="400" style="normal">SamsungMyanmar-Regular.ttf</font>
+    <family lang="und-Mymr" variant="elegant">
+        <font weight="400" style="normal">NotoSansMyanmar-Regular.ttf</font>
+        <font weight="700" style="normal">NotoSansMyanmar-Bold.ttf</font>
+    </family>
+    <family lang="und-Mymr" variant="compact">
+        <font weight="400" style="normal">SamsungMyanmarUI-Regular.ttf</font>
     </family>
     <family lang="und-Mymr">
-        <font weight="400" style="normal">NotoSansMyanmarZawgyiForN-Regular.ttf</font>
-        <font weight="700" style="normal">NotoSansMyanmarZawgyiForN-Bold.ttf</font>
+        <font weight="400" style="normal">SamsungMyanmarZawgyiUI-Regular.ttf</font>
+        <font weight="700" style="normal">SamsungMyanmarZawgyiUI-Bold.ttf</font>
     </family>
     <family lang="und-Thaa">
         <font weight="400" style="normal">NotoSansThaana-Regular.ttf</font>
@@ -414,15 +425,15 @@
         <font weight="400" style="normal" index="3">SECCJK-Regular.ttc</font>
     </family>
     <family>
-        <font weight="400" style="normal" index="3">SECCJK-Regular-Extra.ttf</font>
-    </family>
-    <family lang="ja">
-        <font weight="400" style="normal" index="0">NotoSansCJK-Regular.ttc</font>
+        <font weight="400" style="normal">SECCJK-Regular-Extra.ttf</font>
     </family>
     <!-- Added samsungkorean font to be higher than the Google Font, becuase font style -->
     <family lang="ko">
         <font weight="400" style="normal">SamsungKorean-Regular.ttf</font>
         <font weight="700" style="normal">SamsungKorean-Bold.ttf</font>
+    </family>
+    <family lang="ja">
+        <font weight="400" style="normal" index="0">NotoSansCJK-Regular.ttc</font>
     </family>
     <family>
         <font weight="400" style="normal">SECFallback.ttf</font>
@@ -430,7 +441,7 @@
     <family>
         <font weight="400" style="normal">NotoSansSymbols-Regular-Subsetted.ttf</font>
     </family>
-    <family lang="und-Zsye">
+    <family>
         <font weight="400" style="normal">NotoColorEmoji.ttf</font>
     </family>
     <family>

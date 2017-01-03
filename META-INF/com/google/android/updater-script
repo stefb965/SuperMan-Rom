@@ -6,15 +6,14 @@ if
 assert(getprop("ro.product.device") == "hero2lte" || getprop("ro.build.product") == "hero2lte" || getprop("ro.product.name") == "hero2lte" ||
 	getprop("ro.product.device") == "herolte" || getprop("ro.build.product") == "herolte" || getprop("ro.product.name") == "herolte" ||
 	abort("This package is for \"hero2lte,herolte\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
-assert(getprop("") == "" ||
-	abort("This package is for \"\"; this is \"" + getprop("") + "\"."););
-unmount("/system");
-unmount("/data");
+ifelse(is_mounted("/system"), unmount("/system"));
+ifelse(is_mounted("/cache"), unmount("/cache"));
+ifelse(is_mounted("/data"), unmount("/data"));
 show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
-ui_print("SuperMan-Rom Installer V1.18.2");
+ui_print("SuperMan-Rom Installer V1.19");
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
@@ -45,6 +44,7 @@ if
 		run_program("/sbin/busybox", "sh", "/tmp/DeleteDataWithoutMedia.sh");
 		delete_recursive("/magisk");
 		delete_recursive("/supersu");
+		delete_recursive("/su");
 		set_progress(0.250000);
 endif;	
 if
@@ -56,6 +56,7 @@ if
 		delete_recursive("/data");
 		delete_recursive("/magisk");
 		delete_recursive("/supersu");
+		delete_recursive("/su");
 		set_progress(0.250000);
 endif;
 if
@@ -126,7 +127,8 @@ endif;
 if
 	file_getprop("/tmp/aroma/emoji.prop","emoji") == "nougat"
 	then
-		ui_print("Installing Android N emoji...");
+		ui_print("Installing Android Nougat emoji...");
+		delete_recursive("/system/fonts");
 		package_extract_dir("superman/emoji/nougat/system", "/system");
 endif;
 #-- SystemUI
@@ -462,7 +464,7 @@ if
 	file_getprop("/tmp/aroma/debloat.prop","item.1.26") == "1"
 	then
 		ui_print("Installing Samsung Music App...");
-		package_extract_dir("superman/debloat/Samsung_Music", "/system/priv-app");
+		package_extract_dir("superman/debloat/Samsung_Music/app", "/data/app");
 endif;
 if
 	file_getprop("/tmp/aroma/debloat.prop","item.1.27") == "1"
@@ -972,7 +974,7 @@ set_progress(0.600000);
 ui_print(" ");
 ui_print("Extracting boot image...");
 ui_print(" ");
-#-- Kernel Selection
+#-- Kernel/Recovery Selection
 ifelse(
 	is_substring("G930", getprop("ro.boot.bootloader")),
 		(
@@ -981,6 +983,7 @@ ifelse(
 				then
 					ui_print("Installing SM-G930F full StockKernel...");
 					package_extract_file("superman/kernel/stocks7.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+					set_progress(0.650000);
 					ui_print(" ");
 			endif;
 			if
@@ -988,6 +991,7 @@ ifelse(
 				then
 					ui_print("Installing SM-G930F SuperKernel...");
 					package_extract_file("superman/kernel/superkernels7.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+					set_progress(0.650000);
 					ui_print(" ");
 			endif;
 			if
@@ -995,6 +999,15 @@ ifelse(
 				then
 					ui_print("Installing SM-G930F SuperStock...");
 					package_extract_file("superman/kernel/superstocks7.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+					set_progress(0.650000);
+					ui_print(" ");
+			endif;
+			if
+				file_getprop("/tmp/aroma/kernel.prop","recovery") == "update"
+				then
+					ui_print("Installing latest TWRP 3.0.2-5 for herolte...");
+					package_extract_file("superman/recovery/twrp-3.0.2-5-herolte.img", "/dev/block/platform/155a0000.ufs/by-name/RECOVERY");
+					set_progress(0.650000);
 					ui_print(" ");
 			endif;
 		),
@@ -1004,6 +1017,7 @@ ifelse(
 				then
 					ui_print("Installing SM-G935F full StockKernel...");
 					package_extract_file("superman/kernel/stocks7e.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+					set_progress(0.650000);
 					ui_print(" ");
 			endif;
 			if
@@ -1011,6 +1025,7 @@ ifelse(
 				then
 					ui_print("Installing SM-G935F SuperKernel...");
 					package_extract_file("superman/kernel/superkernels7e.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+					set_progress(0.650000);
 					ui_print(" ");
 			endif;
 			if
@@ -1018,19 +1033,35 @@ ifelse(
 				then
 					ui_print("Installing SM-G935F SuperStock...");
 					package_extract_file("superman/kernel/superstocks7e.img", "/dev/block/platform/155a0000.ufs/by-name/BOOT");
+					set_progress(0.650000);
+					ui_print(" ");
+			endif;
+			if
+				file_getprop("/tmp/aroma/kernel.prop","recovery") == "update"
+				then
+					ui_print("Installing latest TWRP 3.0.2-5 for hero2lte...");
+					package_extract_file("superman/recovery/twrp-3.0.2-5-hero2lte.img", "/dev/block/platform/155a0000.ufs/by-name/RECOVERY");
+					set_progress(0.650000);
 					ui_print(" ");
 			endif;
 		)
 );
+if
+	file_getprop("/tmp/aroma/kernel.prop","recovery") == "keep"
+	then
+		ui_print("Keep current recovery version");
+		set_progress(0.650000);
+		ui_print(" ");
+endif;
 set_progress(0.700000);
 #-- SuperSU
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "su"
 	then
-		ui_print("Installing SuperSU V2.79 SR1 variant...");
+		ui_print("Installing SuperSU V2.79 SR2 variant...");
 		package_extract_dir("superman/root", "/tmp/root");
-		run_program("/sbin/busybox", "unzip", "/tmp/root/SuperSU-v2.79-SR1.zip", "META-INF/com/google/android/*", "-d", "/tmp/root");
-		run_program("/sbin/busybox", "sh", "/tmp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/root/SuperSU-v2.79-SR1.zip");
+		run_program("/sbin/busybox", "unzip", "/tmp/root/SuperSU-v2.79-SR2.zip", "META-INF/com/google/android/*", "-d", "/tmp/root");
+		run_program("/sbin/busybox", "sh", "/tmp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/root/SuperSU-v2.79-SR2.zip");
 #SUD
 		set_metadata_recursive("/system/su.d", "uid", 0, "gid", 0, "dmode", 0700, "fmode", 0700, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 		set_progress(0.750000);
@@ -1040,10 +1071,10 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
-		ui_print("Installing Magisk V9 for systemless mods...");
+		ui_print("Installing Magisk V10.2 for systemless mods...");
 		package_extract_dir("superman/magisk", "/temp/magisk");
-		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v9.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v9.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v10.2.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v10.2.zip");
 		set_progress(0.800000);
 		ui_print(" ");
 endif;
@@ -1051,16 +1082,17 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "no"
 	then
 		ui_print("No magisk installed...");
+		set_progress(0.800000);
 		ui_print(" ");
 endif;
 #-- Root
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
 	then
-		ui_print("Installing Magisk phh's root r266-2...");
+		ui_print("Installing Magisk phh's r2 by topjohnwu...");
 		package_extract_dir("superman/root", "/temp/root");
-		run_program("/sbin/busybox", "unzip", "/temp/root/phh-superuser-magisk-r266-2.zip", "META-INF/com/google/android/*", "-d", "/temp/root");
-		run_program("/sbin/busybox", "sh", "/temp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/root/phh-superuser-magisk-r266-2.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/root/phh-superuser-topjohnwu-r2.zip", "META-INF/com/google/android/*", "-d", "/temp/root");
+		run_program("/sbin/busybox", "sh", "/temp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/root/phh-superuser-topjohnwu-r2.zip");
 		set_progress(0.850000);
 		ui_print(" ");
 endif;
@@ -1078,6 +1110,7 @@ if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "no"
 	then
 		ui_print("No root installed");
+		set_progress(0.850000);
 		ui_print(" ");
 endif;
 #-- Busybox
@@ -1353,6 +1386,7 @@ ui_print("Wiping dalvik and tmp");
 ui_print(" ");
 delete_recursive("/temp");
 delete_recursive("/data/dalvik-cache");
+ui_print("Umounting Partitions");
 unmount("/system");
 unmount("/data");
 unmount("/cache");
@@ -1438,5 +1472,4 @@ if
 		ui_print("Don't update the Bootloader");
 		ui_print(" ");
 endif;
-
 ui_print("Please Reboot now");
