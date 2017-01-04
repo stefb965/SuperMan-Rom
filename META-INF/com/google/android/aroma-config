@@ -405,7 +405,7 @@ if confirm(
 		#-- Yes Text
 		"Encrypt",
 		#-- No Text
-		"Don't encrypt (default)"
+		"Decrypt (default)"
 )=="yes"
 	then
 		writetmpfile("encrypt.prop","encrypt=yes");
@@ -422,8 +422,8 @@ endif;
 #
 
 form(
-    "Build.prop Tweaks",
-    "You can choose if you want to install any build.prop",
+    "Build.prop and init.d Tweaks",
+    "You can choose if you want to install any build.prop or init.d tweaks",
     "icons/install2",
     "buildtweaks.prop",
   #
@@ -438,9 +438,13 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"build",	"Select your build.prop tweaks",	"",							"group",
-	"none",		"No build.prop tweaks",		"Will keep your build.prop clean from tweaks",			"select",
-	"stock",	"Stock build.prop tweaks",	"Include the stock tweaks like we had them until now",		"select.selected"
+	"build",	"Select your build.prop tweaks",	"",									"group",
+	"none",		"No build.prop tweaks",		"Will keep your build.prop clean from tweaks",					"select",
+	"stock",	"Stock build.prop tweaks",	"Include the stock tweaks like we had them until now",				"select.selected",
+	"max",		"Maximal build.prop tweaks",	"All kind of build.prop tweaks found on the net. Use at your own risk!",	"select",
+	"initd",	"Select your init.d tweaks",	"",										"group",
+	"no",		"No init.d tweaks",		"This is the recommend option to use",						"select.selected",
+	"yes",		"Install init.d tweaks",	"Zipaligns apps and optimize database at startup. Use at your won risk!",	"select"
 );
 
 ##

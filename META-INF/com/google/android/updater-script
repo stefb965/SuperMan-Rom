@@ -7,13 +7,15 @@ assert(getprop("ro.product.device") == "hero2lte" || getprop("ro.build.product")
 	getprop("ro.product.device") == "herolte" || getprop("ro.build.product") == "herolte" || getprop("ro.product.name") == "herolte" ||
 	abort("This package is for \"hero2lte,herolte\" devices; this is a \"" + getprop("ro.product.device") + "\"."););
 ifelse(is_mounted("/system"), unmount("/system"));
-ifelse(is_mounted("/cache"), unmount("/cache"));
 ifelse(is_mounted("/data"), unmount("/data"));
+ifelse(is_mounted("/cache"), unmount("/cache"));
+ifelse(is_mounted("/preload"), unmount("/preload"));
+ifelse(is_mounted("/efs"), unmount("/efs"));
 show_progress(1.000000, 0);
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
-ui_print("SuperMan-Rom Installer V1.19");
+ui_print("SuperMan-Rom Installer V1.19.1");
 ui_print(" ");
 ui_print(" ");
 ui_print(" ");
@@ -283,6 +285,18 @@ package_extract_file("scripts/build.prop_tweaks.sh", "/tmp/build.prop_tweaks.sh"
 set_perm(0, 0, 0777, "/tmp/build.prop_tweaks.sh");
 run_program("/tmp/build.prop_tweaks.sh");
 set_progress(0.390000);
+#-- Init.d
+if
+	file_getprop("/tmp/aroma/buildtweaks.prop","initd") == "yes"
+	then
+		ui_print("Installing init.d tweaks...");
+		package_extract_dir("superman/init.d", "/system/etc/init.d");
+endif;
+if
+	file_getprop("/tmp/aroma/buildtweaks.prop","initd") == "no"
+	then
+		ui_print("No init.d tweaks installed...");
+endif;
 #-- SMS App
 if
 	file_getprop("/tmp/aroma/sms.prop","sms") == "modded"
