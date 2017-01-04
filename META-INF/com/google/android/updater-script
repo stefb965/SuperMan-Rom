@@ -1053,7 +1053,24 @@ if
 		set_progress(0.650000);
 		ui_print(" ");
 endif;
-set_progress(0.700000);
+#-- Encryption
+if
+	file_getprop("/tmp/aroma/encrypt.prop","encrypt") == "yes"
+	then
+		ui_print("Keeping force encryption flag");
+		set_progress(0.700000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/encrypt.prop","encrypt") == "no"
+	then
+		ui_print("Removing force encryption entry");
+		package_extract_dir("superman/kernel/encryption", "/temp/encryption");
+		run_program("/sbin/busybox", "unzip", "/temp/encryption/no-verity-opt-encrypt-5.0.zip", "META-INF/com/google/android/*", "-d", "/temp/encryption");
+		run_program("/sbin/busybox", "sh", "/temp/encryption/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/encryption/no-verity-opt-encrypt-5.0.zip");
+		set_progress(0.700000);
+		ui_print(" ");
+endif;
 #-- SuperSU
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "su"

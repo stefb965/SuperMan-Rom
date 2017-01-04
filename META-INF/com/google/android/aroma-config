@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V1.19");
+ini_set("rom_version",          "V1.19.1");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G930F/SM-G935F");
-ini_set("rom_date",             "24.12.2016");
+ini_set("rom_date",             "05.01.2017");
 
 ##
 # Show Animated Splash
@@ -257,6 +257,7 @@ if prop("menu.prop","selected")=="1" then
 # Write tmp file for restore check
 writetmpfile("restore.prop","restore=no");
 writetmpfile("jumpinstall.prop","install=no");
+writetmpfile("encrypt.prop","encrypt=no");
 
 # Check if wipe.sh is backed up from last time
 resexec("checkconfig/checkconfig.sh");
@@ -359,7 +360,7 @@ form(
 	"none",		"Don't install any csc",	"This is used if you flash csc right after rom install. So no files got messed up with any other csc and your csc can work perfect",						"select"
 );
 
-alert("Warning", "For Kernels, if you are not a professional or an android geek it is recommend to stick to stock/stock modified kernel!");
+alert("Warning", "For Kernels, if you are not a professional or an android geek it is recommend to stick to stock/superstock kernel!");
 
 ##
 # Kernel Form
@@ -393,6 +394,28 @@ form(
 	"update",	"Update Recovery",		"This will update your TWRP to latest 3.0.2-5 release made by me",	"select",
 	"keep",		"Keep current Recovery",	"Will keep your current installed TWRP version",			"select.selected"
 );
+
+if confirm(
+		#-- Title
+		"You want to encrypt your device?",
+		#-- Text
+		"If you choose to encrypt your device, /data parition can't be accessed in TWRP!",
+		#-- Icon (Optional)
+		"@install",
+		#-- Yes Text
+		"Encrypt",
+		#-- No Text
+		"Don't encrypt (default)"
+)=="yes"
+	then
+		writetmpfile("encrypt.prop","encrypt=yes");
+	else
+		writetmpfile("encrypt.prop","encrypt=no");
+endif;
+
+if prop("encrypt.prop","encrypt")=="yes" then
+alert("Attention!", "You selected to encrypt your data parition. Be aware you can't do any backups in twrp after this! Also 3rd party zips (SuperSU/Magisk/Phh) can probably still overwrite force encryption value!");
+endif;
 
 ##
 # build.prop Form
