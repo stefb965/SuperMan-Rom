@@ -1150,8 +1150,8 @@ if
 	then
 		ui_print("Installing Busybox...");
 		package_extract_dir("superman/busybox", "/tmp/busybox");
-		run_program("/sbin/busybox", "unzip", "/tmp/busybox/UPDATE-Busybox.Installer.v1.25.1-ALL-signed.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
-		run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/UPDATE-Busybox.Installer.v1.25.1-ALL-signed.zip");
+		run_program("/sbin/busybox", "unzip", "/tmp/busybox/Busybox-1.26.1-YDS-UNIVERSAL.zip", "META-INF/com/google/android/*", "-d", "/tmp/busybox");
+		run_program("/sbin/busybox", "sh", "/tmp/busybox/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/busybox/Busybox-1.26.1-YDS-UNIVERSAL.zip");
 		set_progress(0.900000);
 		ui_print(" ");
 endif;
