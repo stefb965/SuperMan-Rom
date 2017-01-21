@@ -1022,6 +1022,10 @@
 		<ctl name="AIF3TX2 Input 1 Volume" value="32" />
 	</path>
 
+	<path name="gain-call_spectro">
+		<!-- we use default volume -->
+	</path>
+
 	<!-- remote mic output volume -->
 	<path name="gain-remote-bt-ble-headset">
 		<ctl name="AIF3TX1 Input 1 Volume" value="32" />
@@ -2082,6 +2086,10 @@
 	<path name="gain-call_forwarding_slave-bt-ble-headset-in">
 		<ctl name="IN1R Digital Volume" value="128" />
 		<ctl name="LHPF1 Input 1 Volume" value="32" />
+	</path>
+
+	<path name="gain-call_spectro-mic">
+		<!-- we use default volume -->
 	</path>
 
 	<!-- remote mic input volume -->

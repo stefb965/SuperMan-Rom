@@ -16,5 +16,5 @@
 
 <!-- Feature for devices with a context awareness. -->
 <permissions>
-    <feature name="com.sec.feature.sensorhub" level="14"/>
+    <feature name="com.sec.feature.sensorhub" version="14"/>
 </permissions>

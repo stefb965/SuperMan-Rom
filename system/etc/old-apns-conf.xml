@@ -2004,6 +2004,13 @@
       apn="web.yesss.at"
       type="default,supl"
   />
+ 
+  <apn carrier="spusu Internet"
+      mcc="232"
+      mnc="17"
+      apn="mass.at"
+      type="default,supl"
+  />
 
   <apn carrier="UBIQUISYS"
       mcc="234"
@@ -5015,6 +5022,8 @@
       mmsproxy="proxy.mobile.att.net"
       mmsport="80"
       type="default,mms,supl,fota,hipri"
+      protocol="IPV4V6"
+      roaming_protocol="IPV4V6"
   />
 
   <apn carrier="ATT Phone"
@@ -10679,7 +10688,7 @@
       mcc="450"
       mnc="01"
       apn="ims"
-      type="ims"
+      type="ims,ia"
       protocol="IPV6"
       roaming_protocol="IPV6"
   />
@@ -12332,7 +12341,17 @@
       mmsport="8080"
       type="mms"
   />
-
+  
+<!-- Samsung edit -->
+<!-- Belltel requested to add their APN -->
+  <apn carrier="Internet"
+      mcc="515"
+      mnc="06"
+      authtype="1"
+      apn="internet"
+      type="default"
+  />
+  
   <apn carrier="RED INTERNET"
       mcc="515"
       mnc="18"
@@ -13304,23 +13323,18 @@
       type="mms"
   />
 
-  <apn carrier="INTERNET"
+  <apn carrier="INTERNET CLARO"
       mcc="710"
       mnc="21"
-      apn="web.emovil"
-      user="webemovil"
-      password="webemovil"
+      apn="internet.ideasclaro"
       authtype="1"
       type="default,supl"
   />
 
-
-  <apn carrier="MMS"
+  <apn carrier="MMS CLARO"
       mcc="710"
       mnc="21"
-      apn="mms.emovil"
-      user="mmsemovil"
-      password="mmsemovil"
+      apn="mms.ideasclaro"
       mmsproxy="10.6.32.2"
       mmsport="8080"
       mmsc="http://10.6.32.27/servlets/mms"

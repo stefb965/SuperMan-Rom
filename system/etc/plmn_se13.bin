@@ -300,10 +300,12 @@ vodafone P"voda P
 27099L Orange-LU"Orange
 
 27201vodafone IE"voda IE
+
+272023"3
 
 27203IRL - METEOR"METEOR
-
-272053 IRL"3 IRL
+
+272053"3
 
 27401	IS SIMINN"SIMINN
 
@@ -330,8 +332,8 @@ Telekom.al"T.al
 27801vodafone MT"voda MT
 
 27821	go mobile"gomobile
-
-27877Melita"Melita
+
+27877MOR MEDITEL"MEDITEL
 
 28001	Cyta-Voda"CytaVoda
 
@@ -413,8 +415,8 @@ Mobilicity"Mobilici
 302370Fido"Fido
 
 302380KNET"KNET
-
-302490WIND"WIND
+
+302490Freedom"Freedom
 
 302500	Videotron"CANVT
 
@@ -443,6 +445,8 @@ SPM AMERIS"AMERIS
 
 310100
 US PLATEAU"PLATEAU
+
+310110IT&E"IT&E
 
 310120Sprint"Sprint
 
@@ -1368,6 +1372,8 @@ CHN-UNICOM"UNICOM
 46011CHN-CT"CT
 
 46601Far EasTone"FET
+
+46605TWN APT"APT
 
 46688
 KGT-Online"KGT
@@ -1412,6 +1418,8 @@ Banglalink"BL
 50219	MY CELCOM"CELCOM
 
 502152Yes 4G"Yes 4G
+
+502153webe"webe
 
 502156MYSALTEL"ALTEL
 "
@@ -1424,6 +1432,10 @@ Banglalink"BL
 505063TELSTRA"3TELSTRA
 
 50510Norfolk Telecom"NT
+"
+50571Telstra Mobile"Telstra
+"
+50572Telstra Mobile"Telstra
 
 51001IND INDOSAT"INDOSAT
 
@@ -1489,6 +1501,8 @@ BRU-DSTCom"DSTCom
 530242degrees"2degrees
 
 53701bmobile"bmobile
+
+53702Telikom PNG"TM
 
 53703DIGICEL"DIGICEL
 
@@ -1530,6 +1544,8 @@ CK KOKANET"KOKANET
 55201PalauCel"PalauCel
  
 55301FSM Telecom"FSM Tele
+
+55401Teletok"TTOK
 
 60201	Orange EG"Orange
 
@@ -1542,8 +1558,8 @@ CK KOKANET"KOKANET
 60302Djezzy"Djezzy
 #
 60303ooredoo Algeria"Ooredoo
-
-60400MOR MEDITEL"MEDITEL
+
+60400	Orange MA"Orange
 
 60401MOR IAM"IAM
 
@@ -1629,8 +1645,8 @@ MALITEL ML"MALITEL
 61801LBR Lonestar Cell"LoneStar
  
 61804Novafone 4G"Novafone
-
-61807Celcom"Celcom
+
+61807Cellcom"Cellcom
 
 61901Airtel"Airtel
 
@@ -1662,6 +1678,9 @@ Tigo Ghana"MIC
 62301ETISALAT RCA"ETISALAT
 
 62302Telecel"Telecel
+
+62303
+Orange RCA"Orange
 
 62401MTN CAM"MTN CAM
 
@@ -1792,8 +1811,12 @@ VodaCom-MZ"VodaCom
 64604TELMA"TELMA
 
 64700	Orange re"Orange
+ 
+64701MAORE MOBILE"MMOBILE
 
 64702ONLY"ONLY
+"
+64703FREE MOBILE RE"FREE RE
 
 64801
 ZW NET*ONE"NETONE
@@ -1824,6 +1847,8 @@ TELECEL ZW"TELECEL
 65310	Swazi-MTN"SwaziMTN
 
 65401HURI"HURI
+
+65402TELCO"COMTM
 
 65501
 VodaCom-SA"Vodacom
@@ -2017,4 +2042,4 @@ AeroMobile"AeroMob
 
 90145AISatSea"AISatSea
 
-90150EchoStar Mobile"EML&Published TS25 Database 22 August 2016
+90150EchoStar Mobile"EML(Published TS25 Database 12 December 2016

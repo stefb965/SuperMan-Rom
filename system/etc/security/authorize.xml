@@ -3,7 +3,7 @@
 	<service name="DevicePolicyManagerService">
 
 		<method name="getProfileOwner">
-			<package name="com.google.android.gms" seinfo="untrusted"/>
+			<package name="com.google.android.gms" seinfo="gmscore"/>
 			<package name="com.android.vending" seinfo="gmscore"/>
 			<package name="com.google.android.apps.enterprise.dmagent" seinfo="untrusted"/>
 		</method>
@@ -836,7 +836,7 @@
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
 			<package name="com.sec.knox.containeragent2" seinfo="shared" />
 		</method>
-
+		
 		<method name="getIsFingerIdentifyFailed">
 			<seinfo value="platform" />
 			<seinfo value="shared" />
@@ -868,7 +868,6 @@
 		</method>
 
 		<method name="setIsIrisReset">
-		
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 			<package name="com.sec.knox.containeragent2" seinfo="platform" />
@@ -1476,6 +1475,11 @@
 	        <package name="com.samsung.android.videolist" seinfo="platform" />
 	        <package name="com.samsung.android.app.music.chn" seinfo="platform" />
 	        <package name="com.samsung.android.app.notes" seinfo="platform" />
+	        <package name="com.samsung.android.gear360manager" seinfo="platform" />
+	        <package name="com.samsung.android.samsunggear360manager" seinfo="platform" />
+	        <package name="com.samsung.android.gear360manager" seinfo="platform" />
+	        <package name="com.samsung.android.gear360viewer" seinfo="platform" />
+	        <package name="com.samsung.knox.securefolder" seinfo="platform" />
 		</method>
 
 	</service>
@@ -1672,11 +1676,13 @@
 			<package name="com.sec.knox.containeragent" seinfo="platform" />
 			<package name="com.sec.knox.bluetooth" seinfo="platform" />
 			<package name="com.sec.knox.switcher" seinfo="platform" />
+			<package name="com.samsung.knox.securefolder" seinfo="platform" />			
 		</method>
 
 		<method name="moveFiles">
 			<package name="com.samsung.knox.rcp.components" seinfo="platform" />
 			<package name="com.sec.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
 		</method>
 
 		<method name="moveFilesForApp">
@@ -1690,6 +1696,11 @@
 			<package name="com.samsung.android.videolist" seinfo="platform" />
 			<package name="com.samsung.android.app.music.chn" seinfo="platform" />
 			<package name="com.samsung.android.app.notes" seinfo="platform" />
+			<package name="com.samsung.android.gear360manager" seinfo="platform" />
+			<package name="com.samsung.android.samsunggear360manager" seinfo="platform" />
+			<package name="com.samsung.android.gear360manager" seinfo="platform" />
+			<package name="com.samsung.android.gear360viewer" seinfo="platform" />
+			<package name="com.samsung.knox.securefolder" seinfo="platform" />
 		</method>
 
 		<method name="getFiles">
@@ -2855,6 +2866,7 @@
 		
 		<method name="C_SignInit">
 			<package name="com.samsung.pasc" seinfo="release" />
+			<package name="com.f5.edge.client_ics" seinfo="untrusted" />			
 		</method>
 		
 	</service>
@@ -3008,12 +3020,11 @@
 
 	<service name="ContactsProvider2">
 
-		<method name="queryPhoneLookupEnterpriseForKnox">
+		<method name="isCallerInfoBrowsingAllow">
 			<package name="com.samsung.android.incallui" seinfo="platform" />
 			<package name="com.android.incallui" seinfo="platform" />
 			<package name="com.android.server.telecom" seinfo="platform" />
-			<package name="com.android.providers.contacts" seinfo="shared" />
-			<package name="com.kddi.android.evc" seinfo="filtered_untrusted" />
+		    <package name="com.android.providers.contacts" seinfo="shared" />
 		</method>
 
 		<method name="isBluetoothEnterpriseContactSharingDisabled">
@@ -3025,8 +3036,8 @@
 			<package name="com.android.incallui" seinfo="platform" />
 			<package name="com.android.server.telecom" seinfo="platform" />
 			<package name="com.android.providers.contacts" seinfo="shared" />
-			<package name="com.kddi.android.evc" seinfo="filtered_untrusted" />
 		</method>
+
 	</service>
 
 
