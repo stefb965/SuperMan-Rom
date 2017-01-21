@@ -57,6 +57,7 @@ else if grep -q build=stock $aromabuildprop; then
 	echo "ro.config.hw_power_saving=true" >> $buildprop
 	echo "ro.ril.disable.power.collapse=1" >> $buildprop
 	echo "pm.sleep_mode=1" >> $buildprop
+	echo "wifi.supplicant_scan_interval=180" >> $buildprop
 else if grep -q build=max $aromabuildprop; then
 	echo "Installing max build.prop tweaks"
 	echo "# Max Tweaks" >> $buildprop

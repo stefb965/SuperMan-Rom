@@ -355,9 +355,17 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"csc",		"Choose if you want to include csc or not",			"",					"group",
-	"stock",	"Install stock csc",		"For this base AUT (Switzerland) csc is stock csc and will be flashed with this",	"select.selected",
-	"none",		"Don't install any csc",	"This is used if you flash csc right after rom install. So no files got messed up with any other csc and your csc can work perfect",						"select"
+	"CSC",		"Europe Multi-CSC",	"",							"group",
+	"All",		"All CSCs",		"Installs the whole Multi-CSC",				"select",
+	"BTU",		"BTU",			"United Kingdom unbranded",				"select",
+	"CPW",		"CPW",			"United Kingdom (unknown)",				"select",
+	"DBT",		"DBT",			"Germany unbranded",					"select",
+	"ITV",		"ITV",			"Italian unbranded",					"select",
+	"KOR",		"KOR",			"Korean unbranded",					"select",
+	"NEE",		"NEE",			"Nordic Countries unbranded",				"select",
+	"XEF",		"XEF",			"France unbranded (default)",				"select.selected",
+	"XEO",		"XEO",			"Poland unbranded",					"select",
+	"XEU",		"XEU",			"United Kingdom O2 UK branded",				"select"
 );
 
 alert("Warning", "For Kernels, if you are not a professional or an android geek it is recommend to stick to stock/superstock kernel!");
@@ -394,7 +402,7 @@ form(
 	"update",	"Update Recovery",		"This will update your TWRP to latest 3.0.2-5 release made by me",	"select",
 	"keep",		"Keep current Recovery",	"Will keep your current installed TWRP version",			"select.selected"
 );
-
+if prop("kernel.prop","kernel")=="stock" then
 if confirm(
 		#-- Title
 		"You want to encrypt your device?",
@@ -403,16 +411,16 @@ if confirm(
 		#-- Icon (Optional)
 		"@install",
 		#-- Yes Text
-		"Encrypt",
+		"Decrypt (default)",
 		#-- No Text
-		"Decrypt (default)"
+		"Encrypt"
 )=="yes"
 	then
-		writetmpfile("encrypt.prop","encrypt=yes");
-	else
 		writetmpfile("encrypt.prop","encrypt=no");
+	else
+		writetmpfile("encrypt.prop","encrypt=yes");
 endif;
-
+endif;
 if prop("encrypt.prop","encrypt")=="yes" then
 alert("Attention!", "You selected to encrypt your data parition. Be aware you can't do any backups in twrp after this! Also 3rd party zips (SuperSU/Magisk/Phh) can probably still overwrite force encryption value!");
 endif;
@@ -474,33 +482,7 @@ form(
 	"nothing",	"Keep current",		"Keeps your current splash screen (no matter which it is)",		"select.selected"
 );
 
-##
-# Camera Form
-#
-
-form(
-    "Camera",
-    "Modded or stock Camera application?",
-    "icons/install2",
-    "camera.prop",
-  #
-  # Type:
-  #  - group              = Group
-  #  - select             = Select Item
-  #  - select.selected    = Selected Select Item
-  #  - check              = Checkbox Item
-  #  - check.checked      = Checked Checkbox Item
-  #  - hide               = Hidden
-  #
-  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
-  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
-  #-------------+--------+-------------------------------------------------------+---------------#
-	"camera",	"Camera Selection",		"",											"group",
-	"stock",	"Stock Camera",			"Nothing changed, stock values",							"select.selected",
-	"modded",	"Modded Camera V5",		"Increase bitrates for all camera resolutions and to set pictures at 100 quality.",	"select"
-);
-
-alert("Important:", "If you want to install snapchat after this rom, make sure to NOT use root OR xposed! Snapchat will be UNABLE to login! Install xposed and root after you logged in to snapchat.");
+alert("Important:", "If you want to install snapchat after this rom, make sure to NOT use root! Snapchat will be UNABLE to login! Install after you logged in to snapchat.");
 
 ##
 # Magisk Form
@@ -593,8 +575,7 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"emoji",	"Select which Icons you want",	"",							"group",
 	"stock",	"Install stock emoji",		"Will display stock emojis in samsung keyboard",	"select.selected",
-	"ios",		"Install iOS 10 emojis",	"Will install new iOS emojis in samsung keyboard",	"select",
-	"nougat",	"Install Android N emojis",	"Installs android N emojis from s7 nougat (looked similar to MM to be honest)",	"select"
+	"ios",		"Install iOS 10.2 emojis",	"Will install new iOS emojis in samsung keyboard",	"select"
 );
 
 ##
@@ -624,7 +605,6 @@ form(
 	"moddedclock",	"Modded 3minit clock SystemUI",	"Same features as modded SystemUI but with 3minit clock instead of normal clock",	"select",
 	"roundedclock",	"Rounded 3minit clock SytemUI",	"Same features as rounded SystemUI but with 3minit clock instead of normal clock",	"select",
 	"stock",	"Stock SystemUI",		"No features included in here. Just stock SystemUI as you can find on any rom",		"select",
-	"goodlock",	"Good Lock SystemUI",		"Installs samsungs updated good lock SystemUI app. It can't be used with romcontrol!",	"select",
 	"settings",	"Choose your prefered Settings",		"",									"group",
 	"modded",	"Modded Settings",		"Features mods like: Links to Superuser, adaway. SuperMan header in Settings, changable fonts and more",	"select.selected",
 	"stock",	"Stock Settings",		"No special features, all stock in this settings",					"select"
@@ -678,11 +658,11 @@ form(
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
 	"modem",	"Modem update F/FD/W8",		"",										"group",
-	"update",	"Update Modem",		"Will auto update your modem to latest BPKG on F/FD and to APK3 on W8 models",		"select",
-	"keep",		"Keep current Modem",	"Will keep your current modem and change nothing",					"select.selected",
+	"update",	"Update Modem",			"Will auto update your modem to latest DPLT on F/FD",				"select.selected",
+	"keep",		"Keep current Modem",		"Will keep your current modem and change nothing",				"select",
 	"bootloader",	"Bootloader update F/FD/W8",	"",										"group",
-	"update",	"Update Bootloader",	"Will auto update your BL to latest release on F/FD/W8 models. Phone will auto reboot!",			"select",
-	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",				"select.selected"
+	"update",	"Update Bootloader",		"Will auto update your BL to DPLT on F/FD/ models. Phone will auto reboot!",		"select.selected",
+	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",				"select"
 );
 
 ##
@@ -820,7 +800,6 @@ checkbox(
 	"Samsung OneDrive",	"",									0,	#-- item.1.27
 	"OneNote",		"",									0,	#-- item.1.28
 	"OperaMax",		"Is used if you want to have UDS working (Ultra-Data Saving)",		0,	#-- item.1.29
-	"UPSM",			"This app can configure your apps you can use on UltraPowerSaving Mode",0,	#-- item.1.30
 	"Google Apps",		"",									2,	#-- group 2
 	"Google Now",		"",									0,	#-- item.2.1
 	"Google Chrome",	"",									0,	#-- item.2.2

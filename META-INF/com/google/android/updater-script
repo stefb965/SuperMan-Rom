@@ -76,15 +76,64 @@ package_extract_dir("system", "/system");
 set_progress(0.300000);
 #-- CSC
 if
-	file_getprop("/tmp/aroma/csc.prop","csc") == "stock"
+	file_getprop("/tmp/aroma/csc.prop","CSC") == "All"
 	then
-		ui_print("Installing stock CSC...");
-		package_extract_dir("superman/csc/system", "/system");
+		ui_print("Installing All Multi-CSC...");
+		package_extract_dir("superman/csc/system/csc", "/system/csc");
 endif;
 if
-	file_getprop("/tmp/aroma/csc.prop","csc") == "none"
+	file_getprop("/tmp/aroma/csc.prop","CSC") == "BTU"
 	then
-		ui_print("Don't install any csc...");
+		ui_print("Installing BTU CSC...");
+		package_extract_dir("superman/csc/system/csc/BTU/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/csc.prop","CSC") == "CPW"
+	then
+		ui_print("Installing CPW CSC...");
+		package_extract_dir("superman/csc/system/csc/CPW/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/csc.prop","CSC") == "DBT"
+	then
+		ui_print("Installing DBT CSC...");
+		package_extract_dir("superman/csc/system/csc/DBT/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/csc.prop","CSC") == "ITV"
+	then
+		ui_print("Installing ITV CSC...");
+		package_extract_dir("superman/csc/system/csc/ITV/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/csc.prop","CSC") == "KOR"
+	then
+		ui_print("Installing KOR CSC...");
+		package_extract_dir("superman/csc/system/csc/KOR/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/csc.prop","CSC") == "NEE"
+	then
+		ui_print("Installing NEE CSC...");
+		package_extract_dir("superman/csc/system/csc/NEE/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/csc.prop","CSC") == "XEF"
+	then
+		ui_print("Installing XEF CSC...");
+		package_extract_dir("superman/csc/system/csc/XEF/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/csc.prop","CSC") == "XEO"
+	then
+		ui_print("Installing XEO CSC...");
+		package_extract_dir("superman/csc/system/csc/XEO/system", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/csc.prop","CSC") == "XEU"
+	then
+		ui_print("Installing XEU CSC...");
+		package_extract_dir("superman/csc/system/csc/XEU/system", "/system");
 endif;
 #-- Variants
 ifelse(
@@ -100,19 +149,6 @@ ifelse(
 			set_progress(0.350000);
 		)
 );
-#-- Camera Mod
-if
-	file_getprop("/tmp/aroma/camera.prop","camera") == "stock"
-	then
-		ui_print("Stock Camera...");
-		package_extract_dir("superman/camera/stock", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/camera.prop","camera") == "modded"
-	then
-		ui_print("Modded Camera...");
-		package_extract_dir("superman/camera/modded", "/system");
-endif;
 #-- Emoji
 if
 	file_getprop("/tmp/aroma/emoji.prop","emoji") == "stock"
@@ -126,25 +162,12 @@ if
 		ui_print("Installing IOS emoji...");
 		package_extract_dir("superman/emoji/IOS/system", "/system");
 endif;
-if
-	file_getprop("/tmp/aroma/emoji.prop","emoji") == "nougat"
-	then
-		ui_print("Installing Android Nougat emoji...");
-		delete_recursive("/system/fonts");
-		package_extract_dir("superman/emoji/nougat/system", "/system");
-endif;
 #-- SystemUI
 if
 	file_getprop("/tmp/aroma/mods.prop","systemUI") == "stock"
 	then
 		ui_print("Installing stock SystemUI...");
 		package_extract_dir("superman/systemui/stock", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/mods.prop","systemUI") == "goodlock"
-	then
-		ui_print("Installing goodlock SystemUI...");
-		package_extract_dir("superman/systemui/goodlock", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/mods.prop","systemUI") == "rounded"
@@ -246,22 +269,16 @@ if
 endif;
 #-- Fingerprint files
 if
-	file_getprop("/tmp/aroma/kernel.prop","kernel") == "stock"
-	then
-		ui_print("Installing Stock kernel Files...");
-		package_extract_dir("superman/kernel/stock/system", "/system");
-endif;
-if
 	file_getprop("/tmp/aroma/kernel.prop","kernel") == "super"
 	then
 		ui_print("Installing Modded kernel Files...");
-		package_extract_dir("superman/kernel/custom/system", "/system");
+		delete("/system/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin");
 endif;
 if
 	file_getprop("/tmp/aroma/kernel.prop","kernel") == "superstock"
 	then
 		ui_print("Installing Modded kernel Files...");
-		package_extract_dir("superman/kernel/custom/system", "/system");
+		delete("/system/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin");
 endif;
 #-- Model
 ui_print(" ");
@@ -400,7 +417,7 @@ if
 	file_getprop("/tmp/aroma/debloat.prop","item.1.13") == "1"
 	then
 		ui_print("Installing GameTools...");
-		package_extract_dir("superman/debloat/Game", "/system/priv-app");
+		package_extract_dir("superman/debloat/Game", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/debloat.prop","item.1.14") == "1"
@@ -499,12 +516,6 @@ if
 		package_extract_dir("superman/debloat/Opera", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/debloat.prop","item.1.30") == "1"
-	then
-		ui_print("Installing UPSM App...");
-		package_extract_dir("superman/debloat/UPSM", "/system/app");
-endif;
-if
 	file_getprop("/tmp/aroma/debloat.prop","item.2.1") == "1"
 	then
 		ui_print("Installing Google Now...");
@@ -598,19 +609,6 @@ endif;
 #-- Data excraction
 ui_print("Extracting data..."); ui_print(" ");
 package_extract_dir("data", "/data");
-#-- Xposed App
-if
-	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpssu"
-	then
-		ui_print("Installing Xposed app...");
-		package_extract_dir("superman/xposed/app", "/data/app");
-endif;
-if
-	file_getprop("/tmp/aroma/magisk.prop","xposed") == "xpsma"
-	then
-		ui_print("Installing Xposed app...");
-		package_extract_dir("superman/xposed/app", "/data/app");
-endif;
 #-- Phh's App
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
@@ -1114,12 +1112,36 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
+if
+	file_getprop("/tmp/aroma/kernel.prop","kernel") == "stock"
+	then
+		ui_print("Installing Magisk V9 for systemless mods...");
+		package_extract_dir("superman/magisk", "/temp/magisk");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v9.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v9.zip");
+		set_progress(0.800000);
+		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/kernel.prop","kernel") == "super"
+	then
 		ui_print("Installing Magisk V10.2 for systemless mods...");
 		package_extract_dir("superman/magisk", "/temp/magisk");
 		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v10.2.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
 		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v10.2.zip");
 		set_progress(0.800000);
 		ui_print(" ");
+endif;
+if
+	file_getprop("/tmp/aroma/kernel.prop","kernel") == "superstock"
+	then
+		ui_print("Installing Magisk V10.2 for systemless mods...");
+		package_extract_dir("superman/magisk", "/temp/magisk");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v10.2.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v10.2.zip");
+		set_progress(0.800000);
+		ui_print(" ");
+endif;
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "no"
@@ -1220,7 +1242,7 @@ if
 			is_substring("G930F", getprop("ro.boot.bootloader")),
 				(
 					ui_print(" ");
-					ui_print("Flashing latest BPLB G930F/FD param file");
+					ui_print("Flashing latest DPLT G930F/FD param file");
 					assert(package_extract_file("superman/bootloader/s7/param.bin", "/dev/block/sda4"));
 					ui_print(" ");
 				),
@@ -1229,36 +1251,14 @@ if
 					is_substring("G935F", getprop("ro.boot.bootloader")),
 						(
 							ui_print(" ");
-							ui_print("Flashing latest BPLB G935F/FD param file");
+							ui_print("Flashing latest DPLT G935F/FD param file");
 							assert(package_extract_file("superman/bootloader/s7e/param.bin", "/dev/block/sda4"));
 							ui_print(" ");
 						),
 						(
-						ifelse(
-							is_substring("G930W8", getprop("ro.boot.bootloader")),
-								(
-									ui_print(" ");
-									ui_print("Flashing latest APK3 G930W8 param file");
-									assert(package_extract_file("superman/bootloader/s7w8/param.bin", "/dev/block/sda4"));
-									ui_print(" ");
-								),
-								(
-								ifelse(
-									is_substring("G935W8", getprop("ro.boot.bootloader")),
-										(
-											ui_print(" ");
-											ui_print("Flashing latest APK3 G935W8 param file");
-											assert(package_extract_file("superman/bootloader/s7ew8/param.bin", "/dev/block/sda4"));
-											ui_print(" ");
-										),
-										(
-											ui_print(" ");
-											ui_print("You don't have a F/FD/W8 model, please update via Odin!");
-											ui_print(" ");
-										)
-								);
-								)
-						);
+							ui_print(" ");
+							ui_print("Your model does not yet support Nougat BL.");
+							ui_print(" ");
 						)
 				);
 				)
@@ -1347,8 +1347,9 @@ if
 			is_substring("G930F", getprop("ro.boot.bootloader")),
 				(
 					ui_print(" ");
-					ui_print("Flashing latest BPKG G930F/FD Modem");
+					ui_print("Flashing latest DPLT G930F/FD Modem");
 					assert(package_extract_file("superman/modem/s7/modem.bin", "/dev/block/sda8"));
+					assert(package_extract_file("superman/modem/s7/modem_debug.bin", "/dev/block/sda17"));
 					ui_print(" ");
 				),
 				(
@@ -1356,36 +1357,15 @@ if
 					is_substring("G935F", getprop("ro.boot.bootloader")),
 						(
 							ui_print(" ");
-							ui_print("Flashing latest BPKG G935F/FD Modem");
+							ui_print("Flashing latest DPLT G935F/FD Modem");
 							assert(package_extract_file("superman/modem/s7e/modem.bin", "/dev/block/sda8"));
+							assert(package_extract_file("superman/modem/s7e/modem_debug.bin", "/dev/block/sda17"));
 							ui_print(" ");
 						),
 						(
-						ifelse(
-							is_substring("G930W8", getprop("ro.boot.bootloader")),
-								(
-									ui_print(" ");
-									ui_print("Flashing latest APK3 G930W8 Modem");
-									assert(package_extract_file("superman/modem/s7w8/modem.bin", "/dev/block/sda8"));
-									ui_print(" ");
-								),
-								(
-								ifelse(
-									is_substring("G935W8", getprop("ro.boot.bootloader")),
-										(
-											ui_print(" ");
-											ui_print("Flashing latest APK3 G935W8 Modem");
-											assert(package_extract_file("superman/modem/s7ew8/modem.bin", "/dev/block/sda8"));
-											ui_print(" ");
-										),
-										(
-											ui_print(" ");
-											ui_print("You don't have a F/FD/W8 model, please update via Odin!");
-											ui_print(" ");
-										)
-								);
-								)
-						);
+							ui_print(" ");
+							ui_print("Your model is not supported yet on nougat, no CP update");
+							ui_print(" ");
 						)
 				);
 				)
@@ -1420,7 +1400,7 @@ if
 			is_substring("G930F", getprop("ro.boot.bootloader")),
 				(
 					ui_print(" ");
-					ui_print("Flashing latest BPLB G930F/FD BL");
+					ui_print("Flashing latest DPLT G930F/FD BL");
 					assert(package_extract_file("superman/bootloader/s7/sboot.bin", "/dev/block/sda1"));
 					sleep(1);
 					assert(package_extract_file("superman/bootloader/s7/cm.bin", "/dev/block/sda2"));
@@ -1442,39 +1422,9 @@ if
 							run_program("/sbin/reboot", "fota_bl");
 						),
 						(
-						ifelse(
-							is_substring("G930W8", getprop("ro.boot.bootloader")),
-								(
-									ui_print(" ");
-									ui_print("Flashing latest APK3 G930W8 BL");
-									assert(package_extract_file("superman/bootloader/s7w8/sboot.bin", "/dev/block/sda1"));
-									sleep(1);
-									assert(package_extract_file("superman/bootloader/s7w8/cm.bin", "/dev/block/sda2"));
-									sleep(1);
-									ui_print(" ");
-									run_program("/sbin/reboot", "fota_bl");
-								),
-								(
-								ifelse(
-									is_substring("G935W8", getprop("ro.boot.bootloader")),
-										(
-											ui_print(" ");
-											ui_print("Flashing latest APK3 G935W8 BL");
-											assert(package_extract_file("superman/bootloader/s7ew8/sboot.bin", "/dev/block/sda1"));
-											sleep(1);
-											assert(package_extract_file("superman/bootloader/s7ew8/cm.bin", "/dev/block/sda2"));
-											sleep(1);
-											ui_print(" ");
-											run_program("/sbin/reboot", "fota_bl");
-										),
-										(
-											ui_print(" ");
-											ui_print("You don't have a F/FD/W8 model, please update via Odin!");
-											ui_print(" ");
-									)
-								);
-							)
-						);
+							ui_print(" ");
+							ui_print("Your model does not yet support Nougat BL.");
+							ui_print(" ");
 						)
 				);
 				)

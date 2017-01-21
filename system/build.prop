@@ -87,7 +87,7 @@ import /efs/factory.prop
 #
 ro.astcenc.astcsupport=1
 ro.mct.compressiontype=ETC1
-ro.config.dmverity=true
+ro.config.dmverity=false
 ro.config.rkp=true
 ro.config.kap_default_on=true
 ro.config.kap=true
@@ -119,7 +119,7 @@ dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heapminfree=2m
 dalvik.vm.heapmaxfree=8m
 ro.hdcp2.rx=tz
-ro.securestorage.support=true
+ro.securestorage.support=false
 ro.build.scafe.version=2017A
 ro.location.hwflp=true
 security.mdpp=None
