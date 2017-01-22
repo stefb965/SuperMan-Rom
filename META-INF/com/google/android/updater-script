@@ -267,19 +267,6 @@ if
 		ui_print("Installing superman animation...");
 		package_extract_dir("superman/animation/superman", "/system/media");
 endif;
-#-- Fingerprint files
-if
-	file_getprop("/tmp/aroma/kernel.prop","kernel") == "super"
-	then
-		ui_print("Installing Modded kernel Files...");
-		delete("/system/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin");
-endif;
-if
-	file_getprop("/tmp/aroma/kernel.prop","kernel") == "superstock"
-	then
-		ui_print("Installing Modded kernel Files...");
-		delete("/system/app/mcRegistry/ffffffffd0000000000000000000000a.tlbin");
-endif;
 #-- Model
 ui_print(" ");
 ui_print("Setting right model number to csc and build.prop");
@@ -1112,36 +1099,12 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
-if
-	file_getprop("/tmp/aroma/kernel.prop","kernel") == "stock"
-	then
-		ui_print("Installing Magisk V9 for systemless mods...");
-		package_extract_dir("superman/magisk", "/temp/magisk");
-		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v9.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v9.zip");
-		set_progress(0.800000);
-		ui_print(" ");
-endif;
-if
-	file_getprop("/tmp/aroma/kernel.prop","kernel") == "super"
-	then
 		ui_print("Installing Magisk V10.2 for systemless mods...");
 		package_extract_dir("superman/magisk", "/temp/magisk");
 		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v10.2.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
 		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v10.2.zip");
 		set_progress(0.800000);
 		ui_print(" ");
-endif;
-if
-	file_getprop("/tmp/aroma/kernel.prop","kernel") == "superstock"
-	then
-		ui_print("Installing Magisk V10.2 for systemless mods...");
-		package_extract_dir("superman/magisk", "/temp/magisk");
-		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v10.2.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v10.2.zip");
-		set_progress(0.800000);
-		ui_print(" ");
-endif;
 endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "no"
