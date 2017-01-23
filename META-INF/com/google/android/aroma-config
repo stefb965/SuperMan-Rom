@@ -600,10 +600,8 @@ form(
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
 	"systemUI",	"Choose your prefered SystemUI",		"",									"group",
-	"modded",	"Modded SystemUI",		"Includes all romcontrol features, disabled sd card notificaitons, no grey background on powersaving mode and many more features.",		"select",
-	"rounded",	"Rounded SytemUI",		"Same features as modded SystemUI but with rounded recentpanel view",			"select.selected",
+	"modded",	"Modded SystemUI",		"Includes all romcontrol features, disabled sd card notificaitons, no grey background on powersaving mode and many more features.",		"select.selected",
 	"moddedclock",	"Modded 3minit clock SystemUI",	"Same features as modded SystemUI but with 3minit clock instead of normal clock",	"select",
-	"roundedclock",	"Rounded 3minit clock SytemUI",	"Same features as rounded SystemUI but with 3minit clock instead of normal clock",	"select",
 	"stock",	"Stock SystemUI",		"No features included in here. Just stock SystemUI as you can find on any rom",		"select",
 	"settings",	"Choose your prefered Settings",		"",									"group",
 	"modded",	"Modded Settings",		"Features mods like: Links to Superuser, adaway. SuperMan header in Settings, changable fonts and more",	"select.selected",

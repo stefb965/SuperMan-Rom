@@ -170,22 +170,10 @@ if
 		package_extract_dir("superman/systemui/stock", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/mods.prop","systemUI") == "rounded"
-	then
-		ui_print("Installing rounded SystemUI...");
-		package_extract_dir("superman/systemui/rounded", "/system/priv-app");
-endif;
-if
 	file_getprop("/tmp/aroma/mods.prop","systemUI") == "modded"
 	then
 		ui_print("Installing modded SystemUI...");
 		package_extract_dir("superman/systemui/modded", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/mods.prop","systemUI") == "roundedclock"
-	then
-		ui_print("Installing rounded SystemUI...");
-		package_extract_dir("superman/systemui/rounded_clock", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/mods.prop","systemUI") == "moddedclock"
@@ -197,30 +185,8 @@ endif;
 if
 	file_getprop("/tmp/aroma/mods.prop","settings") == "modded"
 	then
-	if
-		file_getprop("/tmp/aroma/magisk.prop","root") == "su"
-		then
-			ui_print("Installing supersu compatible settings...");
-			package_extract_dir("superman/settings/supersu", "/system/priv-app");
-	endif;
-	if
-		file_getprop("/tmp/aroma/magisk.prop","root") == "phhma"
-		then
-			ui_print("Installing phh compatible settings...");
-			package_extract_dir("superman/settings/phh", "/system/priv-app");
-	endif;
-	if
-		file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
-		then
-			ui_print("Installing phh compatible settings...");
-			package_extract_dir("superman/settings/phh", "/system/priv-app");
-	endif;
-	if
-		file_getprop("/tmp/aroma/magisk.prop","root") == "no"
-		then
-			ui_print("Installing supersu compatible settings...");
-			package_extract_dir("superman/settings/supersu", "/system/priv-app");
-	endif;
+		ui_print("Installing modded settings...");
+		package_extract_dir("superman/settings/modded", "/system/priv-app");
 endif;
 if
 	file_getprop("/tmp/aroma/mods.prop","settings") == "stock"
