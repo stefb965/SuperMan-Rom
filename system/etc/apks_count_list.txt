@@ -20,13 +20,13 @@
 /system/app/UniversalSwitch/UniversalSwitch.apk
 /system/app/FlipboardBriefing/FlipboardBriefing.apk
 /system/app/CoreApps_SDK/CoreApps_SDK.apk
-/system/app/KnoxSetupWizardClient/KnoxSetupWizardClient.apk
 /system/app/SamsungCalendar_Stable/SamsungCalendar_Stable.apk
+/system/app/KnoxSetupWizardClient/KnoxSetupWizardClient.apk
+/system/app/WeatherWidget2017_SE/WeatherWidget2017_SE.apk
 /system/app/VideoCollage_Grace_N/VideoCollage_Grace_N.apk
 /system/app/SecMemo3/SecMemo3.apk
 /system/app/MDMApp/MDMApp.apk
 /system/app/STalkback/STalkback.apk
-/system/app/WeatherWidget2017_SE/WeatherWidget2017_SE.apk
 /system/app/HighlightPlayer_Grace_N/HighlightPlayer_Grace_N.apk
 /system/app/FBAppManager/FBAppManager.apk
 /system/app/Weather2017_SE/Weather2017_SE.apk
@@ -108,8 +108,8 @@
 /system/app/KeyChain/KeyChain.apk
 /system/app/Panorama360Viewer/Panorama360Viewer.apk
 /system/app/SilentLog/SilentLog.apk
-/system/app/FidoUafClient_v15/FidoUafClient_v15.apk
 /system/app/FidoUafClient_v16/FidoUafClient_v16.apk
+/system/app/FidoUafClient_v15/FidoUafClient_v15.apk
 /system/app/CaptivePortalLogin/CaptivePortalLogin.apk
 /system/app/EasyOneHand3/EasyOneHand3.apk
 /system/app/ImsSettings/ImsSettings.apk

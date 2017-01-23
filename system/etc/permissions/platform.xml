@@ -112,8 +112,6 @@
 
         <group gid="sdcard_rw" />
 
-        <group gid="sdcard_all" />
-
     </permission>
 
 
