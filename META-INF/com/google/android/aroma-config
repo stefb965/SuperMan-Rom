@@ -516,11 +516,12 @@ form(
 	"busybox",	"Busybox", 		"",									"group",
 	"yes",		"Busybox V1.26.2",	"Will install latest busybox available (magisk compatible)",		"select.selected",
 	"no",		"No busybox",		"Don't install busybox",						"select",
-	"v4a",		"Viper4Android",	"",									"group",
+	"v4a",		"Sound Mods",		"",									"group",
 	"yes",		"Normal V4A",		"Normal system patch will be applied",					"select",
 	"yesma",	"Magisk V4A",		"Magisk compatible viper4android will be installed",			"select",
 	"arise",	"ARISE Deuteronomy",	"A.R.I.S.E sound system which is similar to V4A",			"select",
-	"no",		"No V4A",		"Viper4Android won't be installed",					"select.selected"
+	"dap",		"Dolby Atmos",		"Installs dolby atmos onto your phone",					"select",
+	"no",		"No SoundMod",		"Viper4Android won't be installed",					"select.selected"
 );
 
 ##
@@ -656,10 +657,10 @@ form(
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
 	"modem",	"Modem update F/FD/W8",		"",										"group",
-	"update",	"Update Modem",			"Will auto update your modem to latest DPLT on F/FD",				"select.selected",
+	"update",	"Update Modem",			"Will auto update your modem to latest DQA3 on F/FD",				"select.selected",
 	"keep",		"Keep current Modem",		"Will keep your current modem and change nothing",				"select",
 	"bootloader",	"Bootloader update F/FD/W8",	"",										"group",
-	"update",	"Update Bootloader",		"Will auto update your BL to DPLT on F/FD/ models. Phone will auto reboot!",		"select.selected",
+	"update",	"Update Bootloader",		"Will auto update your BL to DQAS on F/FD/ models. Phone will auto reboot!",		"select.selected",
 	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",				"select"
 );
 
