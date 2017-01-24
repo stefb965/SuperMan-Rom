@@ -194,19 +194,6 @@ if
 		ui_print("Installing stock settings...");
 		package_extract_dir("superman/settings/stock", "/system/priv-app");
 endif;
-#-- Services.jar
-if
-	file_getprop("/tmp/aroma/launcher.prop","services") == "stock"
-	then
-		ui_print("Installing stock services...");
-		package_extract_dir("superman/services/stock", "/system/framework");
-endif;
-if
-	file_getprop("/tmp/aroma/launcher.prop","services") == "modded"
-	then
-		ui_print("Installing modded services...");
-		package_extract_dir("superman/services/modded", "/system/framework");
-endif;
 #-- Launcher
 if
 	file_getprop("/tmp/aroma/launcher.prop","launcher") == "stock"

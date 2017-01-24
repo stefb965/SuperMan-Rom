@@ -664,12 +664,12 @@ form(
 );
 
 ##
-# Services/Launcher Form
+# Launcher Form
 #
 
 form(
-    "Services and Launcher",
-    "Choose between stock and modded services/launcher",
+    "Launcher",
+    "Choose between stock and modded launcher",
     "icons/install2",
     "launcher.prop",
   #
@@ -684,12 +684,9 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"services",	"Services",		"",							"group",
-	"stock",	"Stock services.jar",	"You will have no mods like 5 way reboot",		"select",
-	"modded",	"Modded services.jar",	"USB Plug/Unplug disable wake up, Remove high volume warning for headphones, 5 way reboot, long press back to kill and more. Install this for modded launcher!",									"select.selected",
 	"launcher",	"Launcher", 		"",							"group",
 	"stock",	"Stock Launcher",	"Normal touchwiz launcher as always",			"select",
-	"modded",	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects, twswipe (this only works with modded services!)",												"select.selected"
+	"modded",	"Modded Launcher",	"Gesture anywhere on Home screen, Touchwiz Page Transition effects, twswipe",		"select.selected"
 
 );
 
