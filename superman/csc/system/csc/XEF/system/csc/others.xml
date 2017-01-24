@@ -15,7 +15,6 @@
     <CscFeature_Web_ConfigSyncSource>TRUE</CscFeature_Web_ConfigSyncSource>
     <CscFeature_RIL_ConfigAlwaysOnApn>mms_20801,mms_34001,mms_64700,ims</CscFeature_RIL_ConfigAlwaysOnApn>
     <CscFeature_SystemUI_DisplayPlmnAtNotificationPanel>TRUE</CscFeature_SystemUI_DisplayPlmnAtNotificationPanel>
-    <CscFeature_Common_ConfigSvcProviderForUnknownNumber>whitepages,whitepages,whitepages</CscFeature_Common_ConfigSvcProviderForUnknownNumber>
     <CscFeature_IMS_EnableIMS>TRUE</CscFeature_IMS_EnableIMS>
     <CscFeature_IMS_EnableRCSe>FALSE</CscFeature_IMS_EnableRCSe>
     <CscFeature_IMS_EnableVoLTE>TRUE</CscFeature_IMS_EnableVoLTE>
@@ -55,5 +54,6 @@
     <CscFeature_SmartManager_ConfigSubFeatures>roguepopup|autoclean|autorestart|applock|networkpowersaving|storageclean|trafficmanager|notificationmanager|applicationpermission|devicesecurity|data_compression|UDS</CscFeature_SmartManager_ConfigSubFeatures>
     <CscFeature_Common_EnableAirMessage>TRUE</CscFeature_Common_EnableAirMessage>
     <CscFeature_Common_ConfigSvcProviderForUnknownNumber>whitepages,whitepages,on</CscFeature_Common_ConfigSvcProviderForUnknownNumber>
+    <CscFeature_Setting_SupportRealTimeNetworkSpeed>TRUE</CscFeature_Setting_SupportRealTimeNetworkSpeed>
   </FeatureSet>
 </SamsungMobileFeauture>

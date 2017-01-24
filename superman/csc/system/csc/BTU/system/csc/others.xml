@@ -38,7 +38,6 @@
     <CscFeature_RIL_ConfigAlwaysOnApn>ims,IMS,xcap,XCAP</CscFeature_RIL_ConfigAlwaysOnApn>
     <CscFeature_RIL_ConfigSpecialPdpFlag>im_cn</CscFeature_RIL_ConfigSpecialPdpFlag>
     <CscFeature_Setting_HideApnList>3hotspot,ims,IMS,xcap,XCAP</CscFeature_Setting_HideApnList>
-    <CscFeature_Common_ConfigSvcProviderForUnknownNumber>whitepages,whitepages,whitepages/234</CscFeature_Common_ConfigSvcProviderForUnknownNumber>
     <CscFeature_Setting_IncludeApn4SwUpdate>true</CscFeature_Setting_IncludeApn4SwUpdate>
     <CscFeature_RIL_ConfigEpdgExtraFunction>MobilePrefSim_23415;,ChangePrefValueEverySimChangeNoSimCheck,ERIS</CscFeature_RIL_ConfigEpdgExtraFunction>
     
@@ -67,5 +66,6 @@
     <CscFeature_SmartManager_ConfigSubFeatures>roguepopup|autoclean|autorestart|applock|networkpowersaving|storageclean|trafficmanager|notificationmanager|applicationpermission|devicesecurity|data_compression|UDS</CscFeature_SmartManager_ConfigSubFeatures>
     <CscFeature_Common_EnableAirMessage>TRUE</CscFeature_Common_EnableAirMessage>
     <CscFeature_Common_ConfigSvcProviderForUnknownNumber>whitepages,whitepages,on</CscFeature_Common_ConfigSvcProviderForUnknownNumber>
+    <CscFeature_Setting_SupportRealTimeNetworkSpeed>TRUE</CscFeature_Setting_SupportRealTimeNetworkSpeed>
   </FeatureSet>
 </SamsungMobileFeauture>
