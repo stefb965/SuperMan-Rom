@@ -16,41 +16,6 @@ ini_set("rom_device",           "SM-G93XF/FD/K/L/S/W8");
 ini_set("rom_date",             "25.01.2017");
 
 ##
-# Show Animated Splash
-#
-anisplash(
-#  #-- Number of Loop
-    1,
-  
-  #-- Frame  [ Image, duration in millisecond ]
-    "anim/a00", 1,
-    "anim/a01", 1,
-    "anim/a02", 1,
-    "anim/a03", 1,
-    "anim/a04", 1,
-	"anim/a05", 1,
-	"anim/a06", 1,
-	"anim/a07", 1,
-	"anim/a08", 1,
-	"anim/a09", 1,
-	"anim/a10", 1,
-	"anim/a11", 1,
-	"anim/a12", 1,
-	"anim/a13", 1,
-	"anim/a14", 1,
-	"anim/a15", 30,
-	"anim/a16", 30,
-	"anim/a17", 30,
-	"anim/a18", 30,
-	"anim/a19", 30,
-	"anim/a20", 30,
-	"anim/a21", 30,
-	"anim/a22", 30,
-	"anim/a23", 30,
-	"anim/a24", 1500
-);
-
-##
 # Font and Theme Selection
 #
 
@@ -95,7 +60,7 @@ viewbox(
 
 agreebox(
 	#-- Title
-	"SuperMan-Rom™",
+	"SuperMan-Rom™ Bloat-Package",
 
 	#-- Subtitle / Description
 	"Read Carefully",
@@ -294,7 +259,7 @@ viewbox(
 	"Ready to Install",
 
 	#-- Text
-	"SuperMan-Rom is ready to be installed.\n\n"+
+	"The bloatware is ready to be installed.\n\n"+
 	"Press <b>Install ROM</b> to begin the installation.\n\n"+
 	"To review or change any of your installation settings, press <b>Back</b>.\n\n"+
 	"Press Menu -> Quit Installation to quit.",
@@ -311,9 +276,9 @@ ini_set("text_next", "Next");
 ini_set("icon_next", "@next");
 
 install(
-	"SuperMan-Rom™ Installation",
+	"SuperMan-Rom™ Bloat-Package Installation",
 	getvar("rom_name") + "\n" +
-	"Please wait while SuperMan-Rom is conquering your phone" +
+	"Please wait while bloatware is installed to your phone" +
 	"",
 	"icons/install2"
 );

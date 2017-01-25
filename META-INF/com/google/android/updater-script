@@ -770,6 +770,9 @@ if
 endif;
 #-- Encryption
 if
+	file_getprop("/tmp/aroma/kernel.prop","kernel") == "stock"
+	then
+if
 	file_getprop("/tmp/aroma/encrypt.prop","encrypt") == "yes"
 	then
 		ui_print("Keeping force encryption flag");
@@ -785,6 +788,7 @@ if
 		run_program("/sbin/busybox", "sh", "/temp/encryption/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/encryption/no-verity-opt-encrypt-5.1.zip");
 		set_progress(0.700000);
 		ui_print(" ");
+endif;
 endif;
 #-- SuperSU
 if
