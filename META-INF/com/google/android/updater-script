@@ -269,28 +269,10 @@ if
 endif;
 #-- Sound Mod
 if
-	file_getprop("/tmp/aroma/sound.prop","sound") == "level0"
+	file_getprop("/tmp/aroma/sound.prop","sound") == "mod"
 	then
-		ui_print("Installing sound mod level 0...");
-		package_extract_dir("superman/sound/mod0/system", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/sound.prop","sound") == "level1"
-	then
-		ui_print("Installing sound mod level 1...");
-		package_extract_dir("superman/sound/mod1/system", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/sound.prop","sound") == "level2"
-	then
-		ui_print("Installing sound mod level 2...");
-		package_extract_dir("superman/sound/mod2/system", "/system");
-endif;
-if
-	file_getprop("/tmp/aroma/sound.prop","sound") == "level3"
-	then
-		ui_print("Installing sound mod level 3...");
-		package_extract_dir("superman/sound/mod3/system", "/system");
+		ui_print("Installing sound mod V19...");
+		package_extract_dir("superman/sound/mod/system", "/system");
 endif;
 if
 	file_getprop("/tmp/aroma/sound.prop","sound") == "nothing"

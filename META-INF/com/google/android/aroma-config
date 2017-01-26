@@ -530,7 +530,7 @@ form(
 #
 
 form(
-    "SoundMod V18",
+    "SoundMod V19",
     "Do you want to install the sound mod by ZuBi182?",
     "icons/install2",
     "sound.prop",
@@ -546,12 +546,9 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"sound",	"Sound Level",			"",					"group",
-	"level0",	"Install sound mod Level 0",	"Stock Volume",				"select",
-	"level1",	"Install sound mod Level 1",	"Slightly increased values",		"select",
-	"level2",	"Install sound mod Level 2",	"Intermediate version",			"select",
-	"level3",	"Install sound mod Level 3",	"Best volume values",			"select",
-	"nothing",	"Use stock sound",		"Will keep the stock files",		"select.selected"
+	"sound",	"Sound Level",			"",								"group",
+	"mod",		"Install sound mod V19",	"There's currently only one sound mod level for Android N",	"select",
+	"nothing",	"Use stock sound",		"Will keep the stock files",					"select.selected"
 );
 
 ##
