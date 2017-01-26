@@ -169,18 +169,37 @@ if
 		ui_print("Installing stock SystemUI...");
 		package_extract_dir("superman/systemui/stock", "/system/priv-app");
 endif;
-if
-	file_getprop("/tmp/aroma/mods.prop","systemUI") == "modded"
-	then
-		ui_print("Installing modded SystemUI...");
-		package_extract_dir("superman/systemui/modded", "/system/priv-app");
-endif;
-if
-	file_getprop("/tmp/aroma/mods.prop","systemUI") == "moddedclock"
-	then
-		ui_print("Installing modded SystemUI...");
-		package_extract_dir("superman/systemui/modded_clock", "/system/priv-app");
-endif;
+ifelse(
+	is_substring("G930", getprop("ro.boot.bootloader")),
+		(
+			if
+				file_getprop("/tmp/aroma/mods.prop","systemUI") == "modded"
+				then
+					ui_print("Installing modded SystemUI...");
+					package_extract_dir("superman/systemui/s7/modded", "/system/priv-app");
+			endif;
+			if
+				file_getprop("/tmp/aroma/mods.prop","systemUI") == "moddedclock"
+				then
+					ui_print("Installing modded SystemUI...");
+					package_extract_dir("superman/systemui/s7/modded_clock", "/system/priv-app");
+			endif;
+		),
+		(
+			if
+				file_getprop("/tmp/aroma/mods.prop","systemUI") == "modded"
+				then
+					ui_print("Installing modded SystemUI...");
+					package_extract_dir("superman/systemui/s7e/modded", "/system/priv-app");
+			endif;
+			if
+				file_getprop("/tmp/aroma/mods.prop","systemUI") == "moddedclock"
+				then
+					ui_print("Installing modded SystemUI...");
+					package_extract_dir("superman/systemui/s7e/modded_clock", "/system/priv-app");
+			endif;
+		)
+);
 #-- Settings
 if
 	file_getprop("/tmp/aroma/mods.prop","settings") == "modded"
