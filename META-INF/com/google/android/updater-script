@@ -1373,17 +1373,6 @@ ifelse(
 					ui_print(" ");
 			endif;
 			if
-				file_getprop("/tmp/aroma/bootanim.prop","splash") == "super_white"
-				then
-					ui_print(" ");
-					ui_print("Installing S7 SuperMan Splash...");
-					package_extract_dir("superman/splash", "/tmp/splash");
-					run_program("/sbin/busybox", "unzip", "/tmp/splash/splashwhite-930.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
-					run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashwhite-930.zip");
-					set_progress(0.990000);
-					ui_print(" ");
-			endif;
-			if
 				file_getprop("/tmp/aroma/bootanim.prop","splash") == "nothing"
 				then
 					ui_print(" ");
@@ -1412,17 +1401,6 @@ ifelse(
 					package_extract_dir("superman/splash", "/tmp/splash");
 					run_program("/sbin/busybox", "unzip", "/tmp/splash/splashblack-935.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
 					run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashblack-935.zip");
-					set_progress(0.990000);
-					ui_print(" ");
-			endif;
-			if
-				file_getprop("/tmp/aroma/bootanim.prop","splash") == "super_white"
-				then
-					ui_print(" ");
-					ui_print("Installing S7 Edge SuperMan Splash...");
-					package_extract_dir("superman/splash", "/tmp/splash");
-					run_program("/sbin/busybox", "unzip", "/tmp/splash/splashwhite-935.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
-					run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashwhite-935.zip");
 					set_progress(0.990000);
 					ui_print(" ");
 			endif;
