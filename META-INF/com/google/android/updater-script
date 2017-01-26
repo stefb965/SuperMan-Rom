@@ -149,6 +149,19 @@ ifelse(
 			set_progress(0.350000);
 		)
 );
+#-- Camera Mod
+if
+	file_getprop("/tmp/aroma/camera.prop","camera") == "stock"
+	then
+		ui_print("Stock Camera...");
+		package_extract_dir("superman/camera/stock", "/system");
+endif;
+if
+	file_getprop("/tmp/aroma/camera.prop","camera") == "modded"
+	then
+		ui_print("Modded Camera...");
+		package_extract_dir("superman/camera/modded", "/system");
+endif;
 #-- Emoji
 if
 	file_getprop("/tmp/aroma/emoji.prop","emoji") == "stock"

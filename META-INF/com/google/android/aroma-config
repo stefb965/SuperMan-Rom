@@ -456,6 +456,32 @@ form(
 	"yes",		"Install init.d tweaks",	"Zipaligns apps and optimize database at startup. Use at your won risk!",	"select"
 );
 
+##
+# Camera Form
+#
+
+form(
+    "Camera",
+    "Modded or stock Camera application?",
+    "icons/install2",
+    "camera.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"camera",	"Camera Selection",		"",											"group",
+	"stock",	"Stock Camera",			"Nothing changed, stock values",							"select.selected",
+	"modded",	"Modded Camera V7",		"Increase bitrates for all camera resolutions and to set pictures at 100 quality.",	"select"
+);
+
 alert("Important:", "If you want to install snapchat after this rom, make sure to NOT use root! Snapchat will be UNABLE to login! Install after you logged in to snapchat.");
 
 ##
