@@ -456,33 +456,6 @@ form(
 	"yes",		"Install init.d tweaks",	"Zipaligns apps and optimize database at startup. Use at your won risk!",	"select"
 );
 
-##
-# Splash Form
-#
-
-form(
-    "Splash Screen",
-    "Choose between stock and superman splash",
-    "icons/install2",
-    "splash.prop",
-  #
-  # Type:
-  #  - group              = Group
-  #  - select             = Select Item
-  #  - select.selected    = Selected Select Item
-  #  - check              = Checkbox Item
-  #  - check.checked      = Checked Checkbox Item
-  #  - hide               = Hidden
-  #
-  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
-  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
-  #-------------+--------+-------------------------------------------------------+---------------#
-	"splash",	"Splash",		"",									"group",
-	"stock",	"Stock Splash",		"Stock S7 splash screen will be installed",				"select",
-	"super",	"SuperMan Splash",	"Superman Splash screen for S7",					"select",
-	"nothing",	"Keep current",		"Keeps your current splash screen (no matter which it is)",		"select.selected"
-);
-
 alert("Important:", "If you want to install snapchat after this rom, make sure to NOT use root! Snapchat will be UNABLE to login! Install after you logged in to snapchat.");
 
 ##
@@ -660,7 +633,6 @@ form(
 	"launcher",	"Launcher", 		"",									"group",
 	"stock",	"Stock Launcher",	"Normal touchwiz launcher as always",					"select",
 	"modded",	"Modded Launcher",	"Touchwiz Page Transition effects, TWSwipe with will replace Filpboard",	"select.selected"
-
 );
 
 ##
@@ -684,9 +656,39 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"anim",		"Bootanimations",			"",									"group",
-	"stock",	"Stock animation",	"Just as always, stock boot/shutdown animation",					"select",
-	"super",	"SuperMan animation!",	"Superman boot/shutdown animation!!! Big thanks to myellow for his great work!",	"select.selected"
+	"anim",		"Bootanimations",			"",											"group",
+	"stock",	"Stock animation",		"Just as always, stock boot/shutdown animation",						"select",
+	"super_black",	"SuperMan black animation",	"New SuperMan bootanimation with black background, all credits to myellow (he's awesome)",	"select.selected",
+	"super_white",	"SuperMan white animation",	"New SuperMan bootanimation with white background, credits to myellow (he's still awesome)",	"select",
+	"splash",	"Splash Screen",		"",												"group",
+	"stock",	"Stock Splash",			"Stock S7 splash screen will be installed",							"select",
+	"super_black",	"SuperMan black Splash",	"New SuperMan black Splash will be installed",							"select",
+	"super_white",	"SuperMan white Splash",	"New SuperMan white Splash will be installed",							"select",
+	"nothing",	"Keep current",			"Keeps your current splash screen (no matter which it is)",					"select.selected"
+);
+
+##
+# Splash Form
+#
+
+form(
+    "Splash Screen",
+    "Choose between stock and superman splash",
+    "icons/install2",
+    "splash.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+
 );
 
 ##

@@ -234,10 +234,16 @@ if
 		package_extract_dir("superman/animation/stock", "/system/media");
 endif;
 if
-	file_getprop("/tmp/aroma/bootanim.prop","anim") == "super"
+	file_getprop("/tmp/aroma/bootanim.prop","anim") == "super_black"
 	then
-		ui_print("Installing superman animation...");
-		package_extract_dir("superman/animation/superman", "/system/media");
+		ui_print("Installing black superman animation...");
+		package_extract_dir("superman/animation/superman_black", "/system/media");
+endif;
+if
+	file_getprop("/tmp/aroma/bootanim.prop","anim") == "super_white"
+	then
+		ui_print("Installing white superman animation...");
+		package_extract_dir("superman/animation/superman_white", "/system/media");
 endif;
 #-- Model
 ui_print(" ");
@@ -1345,7 +1351,7 @@ ifelse(
 	is_substring("G930", getprop("ro.boot.bootloader")),
 		(
 			if
-				file_getprop("/tmp/aroma/splash.prop","splash") == "stock"
+				file_getprop("/tmp/aroma/bootanim.prop","splash") == "stock"
 				then
 					ui_print(" ");
 					ui_print("Installing S7 Stock Splash...");
@@ -1356,18 +1362,29 @@ ifelse(
 					ui_print(" ");
 			endif;
 			if
-				file_getprop("/tmp/aroma/splash.prop","splash") == "super"
+				file_getprop("/tmp/aroma/bootanim.prop","splash") == "super_black"
 				then
 					ui_print(" ");
 					ui_print("Installing S7 SuperMan Splash...");
 					package_extract_dir("superman/splash", "/tmp/splash");
-					run_program("/sbin/busybox", "unzip", "/tmp/splash/splashblue-930.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
-					run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashblue-930.zip");
+					run_program("/sbin/busybox", "unzip", "/tmp/splash/splashblack-930.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
+					run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashblack-930.zip");
 					set_progress(0.990000);
 					ui_print(" ");
 			endif;
 			if
-				file_getprop("/tmp/aroma/splash.prop","splash") == "nothing"
+				file_getprop("/tmp/aroma/bootanim.prop","splash") == "super_white"
+				then
+					ui_print(" ");
+					ui_print("Installing S7 SuperMan Splash...");
+					package_extract_dir("superman/splash", "/tmp/splash");
+					run_program("/sbin/busybox", "unzip", "/tmp/splash/splashwhite-930.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
+					run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashwhite-930.zip");
+					set_progress(0.990000);
+					ui_print(" ");
+			endif;
+			if
+				file_getprop("/tmp/aroma/bootanim.prop","splash") == "nothing"
 				then
 					ui_print(" ");
 					ui_print("Keep current Splash screen");
@@ -1377,7 +1394,7 @@ ifelse(
 		),
 		(
 			if
-				file_getprop("/tmp/aroma/splash.prop","splash") == "stock"
+				file_getprop("/tmp/aroma/bootanim.prop","splash") == "stock"
 				then
 					ui_print(" ");
 					ui_print("Installing S7 Edge Stock Splash...");
@@ -1388,18 +1405,29 @@ ifelse(
 					ui_print(" ");
 			endif;
 			if
-				file_getprop("/tmp/aroma/splash.prop","splash") == "super"
+				file_getprop("/tmp/aroma/bootanim.prop","splash") == "super_black"
 				then
 					ui_print(" ");
 					ui_print("Installing S7 Edge SuperMan Splash...");
 					package_extract_dir("superman/splash", "/tmp/splash");
-					run_program("/sbin/busybox", "unzip", "/tmp/splash/splashblue-935.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
-					run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashblue-935.zip");
+					run_program("/sbin/busybox", "unzip", "/tmp/splash/splashblack-935.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
+					run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashblack-935.zip");
 					set_progress(0.990000);
 					ui_print(" ");
 			endif;
 			if
-				file_getprop("/tmp/aroma/splash.prop","splash") == "nothing"
+				file_getprop("/tmp/aroma/bootanim.prop","splash") == "super_white"
+				then
+					ui_print(" ");
+					ui_print("Installing S7 Edge SuperMan Splash...");
+					package_extract_dir("superman/splash", "/tmp/splash");
+					run_program("/sbin/busybox", "unzip", "/tmp/splash/splashwhite-935.zip", "META-INF/com/google/android/*", "-d", "/tmp/splash");
+					run_program("/sbin/busybox", "sh", "/tmp/splash/META-INF/com/google/android/update-binary", "dummy", "1", "/tmp/splash/splashwhite-935.zip");
+					set_progress(0.990000);
+					ui_print(" ");
+			endif;
+			if
+				file_getprop("/tmp/aroma/bootanim.prop","splash") == "nothing"
 				then
 					ui_print(" ");
 					ui_print("Keep current Splash screen");
