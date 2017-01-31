@@ -453,7 +453,7 @@ form(
 	"max",		"Maximal build.prop tweaks",	"All kind of build.prop tweaks found on the net. Use at your own risk!",	"select",
 	"initd",	"Select your init.d tweaks",	"",										"group",
 	"no",		"No init.d tweaks",		"This is the recommend option to use",						"select.selected",
-	"yes",		"Install init.d tweaks",	"Zipaligns apps and optimize database at startup. Use at your won risk!",	"select"
+	"yes",		"Install init.d tweaks",	"Zipaligns apps and optimize database at startup. Use at your own risk!",	"select"
 );
 
 ##
@@ -599,7 +599,6 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"systemUI",	"Choose your prefered SystemUI",		"",									"group",
 	"modded",	"Modded SystemUI",		"Includes all romcontrol features, disabled sd card notificaitons, fingerprint after reboot mode and many more features.",		"select.selected",
-	"moddedclock",	"Modded 3minit clock SystemUI",	"Same features as modded SystemUI but with 3minit clock instead of normal clock",	"select",
 	"stock",	"Stock SystemUI",		"No features included in here. Just stock SystemUI as you can find on any rom",		"select",
 	"settings",	"Choose your prefered Settings",		"",									"group",
 	"modded",	"Modded Settings",		"SuperMan logo and touchkey light duration enabled",					"select.selected",
@@ -835,20 +834,19 @@ checkbox(
 
 	"General Apps",		"",									2,	#-- group 1
 	"AdAway",		"To enable and disable adblocking",					1,	#-- item.1.1
-	"Amplify",		"Control your wakelocks",						0,	#-- item.1.2
-	"BetterBatteryStats",	"Check what's eating your Battery",					0,	#-- item.1.3
-	"FireFox Browser",	"",									0,	#-- item.1.4
-	"Gsam Battery",		"Also a battery monitoring app",					0,	#-- item.1.5
-	"Greenify",		"May help you saving some battery",					0,	#-- item.1.6
-	"Mega",			"Online storage provider",						0,	#-- item.1.7
-	"OneNote",		"",									0,	#-- item.1.8
-	"OperaMax",		"Is used if you want to have UDS working (Ultra-Data Saving)",		0,	#-- item.1.9
-	"Opera Mini Browser",	"",									0,	#-- item.1.10
-	"Phone Info App",	"Check installed software, CSCs available and more",			1,	#-- item.1.11
-	"Root Explorer",	"",									0,	#-- item.1.12
-	"SD Maid",		"Helps keeping your phone clean",					0,	#-- item.1.13
-	"Terminal",		"For terminal commands",						0,	#-- item.1.14
-	"Titanium Backup",	"To backup and restore your Apps",					0	#-- item.1.15
+	"BetterBatteryStats",	"Check what's eating your Battery",					0,	#-- item.1.2
+	"FireFox Browser",	"",									0,	#-- item.1.3
+	"Gsam Battery",		"Also a battery monitoring app",					0,	#-- item.1.4
+	"Greenify",		"May help you saving some battery",					0,	#-- item.1.5
+	"Mega",			"Online storage provider",						0,	#-- item.1.6
+	"OneNote",		"",									0,	#-- item.1.7
+	"OperaMax",		"Is used if you want to have UDS working (Ultra-Data Saving)",		0,	#-- item.1.8
+	"Opera Mini Browser",	"",									0,	#-- item.1.9
+	"Phone Info App",	"Check installed software, CSCs available and more",			1,	#-- item.1.10
+	"Root Explorer",	"",									0,	#-- item.1.11
+	"SD Maid",		"Helps keeping your phone clean",					0,	#-- item.1.12
+	"Terminal",		"For terminal commands",						0,	#-- item.1.13
+	"Titanium Backup",	"To backup and restore your Apps",					0	#-- item.1.14
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
