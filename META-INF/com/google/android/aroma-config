@@ -357,13 +357,13 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"CSC",		"Europe Multi-CSC",	"",							"group",
 	"All",		"All CSCs",		"Installs the whole Multi-CSC",				"select",
-	"BTU",		"BTU",			"United Kingdom unbranded",				"select",
+	"BTU",		"BTU",			"United Kingdom unbranded (default)",			"select.selected",
 	"CPW",		"CPW",			"United Kingdom (unknown)",				"select",
 	"DBT",		"DBT",			"Germany unbranded",					"select",
 	"ITV",		"ITV",			"Italian unbranded",					"select",
 	"KOR",		"KOR",			"Korean unbranded",					"select",
 	"NEE",		"NEE",			"Nordic Countries unbranded",				"select",
-	"XEF",		"XEF",			"France unbranded (default)",				"select.selected",
+	"XEF",		"XEF",			"France unbranded",					"select",
 	"XEO",		"XEO",			"Poland unbranded",					"select",
 	"XEU",		"XEU",			"United Kingdom O2 UK branded",				"select",
 	"none",		"No CSC",		"Won't install any CSC",				"select"
@@ -394,8 +394,8 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"kernel",	"Kernel Selection",		"",									"group",
 	"stock",	"Stock Kernel",			"This is just a full stock kernel as you can find on stock rom",	"select",
-	"super",	"SuperKernel",			"SuperKernel V2.0.1 with many tweaks",					"select",
-	"superstock",	"SuperStock",			"Latest SuperStock V2.0.1 for our galaxy s7",				"select.selected",
+	"super",	"SuperKernel",			"SuperKernel V2.0.2 with many tweaks",					"select",
+	"superstock",	"SuperStock",			"Latest SuperStock V2.0.2 for our galaxy s7",				"select.selected",
 	"control",	"Kernel Control app",		"",									"group",
 	"synapse",	"Synapse",			"Installs Synapse app to control the Kernel. Only working on SuperKernel",	"check",
 	"adiutor",	"Kernel Adiutor",		"Installs latest Kernel Adiutor app. You can control all kernels with it",	"check",
