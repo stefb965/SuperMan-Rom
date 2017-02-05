@@ -483,6 +483,12 @@ if
 		ui_print("Installing Samsung Video...");
 		package_extract_dir("superman/debloat/SamsungVideo", "/data/app");
 endif;
+if
+	file_getprop("/tmp/aroma/samsung.prop","item.1.30") == "1"
+	then
+		ui_print("Installing Samsung Gear Viewer...");
+		package_extract_dir("superman/debloat/Gear_Viewer", "/data/app");
+endif;
 #-- Google Bloat
 if
 	file_getprop("/tmp/aroma/google.prop","item.1.1") == "1"
@@ -566,71 +572,83 @@ endif;
 if
 	file_getprop("/tmp/aroma/others.prop","item.1.3") == "1"
 	then
+		ui_print("Installing CPU-Z...");
+		package_extract_dir("superman/debloat/CPU-Z", "/data/app");
+endif;
+if
+	file_getprop("/tmp/aroma/others.prop","item.1.4") == "1"
+	then
 		ui_print("Installing Firefox...");
 		package_extract_dir("superman/debloat/Firefox", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/others.prop","item.1.4") == "1"
+	file_getprop("/tmp/aroma/others.prop","item.1.5") == "1"
 	then
 		ui_print("Installing GSamBattery...");
 		package_extract_dir("superman/debloat/GSamBattery", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/others.prop","item.1.5") == "1"
+	file_getprop("/tmp/aroma/others.prop","item.1.6") == "1"
 	then
 		ui_print("Installing Greenify...");
 		package_extract_dir("superman/debloat/Greenify", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/others.prop","item.1.6") == "1"
+	file_getprop("/tmp/aroma/others.prop","item.1.7") == "1"
 	then
 		ui_print("Installing Mega...");
 		package_extract_dir("superman/debloat/Mega", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/others.prop","item.1.7") == "1"
+	file_getprop("/tmp/aroma/others.prop","item.1.8") == "1"
 	then
 		ui_print("Installing OneNote App...");
 		package_extract_dir("superman/debloat/OneNote", "/system/priv-app");
 endif;
 if
-	file_getprop("/tmp/aroma/others.prop","item.1.8") == "1"
+	file_getprop("/tmp/aroma/others.prop","item.1.9") == "1"
 	then
 		ui_print("Installing OperaMax...");
 		package_extract_dir("superman/debloat/OperaMax", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/others.prop","item.1.9") == "1"
+	file_getprop("/tmp/aroma/others.prop","item.1.10") == "1"
 	then
 		ui_print("Installing OperaMini...");
 		package_extract_dir("superman/debloat/OperaMini", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/others.prop","item.1.10") == "1"
+	file_getprop("/tmp/aroma/others.prop","item.1.11") == "1"
 	then
 		ui_print("Installing PhoneInfo...");
 		package_extract_dir("superman/debloat/PhoneInfo", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/others.prop","item.1.11") == "1"
+	file_getprop("/tmp/aroma/others.prop","item.1.12") == "1"
 	then
 		ui_print("Installing RootExplorer...");
 		package_extract_dir("superman/debloat/RootExplorer", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/others.prop","item.1.12") == "1"
+	file_getprop("/tmp/aroma/others.prop","item.1.13") == "1"
 	then
 		ui_print("Installing SDMaid...");
 		package_extract_dir("superman/debloat/SDMaid", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/others.prop","item.1.13") == "1"
+	file_getprop("/tmp/aroma/others.prop","item.1.14") == "1"
+	then
+		ui_print("Installing Tapatalk...");
+		package_extract_dir("superman/debloat/Tapatalk", "/data/app");
+endif;
+if
+	file_getprop("/tmp/aroma/others.prop","item.1.15") == "1"
 	then
 		ui_print("Installing Terminal...");
 		package_extract_dir("superman/debloat/Terminal", "/data/app");
 endif;
 if
-	file_getprop("/tmp/aroma/others.prop","item.1.14") == "1"
+	file_getprop("/tmp/aroma/others.prop","item.1.16") == "1"
 	then
 		ui_print("Installing TitaniumBackup...");
 		package_extract_dir("superman/debloat/TitaniumBackup", "/data/app");
@@ -652,7 +670,7 @@ if
 	file_getprop("/tmp/aroma/media.prop","item.1.3") == "1"
 	then
 		ui_print("Installing Instagram...");
-		package_extract_dir("superman/debloat/Instagram", "/system/app");
+		package_extract_dir("superman/debloat/Instagram", "/data/app");
 endif;
 if
 	file_getprop("/tmp/aroma/media.prop","item.1.4") == "1"

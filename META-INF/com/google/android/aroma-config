@@ -746,7 +746,8 @@ checkbox(
 	"Samsung Music Player",	"",									1,	#-- item.1.26
 	"Samsung OneDrive",	"",									0,	#-- item.1.27
 	"Samsung Notes",	"",									0,	#-- item.1.28
-	"Samsung Video Player",	"",									0	#-- item.1.29
+	"Samsung Video Player",	"",									0,	#-- item.1.29
+	"Samsung Gear 360 viewer",	"",								0	#-- item.1.30
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
@@ -812,18 +813,20 @@ checkbox(
 	"General Apps",		"",									2,	#-- group 1
 	"AdAway",		"To enable and disable adblocking",					1,	#-- item.1.1
 	"BetterBatteryStats",	"Check what's eating your Battery",					0,	#-- item.1.2
-	"FireFox Browser",	"",									0,	#-- item.1.3
-	"Gsam Battery",		"Also a battery monitoring app",					0,	#-- item.1.4
-	"Greenify",		"May help you saving some battery",					0,	#-- item.1.5
-	"Mega",			"Online storage provider",						0,	#-- item.1.6
-	"OneNote",		"",									0,	#-- item.1.7
-	"OperaMax",		"Is used if you want to have UDS working (Ultra-Data Saving)",		0,	#-- item.1.8
-	"Opera Mini Browser",	"",									0,	#-- item.1.9
-	"Phone Info App",	"Check installed software, CSCs available and more",			1,	#-- item.1.10
-	"Root Explorer",	"",									0,	#-- item.1.11
-	"SD Maid",		"Helps keeping your phone clean",					0,	#-- item.1.12
-	"Terminal",		"For terminal commands",						0,	#-- item.1.13
-	"Titanium Backup",	"To backup and restore your Apps",					0	#-- item.1.14
+	"CPU-Z",		"",									0,	#-- item.1.3
+	"FireFox Browser",	"",									0,	#-- item.1.4
+	"Gsam Battery",		"Also a battery monitoring app",					0,	#-- item.1.5
+	"Greenify",		"May help you saving some battery",					0,	#-- item.1.6
+	"Mega",			"Online storage provider",						0,	#-- item.1.7
+	"OneNote",		"",									0,	#-- item.1.8
+	"OperaMax",		"Is used if you want to have UDS working (Ultra-Data Saving)",		0,	#-- item.1.9
+	"Opera Mini Browser",	"",									0,	#-- item.1.10
+	"Phone Info App",	"Check installed software, CSCs available and more",			1,	#-- item.1.11
+	"Root Explorer",	"",									0,	#-- item.1.12
+	"SD Maid",		"Helps keeping your phone clean",					0,	#-- item.1.13
+	"Tapatalk",		"",									0,	#-- item.1.14
+	"Terminal",		"For terminal commands",						0,	#-- item.1.15
+	"Titanium Backup",	"To backup and restore your Apps",					0	#-- item.1.16
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
