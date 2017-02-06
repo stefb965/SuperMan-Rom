@@ -22,11 +22,11 @@
 /system/app/CoreApps_SDK/CoreApps_SDK.apk
 /system/app/SamsungCalendar_Stable/SamsungCalendar_Stable.apk
 /system/app/KnoxSetupWizardClient/KnoxSetupWizardClient.apk
-/system/app/WeatherWidget2017_SE/WeatherWidget2017_SE.apk
 /system/app/VideoCollage_Grace_N/VideoCollage_Grace_N.apk
 /system/app/SecMemo3/SecMemo3.apk
 /system/app/MDMApp/MDMApp.apk
 /system/app/STalkback/STalkback.apk
+/system/app/WeatherWidget2017_SE/WeatherWidget2017_SE.apk
 /system/app/HighlightPlayer_Grace_N/HighlightPlayer_Grace_N.apk
 /system/app/FBAppManager/FBAppManager.apk
 /system/app/Weather2017_SE/Weather2017_SE.apk
