@@ -482,14 +482,13 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"magisk",	"Magisk V10.2",		"",									"group",
-	"yes",		"Yes",			"Magisk V10.2 and its modules for systemless mods",			"select.selected",
-	"no",		"No",			"Won't install magisk",							"select",
+	"magisk",	"Magisk V11",		"",									"group",
+	"yes",		"Yes",			"Magisk V11 will be installed with MagiskSU (already rooted!)",		"select.selected",
+	"no",		"No",			"Won't install Magisk",							"select",
 	"root",		"Root method", 		"",									"group",
 	"su",		"SuperSU 2.79 SR3",	"Will install SuperSU 2.79 SR3",					"select",
-	"phhma",	"Phh's r2 topjohwu",	"Installs phh's supersuser patched for magisk",				"select.selected",
 	"phh",		"Phh's r275",		"Installs standard r275 phh superuser",					"select",
-	"no",		"No root",		"No root will be installed",						"select",
+	"no",		"No additional root",	"I already have Magisk V11 checked above or I want no root",		"select.selected",
 	"busybox",	"Busybox", 		"",									"group",
 	"yes",		"Busybox V1.26.2",	"Will install latest busybox available (magisk compatible)",		"select.selected",
 	"no",		"No busybox",		"Don't install busybox",						"select",
