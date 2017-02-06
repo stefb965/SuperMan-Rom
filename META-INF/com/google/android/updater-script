@@ -1195,10 +1195,10 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
-		ui_print("Installing Magisk V11 for systemless mods...");
+		ui_print("Installing Magisk V11.0 for systemless mods...");
 		package_extract_dir("superman/magisk", "/temp/magisk");
-		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v11.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v11.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v11.0.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v11.0.zip");
 		set_progress(0.800000);
 		ui_print(" ");
 endif;
@@ -1301,7 +1301,7 @@ if
 			is_substring("G930F", getprop("ro.boot.bootloader")),
 				(
 					ui_print(" ");
-					ui_print("Flashing latest DQAS G930F/FD param file");
+					ui_print("Flashing latest DQAZ G930F/FD param file");
 					assert(package_extract_file("superman/bootloader/s7/param.bin", "/dev/block/sda4"));
 					ui_print(" ");
 				),
@@ -1310,7 +1310,7 @@ if
 					is_substring("G935F", getprop("ro.boot.bootloader")),
 						(
 							ui_print(" ");
-							ui_print("Flashing latest DQAS G935F/FD param file");
+							ui_print("Flashing latest DQAZ G935F/FD param file");
 							assert(package_extract_file("superman/bootloader/s7e/param.bin", "/dev/block/sda4"));
 							ui_print(" ");
 						),
@@ -1406,7 +1406,7 @@ if
 			is_substring("G930F", getprop("ro.boot.bootloader")),
 				(
 					ui_print(" ");
-					ui_print("Flashing latest DQA3 G930F/FD Modem");
+					ui_print("Flashing latest DQAF G930F/FD Modem");
 					assert(package_extract_file("superman/modem/s7/modem.bin", "/dev/block/sda8"));
 					assert(package_extract_file("superman/modem/s7/modem_debug.bin", "/dev/block/sda17"));
 					ui_print(" ");
@@ -1416,7 +1416,7 @@ if
 					is_substring("G935F", getprop("ro.boot.bootloader")),
 						(
 							ui_print(" ");
-							ui_print("Flashing latest DQA3 G935F/FD Modem");
+							ui_print("Flashing latest DQAF G935F/FD Modem");
 							assert(package_extract_file("superman/modem/s7e/modem.bin", "/dev/block/sda8"));
 							assert(package_extract_file("superman/modem/s7e/modem_debug.bin", "/dev/block/sda17"));
 							ui_print(" ");
@@ -1459,7 +1459,7 @@ if
 			is_substring("G930F", getprop("ro.boot.bootloader")),
 				(
 					ui_print(" ");
-					ui_print("Flashing latest DQAS G930F/FD BL");
+					ui_print("Flashing latest DQAZ G930F/FD BL");
 					assert(package_extract_file("superman/bootloader/s7/sboot.bin", "/dev/block/sda1"));
 					sleep(1);
 					assert(package_extract_file("superman/bootloader/s7/cm.bin", "/dev/block/sda2"));
@@ -1472,7 +1472,7 @@ if
 					is_substring("G935F", getprop("ro.boot.bootloader")),
 						(
 							ui_print(" ");
-							ui_print("Flashing latest DQAS G935F/FD BL");
+							ui_print("Flashing latest DQAZ G935F/FD BL");
 							assert(package_extract_file("superman/bootloader/s7e/sboot.bin", "/dev/block/sda1"));
 							sleep(1);
 							assert(package_extract_file("superman/bootloader/s7e/cm.bin", "/dev/block/sda2"));

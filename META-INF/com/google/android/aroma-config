@@ -393,8 +393,8 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"kernel",	"Kernel Selection",		"",									"group",
 	"stock",	"Stock Kernel",			"This is just a full stock kernel as you can find on stock rom",	"select",
-	"super",	"SuperKernel",			"SuperKernel V2.0.2 with many tweaks",					"select",
-	"superstock",	"SuperStock",			"Latest SuperStock V2.0.2 for our galaxy s7",				"select.selected",
+	"super",	"SuperKernel",			"SuperKernel V2.1.0 with many tweaks",					"select",
+	"superstock",	"SuperStock",			"Latest SuperStock V2.1.0 for our galaxy s7",				"select.selected",
 	"control",	"Kernel Control app",		"",									"group",
 	"synapse",	"Synapse",			"Installs Synapse app to control the Kernel. Only working on SuperKernel",	"check",
 	"adiutor",	"Kernel Adiutor",		"Installs latest Kernel Adiutor app. You can control all kernels with it",	"check",
@@ -456,7 +456,7 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"camera",	"Camera Selection",		"",											"group",
 	"stock",	"Stock Camera",			"Nothing changed, stock values",							"select.selected",
-	"modded",	"Modded Camera V7",		"Increase bitrates for all camera resolutions and to set pictures at 100 quality.",	"select"
+	"modded",	"Modded Camera V8",		"Increase bitrates for all camera resolutions and to set pictures at 100 quality.",	"select"
 );
 
 alert("Important:", "If you want to install snapchat after this rom, make sure to NOT use root! Snapchat will be UNABLE to login! Install after you logged in to snapchat.");
@@ -482,13 +482,13 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"magisk",	"Magisk V11",		"",									"group",
-	"yes",		"Yes",			"Magisk V11 will be installed with MagiskSU (already rooted!)",		"select.selected",
+	"magisk",	"Magisk V11.0",		"",									"group",
+	"yes",		"Yes",			"Magisk V11.0 will be installed with MagiskSU (already rooted!)",	"select.selected",
 	"no",		"No",			"Won't install Magisk",							"select",
 	"root",		"Root method", 		"",									"group",
 	"su",		"SuperSU 2.79 SR3",	"Will install SuperSU 2.79 SR3",					"select",
 	"phh",		"Phh's r275",		"Installs standard r275 phh superuser",					"select",
-	"no",		"No additional root",	"I already have Magisk V11 checked above or I want no root",		"select.selected",
+	"no",		"No additional root",	"I already have Magisk V11.0 checked above or I want no root",		"select.selected",
 	"busybox",	"Busybox", 		"",									"group",
 	"yes",		"Busybox V1.26.2",	"Will install latest busybox available (magisk compatible)",		"select.selected",
 	"no",		"No busybox",		"Don't install busybox",						"select",
@@ -603,10 +603,10 @@ form(
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
 	"modem",	"Modem update F/FD/W8",		"",										"group",
-	"update",	"Update Modem",			"Will auto update your modem to latest DQA3 on F/FD",				"select.selected",
+	"update",	"Update Modem",			"Will auto update your modem to latest DQAF on F/FD",				"select.selected",
 	"keep",		"Keep current Modem",		"Will keep your current modem and change nothing",				"select",
 	"bootloader",	"Bootloader update F/FD/W8",	"",										"group",
-	"update",	"Update Bootloader",		"Will auto update your BL to DQAS on F/FD/ models. Phone will auto reboot!",		"select.selected",
+	"update",	"Update Bootloader",		"Will auto update your BL to DQAZ on F/FD/ models. Phone will auto reboot!",		"select.selected",
 	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",				"select"
 );
 
