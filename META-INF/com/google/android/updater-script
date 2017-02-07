@@ -1195,10 +1195,10 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","magisk") == "yes"
 	then
-		ui_print("Installing Magisk V11.0 for systemless mods...");
+		ui_print("Installing Magisk V11.1 for systemless mods...");
 		package_extract_dir("superman/magisk", "/temp/magisk");
-		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v11.0.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
-		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v11.0.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/magisk/Magisk-v11.1.zip", "META-INF/com/google/android/*", "-d", "/temp/magisk");
+		run_program("/sbin/busybox", "sh", "/temp/magisk/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/magisk/Magisk-v11.1.zip");
 		set_progress(0.800000);
 		ui_print(" ");
 endif;
