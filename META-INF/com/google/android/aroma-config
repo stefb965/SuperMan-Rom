@@ -604,7 +604,7 @@ form(
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
 	"modem",	"Modem update F/FD/W8",		"",										"group",
-	"update",	"Update Modem",			"Will auto update your modem to latest DQB2 on F/FD",				"select.selected",
+	"update",	"Update Modem",			"Will auto update your modem to latest DQB1 on F/FD",				"select.selected",
 	"keep",		"Keep current Modem",		"Will keep your current modem and change nothing",				"select",
 	"bootloader",	"Bootloader update F/FD/W8",	"",										"group",
 	"update",	"Update Bootloader",		"Will auto update your BL to DQB3 on F/FD/ models. Phone will auto reboot!",		"select.selected",
