@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V2.0");
+ini_set("rom_version",          "V2.1");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G93XF/FD/K/L/S/W8");
-ini_set("rom_date",             "27.01.2017");
+ini_set("rom_date",             "09.02.2017");
 
 ##
 # Show Animated Splash
@@ -604,10 +604,10 @@ form(
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
 	"modem",	"Modem update F/FD/W8",		"",										"group",
-	"update",	"Update Modem",			"Will auto update your modem to latest DQAF on F/FD",				"select.selected",
+	"update",	"Update Modem",			"Will auto update your modem to latest DQB2 on F/FD",				"select.selected",
 	"keep",		"Keep current Modem",		"Will keep your current modem and change nothing",				"select",
 	"bootloader",	"Bootloader update F/FD/W8",	"",										"group",
-	"update",	"Update Bootloader",		"Will auto update your BL to DQAZ on F/FD/ models. Phone will auto reboot!",		"select.selected",
+	"update",	"Update Bootloader",		"Will auto update your BL to DQB3 on F/FD/ models. Phone will auto reboot!",		"select.selected",
 	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",				"select"
 );
 
