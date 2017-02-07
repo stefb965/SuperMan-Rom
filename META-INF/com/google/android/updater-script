@@ -556,6 +556,12 @@ if
 		ui_print("Installing Google Photo...");
 		package_extract_dir("superman/debloat/GooglePhoto", "/system/app");
 endif;
+if
+	file_getprop("/tmp/aroma/google.prop","item.1.12") == "1"
+	then
+		ui_print("Installing Google Assistant...");
+		package_extract_dir("superman/debloat/Google_Assistant", "/system/priv-app");
+endif;
 #-- Other Bloat
 if
 	file_getprop("/tmp/aroma/others.prop","item.1.1") == "1"

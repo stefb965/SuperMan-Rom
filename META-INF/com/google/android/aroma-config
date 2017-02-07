@@ -783,7 +783,8 @@ checkbox(
 	"Google Movies",	"",									0,	#-- item.1.8
 	"Youtube",		"",									0,	#-- item.1.9
 	"AndroidPay",		"",									0,	#-- item.1.10
-	"Google Photos",	"",									0	#-- item.1.11
+	"Google Photos",	"",									0,	#-- item.1.11
+	"Google Assistant",	"",									0	#-- item.1.12
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
