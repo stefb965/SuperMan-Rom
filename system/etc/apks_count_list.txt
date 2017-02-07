@@ -22,11 +22,11 @@
 /system/app/CoreApps_SDK/CoreApps_SDK.apk
 /system/app/SamsungCalendar_Stable/SamsungCalendar_Stable.apk
 /system/app/KnoxSetupWizardClient/KnoxSetupWizardClient.apk
+/system/app/WeatherWidget2017_SE/WeatherWidget2017_SE.apk
 /system/app/VideoCollage_Grace_N/VideoCollage_Grace_N.apk
 /system/app/SecMemo3/SecMemo3.apk
 /system/app/MDMApp/MDMApp.apk
 /system/app/STalkback/STalkback.apk
-/system/app/WeatherWidget2017_SE/WeatherWidget2017_SE.apk
 /system/app/HighlightPlayer_Grace_N/HighlightPlayer_Grace_N.apk
 /system/app/FBAppManager/FBAppManager.apk
 /system/app/Weather2017_SE/Weather2017_SE.apk
@@ -38,12 +38,12 @@
 /system/app/CnnPanel/CnnPanel.apk
 /system/app/GameOptimizer/GameOptimizer.apk
 /system/app/ANTPlusPlugins/ANTPlusPlugins.apk
+/system/app/vsimservice/vsimservice.apk
 /system/app/QuickConnect/QuickConnect.apk
 /system/app/EmergencyModeService/EmergencyModeService.apk
 /system/app/RemoteControl/RemoteControl.apk
 /system/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk
 /system/app/MobilePrintSvc_Samsung/MobilePrintSvc_Samsung.apk
-/system/app/hwlogcollector/hwlogcollector.apk
 /system/app/CarmodeStub/CarmodeStub.apk
 /system/app/CatchFavorites_N/CatchFavorites_N.apk
 /system/app/AdvSoundDetector2015/AdvSoundDetector2015.apk
@@ -108,8 +108,8 @@
 /system/app/KeyChain/KeyChain.apk
 /system/app/Panorama360Viewer/Panorama360Viewer.apk
 /system/app/SilentLog/SilentLog.apk
-/system/app/FidoUafClient_v16/FidoUafClient_v16.apk
 /system/app/FidoUafClient_v15/FidoUafClient_v15.apk
+/system/app/FidoUafClient_v16/FidoUafClient_v16.apk
 /system/app/CaptivePortalLogin/CaptivePortalLogin.apk
 /system/app/EasyOneHand3/EasyOneHand3.apk
 /system/app/ImsSettings/ImsSettings.apk
@@ -174,8 +174,8 @@
 /system/priv-app/SecEmail_N/SecEmail_N.apk
 /system/priv-app/AuthFramework/AuthFramework.apk
 /system/priv-app/Phonesky/Phonesky.apk
-/system/priv-app/GalaxyCare/GalaxyCare.apk
 /system/priv-app/GameHome/GameHome.apk
+/system/priv-app/GalaxyCare/GalaxyCare.apk
 /system/priv-app/SecGallery2015/SecGallery2015.apk
 /system/priv-app/GalaxyApps_3xh/GalaxyApps_3xh.apk
 /system/priv-app/SVoice/SVoice.apk
@@ -189,8 +189,8 @@
 /system/priv-app/GameTools/GameTools.apk
 /system/priv-app/SVoiceLang_RussianPack_RU_1.0/SVoiceLang_RussianPack_RU_1.0.apk
 /system/priv-app/SamsungInCallUI/SamsungInCallUI.apk
-/system/priv-app/GoogleLoginService/GoogleLoginService.apk
 /system/priv-app/SamsungCamera6/SamsungCamera6.apk
+/system/priv-app/GoogleLoginService/GoogleLoginService.apk
 /system/priv-app/AODService_v20/AODService_v20.apk
 /system/priv-app/VoiceNote_5.0/VoiceNote_5.0.apk
 /system/priv-app/SetupWizard/SetupWizard.apk
@@ -214,8 +214,8 @@
 /system/priv-app/FotaAgent/FotaAgent.apk
 /system/priv-app/SamsungPayStub/SamsungPayStub.apk
 /system/priv-app/EmergencyInfo/EmergencyInfo.apk
-/system/priv-app/TouchWizHome_2016C/TouchWizHome_2016C.apk
 /system/priv-app/SamsungVideoPlayer_DreamPreview/SamsungVideoPlayer_DreamPreview.apk
+/system/priv-app/TouchWizHome_2016C/TouchWizHome_2016C.apk
 /system/priv-app/ImsLogger+/ImsLogger+.apk
 /system/priv-app/SamsungPass_1.1/SamsungPass_1.1.apk
 /system/priv-app/SecMyFiles2017/SecMyFiles2017.apk

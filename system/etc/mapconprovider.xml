@@ -1178,6 +1178,17 @@
              <apn apnName="supl" ratPriority="LTE" />
              <apn apnName="dun" ratPriority="LTE" />
          </operator>
+         <operator operatorNumeric="722310">
+             <apn apnName="ims" ratPriority="IWLAN:LTE" />
+             <apn apnName="mms" ratPriority="LTE" />
+             <apn apnName="xcap" ratPriority="IWLAN:LTE" />
+             <apn apnName="cbs" ratPriority="LTE" />
+             <apn apnName="emergency" ratPriority="LTE:IWLAN" />
+             <apn apnName="default" ratPriority="LTE" />
+             <apn apnName="hipri" ratPriority="LTE" />
+             <apn apnName="supl" ratPriority="LTE" />
+             <apn apnName="dun" ratPriority="LTE" />
+         </operator>
          <operator operatorNumeric="default">
              <apn apnName="ims" ratPriority="IWLAN:LTE" />
              <apn apnName="mms" ratPriority="LTE" />

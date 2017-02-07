@@ -489,6 +489,12 @@ if
 		ui_print("Installing Samsung Gear Viewer...");
 		package_extract_dir("superman/debloat/Gear_Viewer", "/data/app");
 endif;
+if
+	file_getprop("/tmp/aroma/samsung.prop","item.1.31") == "1"
+	then
+		ui_print("Installing Knox...");
+		package_extract_dir("superman/debloat/Knox", "/system");
+endif;
 #-- Google Bloat
 if
 	file_getprop("/tmp/aroma/google.prop","item.1.1") == "1"

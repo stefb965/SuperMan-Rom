@@ -51,6 +51,14 @@ auditfilter system_app { platform_app priv_app untrusted_app sec_untrusted_app t
 # avc:  denied  { execute } for  pid=5538 comm="ktailbarservice" path="/data/data/com.samsung.android.app.cocktailbarservice/cache/Generated1725786881.dex" dev="sda22" ino=66007 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:app_data_file:s0:c512,c768 tclass=file permissive=0
 auditfilter platform_app app_data_file:file execute; comm="ktailbarservice"
 
+# board/N_review_request/view/21663399/?page=1
+# avc:  denied  { execute } for  pid=21012 comm="id.app.reminder" path="/data/data/com.google.android.gms/app_chimera/m/00000002/oat/arm64/DynamiteModulesB_GmsCore_prodmnc_alldpi_release.odex" dev="sda24" ino=1114739 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:app_data_file:s0:c512,c768 tclass=file permissive=0 SEPF_SECMOBILE_7.0_0002
+auditfilter platform_app app_data_file:file execute; comm="id.app.reminder"
+
+# board/N_review_request/view/21664886/?page=1
+#  avc:  denied  { execute } for  pid=28533 comm="androidmapsapi-" path="/data/data/com.google.android.gms/app_chimera/m/00000001/oat/arm64/DynamiteModulesA_GmsCore_prodmnc_alldpi_release.odex" dev="sda24" ino=656091 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:app_data_file:s0:c512,c768 tclass=file permissive=0 SEPF_SECMOBILE_7.0_0002
+auditfilter platform_app app_data_file:file execute; comm="androidmapsapi-"
+
 ### untrusted_app ###
 # P160927-04739 com.facebook.katana
 # avc:  denied  { read } for  pid=1466 comm="facebook.katana" name="1466-0" dev="debugfs" ino=506785 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:debugfs:s0 tclass=file permissive=0

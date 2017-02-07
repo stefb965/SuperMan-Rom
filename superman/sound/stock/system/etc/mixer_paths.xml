@@ -501,6 +501,119 @@
 		<path name="wificall_wb-speaker" />
 	</path>
 
+	<!-- wificall EVS -->
+	<path name="wificall_evs-handset">
+		<path name="mute-speaker" />
+		<ctl name="Sample Rate 2" value="32kHz" />
+		<ctl name="Sample Rate 3" value="96kHz" />
+		<!-- DSP4: 32K -->
+		<ctl name="DSP4 Rate" value="SYNCCLK rate 2" />
+		<!-- ISRC1: 48K <-> 96K -->
+		<ctl name="ISRC1 FSL" value="SYNCCLK rate 1" />
+		<ctl name="ISRC1 FSH" value="SYNCCLK rate 3" />
+		<!-- ISRC2: 32K <-> 96K -->
+		<ctl name="ISRC2 FSL" value="SYNCCLK rate 2" />
+		<ctl name="ISRC2 FSH" value="SYNCCLK rate 3" />
+		<!-- EVS RX routing -->
+		<ctl name="ISRC1INT3 Input" value="AIF1RX1" />
+		<ctl name="ISRC2DEC3 Input" value="ISRC1INT3" />
+		<ctl name="DSP4 Firmware" value="RX_EVS" />
+		<ctl name="DSP4 Aux 1" value="ISRC2DEC3" />
+		<ctl name="DSP4 Aux 2" value="ISRC2DEC1" />
+		<ctl name="DSP4 Aux 3" value="ISRC2DEC2" />
+		<ctl name="ISRC2INT3 Input" value="DSP4.3" />
+		<ctl name="ISRC1DEC4 Input" value="ISRC2INT3" />
+		<ctl name="HPOUT3L Input 1" value="ISRC1DEC4" />
+		<ctl name="HPOUT3R Input 1" value="ISRC1DEC4" />
+		<ctl name="HPOUT3 EDRE Switch" value="1" />
+		<ctl name="RCV Switch" value="1" />
+	</path>
+
+	<path name="wificall_evs-speaker">
+		<path name="unmute-speaker" />
+		<ctl name="Sample Rate 2" value="32kHz" />
+		<ctl name="Sample Rate 3" value="96kHz" />
+		<ctl name="ASRC2 Rate 1" value="SYNCCLK rate 1" />
+		<ctl name="ASRC2 Rate 2" value="ASYNCCLK rate 2" />
+		<!-- DSP4: 32K -->
+		<ctl name="DSP4 Rate" value="SYNCCLK rate 2" />
+		<!-- ISRC1: 48K <-> 96K -->
+		<ctl name="ISRC1 FSL" value="SYNCCLK rate 1" />
+		<ctl name="ISRC1 FSH" value="SYNCCLK rate 3" />
+		<!-- ISRC2: 32K <-> 96K -->
+		<ctl name="ISRC2 FSL" value="SYNCCLK rate 2" />
+		<ctl name="ISRC2 FSH" value="SYNCCLK rate 3" />
+		<!-- EVS RX routing -->
+		<ctl name="ISRC1INT3 Input" value="AIF1RX1" />
+		<ctl name="ISRC2DEC3 Input" value="ISRC1INT3" />
+		<ctl name="DSP4 Firmware" value="RX_EVS" />
+		<ctl name="DSP4 Aux 1" value="ISRC2DEC3" />
+		<ctl name="DSP4 Aux 2" value="ISRC2DEC1" />
+		<ctl name="DSP4 Aux 3" value="ISRC2DEC2" />
+		<ctl name="ISRC2INT3 Input" value="DSP4.3" />
+		<ctl name="ISRC1DEC4 Input" value="ISRC2INT3" />
+		<ctl name="ASRC2IN1L Input" value="ISRC1DEC4" />
+		<ctl name="ASRC2IN1R Input" value="ISRC1DEC4" />
+		<ctl name="DSP5L Input 1" value="ASRC2IN1L" />
+		<ctl name="DSP5L Input 2" value="ASRC2IN1R" />
+		<ctl name="AIF4TX1 Input 1" value="DSP5.1" />
+		<ctl name="AIF4TX2 Input 1" value="DSP5.1" />
+		<ctl name="DSP5 Aux 2" value="AIF4RX1" />
+		<ctl name="DSP5 Aux 3" value="AIF4RX2" />
+		<ctl name="ASRC2IN2L Input" value="DSP5.1" />
+		<ctl name="ISRC1INT4 Input" value="ASRC2IN2L" />
+		<ctl name="ISRC2DEC4 Input" value="ISRC1INT4" />
+		<ctl name="VI SENSING Switch" value="1" />
+		<ctl name="SPK Switch" value="1" />
+	</path>
+
+	<path name="wificall_evs-headset">
+		<ctl name="Sample Rate 2" value="32kHz" />
+		<ctl name="Sample Rate 3" value="96kHz" />
+		<ctl name="ASRC1 Rate 1" value="SYNCCLK rate 2" />
+		<!-- DSP4: 32K -->
+		<ctl name="DSP4 Rate" value="SYNCCLK rate 2" />
+		<!-- ISRC1: 48K <-> 96K -->
+		<ctl name="ISRC1 FSL" value="SYNCCLK rate 1" />
+		<ctl name="ISRC1 FSH" value="SYNCCLK rate 3" />
+		<!-- ISRC2: 32K <-> 96K -->
+		<ctl name="ISRC2 FSL" value="SYNCCLK rate 2" />
+		<ctl name="ISRC2 FSH" value="SYNCCLK rate 3" />
+		<!-- EVS RX routing -->
+		<ctl name="ISRC1INT3 Input" value="AIF1RX1" />
+		<ctl name="ISRC2DEC3 Input" value="ISRC1INT3" />
+		<ctl name="DSP4 Firmware" value="RX_EVS" />
+		<ctl name="DSP4 Aux 1" value="ISRC2DEC3" />
+		<ctl name="DSP4 Aux 2" value="ISRC2DEC1" />
+		<ctl name="DSP4 Aux 3" value="ISRC2DEC2" />
+		<ctl name="ISRC2INT3 Input" value="DSP4.3" />
+		<ctl name="ISRC1DEC4 Input" value="ISRC2INT3" />
+		<ctl name="HPOUT1L Input 1" value="ISRC1DEC4" />
+		<ctl name="HPOUT1R Input 1" value="ISRC1DEC4" />
+		<ctl name="HP Switch" value="1" />
+	</path>
+
+	<path name="wificall_evs-headphone">
+		<path name="wificall_evs-headset" />
+	</path>
+
+	<path name="wificall_evs-bt-sco-headset">
+		<!-- TODO: We will make this -->
+	</path>
+
+	<path name="wificall_evs-bt-ble-headset">
+		<!-- TODO: We will make this -->
+	</path>
+
+	<!-- wificall EVS / EXTRA_VOL -->
+	<path name="wificall_evs_extra_vol-handset">
+		<path name="wificall_evs-handset" />
+	</path>
+
+	<path name="wificall_evs_extra_vol-speaker">
+		<path name="wificall_evs-speaker" />
+	</path>
+
 	<!-- Video call playback -->
 	<path name="video_call-handset">
 		<path name="mute-speaker" />
@@ -1862,6 +1975,119 @@
 
 	<path name="wificall_wb_extra_vol-speaker-mic">
 		<path name="wificall_wb-speaker-mic" />
+	</path>
+
+	<!-- wificall EVS -->
+	<path name="wificall_evs-handset-mic">
+		<ctl name="IN1R Digital Volume" value="0" />
+		<ctl name="Sample Rate 2" value="32kHz" />
+		<ctl name="Sample Rate 3" value="96kHz" />
+		<!-- ISRC1: 48K <-> 96K -->
+		<ctl name="ISRC1 FSL" value="SYNCCLK rate 1" />
+		<ctl name="ISRC1 FSH" value="SYNCCLK rate 3" />
+		<!-- ISRC2: 32K <-> 96K -->
+		<ctl name="ISRC2 FSL" value="SYNCCLK rate 2" />
+		<ctl name="ISRC2 FSH" value="SYNCCLK rate 3" />
+		<!-- EVS RX routing -->
+		<ctl name="Headset Mic Switch" value="0" />
+		<ctl name="Main Mic Switch" value="1" />
+		<ctl name="Sub Mic Switch" value="1" />
+		<ctl name="EQ1 Input 1" value="IN1R" />
+		<ctl name="ISRC1INT1 Input" value="EQ1" />
+		<ctl name="ISRC2DEC1 Input" value="ISRC1INT1" />
+		<ctl name="EQ2 Input 1" value="IN3L" />
+		<ctl name="ISRC1INT2 Input" value="EQ2" />
+		<ctl name="ISRC2DEC2 Input" value="ISRC1INT2" />
+		<ctl name="AIF1TX1 Input 1" value="ISRC1DEC1" />
+		<ctl name="AIF1TX2 Input 1" value="ISRC1DEC2" />
+		<ctl name="ISRC1DEC1 Input" value="ISRC2INT1" />
+		<ctl name="ISRC1DEC2 Input" value="ISRC2INT2" />
+		<ctl name="ISRC2INT1 Input" value="DSP2.1" />
+		<ctl name="ISRC2INT2 Input" value="DSP2.1" />
+		<ctl name="DSP2 Firmware" value="TX_EVS" />
+		<ctl name="DSP3 Firmware" value="TX_EVS" />
+		<ctl name="DSP2 Virtual Input" value="Shared Memory" />
+		<ctl name="DSP3 Virtual Input" value="Shared Memory" />
+		<ctl name="DSP3L Input 1" value="ISRC2DEC1" />
+		<ctl name="DSP3R Input 1" value="ISRC2DEC2" />
+		<ctl name="DSP3 Aux 1" value="ISRC2DEC3" />
+	</path>
+
+	<path name="wificall_evs-speaker-mic">
+		<ctl name="IN1R Digital Volume" value="0" />
+		<ctl name="Sample Rate 2" value="32kHz" />
+		<ctl name="Sample Rate 3" value="96kHz" />
+		<!-- ISRC1: 48K <-> 96K -->
+		<ctl name="ISRC1 FSL" value="SYNCCLK rate 1" />
+		<ctl name="ISRC1 FSH" value="SYNCCLK rate 3" />
+		<!-- ISRC2: 32K <-> 96K -->
+		<ctl name="ISRC2 FSL" value="SYNCCLK rate 2" />
+		<ctl name="ISRC2 FSH" value="SYNCCLK rate 3" />
+		<!-- EVS RX routing -->
+		<ctl name="Headset Mic Switch" value="0" />
+		<ctl name="Main Mic Switch" value="1" />
+		<ctl name="Sub Mic Switch" value="1" />
+		<ctl name="EQ3 Input 1" value="IN1R" />
+		<ctl name="ISRC1INT1 Input" value="EQ3" />
+		<ctl name="ISRC2DEC1 Input" value="ISRC1INT1" />
+		<ctl name="EQ4 Input 1" value="IN3L" />
+		<ctl name="ISRC1INT2 Input" value="EQ4" />
+		<ctl name="ISRC2DEC2 Input" value="ISRC1INT2" />
+		<ctl name="AIF1TX1 Input 1" value="ISRC1DEC1" />
+		<ctl name="AIF1TX2 Input 1" value="ISRC1DEC2" />
+		<ctl name="ISRC1DEC1 Input" value="ISRC2INT1" />
+		<ctl name="ISRC1DEC2 Input" value="ISRC2INT2" />
+		<ctl name="ISRC2INT1 Input" value="DSP2.1" />
+		<ctl name="ISRC2INT2 Input" value="DSP2.1" />
+		<ctl name="DSP2 Firmware" value="TX_EVS" />
+		<ctl name="DSP3 Firmware" value="TX_EVS" />
+		<ctl name="DSP2 Virtual Input" value="Shared Memory" />
+		<ctl name="DSP3 Virtual Input" value="Shared Memory" />
+		<ctl name="DSP3L Input 1" value="ISRC2DEC2" />
+		<ctl name="DSP3R Input 1" value="ISRC2DEC1" />
+		<ctl name="DSP3 Aux 1" value="ISRC2DEC4" />
+	</path>
+
+	<path name="wificall_evs-headset-mic">
+		<ctl name="Sample Rate 2" value="32kHz" />
+		<ctl name="Sample Rate 3" value="96kHz" />
+		<!-- DSP4: 32K -->
+		<ctl name="DSP4 Rate" value="SYNCCLK rate 2" />
+		<!-- EVS TX routing -->
+		<ctl name="Headset Mic Switch" value="1" />
+		<ctl name="LHPF1 Input 1" value="IN2L" />
+		<ctl name="AIF1TX1 Input 1" value="LHPF1" />
+		<ctl name="AIF1TX2 Input 1" value="LHPF1" />
+	</path>
+
+	<path name="wificall_evs-headphone-mic">
+		<ctl name="Sample Rate 2" value="32kHz" />
+		<ctl name="Sample Rate 3" value="96kHz" />
+		<!-- DSP4: 32K -->
+		<ctl name="DSP4 Rate" value="SYNCCLK rate 2" />
+		<!-- EVS TX routing -->
+		<ctl name="Main Mic Switch" value="1" />
+		<ctl name="EQ1 Input 1" value="IN1R" />
+		<ctl name="LHPF1 Input 1" value="EQ1" />
+		<ctl name="AIF1TX1 Input 1" value="LHPF1" />
+		<ctl name="AIF1TX2 Input 1" value="LHPF1" />
+	</path>
+
+	<path name="wificall_evs-bt-sco-headset-in">
+		<!-- TODO: We will make this -->
+	</path>
+
+	<path name="wificall_evs-bt-ble-headset-in">
+		<!-- TODO: We will make this -->
+	</path>
+
+	<!-- wificall EVS / EXTRA_VOL -->
+	<path name="wificall_evs_extra_vol-handset-mic">
+		<path name="wificall_evs-handset-mic" />
+	</path>
+
+	<path name="wificall_evs_extra_vol-speaker-mic">
+		<path name="wificall_evs-speaker-mic" />
 	</path>
 
 	<!-- Video call input -->

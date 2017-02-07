@@ -1,8 +1,8 @@
-79
+91
 38
 0
 1
-46
+58
 LVVEFS_ABSOLUTE_PATH
 /vendor/etc/nxp/voiceexperience/mVoIP/Rx_ControlParams_WIDEBAND_EARPIECE.txt
 /vendor/etc/nxp/voiceexperience/mVoIP/Rx_ControlParams_WIDEBAND_SPEAKER.txt
@@ -38,6 +38,12 @@ LVVEFS_ABSOLUTE_PATH
 /vendor/etc/nxp/voiceexperience/WifiCalling/Rx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt
 /vendor/etc/nxp/voiceexperience/WifiCalling/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt
 /vendor/etc/nxp/voiceexperience/WifiCalling/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET_NREC_ON.txt
+/vendor/etc/nxp/voiceexperience/WifiCalling/Rx_ControlParams_SUPERWIDEBAND_EARPIECE.txt
+/vendor/etc/nxp/voiceexperience/WifiCalling/Rx_ControlParams_SUPERWIDEBAND_SPEAKER.txt
+/vendor/etc/nxp/voiceexperience/WifiCalling/Rx_ControlParams_SUPERWIDEBAND_WIRED_HEADSET.txt
+/vendor/etc/nxp/voiceexperience/WifiCalling/Rx_ControlParams_SUPERWIDEBAND_WIRED_HEADPHONE.txt
+/vendor/etc/nxp/voiceexperience/WifiCalling/Rx_ControlParams_SUPERWIDEBAND_BLUETOOTH_SCO_HEADSET.txt
+/vendor/etc/nxp/voiceexperience/WifiCalling/Rx_ControlParams_SUPERWIDEBAND_BLUETOOTH_SCO_HEADSET_NREC_ON.txt
 /vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_NARROWBAND_EARPIECE.txt
 /vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_NARROWBAND_SPEAKER.txt
 /vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_NARROWBAND_WIRED_HEADSET.txt
@@ -50,6 +56,12 @@ LVVEFS_ABSOLUTE_PATH
 /vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_WIDEBAND_WIRED_HEADPHONE.txt
 /vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET.txt
 /vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_WIDEBAND_BLUETOOTH_SCO_HEADSET_NREC_ON.txt
+/vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_SUPERWIDEBAND_EARPIECE.txt
+/vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_SUPERWIDEBAND_SPEAKER.txt
+/vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_SUPERWIDEBAND_WIRED_HEADSET.txt
+/vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_SUPERWIDEBAND_WIRED_HEADPHONE.txt
+/vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_SUPERWIDEBAND_BLUETOOTH_SCO_HEADSET.txt
+/vendor/etc/nxp/voiceexperience/WifiCallingHAC/Rx_ControlParams_SUPERWIDEBAND_BLUETOOTH_SCO_HEADSET_NREC_ON.txt
 0
 0
 /data/nxp-dump/LVVEFS_Rx_Status.bin

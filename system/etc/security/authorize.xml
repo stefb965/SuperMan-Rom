@@ -926,6 +926,14 @@
 			<package name="com.sec.knox.containeragent2" seinfo="shared" />
 		</method>
 
+		<method name="isIrisLockscreenActivated">
+			<seinfo value="platform" />
+			<seinfo value="shared" />
+			<package name="com.sec.knox.containeragent2" seinfo="platform" />
+			<package name="com.sec.knox.containeragent2" seinfo="shared" />
+			<package name="com.samsung.knox.securefolder" seinfo="platform" />
+		</method>
+
 		<method name="savePasswordResetTokenInTima">
 			<seinfo value="platform" />
 			<seinfo value="shared" />
@@ -1134,6 +1142,15 @@
 			<seinfo value="platform" />
 			<seinfo value="shared" />
 		</method>
+
+		<method name="startActivityThroughPersona">
+			<seinfo value="platform" />
+			<seinfo value="shared" />
+			<package name="com.sec.knox.containeragent2" seinfo="platform" />
+			<package name="com.sec.knox.containeragent2" seinfo="shared" />
+			<package name="com.samsung.knox.securefolder" seinfo="platform" />	
+		</method>
+
 	</service>
 
 

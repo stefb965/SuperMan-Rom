@@ -483,12 +483,13 @@ form(
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
 	"magisk",	"Magisk V11.1",		"",									"group",
-	"yes",		"Yes",			"Magisk V11.1 will be installed with MagiskSU (already rooted!)",	"select.selected",
+	"yes",		"Yes",			"Magisk V11.1 will be installed with MagiskSU",				"select.selected",
 	"no",		"No",			"Won't install Magisk",							"select",
 	"root",		"Root method", 		"",									"group",
 	"su",		"SuperSU 2.79 SR3",	"Will install SuperSU 2.79 SR3",					"select",
-	"phh",		"Phh's r275",		"Installs standard r275 phh superuser",					"select",
-	"no",		"No additional root",	"I already have Magisk V11.1 checked above or I want no root",		"select.selected",
+	"magisk",	"MagiskSU",		"Installs MagiskSU based on phh root",					"select.selected",
+	"phh",		"Phh's r275",		"Installs normal r275 phh superuser",					"select",
+	"no",		"No additional root",	"I don't want any root method to be installed",				"select",
 	"busybox",	"Busybox", 		"",									"group",
 	"yes",		"Busybox V1.26.2",	"Will install latest busybox available (magisk compatible)",		"select.selected",
 	"no",		"No busybox",		"Don't install busybox",						"select",
@@ -746,7 +747,8 @@ checkbox(
 	"Samsung OneDrive",	"",									0,	#-- item.1.27
 	"Samsung Notes",	"",									0,	#-- item.1.28
 	"Samsung Video Player",	"",									0,	#-- item.1.29
-	"Samsung Gear 360 viewer",	"",								0	#-- item.1.30
+	"Samsung Gear 360 viewer",	"",								0,	#-- item.1.30
+	"Knox",			"I don't know why but some people want knox back, here you go!",	0	#-- item.1.31
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
