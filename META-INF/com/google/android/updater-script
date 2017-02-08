@@ -191,6 +191,12 @@ ifelse(
 					ui_print("Installing modded SystemUI...");
 					package_extract_dir("superman/systemui/modded/s7", "/system/priv-app");
 					package_extract_dir("superman/systemui/minitfiles", "/system/priv-app");
+			if
+				file_getprop("/tmp/aroma/theme.prop","darkside") == "install"
+				then
+					ui_print("Installing themed SystemUI...");
+					package_extract_dir("superman/theme/systemui/s7", "/system/priv-app");
+			endif;
 			endif;
 		),
 		(
@@ -200,6 +206,12 @@ ifelse(
 					ui_print("Installing modded SystemUI...");
 					package_extract_dir("superman/systemui/modded/s7e", "/system/priv-app");
 					package_extract_dir("superman/systemui/minitfiles", "/system/priv-app");
+			if
+				file_getprop("/tmp/aroma/theme.prop","darkside") == "install"
+				then
+					ui_print("Installing themed SystemUI...");
+					package_extract_dir("superman/theme/systemui/s7e", "/system/priv-app");
+			endif;
 			endif;
 		)
 );
@@ -247,6 +259,14 @@ if
 	then
 		ui_print("Installing white superman animation...");
 		package_extract_dir("superman/animation/superman_white", "/system/media");
+endif;
+#-- Theme
+if
+	file_getprop("/tmp/aroma/theme.prop","darkside") == "install"
+	then
+		ui_print("Installing SuperMan Theme...");
+		package_extract_dir("superman/theme/app", "/system/app");
+		package_extract_dir("superman/theme/priv-app", "/system/priv-app");
 endif;
 #-- Model
 ui_print(" ");
@@ -380,6 +400,12 @@ if
 	then
 		ui_print("Installing Gallery...");
 		package_extract_dir("superman/debloat/Gallery", "/system/priv-app");
+if
+	file_getprop("/tmp/aroma/theme.prop","darkside") == "install"
+	then
+		ui_print("Installing themed Gallery...");
+		package_extract_dir("superman/theme/debloat", "/system/priv-app");
+endif;
 endif;
 if
 	file_getprop("/tmp/aroma/samsung.prop","item.1.13") == "1"

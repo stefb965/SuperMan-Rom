@@ -433,32 +433,6 @@ form(
 	"yes",		"Install init.d tweaks",	"Zipaligns apps and optimize database at startup. Use at your own risk!",	"select"
 );
 
-##
-# Camera Form
-#
-
-form(
-    "Camera",
-    "Modded or stock Camera application?",
-    "icons/install2",
-    "camera.prop",
-  #
-  # Type:
-  #  - group              = Group
-  #  - select             = Select Item
-  #  - select.selected    = Selected Select Item
-  #  - check              = Checkbox Item
-  #  - check.checked      = Checked Checkbox Item
-  #  - hide               = Hidden
-  #
-  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
-  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
-  #-------------+--------+-------------------------------------------------------+---------------#
-	"camera",	"Camera Selection",		"",											"group",
-	"stock",	"Stock Camera",			"Nothing changed, stock values",							"select.selected",
-	"modded",	"Modded Camera V8",		"Increase bitrates for all camera resolutions and to set pictures at 100 quality.",	"select"
-);
-
 alert("Important:", "If you want to install snapchat after this rom, make sure to NOT use root! Snapchat will be UNABLE to login! Install after you logged in to snapchat.");
 
 ##
@@ -499,6 +473,32 @@ form(
 	"arise",	"ARISE Deuteronomy",	"A.R.I.S.E sound system which is similar to V4A",			"select",
 	"dap",		"Dolby Atmos",		"Installs dolby atmos onto your phone",					"select",
 	"no",		"No SoundMod",		"Viper4Android won't be installed",					"select.selected"
+);
+
+##
+# Camera Form
+#
+
+form(
+    "Camera",
+    "Modded or stock Camera application?",
+    "icons/install2",
+    "camera.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"camera",	"Camera Selection",		"",											"group",
+	"stock",	"Stock Camera",			"Nothing changed, stock values",							"select.selected",
+	"modded",	"Modded Camera V8",		"Increase bitrates for all camera resolutions and to set pictures at 100 quality.",	"select"
 );
 
 ##
@@ -583,6 +583,32 @@ form(
 );
 
 ##
+# Launcher Form
+#
+
+form(
+    "Launcher",
+    "Choose between stock and modded launcher",
+    "icons/install2",
+    "launcher.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"launcher",	"Launcher", 		"",									"group",
+	"stock",	"Stock Launcher",	"Normal touchwiz launcher as always",					"select",
+	"modded",	"Modded Launcher",	"Touchwiz Page Transition effects, TWSwipe with will replace Filpboard",	"select.selected"
+);
+
+##
 # Modem Form
 #
 
@@ -609,32 +635,6 @@ form(
 	"bootloader",	"Bootloader update F/FD/W8",	"",										"group",
 	"update",	"Update Bootloader",		"Will auto update your BL to DQB3 on F/FD/ models. Phone will auto reboot!",		"select.selected",
 	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",				"select"
-);
-
-##
-# Launcher Form
-#
-
-form(
-    "Launcher",
-    "Choose between stock and modded launcher",
-    "icons/install2",
-    "launcher.prop",
-  #
-  # Type:
-  #  - group              = Group
-  #  - select             = Select Item
-  #  - select.selected    = Selected Select Item
-  #  - check              = Checkbox Item
-  #  - check.checked      = Checked Checkbox Item
-  #  - hide               = Hidden
-  #
-  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
-  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
-  #-------------+--------+-------------------------------------------------------+---------------#
-	"launcher",	"Launcher", 		"",									"group",
-	"stock",	"Stock Launcher",	"Normal touchwiz launcher as always",					"select",
-	"modded",	"Modded Launcher",	"Touchwiz Page Transition effects, TWSwipe with will replace Filpboard",	"select.selected"
 );
 
 ##
@@ -689,9 +689,35 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"adblocker",	"Adblocker",			"",										"group",
+	"adblocker",	"Adblocker",		"",											"group",
 	"enable",	"Enable by default",	"Enables Adblocker by default (3minit battery needs disabled adblocker to work)",	"select.selected",
 	"disable",	"Disable by default",	"Disables Adblocker by default. However you can still enable it in the app later",	"select"
+);
+
+##
+# AdAway Form
+#
+
+form(
+    "SuperMan theme",
+    "Installs Dark Side of SuperMan theme by Alex74",
+    "icons/install2",
+    "theme.prop",
+  #
+  # Type:
+  #  - group              = Group
+  #  - select             = Select Item
+  #  - select.selected    = Selected Select Item
+  #  - check              = Checkbox Item
+  #  - check.checked      = Checked Checkbox Item
+  #  - hide               = Hidden
+  #
+  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
+  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
+  #-------------+--------+-------------------------------------------------------+---------------#
+	"darkside",	"Darkside Theme",	"",												"group",
+	"install",	"Install Theme",	"Enables new theme for superman made by Alex74. Colors are blue/black (beautiful design)",	"select",
+	"stock",	"Keep Stock Theme",	"Won't install any theme and keep it stock",							"select.selected"
 );
 
 alert("Attention", "Removing samsung apps can lead to force closes and not working features!");
