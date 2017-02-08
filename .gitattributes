@@ -2,3 +2,4 @@ system/app/WebViewGoogle/*.apk filter=lfs diff=lfs merge=lfs -text
 system/app/Chrome/Chrome.apk filter=lfs diff=lfs merge=lfs -text
 superman/debloat/Chrome/Chrome/Chrome.apk filter=lfs diff=lfs merge=lfs -text
 debloat/superman/debloat/Chrome/Chrome.apk filter=lfs diff=lfs merge=lfs -text
+debloat/superman/viper4android/ARISE_Deuteronomy_2.68.zip filter=lfs diff=lfs merge=lfs -text
