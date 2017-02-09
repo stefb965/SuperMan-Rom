@@ -267,6 +267,7 @@ if
 		ui_print("Installing SuperMan Theme...");
 		package_extract_dir("superman/theme/app", "/system/app");
 		package_extract_dir("superman/theme/priv-app", "/system/priv-app");
+		package_extract_dir("superman/theme/framework", "/system/framework");
 endif;
 #-- Model
 ui_print(" ");
