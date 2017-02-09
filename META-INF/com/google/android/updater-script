@@ -1305,16 +1305,6 @@ if
 		ui_print(" ");
 endif;
 if
-	file_getprop("/tmp/aroma/magisk.prop","v4a") == "arise"
-	then
-		ui_print("Installing Viper4 ARISE...");
-		package_extract_dir("superman/viper4android", "/temp/viper4android");
-		run_program("/sbin/busybox", "unzip", "/temp/viper4android/ARISE_Deuteronomy_2.68.zip", "META-INF/com/google/android/*", "-d", "/temp/viper4android");
-		run_program("/sbin/busybox", "sh", "/temp/viper4android/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/viper4android/ARISE_Deuteronomy_2.68.zip");
-		set_progress(0.950000);
-		ui_print(" ");
-endif;
-if
 	file_getprop("/tmp/aroma/magisk.prop","v4a") == "dap"
 	then
 		ui_print("Installing Dolby Atmos...");

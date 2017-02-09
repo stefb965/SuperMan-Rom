@@ -470,7 +470,6 @@ form(
 	"v4a",		"Sound Mods",		"",									"group",
 	"yes",		"Normal V4A",		"Normal system patch will be applied",					"select",
 	"yesma",	"Magisk V4A",		"Magisk compatible viper4android will be installed",			"select",
-	"arise",	"ARISE Deuteronomy",	"A.R.I.S.E sound system which is similar to V4A",			"select",
 	"dap",		"Dolby Atmos",		"Installs dolby atmos onto your phone",					"select",
 	"no",		"No SoundMod",		"Viper4Android won't be installed",					"select.selected"
 );
@@ -695,7 +694,7 @@ form(
 );
 
 ##
-# AdAway Form
+# Theme Form
 #
 
 form(
