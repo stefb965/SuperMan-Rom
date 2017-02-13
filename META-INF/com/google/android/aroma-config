@@ -497,7 +497,7 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"camera",	"Camera Selection",		"",											"group",
 	"stock",	"Stock Camera",			"Nothing changed, stock values",							"select.selected",
-	"modded",	"Modded Camera V8",		"Increase bitrates for all camera resolutions and to set pictures at 100 quality.",	"select"
+	"modded",	"Modded Camera V8.1",		"Increase bitrates for all camera resolutions and to set pictures at 100 quality.",	"select"
 );
 
 ##
