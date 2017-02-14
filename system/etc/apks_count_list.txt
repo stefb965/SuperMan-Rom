@@ -108,8 +108,8 @@
 /system/app/KeyChain/KeyChain.apk
 /system/app/Panorama360Viewer/Panorama360Viewer.apk
 /system/app/SilentLog/SilentLog.apk
-/system/app/FidoUafClient_v15/FidoUafClient_v15.apk
 /system/app/FidoUafClient_v16/FidoUafClient_v16.apk
+/system/app/FidoUafClient_v15/FidoUafClient_v15.apk
 /system/app/CaptivePortalLogin/CaptivePortalLogin.apk
 /system/app/EasyOneHand3/EasyOneHand3.apk
 /system/app/ImsSettings/ImsSettings.apk
@@ -167,8 +167,8 @@
 /system/priv-app/SystemUI/SystemUI.apk
 /system/priv-app/PhotoStudio_WQHD_Grace/PhotoStudio_WQHD_Grace.apk
 /system/priv-app/SamsungContacts80/SamsungContacts80.apk
-/system/priv-app/OneDrive_Samsung_v2/OneDrive_Samsung_v2.apk
 /system/priv-app/TeleService/TeleService.apk
+/system/priv-app/OneDrive_Samsung_v2/OneDrive_Samsung_v2.apk
 /system/priv-app/Messaging_Common/Messaging_Common.apk
 /system/priv-app/Crane/Crane.apk
 /system/priv-app/SecEmail_N/SecEmail_N.apk
@@ -191,8 +191,8 @@
 /system/priv-app/SamsungInCallUI/SamsungInCallUI.apk
 /system/priv-app/SamsungCamera6/SamsungCamera6.apk
 /system/priv-app/GoogleLoginService/GoogleLoginService.apk
-/system/priv-app/AODService_v20/AODService_v20.apk
 /system/priv-app/VoiceNote_5.0/VoiceNote_5.0.apk
+/system/priv-app/AODService_v20/AODService_v20.apk
 /system/priv-app/SetupWizard/SetupWizard.apk
 /system/priv-app/SVoiceLang_EnglishPack_US_1.0/SVoiceLang_EnglishPack_US_1.0.apk
 /system/priv-app/QuickAssist/QuickAssist.apk

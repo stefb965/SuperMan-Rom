@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- use empty string to specify no proxy or port -->
 <!-- This version must agree with that in apps/common/res/apns.xml -->
-<iwlanapns version="392">
+<iwlanapns version="396">
     <iwlansettings>
         <apn operatornumeric="00000"
             connname="imsApn"
@@ -931,7 +931,7 @@
             ownuritype="USER_FQDN"
             ownidentity="023430123456701@nai.epc.mnc010.mcc208.3gppnetwork.org"
             remoteuritype="KEY_ID"
-            remoteidentity="ims.vel.site"
+            remoteidentity="ims"
             tunneltype="IPSEC_RAC"
             ipsecencryption="IPSEC_ENCRYPTION_AES_CBC_128"
             ipsecintegrity="IPSEC_INTEGRITY_HMAC_SHA_256_128"
@@ -13191,12 +13191,12 @@
             smartwifirsrp3="0"
             smartwificdmarssi="0"
             smartpktlosspercent="100"
-            threshold4grovein="0"
-            threshold4groveout="0"
-            threshold3grovein="0"
-            threshold3groveout="0"
-            threshold2grovein="0"
-            threshold2groveout="0"
+            threshold4grovein="118"
+            threshold4groveout="124"
+            threshold3grovein="112"
+            threshold3groveout="115"
+            threshold2grovein="102"
+            threshold2groveout="105"
             sysseltimer="120"
             tepdgltetimer="0"
             tepdg1xtimer="0"
@@ -20623,8 +20623,9 @@
             wifi_call_when_roaming="1"
         />
         
+        <!-- 3DK -->
         <vowifi operatornumeric="23806"
-            wifi_call_enable="1"
+            wifi_call_enable="0"
             wifi_call_preferred="2"
             wifi_call_when_roaming="1"
         />

@@ -112,6 +112,8 @@
 
         <group gid="sdcard_rw" />
 
+        <group gid="sdcard_all" />
+
     </permission>
 
 
@@ -384,9 +386,11 @@
 
     <!-- Weather Daemon -->
     <allow-in-power-save-except-idle package="com.sec.android.daemonapp" />
+		<allow-in-power-save package="com.sec.android.daemonapp" />
 
     <!-- Weather Forecast -->
     <allow-in-power-save-except-idle package="com.samsung.android.weather" />
+    <allow-in-power-save package="com.samsung.android.weather" />
 
     <!-- Always On Display -->
     <allow-in-power-save package="com.samsung.android.app.aodservice" />
