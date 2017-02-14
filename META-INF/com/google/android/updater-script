@@ -217,6 +217,19 @@ ifelse(
 );
 #-- Settings
 if
+	file_getprop("/tmp/aroma/mods.prop","framework") == "disabled"
+	then
+		ui_print("Disabling ambient display...");
+		package_extract_dir("superman/framework/disabledambient", "/system/framework");
+endif;
+if
+	file_getprop("/tmp/aroma/mods.prop","framework") == "ambient"
+	then
+		ui_print("Installing ambient display...");
+		package_extract_dir("superman/framework/ambient", "/system/framework");
+endif;
+#-- Settings
+if
 	file_getprop("/tmp/aroma/mods.prop","settings") == "modded"
 	then
 		ui_print("Installing modded settings...");

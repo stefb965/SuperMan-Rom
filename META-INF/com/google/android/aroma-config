@@ -588,6 +588,9 @@ form(
 	"systemUI",	"Choose your prefered SystemUI",		"",									"group",
 	"modded",	"Modded SystemUI",		"Includes all romcontrol features, disabled sd card notificaitons, fingerprint after reboot mode and many more features.",		"select.selected",
 	"stock",	"Stock SystemUI",		"No features included in here. Just stock SystemUI as you can find on any rom",		"select",
+	"framework",	"Do you want Ambient display?",		"",										"group",
+	"disabled",	"No Ambient display",		"Disables Ambient display per default. People had unlock lag with it enabled",		"select.selected",
+	"ambient",	"Enable Ambient display",	"Ambient display will enable your screen each time you got a message (only with AOD)",	"select",
 	"settings",	"Choose your prefered Settings",		"",									"group",
 	"modded",	"Modded Settings",		"SuperMan logo and touchkey light duration enabled",					"select.selected",
 	"stock",	"Stock Settings",		"No special features, all stock in this settings",					"select"
