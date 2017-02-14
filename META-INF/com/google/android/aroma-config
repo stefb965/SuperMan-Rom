@@ -424,16 +424,28 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"build",	"Select your build.prop tweaks",	"",									"group",
-	"none",		"No build.prop tweaks",		"Will keep your build.prop clean from tweaks",					"select",
-	"stock",	"Stock build.prop tweaks",	"Include the stock tweaks like we had them until now",				"select.selected",
-	"max",		"Maximal build.prop tweaks",	"All kind of build.prop tweaks found on the net. Use at your own risk!",	"select",
-	"initd",	"Select your init.d tweaks",	"",										"group",
-	"no",		"No init.d tweaks",		"This is the recommend option to use",						"select.selected",
-	"yes",		"Install init.d tweaks",	"Zipaligns apps and optimize database at startup. Use at your own risk!",	"select"
+	"build",	"Select your build.prop tweaks",	"",										"group",
+	"finger",	"Fingerprint after reboot",	"Enables fingerprint right after a reboot without entering your password first",	"check.checked",
+	"user",		"Multiuser",			"Enable Multi User in settings and in statusbar",					"check.checked",
+	"fix",		"Screen mirror fix",		"Applies a screen mirror fix (was present all the time before)",			"check.checked",
+	"performance",	"Performance tweaks",		"Adds build.prop tweaks which are known to give better performance",			"check",
+	"powersave",	"Powersaving tweaks",		"Adds build.prop tweaks which are known to enhance batterylife",			"check.checked",
+	"quickpower",	"Faster boot process",		"Decreases your boot time with faster fps",						"check",
+	"network",	"Network tweaks",		"Adds build.prop tweaks which are known to increase network performance",		"check",
+	"camera",	"Camera tweaks",		"Should increase image quality in general",						"check",
+	"signal",	"Signal tweaks",		"Better signal receiption and GPS",							"check",
+	"misc",		"Misc tweaks",			"Misc tweaks I could not sort into a category",						"check",
+	"knox",		"Disable Knox",			"Disables knox strings in settings",							"check",
+	"initd",	"Select your init.d tweaks",	"",											"group",
+	"wakelock",	"Wakelock",			"Disables google wakelocks",								"check.checked",
+	"zipalign",	"Zipalign",			"Zipaligns apps startup, boot can take longer",						"check",
+	"vm",		"Background tweaks",		"Tweaks VM/Swappiness/dirty ration at startup",						"check",
+	"sqlite",	"Sqlite",			"Optimizes the databases every week",							"check",
+	"net",		"Network",			"Applies some network tweaks",								"check",
+	"dalvik",	"Dalvik-Cache",			"Moves dalvik files to cache, boot may takes longer",					"check"
 );
 
-alert("Important:", "If you want to install snapchat after this rom, make sure to NOT use root! Snapchat will be UNABLE to login! Install after you logged in to snapchat.");
+alert("Important:", "Snapchat can work with root, if you select Magisk V11.1 below! Follow the steps provided on XDA to get Safetynet working.");
 
 ##
 # Magisk Form

@@ -293,15 +293,40 @@ run_program("/tmp/build.prop_tweaks.sh");
 set_progress(0.390000);
 #-- Init.d
 if
-	file_getprop("/tmp/aroma/buildtweaks.prop","initd") == "yes"
+	file_getprop("/tmp/aroma/buildtweaks.prop","wakelock") == "1"
 	then
-		ui_print("Installing init.d tweaks...");
-		package_extract_dir("superman/init.d", "/system/etc/init.d");
+		ui_print("Installing init.d wakelock tweaks...");
+		package_extract_dir("superman/init.d/wakelock", "/system/etc/init.d");
 endif;
 if
-	file_getprop("/tmp/aroma/buildtweaks.prop","initd") == "no"
+	file_getprop("/tmp/aroma/buildtweaks.prop","zipalign") == "1"
 	then
-		ui_print("No init.d tweaks installed...");
+		ui_print("Installing init.d zipalign tweaks...");
+		package_extract_dir("superman/init.d/zip", "/system/etc/init.d");
+endif;
+if
+	file_getprop("/tmp/aroma/buildtweaks.prop","vm") == "1"
+	then
+		ui_print("Installing init.d VM tweaks...");
+		package_extract_dir("superman/init.d/vm", "/system/etc/init.d");
+endif;
+if
+	file_getprop("/tmp/aroma/buildtweaks.prop","sqlite") == "1"
+	then
+		ui_print("Installing init.d sqlite tweaks...");
+		package_extract_dir("superman/init.d/sqlite", "/system/etc/init.d");
+endif;
+if
+	file_getprop("/tmp/aroma/buildtweaks.prop","net") == "1"
+	then
+		ui_print("Installing init.d network tweaks...");
+		package_extract_dir("superman/init.d/net", "/system/etc/init.d");
+endif;
+if
+	file_getprop("/tmp/aroma/buildtweaks.prop","dalvik") == "1"
+	then
+		ui_print("Installing init.d dalvik tweaks...");
+		package_extract_dir("superman/init.d/dalvik", "/system/etc/init.d");
 endif;
 #-- Adblocker
 if
