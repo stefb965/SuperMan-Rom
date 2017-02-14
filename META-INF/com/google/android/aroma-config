@@ -424,8 +424,8 @@ form(
   #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
   # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
   #-------------+--------+-------------------------------------------------------+---------------#
-	"build",	"Select your build.prop tweaks",	"",										"group",
-	"finger",	"Fingerprint after reboot",	"Enables fingerprint right after a reboot without entering your password first",	"check.checked",
+	"build",	"Select build.prop tweaks",	"",											"group",
+	"finger",	"Fingerprint after reboot",	"Enables fingerprint right after a reboot without entering your password first (only on modded SystemUI)",	"check.checked",
 	"user",		"Multiuser",			"Enable Multi User in settings and in statusbar",					"check.checked",
 	"fix",		"Screen mirror fix",		"Applies a screen mirror fix (was present all the time before)",			"check.checked",
 	"performance",	"Performance tweaks",		"Adds build.prop tweaks which are known to give better performance",			"check",
@@ -436,7 +436,7 @@ form(
 	"signal",	"Signal tweaks",		"Better signal receiption and GPS",							"check",
 	"misc",		"Misc tweaks",			"Misc tweaks I could not sort into a category",						"check",
 	"knox",		"Disable Knox",			"Disables knox strings in settings",							"check",
-	"initd",	"Select your init.d tweaks",	"",											"group",
+	"initd",	"Select init.d tweaks",		"",											"group",
 	"wakelock",	"Wakelock",			"Disables google wakelocks",								"check.checked",
 	"zipalign",	"Zipalign",			"Zipaligns apps startup, boot can take longer",						"check",
 	"vm",		"Background tweaks",		"Tweaks VM/Swappiness/dirty ration at startup",						"check",
