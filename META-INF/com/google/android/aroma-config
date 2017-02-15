@@ -590,7 +590,7 @@ form(
 	"stock",	"Stock SystemUI",		"No features included in here. Just stock SystemUI as you can find on any rom",		"select",
 	"framework",	"Do you want Ambient display?",		"",										"group",
 	"disabled",	"No Ambient display",		"Disables Ambient display per default. People had unlock lag with it enabled",		"select.selected",
-	"ambient",	"Enable Ambient display",	"Ambient display will enable your screen each time you got a message (only with AOD)",	"select",
+	"ambient",	"Enable Ambient display",	"Ambient display will enable your screen each time you got a notification (only with AOD)",	"select",
 	"settings",	"Choose your prefered Settings",		"",									"group",
 	"modded",	"Modded Settings",		"SuperMan logo and touchkey light duration enabled",					"select.selected",
 	"stock",	"Stock Settings",		"No special features, all stock in this settings",					"select"
@@ -647,7 +647,7 @@ form(
 	"update",	"Update Modem",			"Will auto update your modem to latest DQB1 on F/FD",				"select.selected",
 	"keep",		"Keep current Modem",		"Will keep your current modem and change nothing",				"select",
 	"bootloader",	"Bootloader update F/FD/W8",	"",										"group",
-	"update",	"Update Bootloader",		"Will auto update your BL to DQB3 on F/FD/ models. Phone will auto reboot!",		"select.selected",
+	"update",	"Update Bootloader",		"Will auto update your BL to DQB7 on F/FD/ models. Phone will auto reboot!",		"select.selected",
 	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",				"select"
 );
 

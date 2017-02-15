@@ -185,5 +185,10 @@ if grep -q misc=1 $aromabuildprop; then
 	echo "touch.presure.scale=0.001" >> $buildprop
 fi
 
+if grep -q item.1.12=1 /tmp/aroma/google.prop; then
+	echo "# Google Assistant" >> $buildprop
+	echo "ro.opa.eligible_device=true" >> $buildprop
+fi
+
 exit 10
 
