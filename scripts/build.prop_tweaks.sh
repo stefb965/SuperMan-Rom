@@ -2,32 +2,9 @@
 # Written by Tkkg1994
 
 aromabuildprop=/tmp/aroma/buildtweaks.prop
-kernelprop=/tmp/aroma/kernel.prop
 buildprop=/system/build.prop
 
 mount /dev/block/platform/155a0000.ufs/by-name/SYSTEM /system
-
-if grep -q kernel=stock $kernelprop; then
-	echo "Lol this check got redundant since all kernels are custom xD"
-	sed -i /timaversion/d $buildprop
-	sed -i /security.mdpp.mass/d $buildprop
-	sed -i /ro.hardware.keystore/d $buildprop
-else if grep -q kernel=super $kernelprop; then
-	echo "custom kernel detected, deleting false build.prop entries"
-	sed -i /timaversion/d $buildprop
-	sed -i /security.mdpp.mass/d $buildprop
-	sed -i /ro.hardware.keystore/d $buildprop
-else if grep -q kernel=superstock $kernelprop; then
-	echo "custom kernel detected, deleting false build.prop entries"
-	sed -i /timaversion/d $buildprop
-	sed -i /security.mdpp.mass/d $buildprop
-	sed -i /ro.hardware.keystore/d $buildprop
-else
-	echo "Something went wrong with kernel detection"
-fi
-fi
-fi
-
 
 if grep -q knox=1 $aromabuildprop; then
 	echo "Change knox entry"

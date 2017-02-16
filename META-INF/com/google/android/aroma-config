@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V2.1");
+ini_set("rom_version",          "V2.2");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G93XF/FD/K/L/S/W8");
-ini_set("rom_date",             "09.02.2017");
+ini_set("rom_date",             "17.02.2017");
 
 ##
 # Show Animated Splash
@@ -706,32 +706,6 @@ form(
 	"adblocker",	"Adblocker",		"",											"group",
 	"enable",	"Enable by default",	"Enables Adblocker by default (3minit battery needs disabled adblocker to work)",	"select.selected",
 	"disable",	"Disable by default",	"Disables Adblocker by default. However you can still enable it in the app later",	"select"
-);
-
-##
-# Theme Form
-#
-
-form(
-    "SuperMan theme",
-    "Installs Dark Side of SuperMan theme by Alex74",
-    "icons/install2",
-    "theme.prop",
-  #
-  # Type:
-  #  - group              = Group
-  #  - select             = Select Item
-  #  - select.selected    = Selected Select Item
-  #  - check              = Checkbox Item
-  #  - check.checked      = Checked Checkbox Item
-  #  - hide               = Hidden
-  #
-  #-------------+-----------------------[ Selectbox Without Group ]------------------------------#
-  # PROP ID     | TITLE            |  SUBTITLE                                   |    Type       #
-  #-------------+--------+-------------------------------------------------------+---------------#
-	"darkside",	"Darkside Theme",	"",												"group",
-	"install",	"Install Theme",	"Enables new theme for superman made by Alex74. Colors are blue/black (beautiful design)",	"select",
-	"stock",	"Keep Stock Theme",	"Won't install any theme and keep it stock",							"select.selected"
 );
 
 alert("Attention", "Removing samsung apps can lead to force closes and not working features!");
