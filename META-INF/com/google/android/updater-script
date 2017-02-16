@@ -256,10 +256,22 @@ if
 		package_extract_dir("superman/animation/superman_black", "/system/media");
 endif;
 if
+	file_getprop("/tmp/aroma/bootanim.prop","anim") == "super_black3d"
+	then
+		ui_print("Installing black superman 3D animation...");
+		package_extract_dir("superman/animation/superman_black_3d", "/system/media");
+endif;
+if
 	file_getprop("/tmp/aroma/bootanim.prop","anim") == "super_white"
 	then
 		ui_print("Installing white superman animation...");
 		package_extract_dir("superman/animation/superman_white", "/system/media");
+endif;
+if
+	file_getprop("/tmp/aroma/bootanim.prop","anim") == "super_white3d"
+	then
+		ui_print("Installing white superman 3D animation...");
+		package_extract_dir("superman/animation/superman_white_3d", "/system/media");
 endif;
 #-- Model
 ui_print(" ");

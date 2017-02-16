@@ -676,6 +676,8 @@ form(
 	"stock",	"Stock animation",		"Just as always, stock boot/shutdown animation",						"select",
 	"super_black",	"SuperMan black animation",	"New SuperMan bootanimation with black background, all credits to myellow (he's awesome)",	"select.selected",
 	"super_white",	"SuperMan white animation",	"New SuperMan bootanimation with white background, credits to myellow (he's still awesome)",	"select",
+	"super_black3d","SuperMan black 3D animation",	"Even a little bit more updated superman with a 3D animation with black background",		"select",
+	"super_white3d","SuperMan white 3D animation",	"Even a little bit more updated superman with a 3D animation with white background",		"select",
 	"splash",	"Splash Screen",		"",												"group",
 	"stock",	"Stock Splash",			"Stock S7 splash screen will be installed",							"select",
 	"super_black",	"SuperMan black Splash",	"New SuperMan black Splash will be installed",							"select",
