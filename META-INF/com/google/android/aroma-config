@@ -393,8 +393,8 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"kernel",	"Kernel Selection",		"",									"group",
 	"stock",	"Stock Kernel",			"This is just a full stock kernel as you can find on stock rom",	"select",
-	"super",	"SuperKernel",			"SuperKernel V2.1.0 with many tweaks",					"select",
-	"superstock",	"SuperStock",			"Latest SuperStock V2.1.0 for our galaxy s7",				"select.selected",
+	"super",	"SuperKernel",			"SuperKernel V2.1.5 with many tweaks",					"select",
+	"superstock",	"SuperStock",			"Latest SuperStock V2.1.5 for our galaxy s7",				"select.selected",
 	"control",	"Kernel Control app",		"",									"group",
 	"synapse",	"Synapse",			"Installs Synapse app to control the Kernel. Only working on SuperKernel",	"check",
 	"adiutor",	"Kernel Adiutor",		"Installs latest Kernel Adiutor app. You can control all kernels with it",	"check",
@@ -441,8 +441,7 @@ form(
 	"zipalign",	"Zipalign",			"Zipaligns apps startup, boot can take longer",						"check",
 	"vm",		"Background tweaks",		"Tweaks VM/Swappiness/dirty ration at startup",						"check",
 	"sqlite",	"Sqlite",			"Optimizes the databases every week",							"check",
-	"net",		"Network",			"Applies some network tweaks",								"check",
-	"dalvik",	"Dalvik-Cache",			"Moves dalvik files to cache, boot may takes longer",					"check"
+	"net",		"Network",			"Applies some network tweaks",								"check"
 );
 
 alert("Important:", "Snapchat can work with root, if you select Magisk V11.1 below! Follow the steps provided on XDA to get Safetynet working.");
