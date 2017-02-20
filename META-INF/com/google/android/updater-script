@@ -1269,10 +1269,10 @@ endif;
 if
 	file_getprop("/tmp/aroma/magisk.prop","root") == "phh"
 	then
-		ui_print("Installing phh's root r275...");
+		ui_print("Installing phh's root r297...");
 		package_extract_dir("superman/root", "/temp/root");
-		run_program("/sbin/busybox", "unzip", "/temp/root/superuser-r275.zip", "META-INF/com/google/android/*", "-d", "/temp/root");
-		run_program("/sbin/busybox", "sh", "/temp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/root/superuser-r275.zip");
+		run_program("/sbin/busybox", "unzip", "/temp/root/superuser-r297.zip", "META-INF/com/google/android/*", "-d", "/temp/root");
+		run_program("/sbin/busybox", "sh", "/temp/root/META-INF/com/google/android/update-binary", "dummy", "1", "/temp/root/superuser-r297.zip");
 		set_progress(0.850000);
 		ui_print(" ");
 endif;
