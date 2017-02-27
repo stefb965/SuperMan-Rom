@@ -473,7 +473,7 @@ form(
 	"root",		"Root method", 		"",									"group",
 	"su",		"SuperSU 2.79 SR3",	"Will install SuperSU 2.79 SR3",					"select",
 	"magisk",	"MagiskSU",		"Installs MagiskSU based on phh root",					"select.selected",
-	"phh",		"Phh's r297",		"Installs normal r297 phh superuser",					"select",
+	"phh",		"Phh's r275",		"Installs normal r275 phh superuser",					"select",
 	"no",		"No additional root",	"I don't want any root method to be installed",				"select",
 	"busybox",	"Busybox", 		"",									"group",
 	"yes",		"Busybox V1.26.2",	"Will install latest busybox available (magisk compatible)",		"select.selected",
