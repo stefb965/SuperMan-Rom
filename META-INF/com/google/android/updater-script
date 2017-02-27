@@ -500,9 +500,9 @@ endif;
 if
 	file_getprop("/tmp/aroma/samsung.prop","item.1.25") == "1"
 	then
-		ui_print("Installing Samsung Pay...");
-		package_extract_dir("superman/debloat/SamsungPay/system", "/system");
-		package_extract_dir("superman/debloat/SamsungPay/data", "/data");
+		ui_print("Installing Knox...");
+		package_extract_dir("superman/debloat/Knox/system", "/system");
+		package_extract_dir("superman/debloat/Knox/data", "/data");
 endif;
 if
 	file_getprop("/tmp/aroma/samsung.prop","item.1.26") == "1"
@@ -533,13 +533,6 @@ if
 	then
 		ui_print("Installing Samsung Gear Viewer...");
 		package_extract_dir("superman/debloat/Gear_Viewer", "/data/app");
-endif;
-if
-	file_getprop("/tmp/aroma/samsung.prop","item.1.31") == "1"
-	then
-		ui_print("Installing Knox...");
-		package_extract_dir("superman/debloat/Knox/system", "/system");
-		package_extract_dir("superman/debloat/Knox/data", "/data");
 endif;
 #-- Google Bloat
 if

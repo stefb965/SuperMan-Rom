@@ -757,13 +757,12 @@ checkbox(
 	"Microsoft Excel",	"",									0,	#-- item.1.22
 	"Microsoft PowerPoint",	"",									0,	#-- item.1.23
 	"Microsoft Word",	"",									0,	#-- item.1.24
-	"Samsung Pay",		"",									0,	#-- item.1.25
+	"Knox",			"For secure folder, samsung pay and my knox to work",			0	#-- item.1.25
 	"Samsung Music Player",	"",									1,	#-- item.1.26
 	"Samsung OneDrive",	"",									0,	#-- item.1.27
 	"Samsung Notes",	"",									0,	#-- item.1.28
 	"Samsung Video Player",	"",									0,	#-- item.1.29
-	"Samsung Gear 360 viewer",	"",								0,	#-- item.1.30
-	"Knox",			"For secure folder and my knox to work",				0	#-- item.1.31
+	"Samsung Gear 360 viewer",	"",								0	#-- item.1.30
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
