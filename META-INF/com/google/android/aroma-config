@@ -10,10 +10,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "SuperMan-Rom™ ");
-ini_set("rom_version",          "V2.2");
+ini_set("rom_version",          "V2.3");
 ini_set("rom_author",           "Tkkg1994");
 ini_set("rom_device",           "SM-G93XF/FD/K/L/S/W8");
-ini_set("rom_date",             "17.02.2017");
+ini_set("rom_date",             "02.03.2017");
 
 ##
 # Show Animated Splash
@@ -393,8 +393,8 @@ form(
   #-------------+--------+-------------------------------------------------------+---------------#
 	"kernel",	"Kernel Selection",		"",									"group",
 	"stock",	"Stock Kernel",			"This is just a full stock kernel as you can find on stock rom",	"select",
-	"super",	"SuperKernel",			"SuperKernel V2.1.5 with many tweaks",					"select",
-	"superstock",	"SuperStock",			"Latest SuperStock V2.1.5 for our galaxy s7",				"select.selected",
+	"super",	"SuperKernel",			"SuperKernel V2.2.1 with many tweaks",					"select",
+	"superstock",	"SuperStock",			"Latest SuperStock V2.2.1 for our galaxy s7",				"select.selected",
 	"control",	"Kernel Control app",		"",									"group",
 	"synapse",	"Synapse",			"Installs Synapse app to control the Kernel. Only working on SuperKernel",	"check",
 	"adiutor",	"Kernel Adiutor",		"Installs latest Kernel Adiutor app. You can control all kernels with it",	"check",
@@ -646,7 +646,7 @@ form(
 	"update",	"Update Modem",			"Will auto update your modem to latest DQB1 on F/FD",				"select.selected",
 	"keep",		"Keep current Modem",		"Will keep your current modem and change nothing",				"select",
 	"bootloader",	"Bootloader update F/FD/W8",	"",										"group",
-	"update",	"Update Bootloader",		"Will auto update your BL to DQB7 on F/FD/ models. Phone will auto reboot!",		"select.selected",
+	"update",	"Update Bootloader",		"Will auto update your BL to DQBO on F/FD/ models. Phone will auto reboot!",		"select.selected",
 	"keep",		"Keep current Bootloader",	"Will keep your current bootloader and change nothing",				"select"
 );
 
